@@ -1,0 +1,125 @@
+{
+    "de": {
+      "translation": {
+        "cart": {
+          "discountLabel": "Rabatt",
+          "shippingLabel": "Versand",
+          "subtotalLabel": "Zwischensumme",
+          "grandTotalLabel": "Gesamtsumme",
+          "taxLabel": "Steuer",
+          "genericProcessingError": "Beim Versuch, die Zahlung zu verarbeiten, ist ein Fehler aufgetreten."
+        },
+        "braintree": {
+          "missingCreditCardFields": "Bitte füllen Sie alle Zahlungsfelder aus und versuchen Sie es erneut"
+        }
+      }
+    },
+    "en": {
+      "translation": {
+        "cart": {
+          "discountLabel": "Discount",
+          "shippingLabel": "Shipping",
+          "subtotalLabel": "Subtotal",
+          "grandTotalLabel": "Total*",
+          "taxLabel": "Tax",
+          "vatIncluded": "VAT Included",
+          "taxPendingMessage": "Plus applicable taxes",
+          "genericProcessingError": "An error occurred while trying to process your payment",
+          "freeShipping": "FREE SHIPPING"
+        },
+        "braintree": {
+          "missingCreditCardFields": "Please fill in all payment fields and try again"
+        }
+      }
+    },
+    "es": {
+      "translation": {
+        "cart": {
+          "discountLabel": "Descuento",
+          "shippingLabel": "Envío",
+          "subtotalLabel": "Subtotal",
+          "grandTotalLabel": "Total",
+          "taxLabel": "Impuestos",
+          "genericProcessingError": "Ocurrió un error al tratar de procesar su pago, inténtelo de nuevo"
+        },
+        "braintree": {
+          "missingCreditCardFields": "Rellene todos los campos de pago y vuelva a intentarlo"
+        }
+      }
+    },
+    "it": {
+      "translation": {
+        "cart": {
+          "discountLabel": "Aconto",
+          "shippingLabel": "Spedizione",
+          "subtotalLabel": "Subtotale",
+          "grandTotalLabel": "Totale generale",
+          "taxLabel": "Imposte",
+          "genericProcessingError": "Si è verificato un errore durante il tentativo di elaborare il pagamento"
+        },
+        "braintree": {
+          "missingCreditCardFields": "Compila tutti i campi di pagamento e riprova"
+        }
+      }
+    },
+    "fi": {
+      "translation": {
+        "cart": {
+          "discountLabel": "Alennus",
+          "shippingLabel": "Toimitus",
+          "subtotalLabel": "Välisumma",
+          "grandTotalLabel": "Kaikki yhteensä",
+          "taxLabel": "Vero",
+          "genericProcessingError": "Maksusi käsittelyssä tapahtui virhe"
+        },
+        "braintree": {
+          "missingCreditCardFields": "Täytä kaikki maksukentät ja yritä uudelleen"
+        }
+      }
+    },
+    "fr": {
+      "translation": {
+        "cart": {
+          "discountLabel": "Réduction",
+          "shippingLabel": "Livraison",
+          "subtotalLabel": "Sous-total",
+          "grandTotalLabel": "Total final",
+          "taxLabel": "dont TVA",
+          "genericProcessingError": "Une erreur est survenue lors de la tentative de traitement de votre paiement"
+        },
+        "braintree": {
+          "missingCreditCardFields": "Veuillez remplir tous les champs de paiement et réessayer"
+        }
+      }
+    },
+    "nl": {
+      "translation": {
+        "cart": {
+          "discountLabel": "Korting",
+          "shippingLabel": "Verzending",
+          "subtotalLabel": "Subtotaal",
+          "grandTotalLabel": "Eindtotaal",
+          "taxLabel": "Btw",
+          "genericProcessingError": "Er is een fout opgetreden tijdens het verwerken van je betaling."
+        },
+        "braintree": {
+          "missingCreditCardFields": "Vul alle betalingsvelden in en probeer het opnieuw"
+        }
+      }
+    },
+    "pt": {
+      "translation": {
+        "cart": {
+          "discountLabel": "Desconto",
+          "shippingLabel": "Frete",
+          "subtotalLabel": "Subtotal",
+          "grandTotalLabel": "Total",
+          "taxLabel": "Imposto",
+          "genericProcessingError": "Um erro ocorreu na tentativa de processar o seu pagamento"
+        },
+        "braintree": {
+          "missingCreditCardFields": "Por favor, preencha todos os campos de pagamento e tente novamente"
+        }
+      }
+    }
+  }

@@ -1,0 +1,1242 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+    <title>Miracle Brand - Secure Checkout</title>
+    
+    <link href="./images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="./images/webclip.png" rel="apple-touch-icon">
+    
+    <meta content="../toolkit/scripts/custom_translation.json" name="checkout-translations-url">   
+    
+    <script type="text/javascript" src="https://cdn.shopmiraclebrand.co/js/cart_loader.js"></script>
+    <meta content="api.shopmiraclebrand.co" name="checkout-api-endpoint">
+    <meta content="14441424781356" name="checkout-default-variant-id">
+    <meta content="42700865831062" name="checkout-default-addons">
+    <meta content="/up/2b.html" name="checkout-next-url" id="checkoutNextUrlMeta">
+    <meta content="US" name="checkout-default-shipping-zone">
+    <meta content="https://api.shopmiraclebrand.co/v1/cart/{sessionId}/miracle_redirect"   name="checkout-next-url">
+    
+    <meta content="try_C1" name="checkout-funnel-name">
+    <meta content="bogo" name="checkout-aux-page-name">
+
+    <style>
+        @charset "utf-8";.top-navbar{display:flex;justify-content:center;align-items:center;gap:12px;position:sticky;top:0;width:100%;min-height:65px;height:65px;padding:0 12px;background-color:#dcff8e;color:#000;font-family:'Montserrat',sans-serif;font-weight:400;z-index:99}.top-navbar strong{font-weight:700}.top-navbar-text{font-size:14px;line-height:20px}.top-navbar small{display:block;width:60px;font-size:10px;font-weight:600;line-height:9px;text-align:right}.top-navbar #es_timer{display:block;font-size:20px;font-weight:600;text-align:right}#top_bar .desktop{display:flex!important}.warranty-addon{margin:12px 0}.checkout-addon-toggle{display:flex;align-items:center;gap:12px;padding:12px 16px;background-color:#fcf8cd;border-radius:6px}.checkbox-detail span{display:block;font-size:12px;line-height:1.1}input[type="checkbox"]{flex-shrink:0;position:relative;min-width:20px;min-height:20px}input[type="checkbox"]:after{position:absolute;top:0;left:0;width:100%;height:100%;content:"";background-color:#fff;border:1px solid #000;border-radius:4px;z-index:9}input[type="checkbox"]:checked:after{background-image:url(https://try.miraclebrand.co/checkout_v22/images/checkbox-mark.svg);background-size:10px 7px;background-repeat:no-repeat;background-position:50% 50%;background-color:#000}.warranty-container{position:relative;justify-content:space-between;align-items:center;min-width:100%;padding-bottom:20px}.product-line td{border-bottom:0!important}.checkout-cart-display tr{display:flex;justify-content:space-between;width:100%;border-bottom:1px solid #eee}.checkout-remove-warranty{display:flex;gap:2px;align-items:center;position:absolute;bottom:0;right:0;transform:translate3d(-10px,calc(-50% - 2px),0);color:#000;cursor:pointer}.checkout-remove-warranty .remove-text{font-size:10px;text-transform:uppercase}.checkout-remove-warranty:focus,.checkout-remove-warranty:hover{color:#000}:root{--main-color:#00237e}.pad-top{background-color:#00237e;padding-top:50px!important}body{top:0;bottom:0;left:0;right:0;margin:auto;padding:0;background:#fff;color:#333;text-align:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",sans-serif;font-size:14px;overflow-y:scroll}div,ul,h1,h2,h3,h4,h5,li,p,img,form,input,textarea{margin:0;padding:0}header,section,footer,aside,nav,main,article,figure{display:block}table,tr,td{border:0}a{outline:none;color:#064870;text-decoration:none}a:hover{outline:none;color:#6ecddd;text-decoration:none}img{border:none}li{list-style:none}*{box-sizing:border-box}.img-full{max-width:100%}.clearall{clear:both;font-size:1px;line-height:1px;height:1px}select{-webkit-appearance:none;-moz-appearance:none;appearance:none}button{margin:0;padding:0;border:none;font:inherit;color:inherit;background:none}button::-moz-focus-inner{padding:0;border:none}button:-moz-focusring{outline:1px dotted}.for-desk{display:block}.for-mob{display:none}.for-mob>.container{display:block;width:100%}html,body{margin:0;width:100%;margin:auto;height:100%;-ms-overflow-style:scrollbar}.chkout-bg,.lft-chk,body{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}.chkout-bg{display:block}.container{padding:0 5%;margin:0 auto;-ms-box-orient:horizontal;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:flex;box-sizing:content-box;flex:1;height:100%;border-right:1px solid #e1e1e1}.frm-main{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}.lft-chk{width:52%;padding-right:6%;float:left;padding-top:2em;box-sizing:content-box}.right-chk{width:38%;padding-left:4%;float:right;padding-top:3em;padding-bottom:3em;position:relative;box-sizing:content-box}.right-chk:after{content:"";display:block;width:300%;position:absolute;top:0;left:0;bottom:0;background:#fbfbfc;z-index:-1;border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2}.logo-box{float:left;width:100%;margin-bottom:15px}.logo{max-height:60px;max-width:50%;float:left}.logo-right{max-height:60px;max-width:50%;float:right}ul.brdcrm{float:left;width:100%;margin-top:1em}ul.brdcrm li{float:left;font-size:.85714em;color:#737373}ul.brdcrm li span{font-weight:500;color:#333}ul.brdcrm li a{color:var(--main-color)}ul.brdcrm li svg{width:10px;height:10px;display:inline-block;vertical-align:middle;fill:#737373;-webkit-transition:color 0.2s ease-in-out;transition:color 0.2s ease-in-out;margin:0 5px}.paypalbtn{height:50px;background:#ffc439;color:#111;box-sizing:border-box;border-radius:4px;width:100%;padding:5px}.paypalbtn img{height:20px;margin-top:7px}.paypalbtn .pad{margin-left:20px}.paypalbtn i{position:absolute;margin-top:10px}.paypalbtn:hover{color:inherit}.alternate-payment-opt{padding-top:1em;clear:both;float:left;width:100%;text-align:center;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;font-size:.85714em;line-height:1.3em;text-align:center;text-transform:uppercase;color:#737373}.alternate-payment-opt::after,.alternate-payment-opt::before{content:"";display:inline-block;height:1px;background:#e6e6e6;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1}.cp-contact,.cp-shipping,.cp-billing,.cp-prospect{float:left;width:100%;margin-top:9px}.cp-contact{margin-top:0}.heading-box{float:left;width:100%;margin-top:1em;margin-bottom:.7em}.chk-head{font-weight:500;color:#00237e;font-size:18px;line-height:24px;text-align:left}.frm-flds{float:left;width:100%;position:relative;margin:5px 0}.frm-flds.fl{float:left}.frm-flds.fr{float:right}.frm-flds.half-fld{width:49%}.frm-flds.half-fld-fixed{width:49%}.frm-flds.drop-fld{width:34%;margin-right:1%}.frm-flds.zip-fld{width:30%}.frm-flds.street-fld{width:70%}.frm-flds.house-fld{width:29%}.drop-fld:after{content:"";position:absolute;right:0;width:50px;top:0;bottom:0;background:url(../skin-shipping/select.svg) no-repeat center center;z-index:1}.frm-flds label{opacity:0;visibility:hidden;display:block;position:absolute;top:8px;left:10px;font-size:11px;font-weight:400;line-height:1;color:#bbb;border-radius-top-left:3px;transition:all 0.2s ease-in-out;z-index:1;-webkit-transform:translateY(3px);transform:translateY(3px)}.frm-flds .fl-is-active label{opacity:1;visibility:visible;transform:none;color:#737373}.input-flds,.selcet-fld{float:left;width:100%;outline:none;border:1px solid #e2e2e2;height:50px;padding-left:11px;padding-right:11px;border-radius:10px;color:#333;font-family:Arial,Helvetica,sans-serif;-webkit-transition:all 0.2s ease-out;transition:all 0.2s ease-out;box-sizing:border-box;font-size:14px;background-color:#fff;z-index:10;position:relative;cursor:text}.selcet-fld:hover{cursor:pointer}select#shipping_state{cursor:pointer}select#billing_state{cursor:pointer}select#shipping_country{cursor:pointer}select#billing_country{cursor:pointer}select#cc_exp_year{cursor:pointer}select#cc_exp_month{cursor:pointer}.frm-flds .fl-is-active .input-flds{padding-top:1.5em;padding-bottom:.35714em}.input-flds:focus,.selcet-fld:focus{border:1px solid var(--main-color);box-shadow:0 0 0 1px var(--main-color);-webkit-transition:all 0.2s ease-out;transition:all 0.2s ease-out}.label-checkbox{float:left;text-align:left;cursor:pointer;margin-top:10px;color:#545454;font-size:14px}.all-checkbox{display:inline-block;vertical-align:middle;-webkit-appearance:none;width:18px;height:18px;border:1px solid #e2e2e2;border-radius:3px;outline:none;position:relative;margin-right:7px;-webkit-box-shadow:0 0 0 0 #000 inset;box-shadow:0 0 0 0 #000 inset;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out}.all-checkbox:checked{background:var(--main-color);border:1px solid var(--main-color)}.all-checkbox:after{content:"";position:absolute;width:15px;height:15px;background:url(../skin-shipping/tik.svg) no-repeat center center;left:0;top:0;opacity:0;z-index:1;-webkit-transition:all 0.2s ease-in-out 0.1s;transition:all 0.2s ease-in-out 0.1s;-webkit-transform:scale(.2);transform:scale(.2)}.all-checkbox:checked:after{-webkit-transition:all 0.2s ease-in-out 0.1s;transition:all 0.2s ease-in-out 0.1s;-webkit-transform:scale(1);transform:scale(1);opacity:1}.all-sumbit{float:left;width:100%;margin-top:10px}.frm-submit{width:100%;min-height:50px;display:block;border-radius:6px;border:0;font-size:18px;font-family:"Montserrat",sans-serif;font-weight:800;padding:20px 10px;cursor:pointer;margin-top:15px;color:#111111!important;border-top-left-radius:3px!important;border-top-right-radius:3px!important;border-bottom-right-radius:3px!important;border-bottom-left-radius:3px!important;border-top-color:#adb1b8!important;border-right-color:#a2a6ac!important;border-bottom-color:#8d9096!important;border-left-color:#a2a6ac!important;border-top-style:solid!important;border-right-style:solid!important;border-bottom-style:solid!important;border-left-style:solid!important;border-top-width:1px!important;border-right-width:1px!important;border-bottom-width:1px!important;border-left-width:1px!important;background-image:linear-gradient(#f7dfa5,#f0c14b)!important;background-position-x:initial!important;background-position-y:initial!important;background-size:initial!important;background-repeat-x:initial!important;background-repeat-y:initial!important;background-attachment:initial!important;background-origin:initial!important;background-clip:initial!important;background-color:initial!important}.frm-submit:hover{background:var(--main-color);-webkit-transition:all 0.2s ease-in-out 0.1s;transition:all 0.2s ease-in-out 0.1s}a.back-btn{float:left;color:var(--main-color);font-size:14px;margin-top:25px}a.back-btn svg{fill:var(--main-color);height:10px;min-height:10px}.prod-box{float:left;width:100%;height:60px;display:table;vertical-align:middle}.ord-lft{width:75%;position:relative;padding-left:75px;display:table-cell;vertical-align:middle}.prod-img{position:absolute;width:62px;height:62px;border:1px solid #dedddd;border-radius:4px;overflow:hidden;background:#fff;left:0;top:0}.prod-img img{max-height:100%}.prod-count{left:50px;top:-5px;position:absolute;background-color:rgb(114 114 114 / .9);border-radius:50%;padding:1px 5px;color:#fff;font-size:14px}.ord-lft p{float:left;width:100%;text-align:left}.ord-title{color:#323232;font-size:15px;font-weight:500}.ord-desc{color:#717171;font-size:13px}.ord-right{display:table-cell;vertical-align:middle}.ord-right p{float:right;color:#323232;font-size:15px;text-align:right;font-weight:600}.devider-cp{float:left;width:100%;margin:20px 0;height:1px;background:#dedede}.cart-table{color:#535353;width:100%;font-size:14px;line-height:30px}.cart-table span{color:#323232;font-weight:500}.total-txt{font-size:22px}.total-txt span{font-size:22px;display:inline-block;vertical-align:middle}.contact-editor{float:left;width:100%;border:1px solid #e2e2e2;padding:0 15px;border-radius:4px;margin-top:30px}.data-row{float:left;width:100%;border-bottom:1px solid #e2e2e2;padding:12px 0;position:relative;padding-right:60px}.data-row:last-child{border-bottom:0}.label-type{float:left;width:25%;color:#737373;font-size:13px;text-align:left}.get-info{float:left;width:75%;color:#333;font-size:13px;text-align:left}a.change-info{position:absolute;right:0;top:10px;color:var(--main-color);font-size:12px}.cp-shipping,.cp-billing{float:left;width:100%}.shippingtypebox{float:left;width:100%;padding:15px}.standrd_ship{float:left;width:100%;text-align:left;color:#545454;font-size:14px;cursor:pointer}.standrd_ship span{float:right;font-weight:600;color:#333}.shipping-icon{float:left;width:100%;color:#ec5246;font-size:18px;text-align:left;font-weight:600;margin:20px 0}.shipping-icon img{width:48px;display:inline-block;vertical-align:middle;margin-right:10px}.chk-subheading{float:left;width:100%;color:#545454;font-size:13px;text-align:left}.payoptbox{float:left;width:100%;border:1px solid #e2e2e2;border-radius:4px;position:relative;overflow:hidden}.payment-cards-box{float:left;width:100%;padding:13px 15px 10px 15px;border-bottom:1px solid #e2e2e2;height:50px;cursor:pointer}.payment-cards-box p{float:left;font-weight:600;color:#333;font-size:17px}.payment-cards-box img{float:right}.payment-flds-box{float:left;width:100%}.lock-bg,.help-icon{color:#919191;width:17px;position:absolute;right:15px;top:0}.frm-flds.card-nme-fld{width:46%}.frm-flds.card-sm-fld{width:50%;padding-right:5px}.frm-flds.card-sm-fld:last-child{padding-right:0;padding-left:5px}.billingtogglbtn,.paymybtn{float:left;width:100%;font-weight:500;color:#333;font-size:16px;text-align:left;cursor:pointer}.paymybtn{float:left;width:100%}.billingtogglbtn input[type="radio"],.ship-label-btn input[type="radio"],.paymybtn input[type="radio"]{display:inline-block;vertical-align:middle;margin-right:5px;width:18px;height:18px;-webkit-box-shadow:0 0 0 0 #000 inset;box-shadow:0 0 0 0 #000 inset;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;position:relative;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;border:1px solid #ebecef;border-radius:50%;outline:none;margin-top:-2px}.billingtogglbtn input[type="radio"]:checked,.ship-label-btn input[type="radio"]:checked,.paymybtn input[type="radio"]:checked{background:var(--main-color)}.billingtogglbtn input[type="radio"]:checked:after,.ship-label-btn input[type="radio"]:checked:after,.paymybtn input[type="radio"]:checked:after{width:6px;height:6px;border-radius:50%;background:#fff;position:absolute;content:"";left:5px;top:5px}.payplsvg{display:inline-block;vertical-align:middle}.paypal-txt{float:left;width:100%;padding:0 12%;padding-bottom:20px;color:#545454;font-size:14px;line-height:20px}.footer{float:left;width:100%;padding:1em 0;margin-top:1em;border-top:1px solid #e6e6e6}.footer p{float:left;width:100%;font-weight:400;font-size:.85714em;color:#737373;text-align:left}#toggle-mob-cart{width:100%}#toggle-mob-cart.isopened{height:auto;visibility:visible}.stripebtn{margin-top:10px;margin-bottom:10px}.saving{color:green;font-weight:700;margin-top:15px;margin-bottom:5px}.receipt-order{font-size:18px;font-weight:700}.receipt-confirmation{font-size:14px;margin-top:2em}.receipt-detail{display:block;width:100%;margin-top:1em}.receipt-detail span:not(.fa){display:block;text-align:left}.receipt-detail div{margin-bottom:7px}.receipt-detail-left{display:inner-block;float:left;width:50%;padding-right:.5em}.receipt-detail-right{display:inner-block;float:right;width:50%;padding-left:.5em}@media only screen and (max-width:1000px){.for-desk{display:none}.for-mob{display:block}.top-header{width:100%;padding:10px;display:block}.mob-logo{margin:0 auto;max-width:80%;height:auto;vertical-align:middle}.mob-logo-right{max-width:40%;height:40px;float:right}.container{width:100%;padding:0 1em;-ms-box-orient:horizontal;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-moz-flex;display:-webkit-flex;display:flex;#max-width:40em;-webkit-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse;box-sizing:border-box;height:auto;border-right:0}.lft-chk{width:100%;padding-right:0;float:none;padding-top:10px}.right-chk{width:100%;padding-left:0;float:none;padding:0}.right-chk:after{left:-100%;box-shadow:none}ul.brdcrm{display:none}.devider-cp{margin:10px 0}.prod-img{width:55px;height:50px}.ord-title{font-size:13px;line-height:16px}.prod-box{height:50px}.summry-toggle-mob{background:#fff;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;padding:10px 0;text-align:left;width:100%;cursor:pointer;display:block;margin:0 auto}.summry-toggle{float:left;width:60%;color:var(--main-color);font-size:14px}.order-summary-toggle__icon{fill:var(--main-color);display:inline-block;vertical-align:middle;margin-right:.75em}.togle-price{float:right;width:40%;font-size:1.28571em;line-height:1em;color:#333;text-align:right}.order-summary-toggle__dropdown{vertical-align:middle;-webkit-transition:fill 0.2s ease-in-out;transition:fill 0.2s ease-in-out;fill:var(--main-color)}#toggle-mob-cart.isopened{height:0;visibility:hidden;overflow:hidden;-ms-transition:all 0.4s ease-in-out;-webkit-transition:all 0.4s ease-in-out;transition:all 0.4s ease-in-out}a.back-btn{float:none;display:inline-block;vertical-align:middle}.contact-editor{margin-top:10px}#toggle-mob-cart{border-bottom:1px solid #e6e6e6}.receipt-detail-left,.receipt-detail-right{display:block;width:100%}}@media only screen and (max-width:749px){.frm-flds.half-fld,.frm-flds.drop-fld,.frm-flds.zip-fld,.frm-flds.street-fld,.frm-flds.house-fld{width:49%;margin-right:0}.top-header{background-color:#00237e}}@media only screen and (max-width:320px){.frm-flds.half-fld-fixed{width:49%;margin-right:0}}.error{position:absolute;top:1px;right:1px;background-color:#ffc28c!important;color:#000;border:1px solid #f6b77f!important;border-radius:5px;padding:1px;padding-left:3px;padding-right:3px;margin:1px;font-size:10px;white-space:nowrap;opacity:.75;z-index:200}.error-data{border-color:#f6b77f!important;background-color:#feeac8!important}.arrow{position:absolute;top:14px;right:14px;width:16px;z-index:100}.checkmark-circle{width:150px;height:150px;position:relative;display:inline-block;vertical-align:top;margin:50px auto}.checkmark-circle .background{width:150px;height:150px;border-radius:50%;border:4px solid #2eb150;position:absolute}.checkmark-circle .checkmark{border-radius:5px}.checkmark-circle .checkmark.draw:after{-webkit-animation-delay:100ms;-moz-animation-delay:100ms;animation-delay:100ms;-webkit-animation-duration:1s;-moz-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:ease;-moz-animation-timing-function:ease;animation-timing-function:ease;-webkit-animation-name:checkmark;-moz-animation-name:checkmark;animation-name:checkmark;-webkit-transform:scaleX(-1) rotate(135deg);-moz-transform:scaleX(-1) rotate(135deg);-ms-transform:scaleX(-1) rotate(135deg);-o-transform:scaleX(-1) rotate(135deg);transform:scaleX(-1) rotate(135deg);-webkit-animation-fill-mode:forwards;-moz-animation-fill-mode:forwards;animation-fill-mode:forwards}.checkmark-circle .checkmark:after{opacity:1;height:75px;width:37.5px;-webkit-transform-origin:left top;-moz-transform-origin:left top;-ms-transform-origin:left top;-o-transform-origin:left top;transform-origin:left top;border-right:5px solid #2eb150;border-top:5px solid #2eb150;border-radius:2.5px!important;content:"";left:34px;top:80px;position:absolute}@-webkit-keyframes checkmark{0%{height:0;width:0;opacity:1}20%{height:0;width:37.5px;opacity:1}40%{height:75px;width:37.5px;opacity:1}100%{height:75px;width:37.5px;opacity:1}}@-moz-keyframes checkmark{0%{height:0;width:0;opacity:1}20%{height:0;width:37.5px;opacity:1}40%{height:75px;width:37.5px;opacity:1}100%{height:75px;width:37.5px;opacity:1}}@keyframes checkmark{0%{height:0;width:0;opacity:1}20%{height:0;width:37.5px;opacity:1}40%{height:75px;width:37.5px;opacity:1}100%{height:75px;width:37.5px;opacity:1}}.fa-spinner{margin-right:10px}.fa-chevron-right{animation:nudge 0.4s linear infinite alternate}.fas.fa-chevron-right.padding{padding-left:15px}i.fas.fa-lock{padding-right:10px}@keyframes nudge{0%,100%{transform:translate(0,0)}0%{transform:translate(0,0)}100%{transform:translate(-10px,0)}}.payment-flds-box-option img{display:inline-block;vertical-align:middle;margin:20px 0}.discount{background-color:var(--main-color);padding:5px 10px 5px 10px;border-radius:4px;color:#fff;font-size:10px;font-weight:600;position:absolute;margin-top:-2px;margin-left:10px;opacity:.4}.countdown-mob{background:#00237e;border-radius:0;font-size:12px;border:none;margin-bottom:0;padding:10px;color:#fff;text-align:center;text-transform:uppercase;font-weight:600;border-bottom:1px solid #00237e}.countdown{background:#fff0d0;border-radius:12px;font-size:13px;margin-right:5px;border:1px solid #fbcc70;margin-bottom:15px;padding:10px;color:#000;text-align:left}@media only screen and (max-width:749px){.countdown{margin-top:5px;margin-bottom:15px}}.bonus{background-color:#13b500!important;padding:10px;color:#fff;font-weight:600;border-radius:10px}button.checkout-submit-paypal.paypalbtn.overlay{cursor:pointer}@media only screen and (max-width:749px){.frm-flds.half-fld,.frm-flds.drop-fld,.frm-flds.zip-fld,.frm-flds.street-fld,.frm-flds.house-fld{width:100%;margin-right:0}}div#stripe-cvv{background-color:#fff;padding:15px 10px;border-radius:6px;border:1px solid #e2e2e2}div#stripe-cc-number{background-color:#fff;padding:15px 10px;border-radius:6px;border:1px solid #e2e2e2}.checkout-cart-display{margin-top:10px}div#stripe-exp{background-color:#fff;padding:15px 10px;border-radius:6px;border:1px solid #e2e2e2}@media only screen and (max-width:749px){.hide-mobo{display:none!important}}@media only screen and (min-width:749px){.hide-desk{display:none!important}.top-navbar>span{display:flex;align-items:center;gap:6px}.top-navbar-text{font-size:17px;order:-1}.desktop-hidden{display:none}}.checkout-money{text-align:right}.checkout-cart-display .product-line td{border-bottom:1px solid #eee}.checkout-cart-display .product-line:last-child td{border-bottom:none}button,a,input,select{cursor:pointer}tr.discount-line{text-align:left;color:#27925e;font-weight:600}tr.product-line{text-align:left!important}tr.subtotal-line{text-align:left}tr.shipping-line{text-align:left}tr.tax-line{text-align:left}tr.total-line{text-align:left;font-weight:600}button.checkout-coupon-button{width:100%;height:50px;background-color:#565656;color:#fff;border-radius:6px}.column{float:left;width:50%}.row:after{content:"";display:table;clear:both}.mob-secure{float:right;max-height:20px}.mob-logo{float:left!important;max-height:29px}@media only screen and (max-width:749px){span.etc_and_more{display:none!important}img.etc_and_more{margin-right:10px!important}.row:after{content:"";display:table;clear:both}.mob-secure{float:right;max-width:90%}.mob-logo{float:left!important;max-width:70%}}.payment-method{font-size:14px;margin-top:0;margin-bottom:5px;color:#7d7d7d}.white-overlay{background-color:rgb(255 255 255 / 95%);z-index:9999;top:0;left:0;height:100vh;width:100vw;position:fixed;margin:0}.spinner-wrapper{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);margin:0 auto;min-width:220px}.spinner{border:6px solid #e2e2e2;border-top:6px solid #00237e;border-radius:50%;width:100px;height:100px;animation:spin 2s linear infinite;margin:auto}.spinner-icon{position:relative}.spinner-icon .spinner-icon-svg{position:absolute;top:50%;left:50%;margin-left:-19px;margin-top:-70px;width:40px;height:40px}.spinner-text{text-align:center;color:#526473;font-size:16px;padding-top:2rem}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg)}}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.why-us{border-top:1px solid #eee;margin-top:20px;padding-top:20px}.div-block-9{background-color:#ececec;margin-top:10px;padding:10px;border-radius:10px}.review-cards{border-top:1px solid #eee;margin-top:20px;padding-top:20px}span.text-span-8{color:#ffb000;font-size:18px}span.text-span-6{font-weight:600}.custom-container{display:block;position:relative;padding-left:30px;padding-right:10px;margin-bottom:10px;margin-top:10px;cursor:pointer;font-size:22px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.custom-container input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}.checkmark{position:absolute;top:0;left:0;height:20px;width:20px;background-color:#f7d596;border-radius:0}.custom-container:hover input~.checkmark{background-color:#00237e;border-radius:0}.custom-container input:checked~.checkmark{background-color:#00237e;border-radius:0}.checkmark:after{content:"";position:absolute;display:none}.custom-container input:checked~.checkmark:after{display:block}.custom-container .checkmark:after{left:6px;top:5px;width:5px;height:5px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.custom-container .checkmark:before{border:2px solid #737373}.custom-upsell{background-color:#FFF4C6;padding:0 0 0 10px;border-radius:4px;border:1px solid #fede16;margin-top:10px}.checkout-billing-fields{display:none}.checkout-use-billing-address .checkout-billing-fields{display:block}.checkout-invalid-field label{color:red}.checkout-invalid-field input,.checkout-invalid-field select{border:1px solid red;background-color:#fff1f1}.checkout-validation-help-text{display:none}///////////// html,body{margin:0;padding:0}.header{display:flex;flex-direction:row;justify-content:space-around;background-color:#000;min-height:55px;padding:20px;color:#fff}.row{display:flex;flex-direction:row;flex-wrap:wrap;width:100%}.left-col{background-color:#fff;min-height:100vh;flex-grow:1;padding:6% 5%}.right-col{background-color:#fafafa;box-shadow:1px 0 0 #e1e1e1 inset;width:43%}.hrule-header{display:flex;width:100%;justify-content:space-around}.hrule-header .rule{flex-grow:1}.hrule-header .rule hr{color:#737373}.hrule-header .text{font-family:"Helvetica Neue";font-size:12px;color:#737373;margin-left:15px;margin-right:15px}@media (min-width:1281px){body{width:100%!important;max-width:100%!important}.container{width:1080px;margin:0 auto;border-right:0px!important}}div#summry-toggle-mob{height:20px}.paypal-express-checkout{padding:10px;border-radius:5px;border:1px solid #e2e2e2;margin-top:25px}.credit-card-checkout{margin-top:10px}tr.total-line{font-size:18px}.checkout-billing-fields.payment-flds-box{margin-top:15px;margin-bottom:15px}.uco-widget-title{font-size:14px;text-align:center;position:relative;z-index:20;margin-top:15px}.uco-widget-row{font-size:0;padding:10px 0}.uco-widget-img{width:20%;display:inline-block;font-size:14px;margin-right:2%;vertical-align:middle}.uco-widget-text{display:inline-block;font-size:14px;width:78%;vertical-align:middle;text-align:left}.uco-widget-title:before{z-index:10;position:absolute;top:50%;left:0;right:0;height:1px;content:"";background:#dfdfdf}.uco-widget-title span{padding:0 10px;background:#f9f9f9;vertical-align:middle;position:relative;z-index:20}h6.chk-sub{font-size:14px;font-weight:400;text-align:left;margin-bottom:0;margin-top:5px}span.review-content{display:block;margin-top:5px}span.review-verified{display:block;color:#4bad00}span.review-place{float:right;font-size:11px}span.review-name{margin-left:5px;font-weight:600}.copyright{float:left}.footer-links-checkout{font-size:11px;text-align:right;margin-top:2px}@media only screen and (max-width:749px){.footer-links-checkout{float:left;text-align:left;display:block}}.checkout-cart-display table{border:1px solid #ebecef;border-radius:5px;background-color:#fff;border-spacing:0}.checkout-cart-display td,th{border-bottom:1px solid #ebecef}.checkout-cart-display tbody>tr:last-child>td{border-bottom:0}td{padding-top:10px;padding-bottom:10px;padding-right:10px}td:first-child{padding-left:10px;padding-right:0}.coupon-input-wrapper button.checkout-coupon-button{width:35%;border-radius:0 5px 5px 0}.coupon-input-wrapper input.checkout-coupon-field{width:65%;border-radius:5px 0 0 5px}.coupon-input-wrapper{margin-top:15px}.coupon-description{text-align:left;border-radius:5px;margin-bottom:10px;font-size:10px;color:#757575}@media (max-width:749px){.alternative-payment-separator{padding-bottom:5px}}.alternative-payment-separator{display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:justify;justify-content:space-between;font-size:14px;line-height:1.4;text-align:center;text-transform:uppercase;color:#737373;margin-top:5px}.alternative-payment-separator::after,.alternative-payment-separator::before{content:"";display:inline-block;height:1px;background-color:#e6e6e6;-webkit-box-flex:1;flex-grow:1}.alternative-payment-separator__content{display:inline-block;padding:0 1em}.uco-widget-container{margin-top:15px}.checkout-submit-combo:not(.submitting) .fa-spinner{display:none}.checkout-submit-combo.submitting{opacity:.7}.checkout-submit-combo.submitting .fa-lock{display:none}.checkout-submit-combo:focus{outline:none}.payoptbox.payment_method{margin-bottom:15px}.paypal-express-checkout{padding:20px}.paypal-express-checkout .payment-method{display:inline-block;position:absolute;margin-top:-30px;transform:translateX(-50%);background:#fff;padding:0 10px}.checkout-cart-display .checkout-coupon-button{display:none!important}label.price{color:#000;font-weight:800;font-size:24px}#payment_radio-quadpay{border-top:1px solid #e2e2e2;border-bottom:none}.payment-cards-box{padding:0}.payment-cards-box label.paymybtn{height:100%;padding:14px 15px}.payment-cards-box img{margin-top:-35px!important;margin-right:15px}.frm-flds label{z-index:11;position:absolute;top:1px;color:#aaa;top:1px;left:13px;visibility:visible;opacity:1}.checkout-submit-combo{margin-top:20px;float:left}@media screen and (max-width:767px){.frm-flds.mobile-half-fld{width:49%}.frm-flds.mobile-fr{float:right}.chkout-bg{padding:20px;padding-top:0}.summry-toggle-mob{padding-left:10px;padding-right:10px}.summry-toggle{width:70%}.togle-price{width:30%}}.frm-flds label{opacity:0;visibility:hidden;display:block;position:absolute;top:8px;left:10px;font-size:11px;font-weight:400;line-height:1;color:#bbb;border-radius-top-left:3px;transition:all 0.2s ease-in-out;z-index:1;-webkit-transform:translateY(3px);transform:translateY(3px)}.frm-flds.filled label{opacity:1;visibility:visible;top:3px;left:12px;z-index:11;color:#00273e}.frm-flds.filled input{padding-top:12px}.paypal-express-checkout{padding:20px}.paypal-express-checkout .payment-method{display:inline-block;position:absolute;margin-top:-30px;transform:translateX(-50%);background:#fff;padding:0 10px}#payment_radio-quadpay #combo_mode_quadpay{float:left;margin-top:0}#payment_radio-quadpay .quadpay-img{float:left;margin-top:-4px!important}@media screen and (min-width:1001px){.lft-chk{padding-left:20px}.right-chk{padding-right:20px}}@media screen and (max-width:1000px){.chkout-bg{padding:0;padding-top:0}}.field__caret{width:0;height:0;border-left:5px solid #fff0;border-right:5px solid #fff0;border-top:5px solid #919191;position:absolute;right:14px;z-index:10;top:23px}.field__caret:before{content:"";display:inline-block;border-left:solid 1px #e2e2e2;height:25px;position:absolute;right:15px;top:-15px}.checkout-valid-field .field__caret{display:none}a.locker{z-index:10;top:15px;content:"";background:url(../images/locker.svg);width:20px;height:20px;display:inline-block;position:absolute;right:10px;background-size:contain;fill:#fff;color:#fff}a.question{z-index:10;top:15px;content:"";background:url(../images/question.svg);width:20px;height:20px;display:inline-block;position:absolute;right:10px;background-size:contain}.checkout-valid-field a.tooltip{display:none}.checkout-billing-fields.payment-flds-box{margin:0;padding:15px;background:#fafafa;border-right:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;border-left:1px solid #d9d9d9;border-image:initial;border-top:none}.checkout-cart-display button.checkout-coupon-button{display:none!important}.checkout-submit-combo:not(.submitting) .fa-spinner{display:none}.checkout-submit-combo.submitting{opacity:.7}.checkout-submit-combo.submitting .fa-lock{display:none}.checkout-submit-combo:focus{outline:none}#trustspot-widget-wrapper .inline-block{display:inline-block!important}.checkout-credit-card-form .frm-flds.filled label{opacity:1;visibility:visible;top:3px;left:12px;z-index:11}.checkout-credit-card-form .frm-flds.filled input{padding-top:12px}.checkout-credit-card-form .frm-flds .input-flds.required{border:solid 2px red}.checkout-combo-form .frm-flds input[type=number]::-webkit-inner-spin-button,.checkout-combo-form .frm-flds input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.urgency-timer{display:flex;align-items:center;padding:10px 15px;margin:15px 0 -15px;border:1px solid #00237e;border-radius:30px;color:#00237e;background-color:#ebf0ff;margin-bottom:5px}.urgency-timer .count-down{display:inline-block}.urgency-timer__icon-wrap_1D_{background:#def5ff;border-radius:50px;margin-right:11px;width:21px;height:21px}.urgency-timer__icon_2TR{width:21px;height:21px}.urgency-timer__text_3mA{font-family:Biotif-Regular,Arial,Helvetica,Sans-Serif;font-size:14px;line-height:1.5;margin:0}.urgency-timer__text_3mA [class*=date-count-down-inline]{display:inline-block}.shipgs-backorder img{width:25px;margin-right:10px;top:5px}.shipgs-backorder{display:inline-block;margin-top:10px;color:#00237e}.discount-applied{border:0;color:#000;text-align:left;padding:0;font-size:14px}.es_hide{display:none!important}i.fas.fa-percentage{padding:5px;background-color:#fde02f;border-radius:4px}.section__content.section__content__attentive{border-radius:4px;background-color:#fafafa;border:solid 1px #e6e6e6;padding:12px}.section__content.section__content__attentive .input-checkbox{background:#fff}.section__footer__attentive{font-size:9px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.25;letter-spacing:normal;text-align:left;color:gray;padding-top:4px}.section__footer__attentive a{color:gray;font-weight:700}.section__footer__attentive b{font-weight:700}.checkbox__label.checkbox__label__attentive{cursor:auto}.checkbox__label__attentive__header{font-size:14px;font-weight:700;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:normal;text-align:left;color:#333}.checkbox__label__attentive__subheader{font-size:12px;font-weight:400;font-style:normal;font-stretch:normal;line-height:1.17;letter-spacing:normal;text-align:left;color:#737373;padding-top:4px}.checkbox-wrapper{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;align-items:baseline}.checkbox__label.checkbox__label__attentive{padding-left:10px}.attntv{margin-top:10px;margin-bottom:10px}iframe#braintree-hosted-field-number{height:50px!important;background-color:#fff;padding:10px;border-radius:6px;border:1px solid #d9d9d9!important}iframe#braintree-hosted-field-expirationDate{height:50px!important;background-color:#fff;padding:10px;border-radius:6px;border:1px solid #d9d9d9!important}iframe#braintree-hosted-field-cvv{height:50px!important;background-color:#fff;padding:10px;border-radius:6px;border:1px solid #d9d9d9!important}.card_details_small{font-size:12px;text-align:left;margin-bottom:4px}.checkout-note{padding:10px;display:inline-block;color:#3a6507;margin-top:10px;border:solid 1px #9eb485;background:#e4ffc5;border-radius:5px;text-align:left}.checkout-note img{float:left;margin-right:10px;margin-top:3px}.checkout-note p{margin-top:7px;color:#3a6507;font-weight:400}@media screen and (min-width:768px){.mobile{display:none!important}}@media screen and (max-width:767px){.desktop{display:none!important}.checkout-note{margin-top:0;width:100vw;margin-left:calc(50% - 50vw);border-radius:0;border-left:0;border-right:0;padding:10px 20px}}.legal-term{color:#333;margin-top:15px!important;font-size:10px!important;text-align:left}.legal-term a{color:#333;text-decoration:underline;font-weight:700}.legal-term span{font-weight:700}.plus-text{font-size:12px;margin-top:-20px;padding-left:12px;text-align:left}.checkout-cart-display tbody>tr:last-child>td{padding-bottom:24px}
+    </style>
+
+    <!-- Start: Paypal Script -->
+	<script>
+		(function (a, t, o, m, i) {
+			a[m] = a[m] || [];
+			a[m].push({
+				t: new Date().getTime(),
+				event: 'snippetRun'
+			});
+			var f = t.getElementsByTagName(o)[0],
+				e = t.createElement(o);
+			e.async = !0;
+			e.dataset.namespace = "paypal_sdk";
+			e.src = 'https://www.paypal.com/sdk/js?components=shopping&client-id=' + i;
+			f.parentNode.insertBefore(e, f);
+		})(window, document, 'script', 'shoppingDDL', 'AUvZCmTImA-03Jrtr4x_ZdRAnJIL5wFVUC5_eenqw8Ynfecok5HhftLx3-ViQ-QWvmBrGyHICNnoFJrm');
+
+        var pptag = {
+            send: function (e, p) {
+                shoppingDDL.push({
+                    event: e,
+                    payload: p
+                });
+            },
+            set: function (s) {
+                shoppingDDL.push({
+                    set: s
+                });
+            }
+        };
+    </script>
+    <!-- End: Paypal Script -->
+    <!-- Google Tag Manager -->
+    <!-- <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MKJPBJLM');</script> -->
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKJPBJLM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="top-navbar">
+		<span>
+			<small>OFFER VALID FOR</small>
+			<span id="es_timer">
+				<strong class="timer time-remaining" data-timer-duration="900">15:00</strong>
+			</span>
+		</span>
+		<span class="top-navbar-text">
+			❄️ WINTER CLEARANCE SALE! 💳
+			<br class="desktop-hidden">
+			UP TO <strong>53% OFF AUTO-APPLIED</strong>
+		</span>
+    </div>
+
+    <div class="ch-preloader white-overlay" id="ch-preloader">
+        <div class="spinner-wrapper">
+            <div class="">
+                <div class="spinner"></div>
+                <div class="spinner-icon">
+                    <svg fill="#e2e2e2" class="spinner-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-5 7.723v2.277h-2v-2.277c-.595-.347-1-.984-1-1.723 0-1.104.896-2 2-2s2 .896 2 2c0 .738-.404 1.376-1 1.723zm-5-7.723v-4c0-2.206 1.794-4 4-4 2.205 0 4 1.794 4 4v4h-8z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="">
+                <div class="spinner-text">Loading Secure Checkout...</div>
+            </div>
+        </div>
+    </div>
+    <div class="top-header for-mob">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <svg class="mob-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="237.884px" height="50.153px" viewBox="-56.191 -11.846 237.884 50.153" enable-background="new -56.191 -11.846 237.884 50.153" xml:space="preserve">
+                        <g id="footer_logo" transform="translate(0 -0.215)">
+                            <g id="Group_4">
+                                <g id="Group_15" transform="translate(19.193)">
+                                    <path id="Fill_1" fill="#FFFFFF" d="M-41.916-9.523c0.038-0.35,0.348-0.608,0.701-0.58h0.623c0.276-0.013,0.535,0.135,0.663,0.38
+                                        l8.576,18.236h0.118l8.576-18.236c0.122-0.251,0.385-0.403,0.663-0.38h0.622c0.351-0.027,0.663,0.229,0.702,0.58l4.602,25.962
+                                        c0.122,0.351-0.069,0.734-0.42,0.855c-0.089,0.03-0.186,0.042-0.282,0.031h-3.547c-0.342-0.024-0.634-0.254-0.74-0.582
+                                        l-2.301-14.637h-0.116l-6.823,15.183c-0.104,0.271-0.372,0.445-0.662,0.427h-0.703c-0.287,0.005-0.548-0.164-0.662-0.427
+                                        l-6.899-15.183h-0.117l-2.264,14.64c-0.075,0.332-0.36,0.568-0.699,0.582h-3.507c-0.391,0.029-0.732-0.265-0.762-0.656
+                                        c-0.006-0.078,0.002-0.156,0.021-0.232L-41.916-9.523z"/>
+                                    <path id="Fill_3" fill="#FFFFFF" d="M-7.226-8.982c0.015-0.401,0.339-0.722,0.74-0.733h3.625c0.402,0.01,0.728,0.331,0.742,0.733
+                                        v25.577c-0.013,0.402-0.339,0.724-0.742,0.734h-3.625c-0.403-0.012-0.726-0.334-0.74-0.734V-8.982z"/>
+                                    <path id="Fill_5" fill="#FFFFFF" d="M27.503,17.329h-4.09c-0.257,0.017-0.501-0.122-0.623-0.346l-5.189-10.24h-4.324v9.853
+                                        c-0.018,0.399-0.34,0.72-0.742,0.733H8.949c-0.407,0-0.738-0.328-0.74-0.733V-8.981c0.002-0.406,0.334-0.735,0.74-0.735h11.15
+                                        c4.64-0.051,8.445,3.666,8.505,8.307c-0.11,3.549-2.41,6.658-5.77,7.803l5.34,9.812c0.135,0.242,0.135,0.535,0,0.777
+                                        C28.03,17.212,27.774,17.345,27.503,17.329z M13.318-5.08v7.687h6.355c2.14-0.051,3.849-1.795,3.859-3.935
+                                        c-0.056-2.091-1.769-3.756-3.859-3.752H13.318z"/>
+                                    <path id="Fill_7" fill="#FFFFFF" d="M59.586,17.329h-3.388c-0.509,0.032-0.978-0.288-1.131-0.774l-1.904-4.172H41.5l-1.913,4.172
+                                        c-0.175,0.471-0.626,0.781-1.129,0.77h-3.393c-0.253,0.012-0.492-0.109-0.635-0.317c-0.126-0.209-0.134-0.47-0.023-0.688
+                                        L46.527-9.677c0.113-0.266,0.375-0.434,0.662-0.425h0.39c0.29-0.021,0.559,0.152,0.663,0.425L60.25,16.322
+                                        c0.111,0.221,0.103,0.48-0.024,0.689C60.081,17.224,59.839,17.342,59.586,17.329z M47.229-0.405L43.409,8.1h7.835l-3.897-8.504
+                                        H47.229L47.229-0.405z"/>
+                                    <path id="Fill_9" fill="#FFFFFF" d="M79.238-10.102c3.495-0.094,6.888,1.196,9.436,3.592c0.308,0.247,0.354,0.698,0.108,1.007
+                                        c-0.021,0.026-0.045,0.051-0.07,0.074l-2.38,2.435c-0.226,0.269-0.625,0.304-0.893,0.08c-0.028-0.025-0.055-0.049-0.079-0.08
+                                        c-1.666-1.453-3.794-2.263-6.004-2.285c-4.856,0.055-8.751,4.037-8.697,8.895c0,0.04,0.002,0.079,0.003,0.117
+                                        c-0.078,4.852,3.792,8.85,8.644,8.926c0.029,0.001,0.06,0.001,0.089,0.001c2.185-0.02,4.292-0.798,5.966-2.204
+                                        c0.274-0.249,0.696-0.249,0.972,0l2.412,2.475c0.278,0.292,0.267,0.753-0.024,1.032c-0.004,0.004-0.01,0.008-0.014,0.011
+                                        c-2.545,2.443-5.948,3.79-9.475,3.748c-7.684-0.001-13.911-6.232-13.91-13.915C65.323-3.878,71.555-10.104,79.238-10.102"/>
+                                    <path id="Fill_11" fill="#FFFFFF" d="M97.285-8.982c0.001-0.406,0.331-0.735,0.738-0.733h0.001h3.587
+                                        c0.401,0.011,0.725,0.332,0.74,0.733v21.674h9.94c0.407-0.001,0.739,0.328,0.74,0.735c0,0,0,0,0,0.001v3.166
+                                        c-0.001,0.406-0.332,0.735-0.738,0.734h-0.002H98.025c-0.408,0.002-0.738-0.328-0.739-0.733c0-0.001,0-0.001,0-0.001V-8.982z"/>
+                                    <path id="Fill_13" fill="#FFFFFF" d="M120.673-8.982c0-0.406,0.332-0.735,0.738-0.733c0.002,0,0.002,0,0.002,0h15.866
+                                        c0.405-0.003,0.738,0.326,0.739,0.732v0.001v3.174c-0.001,0.406-0.333,0.735-0.738,0.733c0,0,0,0-0.001,0H125.74v6.331h9.629
+                                        c0.4,0.01,0.724,0.332,0.74,0.731v3.207c-0.002,0.407-0.333,0.735-0.739,0.733c0,0,0,0-0.001,0h-9.629v6.762h11.539
+                                        c0.406-0.001,0.738,0.327,0.739,0.735c0,0,0,0,0,0.001v3.164c0,0.407-0.331,0.737-0.738,0.735c0,0,0,0-0.001,0h-15.866
+                                        c-0.407,0.003-0.74-0.327-0.74-0.734l0,0V-8.982L120.673-8.982z"/>
+                                </g>
+                                <g id="Group_18" transform="translate(0 4.054)">
+                                    <g id="Clip_20-2" transform="translate(0 0.017)">
+                                        <path id="Mask-2" fill="#FFFFFF" d="M-46.106-3.106l-5.833-1.745l4.357,4.425l-4.357,4.433l5.833-1.745l1.477,6.166l1.475-6.166
+                                            l5.833,1.745l-4.353-4.433l4.353-4.425l-5.833,1.745l-1.475-6.173L-46.106-3.106z"/>
+                                        <path id="Clip_20-4" fill="#FFFFFF" d="M169.915-3.106l-5.839-1.745l4.354,4.425l-4.354,4.432l5.839-1.746l1.476,6.166
+                                            l1.472-6.166l5.831,1.746l-4.353-4.432l4.353-4.425l-5.831,1.745l-1.477-6.173L169.915-3.106z"/>
+                                    </g>
+                                </g>
+                            </g>
+                            <path id="Fill_22" fill="#FFFFFF" d="M45.519,38.521h-2.598V32.78l-3.045,5.742h-1.24l-3.068-5.776v5.775h-2.598V27.742H35.6
+                                l3.653,6.841l3.653-6.841h2.613V38.521z"/>
+                            <path id="Fill_25" fill="#FFFFFF" d="M53.4,38.522h-2.872l4.544-10.78h2.742l4.547,10.777h-2.857l-0.762-1.963h-4.578l-0.762,1.963
+                                L53.4,38.522z M56.447,30.735l-1.375,3.538h2.777L56.447,30.735z"/>
+                            <path id="Fill_28" fill="#FFFFFF" d="M71.669,38.521h-4.301v-10.78h4.301c3.569,0,5.958,2.167,5.958,5.389
+                                C77.628,36.353,75.238,38.521,71.669,38.521z M70.048,30.042v6.178h1.522c1.664,0.185,3.16-1.015,3.346-2.677
+                                c0.016-0.137,0.022-0.275,0.019-0.414c0.042-1.671-1.278-3.062-2.95-3.104c-0.137-0.004-0.274,0.003-0.409,0.019L70.048,30.042
+                                L70.048,30.042z"/>
+                            <path id="Fill_31" fill="#FFFFFF" d="M91.68,38.521h-8.477V27.742h8.426v2.288h-5.745v2.03h5.274v2.158h-5.274v2.03h5.795V38.521z"
+                                />
+                        </g>
+                    </svg>
+                </div>
+                <div class="column">
+                    <svg class="mob-secure" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72.7 7.8" style="enable-background:new 0 0 72.7 7.8;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{fill:#ffffff;}
+                        </style>
+                        <desc>Created with Sketch.</desc>
+                        <g>
+                            <g>
+                                <path class="st0" d="M5.7,3.6c0,0.7,0,1.5,0,2.2c0,0.1,0,0.1,0,0.2c-0.2,1-1.1,1.7-2.1,1.7c-0.4,0-0.9,0-1.4,0c-0.1,0-0.2,0-0.4,0
+                                    C0.8,7.6,0,6.7,0,5.7c0-0.7,0-1.4,0-2C0,3.3,0.3,3,0.6,3c0.1,0,0.1,0,0.1-0.1c0-0.3,0-0.5,0-0.8c0-1,0.7-1.8,1.6-2.1
+                                    C2.4,0,2.5,0,2.7,0C2.8,0,2.9,0,3,0c0.1,0,0.2,0,0.3,0C4.2,0.2,4.9,1.1,5,2c0,0.3,0,0.6,0,1C5,3,5,3,5,3C5.3,3,5.6,3.2,5.7,3.6
+                                    C5.7,3.5,5.7,3.6,5.7,3.6z M2.8,3c0.4,0,0.9,0,1.3,0c0.1,0,0.1,0,0.1-0.1c0-0.3,0-0.5,0-0.8c0-0.2,0-0.4-0.1-0.5
+                                    C3.9,1,3.3,0.6,2.6,0.7C1.9,0.8,1.4,1.4,1.4,2.1c0,0.3,0,0.6,0,0.8C1.4,3,1.4,3,1.5,3C1.9,3,2.4,3,2.8,3z M2.5,5.8
+                                    c0,0.1,0,0.1,0,0.2c0,0.2,0.2,0.4,0.4,0.4S3.2,6.2,3.2,6c0-0.1,0-0.3,0-0.4s0-0.2,0.1-0.3C3.5,5.2,3.5,5,3.5,4.8
+                                    c0-0.3-0.2-0.6-0.5-0.7C2.7,4,2.4,4.1,2.2,4.4C2.1,4.7,2.1,5,2.3,5.3c0.1,0.1,0.2,0.2,0.2,0.4C2.5,5.7,2.5,5.7,2.5,5.8z"/>
+                            </g>
+                            <g>
+                                <path class="st0" d="M9.4,5.5c0,0,0.1-0.1,0.1-0.1c0.1-0.1,0.1-0.1,0.2-0.1c0,0,0.5,0.5,1.1,0.5c0.5,0,0.9-0.3,0.9-0.7
+                                    c0-0.5-0.4-0.7-1.2-1.1C9.9,3.8,9.5,3.5,9.5,2.7c0-0.5,0.4-1.2,1.4-1.2c0.7,0,1.1,0.3,1.1,0.3c0,0,0.1,0.1,0,0.2
+                                    c0,0-0.1,0.1-0.1,0.1c-0.1,0.1-0.1,0.1-0.2,0.1c0,0-0.5-0.3-0.9-0.3c-0.7,0-0.9,0.5-0.9,0.7c0,0.4,0.3,0.7,0.9,0.9
+                                    c0.9,0.4,1.5,0.7,1.5,1.5c0,0.7-0.7,1.2-1.4,1.2c-0.8,0-1.3-0.5-1.4-0.5C9.4,5.7,9.4,5.7,9.4,5.5z"/>
+                                <path class="st0" d="M13.3,1.7c0-0.1,0.1-0.1,0.1-0.1H16c0.1,0,0.1,0.1,0.1,0.1v0.2C16.2,2,16.1,2,16,2h-2.2v1.6h1.9
+                                    c0.1,0,0.1,0.1,0.1,0.1V4c0,0.1-0.1,0.1-0.1,0.1h-1.9v1.7H16c0.1,0,0.1,0.1,0.1,0.1v0.2c0,0.1-0.1,0.1-0.1,0.1h-2.6
+                                    c-0.1,0-0.1-0.1-0.1-0.1V1.7z"/>
+                                <path class="st0" d="M19.3,1.5c0.7,0,1.2,0.2,1.6,0.6c0.1,0.1,0.1,0.1,0,0.2l-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0
+                                    C20.2,2.2,19.7,2,19.3,2c-1.1,0-1.9,0.9-1.9,1.9c0,1,0.8,1.9,1.9,1.9c0.6,0,0.9-0.2,1.3-0.5c0.1-0.1,0.1,0,0.2,0l0.2,0.2
+                                    c0.1,0,0,0.1,0,0.2c-0.5,0.4-1,0.6-1.6,0.6c-1.3,0-2.4-1.1-2.4-2.4S18,1.5,19.3,1.5z"/>
+                                <path class="st0" d="M21.9,1.7c0-0.1,0.1-0.1,0.1-0.1h0.3c0.1,0,0.1,0.1,0.1,0.1v2.8c0,0.8,0.5,1.4,1.3,1.4c0.8,0,1.3-0.6,1.3-1.3
+                                    V1.7c0-0.1,0.1-0.1,0.1-0.1h0.3c0.1,0,0.1,0.1,0.1,0.1v2.8c0,1-0.7,1.8-1.8,1.8c-1,0-1.8-0.8-1.8-1.8V1.7z"/>
+                                <path class="st0" d="M26.7,1.7c0-0.1,0.1-0.1,0.1-0.1h1.7C29.4,1.6,30,2.2,30,3c0,0.6-0.4,1.1-1,1.4L29.9,6c0,0.1,0,0.2-0.1,0.2
+                                    h-0.3c-0.1,0-0.1,0-0.1-0.1l-0.9-1.8h-1.3v1.7c0,0.1-0.1,0.1-0.1,0.1h-0.3c-0.1,0-0.1-0.1-0.1-0.1V1.7z M28.5,4c0.5,0,1-0.4,1-1
+                                    c0-0.5-0.4-0.9-1-0.9h-1.3V4H28.5z"/>
+                                <path class="st0" d="M31.1,1.7c0-0.1,0.1-0.1,0.1-0.1h2.6c0.1,0,0.1,0.1,0.1,0.1v0.2C34,2,33.9,2,33.9,2h-2.2v1.6h1.9
+                                    c0.1,0,0.1,0.1,0.1,0.1V4c0,0.1-0.1,0.1-0.1,0.1h-1.9v1.7h2.2c0.1,0,0.1,0.1,0.1,0.1v0.2c0,0.1-0.1,0.1-0.1,0.1h-2.6
+                                    c-0.1,0-0.1-0.1-0.1-0.1V1.7z"/>
+                                <path class="st0" d="M39.7,1.5c0.7,0,1.2,0.2,1.6,0.6c0.1,0.1,0.1,0.1,0,0.2l-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0
+                                    C40.6,2.2,40.2,2,39.7,2c-1.1,0-1.9,0.9-1.9,1.9c0,1,0.8,1.9,1.9,1.9c0.6,0,0.9-0.2,1.3-0.5c0.1-0.1,0.1,0,0.2,0l0.2,0.2
+                                    c0.1,0,0,0.1,0,0.2c-0.5,0.4-1,0.6-1.6,0.6c-1.3,0-2.4-1.1-2.4-2.4S38.4,1.5,39.7,1.5z"/>
+                                <path class="st0" d="M42.4,1.7c0-0.1,0.1-0.1,0.1-0.1h0.3c0.1,0,0.1,0.1,0.1,0.1v1.9h2.7V1.7c0-0.1,0.1-0.1,0.1-0.1H46
+                                    c0.1,0,0.1,0.1,0.1,0.1v4.4c0,0.1-0.1,0.1-0.1,0.1h-0.3c-0.1,0-0.1-0.1-0.1-0.1v-2h-2.7v2c0,0.1-0.1,0.1-0.1,0.1h-0.3
+                                    c-0.1,0-0.1-0.1-0.1-0.1V1.7z"/>
+                                <path class="st0" d="M47.5,1.7c0-0.1,0.1-0.1,0.1-0.1h2.6c0.1,0,0.1,0.1,0.1,0.1v0.2C50.3,2,50.3,2,50.2,2H48v1.6h1.9
+                                    c0.1,0,0.1,0.1,0.1,0.1V4c0,0.1-0.1,0.1-0.1,0.1H48v1.7h2.2c0.1,0,0.1,0.1,0.1,0.1v0.2c0,0.1-0.1,0.1-0.1,0.1h-2.6
+                                    c-0.1,0-0.1-0.1-0.1-0.1V1.7z"/>
+                                <path class="st0" d="M53.4,1.5c0.7,0,1.2,0.2,1.6,0.6c0.1,0.1,0.1,0.1,0,0.2l-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0
+                                    C54.4,2.2,53.9,2,53.4,2c-1.1,0-1.9,0.9-1.9,1.9c0,1,0.8,1.9,1.9,1.9c0.6,0,0.9-0.2,1.3-0.5c0.1-0.1,0.1,0,0.2,0l0.2,0.2
+                                    c0.1,0,0,0.1,0,0.2c-0.5,0.4-1,0.6-1.6,0.6c-1.3,0-2.4-1.1-2.4-2.4S52.1,1.5,53.4,1.5z"/>
+                                <path class="st0" d="M56.1,1.7c0-0.1,0.1-0.2,0.2-0.2h0.2c0.1,0,0.2,0.1,0.2,0.2v1.9l2.1-2c0,0,0.1-0.1,0.1-0.1h0.3
+                                    c0.1,0,0.2,0.1,0.1,0.2l-2.1,2L59.3,6c0,0,0,0.2-0.1,0.2h-0.3c0,0-0.1,0-0.1,0L56.6,4v2.1c0,0.1-0.1,0.2-0.2,0.2h-0.2
+                                    c-0.1,0-0.2-0.1-0.2-0.2V1.7z"/>
+                                <path class="st0" d="M62,1.5c1.3,0,2.4,1.1,2.4,2.4S63.4,6.3,62,6.3c-1.3,0-2.4-1.1-2.4-2.4S60.7,1.5,62,1.5z M62,5.8
+                                    C63.1,5.8,64,5,64,3.9S63.1,2,62,2c-1.1,0-1.9,0.9-1.9,1.9S61,5.8,62,5.8z"/>
+                                <path class="st0" d="M65.4,1.7c0-0.1,0.1-0.1,0.1-0.1h0.3c0.1,0,0.1,0.1,0.1,0.1v2.8c0,0.8,0.5,1.4,1.3,1.4c0.8,0,1.3-0.6,1.3-1.3
+                                    V1.7c0-0.1,0.1-0.1,0.1-0.1h0.3c0.1,0,0.1,0.1,0.1,0.1v2.8c0,1-0.7,1.8-1.8,1.8c-1,0-1.8-0.8-1.8-1.8V1.7z"/>
+                                <path class="st0" d="M70.9,2h-1.2c-0.1,0-0.1-0.1-0.1-0.1V1.7c0-0.1,0.1-0.1,0.1-0.1h2.8c0.1,0,0.1,0.1,0.1,0.1v0.2
+                                    C72.7,2,72.6,2,72.5,2h-1.2v4.1c0,0.1-0.1,0.1-0.1,0.1H71c-0.1,0-0.1-0.1-0.1-0.1V2z"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="summry-toggle-mob for-mob">
+        <div class="container" id="summry-toggle-mob">
+            <p class="summry-toggle">
+                <svg width="20" height="19" xmlns="http://www.w3.org/2000/svg"
+                    class="order-summary-toggle__icon">
+                    <path
+                        d="M17.178 13.088H5.453c-.454 0-.91-.364-.91-.818L3.727 1.818H0V0h4.544c.455 0 .91.364.91.818l.09 1.272h13.45c.274 0 .547.09.73.364.18.182.27.454.18.727l-1.817 9.18c-.09.455-.455.728-.91.728zM6.27 11.27h10.09l1.454-7.362H5.634l.637 7.362zm.092 7.715c1.004 0 1.818-.813 1.818-1.817s-.814-1.818-1.818-1.818-1.818.814-1.818 1.818.814 1.817 1.818 1.817zm9.18 0c1.004 0 1.817-.813 1.817-1.817s-.814-1.818-1.818-1.818-1.818.814-1.818 1.818.814 1.817 1.818 1.817z">
+                    </path>
+                </svg>
+                <span class="sm-txt"> Review order summary 
+                    <svg width="11" height="6" xmlns="http://www.w3.org/2000/svg"
+                        class="order-summary-toggle__dropdown" fill="#000">
+                        <path
+                            d="M.504 1.813l4.358 3.845.496.438.496-.438 4.642-4.096L9.504.438 4.862 4.534h.992L1.496.69.504 1.812z">
+                        </path>
+                    </svg>
+                </span>
+                <span class="sm-txt" style="display:none"> Hide order summary <svg width="11" height="7"
+                        xmlns="http://www.w3.org/2000/svg" class="order-summary-toggle__dropdown" fill="#000">
+                        <path
+                            d="M6.138.876L5.642.438l-.496.438L.504 4.972l.992 1.124L6.138 2l-.496.436 3.862 3.408.992-1.122L6.138.876z">
+                        </path>
+                    </svg></span>
+            </p>
+            <p class="togle-price">
+                <span class="checkout-total-value"></span>
+            </p>
+        </div>
+    </div>
+    <div class="chkout-bg" style="overflow:hidden">
+        <div class="container">
+            <div class="lft-chk">
+                <div class="logo-box for-desk">
+                    <div class="row">
+                        <div class="column">
+                            <svg class="mob-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="181.694" height="38.307" viewBox="0 0 181.694 38.307">
+                                <defs>
+                                  <clipPath id="clip-path">
+                                    <path id="Mask" d="M4.595,4.863,0,3.489,3.432,6.975,0,10.466,4.595,9.091l1.164,4.859L6.921,9.091l4.595,1.375L8.088,6.975l3.428-3.486L6.921,4.863,5.759,0Z" transform="translate(0 0)" fill="#00207d"/>
+                                  </clipPath>
+                                  <clipPath id="clip-path-2">
+                                    <path id="Clip_20" data-name="Clip 20" d="M4.6,4.863,0,3.489,3.43,6.975,0,10.466,4.6,9.091l1.163,4.859L6.922,9.091l4.594,1.375L8.087,6.975l3.429-3.486L6.922,4.863,5.759,0Z" transform="translate(170.178 0)" fill="#00207d"/>
+                                  </clipPath>
+                                </defs>
+                                <g id="footer_logo" transform="translate(0 -0.215)">
+                                  <g id="Group_4" data-name="Group 4">
+                                    <g id="Group_15" data-name="Group 15" transform="translate(19.193)">
+                                      <path id="Fill_1" data-name="Fill 1" d="M3.664.457A.516.516,0,0,1,4.217,0h.49A.563.563,0,0,1,5.23.3l6.756,14.366h.092L18.834.3a.533.533,0,0,1,.523-.3h.49A.517.517,0,0,1,20.4.457L24.025,20.91a.531.531,0,0,1-.553.7H20.678a.666.666,0,0,1-.583-.458L18.282,9.619H18.19L12.815,21.58a.523.523,0,0,1-.522.336H11.74a.556.556,0,0,1-.522-.336L5.783,9.619H5.691L3.908,21.153a.591.591,0,0,1-.551.458H.593a.56.56,0,0,1-.583-.7Z" transform="translate(0.159 0.215)" fill="#00207d"/>
+                                      <path id="Fill_3" data-name="Fill 3" d="M0,.578A.6.6,0,0,1,.583,0H3.439a.6.6,0,0,1,.585.578V20.727a.6.6,0,0,1-.585.58H.583A.6.6,0,0,1,0,20.727Z" transform="translate(31.152 0.52)" fill="#00207d"/>
+                                      <path id="Fill_5" data-name="Fill 5" d="M15.2,21.307H11.978a.527.527,0,0,1-.491-.274L7.4,12.966H3.992v7.76a.605.605,0,0,1-.584.58H.583A.583.583,0,0,1,0,20.726V.579A.582.582,0,0,1,.583,0H9.367a6.628,6.628,0,0,1,6.7,6.544,6.714,6.714,0,0,1-4.545,6.147l4.207,7.731a.623.623,0,0,1,0,.612A.589.589,0,0,1,15.2,21.307ZM4.024,3.652V9.708H9.03a3.114,3.114,0,0,0,3.04-3.1A3.037,3.037,0,0,0,9.03,3.652Z" transform="translate(43.313 0.52)" fill="#00207d"/>
+                                      <path id="Fill_7" data-name="Fill 7" d="M19.9,21.611H17.231A.878.878,0,0,1,16.34,21l-1.5-3.287H5.652L4.145,21a.928.928,0,0,1-.889.608H.583a.578.578,0,0,1-.5-.25.556.556,0,0,1-.018-.542L9.613.335A.549.549,0,0,1,10.135,0h.307a.522.522,0,0,1,.523.335l9.459,20.484a.559.559,0,0,1-.019.543A.577.577,0,0,1,19.9,21.611ZM10.166,7.64l-3.009,6.7h6.172l-3.07-6.7h-.094Z" transform="translate(63.887 0.215)" fill="#00207d"/>
+                                      <path id="Fill_9" data-name="Fill 9" d="M11.087,0A10.446,10.446,0,0,1,18.52,2.83a.564.564,0,0,1,.031.852L16.676,5.6a.5.5,0,0,1-.766,0,7.3,7.3,0,0,0-4.73-1.8A6.929,6.929,0,0,0,4.331,10.9a6.921,6.921,0,0,0,6.879,7.032,7.413,7.413,0,0,0,4.7-1.736.569.569,0,0,1,.766,0l1.9,1.949a.575.575,0,0,1-.029.822,10.594,10.594,0,0,1-7.464,2.952A10.959,10.959,0,1,1,11.087,0" transform="translate(88.183 0.215)" fill="#00207d"/>
+                                      <path id="Fill_11" data-name="Fill 11" d="M0,.578A.58.58,0,0,1,.583,0H3.409a.6.6,0,0,1,.583.578V17.653h7.832a.581.581,0,0,1,.583.58v2.494a.581.581,0,0,1-.583.58H.583A.581.581,0,0,1,0,20.727Z" transform="translate(113.487 0.52)" fill="#00207d"/>
+                                      <path id="Fill_13" data-name="Fill 13" d="M0,.578A.58.58,0,0,1,.583,0h12.5a.58.58,0,0,1,.583.578v2.5a.58.58,0,0,1-.583.578H3.992V8.643h7.586a.6.6,0,0,1,.583.578v2.526a.58.58,0,0,1-.583.578H3.992v5.327h9.091a.581.581,0,0,1,.583.58v2.494a.581.581,0,0,1-.583.58H.583A.581.581,0,0,1,0,20.727Z" transform="translate(131.912 0.52)" fill="#00207d"/>
+                                    </g>
+                                    <g id="Group_18" data-name="Group 18" transform="translate(0 4.054)">
+                                      <g id="Clip_20-2" data-name="Clip 20" transform="translate(0 0.017)">
+                                        <path id="Mask-2" data-name="Mask" d="M4.595,4.863,0,3.489,3.432,6.975,0,10.466,4.595,9.091l1.164,4.859L6.921,9.091l4.595,1.375L8.088,6.975l3.428-3.486L6.921,4.863,5.759,0Z" transform="translate(0 0)" fill="#00207d"/>
+                                        <path id="Clip_20-4" data-name="Clip 20" d="M4.6,4.863,0,3.489,3.43,6.975,0,10.466,4.6,9.091l1.163,4.859L6.922,9.091l4.594,1.375L8.087,6.975l3.429-3.486L6.922,4.863,5.759,0Z" transform="translate(170.178 0)" fill="#00207d"/>
+                                      </g>
+                                    </g>
+                                  </g>
+                                  <path id="Fill_22" data-name="Fill 22" d="M9.887,8.491H7.84V3.967l-2.4,4.525H4.464L2.047,3.941v4.55H0V0H2.073L4.951,5.387,7.828,0H9.887Z" transform="translate(66.891 30.03)" fill="#00207d"/>
+                                  <path id="Fill_25" data-name="Fill 25" d="M2.263,8.492H0L3.58,0H5.741L9.323,8.49H7.072l-.6-1.547H2.865l-.6,1.547Zm2.4-6.135L3.58,5.144H5.767Z" transform="translate(80.724 30.03)" fill="#00207d"/>
+                                  <path id="Fill_28" data-name="Fill 28" d="M3.389,8.492H0V0H3.389C6.2,0,8.083,1.706,8.083,4.245S6.2,8.492,3.389,8.492ZM2.111,1.812V6.679h1.2A2.386,2.386,0,0,0,5.96,4.245,2.386,2.386,0,0,0,3.313,1.812Z" transform="translate(93.991 30.029)" fill="#00207d"/>
+                                  <path id="Fill_31" data-name="Fill 31" d="M6.677,8.491H0V0H6.638V1.8H2.111V3.4H6.267v1.7H2.111v1.6H6.677Z" transform="translate(106.467 30.03)" fill="#00207d"/>
+                                </g>
+                            </svg>                              
+                        </div>
+                        <div class="column">
+                            <svg class="mob-secure" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72.7 7.8" style="enable-background:new 0 0 72.7 7.8;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st02{fill:#3F3F3F;}
+                                </style>
+                                <desc>Created with Sketch.</desc>
+                                <g>
+                                    <g>
+                                        <path class="st02" d="M5.7,3.6c0,0.7,0,1.5,0,2.2c0,0.1,0,0.1,0,0.2c-0.2,1-1.1,1.7-2.1,1.7c-0.4,0-0.9,0-1.4,0c-0.1,0-0.2,0-0.4,0
+                                            C0.8,7.6,0,6.7,0,5.7c0-0.7,0-1.4,0-2C0,3.3,0.3,3,0.6,3c0.1,0,0.1,0,0.1-0.1c0-0.3,0-0.5,0-0.8c0-1,0.7-1.8,1.6-2.1
+                                            C2.4,0,2.5,0,2.7,0C2.8,0,2.9,0,3,0c0.1,0,0.2,0,0.3,0C4.2,0.2,4.9,1.1,5,2c0,0.3,0,0.6,0,1C5,3,5,3,5,3C5.3,3,5.6,3.2,5.7,3.6
+                                            C5.7,3.5,5.7,3.6,5.7,3.6z M2.8,3c0.4,0,0.9,0,1.3,0c0.1,0,0.1,0,0.1-0.1c0-0.3,0-0.5,0-0.8c0-0.2,0-0.4-0.1-0.5
+                                            C3.9,1,3.3,0.6,2.6,0.7C1.9,0.8,1.4,1.4,1.4,2.1c0,0.3,0,0.6,0,0.8C1.4,3,1.4,3,1.5,3C1.9,3,2.4,3,2.8,3z M2.5,5.8
+                                            c0,0.1,0,0.1,0,0.2c0,0.2,0.2,0.4,0.4,0.4S3.2,6.2,3.2,6c0-0.1,0-0.3,0-0.4s0-0.2,0.1-0.3C3.5,5.2,3.5,5,3.5,4.8
+                                            c0-0.3-0.2-0.6-0.5-0.7C2.7,4,2.4,4.1,2.2,4.4C2.1,4.7,2.1,5,2.3,5.3c0.1,0.1,0.2,0.2,0.2,0.4C2.5,5.7,2.5,5.7,2.5,5.8z"/>
+                                    </g>
+                                    <g>
+                                        <path class="st02" d="M9.4,5.5c0,0,0.1-0.1,0.1-0.1c0.1-0.1,0.1-0.1,0.2-0.1c0,0,0.5,0.5,1.1,0.5c0.5,0,0.9-0.3,0.9-0.7
+                                            c0-0.5-0.4-0.7-1.2-1.1C9.9,3.8,9.5,3.5,9.5,2.7c0-0.5,0.4-1.2,1.4-1.2c0.7,0,1.1,0.3,1.1,0.3c0,0,0.1,0.1,0,0.2
+                                            c0,0-0.1,0.1-0.1,0.1c-0.1,0.1-0.1,0.1-0.2,0.1c0,0-0.5-0.3-0.9-0.3c-0.7,0-0.9,0.5-0.9,0.7c0,0.4,0.3,0.7,0.9,0.9
+                                            c0.9,0.4,1.5,0.7,1.5,1.5c0,0.7-0.7,1.2-1.4,1.2c-0.8,0-1.3-0.5-1.4-0.5C9.4,5.7,9.4,5.7,9.4,5.5z"/>
+                                        <path class="st02" d="M13.3,1.7c0-0.1,0.1-0.1,0.1-0.1H16c0.1,0,0.1,0.1,0.1,0.1v0.2C16.2,2,16.1,2,16,2h-2.2v1.6h1.9
+                                            c0.1,0,0.1,0.1,0.1,0.1V4c0,0.1-0.1,0.1-0.1,0.1h-1.9v1.7H16c0.1,0,0.1,0.1,0.1,0.1v0.2c0,0.1-0.1,0.1-0.1,0.1h-2.6
+                                            c-0.1,0-0.1-0.1-0.1-0.1V1.7z"/>
+                                        <path class="st02" d="M19.3,1.5c0.7,0,1.2,0.2,1.6,0.6c0.1,0.1,0.1,0.1,0,0.2l-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0
+                                            C20.2,2.2,19.7,2,19.3,2c-1.1,0-1.9,0.9-1.9,1.9c0,1,0.8,1.9,1.9,1.9c0.6,0,0.9-0.2,1.3-0.5c0.1-0.1,0.1,0,0.2,0l0.2,0.2
+                                            c0.1,0,0,0.1,0,0.2c-0.5,0.4-1,0.6-1.6,0.6c-1.3,0-2.4-1.1-2.4-2.4S18,1.5,19.3,1.5z"/>
+                                        <path class="st02" d="M21.9,1.7c0-0.1,0.1-0.1,0.1-0.1h0.3c0.1,0,0.1,0.1,0.1,0.1v2.8c0,0.8,0.5,1.4,1.3,1.4c0.8,0,1.3-0.6,1.3-1.3
+                                            V1.7c0-0.1,0.1-0.1,0.1-0.1h0.3c0.1,0,0.1,0.1,0.1,0.1v2.8c0,1-0.7,1.8-1.8,1.8c-1,0-1.8-0.8-1.8-1.8V1.7z"/>
+                                        <path class="st02" d="M26.7,1.7c0-0.1,0.1-0.1,0.1-0.1h1.7C29.4,1.6,30,2.2,30,3c0,0.6-0.4,1.1-1,1.4L29.9,6c0,0.1,0,0.2-0.1,0.2
+                                            h-0.3c-0.1,0-0.1,0-0.1-0.1l-0.9-1.8h-1.3v1.7c0,0.1-0.1,0.1-0.1,0.1h-0.3c-0.1,0-0.1-0.1-0.1-0.1V1.7z M28.5,4c0.5,0,1-0.4,1-1
+                                            c0-0.5-0.4-0.9-1-0.9h-1.3V4H28.5z"/>
+                                        <path class="st02" d="M31.1,1.7c0-0.1,0.1-0.1,0.1-0.1h2.6c0.1,0,0.1,0.1,0.1,0.1v0.2C34,2,33.9,2,33.9,2h-2.2v1.6h1.9
+                                            c0.1,0,0.1,0.1,0.1,0.1V4c0,0.1-0.1,0.1-0.1,0.1h-1.9v1.7h2.2c0.1,0,0.1,0.1,0.1,0.1v0.2c0,0.1-0.1,0.1-0.1,0.1h-2.6
+                                            c-0.1,0-0.1-0.1-0.1-0.1V1.7z"/>
+                                        <path class="st02" d="M39.7,1.5c0.7,0,1.2,0.2,1.6,0.6c0.1,0.1,0.1,0.1,0,0.2l-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0
+                                            C40.6,2.2,40.2,2,39.7,2c-1.1,0-1.9,0.9-1.9,1.9c0,1,0.8,1.9,1.9,1.9c0.6,0,0.9-0.2,1.3-0.5c0.1-0.1,0.1,0,0.2,0l0.2,0.2
+                                            c0.1,0,0,0.1,0,0.2c-0.5,0.4-1,0.6-1.6,0.6c-1.3,0-2.4-1.1-2.4-2.4S38.4,1.5,39.7,1.5z"/>
+                                        <path class="st02" d="M42.4,1.7c0-0.1,0.1-0.1,0.1-0.1h0.3c0.1,0,0.1,0.1,0.1,0.1v1.9h2.7V1.7c0-0.1,0.1-0.1,0.1-0.1H46
+                                            c0.1,0,0.1,0.1,0.1,0.1v4.4c0,0.1-0.1,0.1-0.1,0.1h-0.3c-0.1,0-0.1-0.1-0.1-0.1v-2h-2.7v2c0,0.1-0.1,0.1-0.1,0.1h-0.3
+                                            c-0.1,0-0.1-0.1-0.1-0.1V1.7z"/>
+                                        <path class="st02" d="M47.5,1.7c0-0.1,0.1-0.1,0.1-0.1h2.6c0.1,0,0.1,0.1,0.1,0.1v0.2C50.3,2,50.3,2,50.2,2H48v1.6h1.9
+                                            c0.1,0,0.1,0.1,0.1,0.1V4c0,0.1-0.1,0.1-0.1,0.1H48v1.7h2.2c0.1,0,0.1,0.1,0.1,0.1v0.2c0,0.1-0.1,0.1-0.1,0.1h-2.6
+                                            c-0.1,0-0.1-0.1-0.1-0.1V1.7z"/>
+                                        <path class="st02" d="M53.4,1.5c0.7,0,1.2,0.2,1.6,0.6c0.1,0.1,0.1,0.1,0,0.2l-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0
+                                            C54.4,2.2,53.9,2,53.4,2c-1.1,0-1.9,0.9-1.9,1.9c0,1,0.8,1.9,1.9,1.9c0.6,0,0.9-0.2,1.3-0.5c0.1-0.1,0.1,0,0.2,0l0.2,0.2
+                                            c0.1,0,0,0.1,0,0.2c-0.5,0.4-1,0.6-1.6,0.6c-1.3,0-2.4-1.1-2.4-2.4S52.1,1.5,53.4,1.5z"/>
+                                        <path class="st02" d="M56.1,1.7c0-0.1,0.1-0.2,0.2-0.2h0.2c0.1,0,0.2,0.1,0.2,0.2v1.9l2.1-2c0,0,0.1-0.1,0.1-0.1h0.3
+                                            c0.1,0,0.2,0.1,0.1,0.2l-2.1,2L59.3,6c0,0,0,0.2-0.1,0.2h-0.3c0,0-0.1,0-0.1,0L56.6,4v2.1c0,0.1-0.1,0.2-0.2,0.2h-0.2
+                                            c-0.1,0-0.2-0.1-0.2-0.2V1.7z"/>
+                                        <path class="st02" d="M62,1.5c1.3,0,2.4,1.1,2.4,2.4S63.4,6.3,62,6.3c-1.3,0-2.4-1.1-2.4-2.4S60.7,1.5,62,1.5z M62,5.8
+                                            C63.1,5.8,64,5,64,3.9S63.1,2,62,2c-1.1,0-1.9,0.9-1.9,1.9S61,5.8,62,5.8z"/>
+                                        <path class="st02" d="M65.4,1.7c0-0.1,0.1-0.1,0.1-0.1h0.3c0.1,0,0.1,0.1,0.1,0.1v2.8c0,0.8,0.5,1.4,1.3,1.4c0.8,0,1.3-0.6,1.3-1.3
+                                            V1.7c0-0.1,0.1-0.1,0.1-0.1h0.3c0.1,0,0.1,0.1,0.1,0.1v2.8c0,1-0.7,1.8-1.8,1.8c-1,0-1.8-0.8-1.8-1.8V1.7z"/>
+                                        <path class="st02" d="M70.9,2h-1.2c-0.1,0-0.1-0.1-0.1-0.1V1.7c0-0.1,0.1-0.1,0.1-0.1h2.8c0.1,0,0.1,0.1,0.1,0.1v0.2
+                                            C72.7,2,72.6,2,72.5,2h-1.2v4.1c0,0.1-0.1,0.1-0.1,0.1H71c-0.1,0-0.1-0.1-0.1-0.1V2z"/>
+                                    </g>
+                                </g>
+                                </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="urgency-timer">
+                    <div class="urgency-timer__icon-wrap_1D_">
+                        <svg class="urgency-timer__icon_2TR" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.6213 19.741C12.4481 19.7845 12.2716 19.8231 12.0963 19.8556C11.6382 19.9414 11.3354 20.3852 11.4201 20.847C11.4619 21.0742 11.5901 21.2635 11.764 21.387C11.9432 21.5141 12.1714 21.5715 12.4039 21.5279C12.6126 21.4889 12.8229 21.443 13.0293 21.3912C13.4816 21.2778 13.7572 20.8161 13.6444 20.3607C13.5318 19.9049 13.0739 19.6275 12.6213 19.741Z" fill="#001780"/>
+                            <path d="M18.8641 8.34276C18.9233 8.52229 19.0362 8.66884 19.1788 8.77011C19.3902 8.92012 19.6669 8.97059 19.9309 8.88265C20.3736 8.73459 20.6134 8.25378 20.467 7.80811C20.4003 7.60494 20.3262 7.40114 20.2474 7.2027C20.0742 6.76662 19.5832 6.55432 19.15 6.72875C18.7173 6.90308 18.5065 7.39786 18.6798 7.83407C18.7461 8.00086 18.8081 8.17206 18.8641 8.34276Z" fill="#001780"/>
+                            <path d="M15.3645 18.527C15.2155 18.6261 15.0618 18.7219 14.907 18.8117C14.503 19.0464 14.3647 19.5666 14.5976 19.9733C14.6608 20.084 14.7451 20.1744 14.8421 20.2435C15.1025 20.4281 15.4562 20.4558 15.7507 20.2849C15.9347 20.1779 16.1178 20.0642 16.2951 19.946C16.684 19.6872 16.791 19.1596 16.534 18.7678C16.277 18.3757 15.7534 18.2681 15.3645 18.527Z" fill="#001780"/>
+                            <path d="M20.9919 10.718C20.9736 10.2487 20.5811 9.88334 20.115 9.90166C19.6495 9.92017 19.2866 10.3156 19.3049 10.7848C19.3119 10.9642 19.3137 11.1463 19.3096 11.3255C19.303 11.6198 19.4459 11.8822 19.668 12.0399C19.8003 12.1337 19.9609 12.1905 20.135 12.1945C20.601 12.2049 20.9871 11.8327 20.9974 11.3631C21.0021 11.1489 21.0003 10.932 20.9919 10.718Z" fill="#001780"/>
+                            <path d="M18.7264 16.2897C18.3528 16.0073 17.8241 16.084 17.5443 16.4596C17.4371 16.6035 17.3243 16.7456 17.2087 16.8824C16.9067 17.2399 16.9494 17.7767 17.3042 18.0811C17.3244 18.0984 17.3449 18.1143 17.3661 18.1292C17.7188 18.3797 18.2091 18.3222 18.4943 17.985C18.6323 17.8218 18.7668 17.652 18.8949 17.4802C19.1747 17.1045 19.099 16.5716 18.7264 16.2897Z" fill="#001780"/>
+                            <path d="M19.9674 13.2158C19.5225 13.0753 19.0487 13.3248 18.9093 13.7729C18.856 13.9441 18.7968 14.1161 18.733 14.2846C18.5928 14.6554 18.7271 15.0635 19.035 15.2822C19.0915 15.3221 19.1537 15.356 19.2212 15.3818C19.6568 15.5492 20.1446 15.3291 20.3106 14.8901C20.3864 14.6898 20.4567 14.4851 20.5203 14.2816C20.6596 13.8334 20.4121 13.3563 19.9674 13.2158Z" fill="#001780"/>
+                            <path d="M8.93804 19.8633C8.18326 19.7268 7.45923 19.4943 6.77267 19.1701C6.76454 19.1658 6.75728 19.161 6.74875 19.1571C6.58696 19.0804 6.42544 18.9982 6.26889 18.9123C6.26834 18.9117 6.26735 18.9113 6.26649 18.9109C5.97926 18.7516 5.69892 18.5753 5.42658 18.3822C1.45536 15.5643 0.500516 10.0173 3.29814 6.01709C3.90647 5.14758 4.64265 4.42217 5.46337 3.84723C5.47349 3.84013 5.4836 3.83308 5.49362 3.82595C8.38573 1.81864 12.3128 1.68336 15.3837 3.74605L14.7241 4.70601C14.5408 4.9732 14.6536 5.16791 14.9746 5.13881L17.8396 4.88043C18.161 4.85133 18.3532 4.57127 18.2668 4.25861L17.4974 1.46637C17.4113 1.15334 17.1908 1.11587 17.0072 1.38302L16.3461 2.34525C14.0925 0.821354 11.3894 0.24027 8.7065 0.708902C8.43629 0.756011 8.16986 0.813669 7.90709 0.880785C7.90506 0.881149 7.90343 0.881376 7.90181 0.88174C7.89165 0.884241 7.88136 0.88756 7.87147 0.890334C5.55795 1.48879 3.53943 2.84798 2.09908 4.78726C2.08694 4.80177 2.07443 4.81596 2.06297 4.83174C2.01507 4.89671 1.96754 4.96319 1.921 5.02967C1.84489 5.13862 1.76986 5.2503 1.69809 5.36198C1.6891 5.37544 1.68224 5.38913 1.67439 5.40272C0.4858 7.25802 -0.0875022 9.40292 0.0108169 11.5866C0.0110427 11.5937 0.0106364 11.601 0.0108169 11.6083C0.0203419 11.8217 0.0371347 12.0379 0.0599313 12.2508C0.0611502 12.2645 0.0641747 12.2776 0.0664769 12.2913C0.090041 12.5054 0.119609 12.7199 0.15667 12.9345C0.533335 15.1234 1.55842 17.0931 3.09446 18.6257C3.09803 18.6293 3.10173 18.6332 3.10534 18.637C3.1066 18.6384 3.108 18.6391 3.10922 18.6404C3.52191 19.0504 3.9708 19.4297 4.45414 19.7726C5.71901 20.6704 7.12749 21.2638 8.6401 21.5372C9.09906 21.6203 9.53748 21.3126 9.61982 20.8505C9.70211 20.3881 9.39686 19.9461 8.93804 19.8633Z" fill="#001780"/>
+                            <path d="M9.9819 4.2572C9.60438 4.2572 9.29858 4.5655 9.29858 4.94523V11.8L15.5223 15.0408C15.6225 15.093 15.7297 15.1176 15.8353 15.1176C16.0825 15.1176 16.3212 14.982 16.4426 14.7454C16.6157 14.4078 16.4847 13.9929 16.1495 13.8185L10.6644 10.9621V4.94523C10.6644 4.5655 10.359 4.2572 9.9819 4.2572Z" fill="#001780"/>
+                        </svg>                            
+                    </div>
+                    <span style="font-weight:600;margin-right:5px;"> Hurry!</span> <span style="margin-right:5px;">Your
+                        order is
+                        reserved for </span><span id="countdown">10:00</span>
+                </div>
+                <div class="hide-desk">
+                    <div class="coupon-input-wrapper mobile_coupon">
+                        <input type="text" class="checkout-coupon-field input-flds" placeholder="Promo code (optional)">
+                        <button class="checkout-coupon-button">REDEEM</button>
+                    </div>
+                    <div class="discount-applied es_hide">
+                        <i data-v-5c54c67c="" class="fas fa-percentage" aria-hidden="true"></i>
+                        <strong>Discount Applied!</strong> You're saving <span class="checkout-discount-value"></span>
+                    </div>
+                </div>
+                <div class="paypal-express-checkout">
+                    <div class="payment-method">EXPRESS CHECKOUT</div>
+                    <form class="checkout-paypal-form">
+                        <div class="form-group" style="display: none">
+                            <label for="paypal_checkout_country">Country</label>
+                            <select id="paypal_checkout_country" type="text" name="paypal_checkout_country"></select>
+                            <div class="field__caret"></div>
+                        </div>
+                        <button class="checkout-submit-paypal paypalbtn overlay">
+                            <svg width="86px" height="22px" viewBox="0 0 86 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>paypal</title><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="8" transform="translate(-392.000000, -452.000000)" fill-rule="nonzero"><g id="express-checkout-cta" transform="translate(188.000000, 437.000000)"><g id="paypal" transform="translate(204.000000, 15.000000)"><path d="M66.4793651,5.73913043 L61.8380952,5.73913043 C61.5650794,5.73913043 61.2920635,6.01242236 61.1555556,6.28571429 L59.2444444,18.310559 C59.2444444,18.5838509 59.3809524,18.7204969 59.6539683,18.7204969 L62.1111111,18.7204969 C62.384127,18.7204969 62.5206349,18.5838509 62.5206349,18.310559 L63.0666667,14.8944099 C63.0666667,14.621118 63.3396825,14.3478261 63.7492063,14.3478261 L65.2507937,14.3478261 C68.3904762,14.3478261 70.1650794,12.8447205 70.5746032,9.83850932 C70.847619,8.60869565 70.5746032,7.51552795 70.0285714,6.83229814 C69.2095238,6.14906832 67.9809524,5.73913043 66.4793651,5.73913043 M67.0253968,10.2484472 C66.752381,11.8881988 65.5238095,11.8881988 64.2952381,11.8881988 L63.4761905,11.8881988 L64.0222222,8.74534161 C64.0222222,8.60869565 64.1587302,8.47204969 64.431746,8.47204969 L64.7047619,8.47204969 C65.5238095,8.47204969 66.3428571,8.47204969 66.752381,9.01863354 C67.0253968,9.1552795 67.0253968,9.56521739 67.0253968,10.2484472" id="Shape" fill="#139AD6"></path><g id="Group" transform="translate(25.800000, 5.739130)" fill="#263B80"><path d="M7.23492063,0 L2.59365079,0 C2.32063492,0 2.04761905,0.273291925 1.91111111,0.546583851 L0,12.5714286 C0,12.8447205 0.136507937,12.9813665 0.40952381,12.9813665 L2.59365079,12.9813665 C2.86666667,12.9813665 3.13968254,12.7080745 3.27619048,12.4347826 L3.82222222,9.1552795 C3.82222222,8.88198758 4.0952381,8.60869565 4.5047619,8.60869565 L6.00634921,8.60869565 C9.14603175,8.60869565 10.9206349,7.10559006 11.3301587,4.09937888 C11.6031746,2.86956522 11.3301587,1.77639752 10.784127,1.0931677 C9.96507937,0.409937888 8.87301587,0 7.23492063,0 M7.78095238,4.50931677 C7.50793651,6.14906832 6.27936508,6.14906832 5.05079365,6.14906832 L4.36825397,6.14906832 L4.91428571,3.00621118 C4.91428571,2.86956522 5.05079365,2.73291925 5.32380952,2.73291925 L5.5968254,2.73291925 C6.41587302,2.73291925 7.23492063,2.73291925 7.64444444,3.27950311 C7.78095238,3.41614907 7.91746032,3.82608696 7.78095238,4.50931677" id="Shape"></path><path d="M21.2952381,4.37267081 L19.1111111,4.37267081 C18.9746032,4.37267081 18.7015873,4.50931677 18.7015873,4.64596273 L18.5650794,5.32919255 L18.4285714,5.05590062 C17.8825397,4.37267081 16.9269841,4.09937888 15.8349206,4.09937888 C13.3777778,4.09937888 11.1936508,6.01242236 10.784127,8.60869565 C10.5111111,9.97515528 10.9206349,11.2049689 11.6031746,12.0248447 C12.2857143,12.8447205 13.2412698,13.1180124 14.4698413,13.1180124 C16.5174603,13.1180124 17.6095238,11.8881988 17.6095238,11.8881988 L17.4730159,12.5714286 C17.4730159,12.8447205 17.6095238,12.9813665 17.8825397,12.9813665 L19.9301587,12.9813665 C20.2031746,12.9813665 20.4761905,12.7080745 20.6126984,12.4347826 L21.8412698,4.7826087 C21.7047619,4.64596273 21.431746,4.37267081 21.2952381,4.37267081 M18.1555556,8.74534161 C17.8825397,9.97515528 16.9269841,10.931677 15.5619048,10.931677 C14.8793651,10.931677 14.3333333,10.6583851 14.0603175,10.3850932 C13.7873016,9.97515528 13.6507937,9.42857143 13.6507937,8.74534161 C13.7873016,7.51552795 14.8793651,6.55900621 16.1079365,6.55900621 C16.7904762,6.55900621 17.2,6.83229814 17.6095238,7.10559006 C18.0190476,7.51552795 18.1555556,8.19875776 18.1555556,8.74534161" id="Shape"></path></g><path d="M80.4031746,10.1118012 L78.2190476,10.1118012 C78.0825397,10.1118012 77.8095238,10.2484472 77.8095238,10.3850932 L77.6730159,11.068323 L77.5365079,10.7950311 C76.9904762,10.1118012 76.0349206,9.83850932 74.9428571,9.83850932 C72.4857143,9.83850932 70.3015873,11.7515528 69.8920635,14.3478261 C69.6190476,15.7142857 70.0285714,16.9440994 70.7111111,17.7639752 C71.3936508,18.5838509 72.3492063,18.8571429 73.5777778,18.8571429 C75.6253968,18.8571429 76.7174603,17.6273292 76.7174603,17.6273292 L76.5809524,18.310559 C76.5809524,18.5838509 76.7174603,18.7204969 76.9904762,18.7204969 L79.0380952,18.7204969 C79.3111111,18.7204969 79.584127,18.447205 79.7206349,18.173913 L80.9492063,10.5217391 C80.8126984,10.3850932 80.6761905,10.1118012 80.4031746,10.1118012 M77.2634921,14.484472 C76.9904762,15.7142857 76.0349206,16.6708075 74.6698413,16.6708075 C73.9873016,16.6708075 73.4412698,16.3975155 73.168254,16.1242236 C72.8952381,15.7142857 72.7587302,15.1677019 72.7587302,14.484472 C72.8952381,13.2546584 73.9873016,12.2981366 75.215873,12.2981366 C75.8984127,12.2981366 76.3079365,12.5714286 76.7174603,12.8447205 C77.2634921,13.2546584 77.4,13.9378882 77.2634921,14.484472" id="Shape" fill="#139AD6"></path><path d="M58.9714286,10.1118012 L56.6507937,10.1118012 C56.3777778,10.1118012 56.2412698,10.2484472 56.1047619,10.3850932 L53.1015873,15.0310559 L51.7365079,10.6583851 C51.6,10.3850932 51.4634921,10.2484472 51.0539683,10.2484472 L48.8698413,10.2484472 C48.5968254,10.2484472 48.4603175,10.5217391 48.4603175,10.7950311 L50.9174603,18.0372671 L48.5968254,21.3167702 C48.4603175,21.5900621 48.5968254,22 48.8698413,22 L51.0539683,22 C51.3269841,22 51.4634921,21.863354 51.6,21.7267081 L59.1079365,10.931677 C59.5174603,10.5217391 59.2444444,10.1118012 58.9714286,10.1118012" id="Path" fill="#263B80"></path><path d="M82.9968254,6.14906832 L81.0857143,18.447205 C81.0857143,18.7204969 81.2222222,18.8571429 81.4952381,18.8571429 L83.4063492,18.8571429 C83.6793651,18.8571429 83.952381,18.5838509 84.0888889,18.310559 L86,6.28571429 C86,6.01242236 85.8634921,5.8757764 85.5904762,5.8757764 L83.4063492,5.8757764 C83.2698413,5.73913043 83.1333333,5.8757764 82.9968254,6.14906832" id="Path" fill="#139AD6"></path><path d="M15.6984127,1.63975155 C14.7428571,0.546583851 12.968254,4.85463981e-15 10.5111111,4.85463981e-15 L3.68571429,4.85463981e-15 C3.27619048,4.85463981e-15 2.86666667,0.409937888 2.73015873,0.819875776 L0,18.7204969 C0,19.1304348 0.273015873,19.4037267 0.546031746,19.4037267 L4.77777778,19.4037267 L5.86984127,12.7080745 L5.86984127,12.9813665 C6.00634921,12.5714286 6.41587302,12.1614907 6.82539683,12.1614907 L8.87301587,12.1614907 C12.831746,12.1614907 15.8349206,10.5217391 16.7904762,6.01242236 C16.7904762,5.8757764 16.7904762,5.73913043 16.7904762,5.60248447 C16.6539683,5.60248447 16.6539683,5.60248447 16.7904762,5.60248447 C16.9269841,3.82608696 16.6539683,2.73291925 15.6984127,1.63975155" id="Path" fill="#263B80"></path><path d="M16.6539683,5.60248447 L16.6539683,5.60248447 C16.6539683,5.73913043 16.6539683,5.8757764 16.6539683,6.01242236 C15.6984127,10.6583851 12.6952381,12.1614907 8.73650794,12.1614907 L6.68888889,12.1614907 C6.27936508,12.1614907 5.86984127,12.5714286 5.73333333,12.9813665 L4.36825397,21.3167702 C4.36825397,21.5900621 4.5047619,21.863354 4.91428571,21.863354 L8.46349206,21.863354 C8.87301587,21.863354 9.28253968,21.5900621 9.28253968,21.1801242 L9.28253968,21.0434783 L9.96507937,16.8074534 L9.96507937,16.5341615 C9.96507937,16.1242236 10.3746032,15.8509317 10.784127,15.8509317 L11.3301587,15.8509317 C14.7428571,15.8509317 17.4730159,14.484472 18.1555556,10.3850932 C18.4285714,8.74534161 18.2920635,7.24223602 17.4730159,6.28571429 C17.3365079,6.01242236 17.0634921,5.73913043 16.6539683,5.60248447" id="Path" fill="#139AD6"></path><path d="M15.6984127,5.19254658 C15.5619048,5.19254658 15.4253968,5.05590062 15.2888889,5.05590062 C15.152381,5.05590062 15.015873,5.05590062 14.8793651,4.91925466 C14.3333333,4.7826087 13.7873016,4.7826087 13.1047619,4.7826087 L7.78095238,4.7826087 C7.64444444,4.7826087 7.50793651,4.7826087 7.37142857,4.91925466 C7.0984127,5.05590062 6.96190476,5.32919255 6.96190476,5.60248447 L5.86984127,12.7080745 L5.86984127,12.9813665 C6.00634921,12.5714286 6.41587302,12.1614907 6.82539683,12.1614907 L8.87301587,12.1614907 C12.831746,12.1614907 15.8349206,10.5217391 16.7904762,6.01242236 C16.7904762,5.8757764 16.7904762,5.73913043 16.9269841,5.60248447 C16.6539683,5.46583851 16.5174603,5.32919255 16.2444444,5.32919255 C15.8349206,5.19254658 15.8349206,5.19254658 15.6984127,5.19254658" id="Path" fill="#232C65"></path></g></g></g></g></svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="credit-card-checkout">
+                    <div class="alternative-payment-separator">
+                        <span class="alternative-payment-separator__content">
+                            OR PAY WITH CREDIT CARD
+                        </span>
+                    </div>
+                    <div class="warranty-addon">
+                        <form>
+                            <label data-variant-id="42700865831062" class="w-checkbox checkout-addon-toggle">
+                                <input type="checkbox" name="checkout-addon-toggle" id="checkout-addon-toggle" checked>
+                                <span for="checkout-addon-toggle" class="checkbox-detail">
+                                    <span>Yes, Add 2-Year Wear &amp; Tear Warranty For Only
+                                        $9.99</span>
+                                </span>
+                            </label>
+                        </form>
+                    </div>
+                    <!---  CREDIT CARD FORM -->
+                    <form class="checkout-combo-form" method="post">
+                        <div class="heading-box">
+                            <h4 class="chk-head">Contact Information</h4>
+                        </div>
+                        <div class="payment-flds-box" style="border-top: none; border-bottom: none;">
+                            <div class="form-group">
+                                <div class="frm-flds">
+                                    <label for="email">Email</label>
+                                    <input id="email" class="input-flds" type="email" name="email" placeholder="E-Mail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading-box">
+                            <h4 class="chk-head">Shipping Address</h4>
+                        </div>
+                        <div class="payment-flds-box" style="border-top: none; border-bottom: none;">
+                            <div class="form-group">
+                                <div class="frm-flds mobile-half-fld half-fld fl">
+                                    <label for="shipping_first_name">First Name</label>
+                                    <input type="text" class="input-flds" id="shipping_first_name"
+                                        name="shipping_first_name" placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds mobile-half-fld half-fld fr">
+                                    <label for="shipping_last_name">Last Name</label>
+                                    <input id="shipping_last_name" class="input-flds" type="text"
+                                        name="shipping_last_name" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds fl">
+                                    <label for="shipping_address_1">Address</label>
+                                    <input id="shipping_address_1" class="input-flds" type="text"
+                                        name="shipping_address1" placeholder="Address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds mobile-fr fl">
+                                    <label for="shipping_address_2">Apartment, suite, etc. (optional)</label>
+                                    <input id="shipping_address_2" class="input-flds" type="text"
+                                        name="shipping_address2" placeholder="Apartment, suite, etc. (optional)">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds half-fld fl">
+                                    <label for="shipping_city">City</label>
+                                    <input id="shipping_city" class="input-flds" type="text" name="shipping_city"
+                                        placeholder="City">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds mobile-half-fld half-fld fr">
+                                    <label for="shipping_state">State</label>
+                                    <select id="shipping_state" class="input-flds" name="shipping_state"
+                                        data-country="US">
+                                    </select>
+                                    <div class="field__caret"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds mobile-half-fld half-fld fl">
+                                    <label for="shipping_postal_code">ZIP Code</label>
+                                    <input type="text" class="input-flds" name="shipping_postal_code"
+                                        placeholder="Zip Code">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds half-fld fr">
+                                    <label for="shipping_country">Country</label>
+                                    <select id="shipping_country" class="input-flds" type="text"
+                                        name="shipping_country">
+                                    </select>
+                                    <div class="field__caret"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds fl">
+                                    <label for="shipping_phone">Phone</label>
+                                    <input id="shipping_phone" class="input-flds" type="number" name="shipping_phone"
+                                        inputmode="numeric" placeholder="Phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading-box">
+                            <h4 class="chk-head">Billing Address</h4>
+                            <h6 class="chk-sub">Select the address that matches your card or payment method.</h6>
+                        </div>
+                        <div class="payoptbox">
+                            <div class="form-group">
+                                <div class="payment-cards-box">
+                                    <label for="billing_use_shipping_true" class="paymybtn">
+                                        <input type="radio" id="billing_use_shipping_true"
+                                            class="form-gateway cardPayOpt" name="billing_use_shipping" value="true"
+                                            checked>Same as shipping address
+                                    </label>
+                                </div>
+                                <div class="payment-cards-box">
+                                    <label for="billing_use_shipping_false" class="paymybtn">
+                                        <input type="radio" id="billing_use_shipping_false"
+                                            class="form-gateway cardPayOpt" name="billing_use_shipping"
+                                            value="false">Use a different billing address
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- To automatically hide billing fields, we wrap them all in a container -->
+                        <!-- See CSS above -->
+                        <div class="checkout-billing-fields payment-flds-box">
+                            <div class="form-group">
+                                <div class="frm-flds mobile-half-fld half-fld fl">
+                                    <label for="billing_first_name">First Name</label>
+                                    <input type="text" id="billing_first_name" name="billing_first_name"
+                                        class="input-flds" placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds mobile-half-fld half-fld fr">
+                                    <label for="billing_last_name">Last Name</label>
+                                    <input id="billing_last_name" type="text" name="billing_last_name"
+                                        class="input-flds" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds fl">
+                                    <label for="billing_address_1">Address 1</label>
+                                    <input id="billing_address_1" type="text" name="billing_address1" class="input-flds"
+                                        placeholder="Address 1">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds mobile-fr fl">
+                                    <label for="billing_address_2">Address 2</label>
+                                    <input id="billing_address_2" type="text" name="billing_address2" class="input-flds"
+                                        placeholder="Address 2">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds half-fld fl">
+                                    <label for="billing_city">City</label>
+                                    <input id="billing_city" type="text" name="billing_city" class="input-flds"
+                                        placeholder="City">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds mobile-half-fld half-fld fr">
+                                    <label for="billing_state">State</label>
+                                    <select id="billing_state" name="billing_state" data-country="US"
+                                        class="input-flds">
+                                    </select>
+                                    <div class="field__caret"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds mobile-half-fld half-fld fl">
+                                    <label for="billing_postal_code">ZIP Code</label>
+                                    <input type="text" name="billing_postal_code" class="input-flds"
+                                        placeholder="Zip Code">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds half-fld fr">
+                                    <label for="billing_country">Country</label>
+                                    <select id="billing_country" type="text" name="billing_country" class="input-flds">
+                                    </select>
+                                    <div class="field__caret"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="frm-flds fl">
+                                    <label for="billing_phone">Phone</label>
+                                    <input id="billing_phone" type="text" name="billing_phone" class="input-flds"
+                                        inputmode="numeric" placeholder="Phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading-box">
+                            <h4 class="chk-head">Payment Method</h4>
+                            <h6 class="chk-sub">All transactions are secure and encrypted. </h6>
+
+                        </div>
+                        <div class="payoptbox cc-payment">
+                            <div class="form-group">
+                                <div class="payment-cards-box" id="payment_radio-credit">
+                                    <label class="paymybtn" for="combo_mode_credit"><input type="radio"
+                                            id="combo_mode_credit" name="combo_mode" value="credit"
+                                            class="form-gateway cardPayOpt" checked=""
+                                            class="form-gateway cardPayOpt">Credit Card</label>
+                                    <img src="images/ccs.svg" class="etc_and_more" height="20"
+                                        style="cursor:pointer; position:relative; margin-top:-20px; margin-right: 83px;">
+                                    <span class="etc_and_more"
+                                        style="float: right; margin-top: -23px !important; margin-right: 15px; font-size: 12px; color: #919191;">and
+                                        more...</span>
+                                </div>
+
+                                <div class="payment-flds-box" style="padding: 15px;">
+                                    <div class="form-group">
+                                        <div class="frm-flds fl">
+                                            <div class="card_details_small">CARD NUMBER</div>
+                                            <div id="braintree-cc-number"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="frm-flds half-fld fl">
+                                            <div class="card_details_small">VALID THROUGH</div>
+
+                                            <div id="braintree-expiry"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"></div>
+                                    <div class="frm-flds half-fld fr">
+                                        <div class="card_details_small">CVV</div>
+
+                                        <div id="braintree-cvv"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="payment-flds-box attntv" style="border-top: none; border-bottom: none;">
+                            <div class="form-group">
+                                <div id="attentiveOptIn" class="fieldset-description" data-buyer-acce="" pts-marketing-a="" ttentive="" aria-label="Phone Sign Up">
+                                    <div class="section__content section__content__attentive">
+                                        <div class="checkbox-wrapper">
+                                            <div class="checkbox__input" data-children-count="1">
+                                                <input type="checkbox" name="accepts_attentive">
+                                            </div>
+                                            <div class="checkbox__label checkbox__label__attentive">
+                                                <span id="headers" tabindex="0" focusable="true">
+                                                    <div class="checkbox__label__attentive__header">Get 10% Off Your
+                                                        Next
+                                                        Order</div>
+                                                    <div class="checkbox__label__attentive__subheader">Sign up to get
+                                                        texts from Miracle and we'll text you a coupon
+                                                        code</div>
+                                                </span>
+                                                <div class="section__footer__attentive">By
+                                                    checking this box, you agree to receive recurring automated
+                                                    promotional and personalized marketing text messages <b>(e.g.
+                                                        cart reminders)</b> from Miracle at the cell number used
+                                                    when signing up. Consent is not a condition of any purchase.
+                                                    <b>Reply HELP for help and STOP to cancel.</b> Msg frequency
+                                                    varies. Msg &amp; data rates may apply. View <a
+                                                        href="http://attn.tv/miracle/terms.html" target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        aria-label="Miracle Terms Link">Terms</a> &amp; <a
+                                                        href="https://www.miraclebrand.co/pages/privacy-policy"
+                                                        target="_blank" rel="noopener noreferrer"
+                                                        aria-label="Miracle Privacy Link">Privacy</a>.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="legal-term">By clicking the <span>"Complete Purchase"</span> button, you hereby agree
+                            to and
+                            accept Pattern Brands LLC's <a target="_blank"
+                                href="https://www.miraclebrand.co/pages/privacy-policy">Privacy Policy</a> and <a
+                                target="_blank" href="https://www.miraclebrand.co/pages/terms-and-conditions">Terms of
+                                Use</a></p>
+                        <button class="checkout-submit-combo frm-submit">
+                            <div class="complete-purchase"><i data-v-5c54c67c="" class="fas fa-lock"></i>
+                                <i class="fas fa-spinner fa-spin"></i>
+                                COMPLETE PURCHASE<br><span class="try-risk" style="font-size:10px;font-weight:400">TRY
+                                    IT RISK FREE! -
+                                    30 DAY MONEY BACK GUARANTEE!</span>
+                            </div>
+                        </button>
+                    </form>
+                    <!---  END CREDIT CARD FORM -->
+                </div>
+                <div class="tt-promo-brand">
+                </div>
+                <div class="hide-desk">
+                    <div class="uco-widget-container">
+                        <div class="alternative-payment-separator" data-alternative-payment-separator="">
+                            <span class="alternative-payment-separator__content">
+                                Trusted customer reviews
+                            </span>
+                        </div>
+                        <div class="uco-widget-content">
+                            <div class="uco-widget-row">
+                                <div class="uco-widget-img reviews">
+                                    <img src="./images/male.png" width="64px">
+                                </div>
+                                <div class="uco-widget-text reviews">
+                                    <div class="reviews">
+                                        <svg width="70" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 133.7 24" style="enable-background:new 0 0 133.7 24;" xml:space="preserve">
+                                            <style type="text/css">
+                                                .st03{fill:#FEC600;}
+                                            </style>
+                                            <g>
+                                                <polygon class="st03" points="0,9.3 5.9,15.1 4.8,24 12.4,19.9 19.9,24 18.5,14.8 24.3,9.3 16.4,7.5 12.1,0 7.5,8.1 	"/>
+                                                <polygon class="st03" points="54,9.3 59.9,15.1 58.8,24 66.4,19.9 73.9,24 72.5,14.8 78.3,9.3 70.4,7.5 66.1,0 61.5,8.1 	"/>
+                                                <polygon class="st03" points="27,9.3 32.9,15.1 31.8,24 39.4,19.9 46.9,24 45.5,14.8 51.3,9.3 43.4,7.5 39.1,0 34.5,8.1 	"/>
+                                                <polygon class="st03" points="81.6,9.3 87.5,15.1 86.4,24 94,19.9 101.5,24 100.1,14.8 105.9,9.3 98,7.5 93.7,0 89.1,8.1 	"/>
+                                                <polygon class="st03" points="109.4,9.3 115.3,15.1 114.2,24 121.8,19.9 129.3,24 127.9,14.8 133.7,9.3 125.8,7.5 121.5,0 
+                                                    116.9,8.1 	"/>
+                                            </g>
+                                        </svg>
+
+                                        <span class="review-name">Russel J.</span>
+                                        <span class="review-verified">
+                                            <svg width="12" style="margin-right:5px; margin-top:5px"; version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
+                                                <g>
+                                                    <path fill="#4BAD00" d="M0,7c0-1.4,0-2.7,0-4.1C0,1.2,1.2,0,2.8,0c2.8,0,5.5,0,8.3,0C12.8,0,14,1.2,14,2.9c0,2.8,0,5.6,0,8.4
+                                                        c0,1.6-1.2,2.8-2.8,2.8c-2.8,0-5.6,0-8.4,0C1.2,14,0,12.8,0,11.1C0,9.8,0,8.4,0,7z M12.6,5.4c-0.2,0.1-0.3,0.2-0.4,0.3
+                                                        c-1.4,1.4-2.9,2.9-4.3,4.3c-0.6,0.6-1.1,0.6-1.7,0C5.4,9.3,4.7,8.7,4.1,8C3.7,7.6,3.6,7.2,3.9,6.9C4.2,6.5,4.6,6.6,5,7
+                                                        c0.5,0.5,1,1,1.5,1.5c0.2,0.3,0.4,0.3,0.7,0c1.7-1.7,3.4-3.3,5.1-5c0.1-0.1,0.2-0.2,0.2-0.3c0.3-0.9-0.4-1.9-1.3-1.9
+                                                        c-2.8,0-5.7,0-8.5,0C1.9,1.4,1.4,2,1.4,2.8c0,2.8,0,5.6,0,8.4c0,0.8,0.5,1.4,1.4,1.4c2.8,0,5.6,0,8.4,0c0.8,0,1.4-0.6,1.4-1.4
+                                                        C12.6,9.3,12.6,7.4,12.6,5.4z"/>
+                                                </g>
+                                            </svg>
+                                            
+                                            Verified Buyer
+                                        </span>
+                                        <span class="review-content">“This towel is great. Best I have ever used.”
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uco-widget-row">
+                                <div class="uco-widget-img">
+                                    <img src="./images/male.png" width="64px">
+                                </div>
+                                <div class="uco-widget-text">
+                                    <div class="reviews">
+                                        <svg width="70" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 133.7 24" style="enable-background:new 0 0 133.7 24;" xml:space="preserve">
+                                            <style type="text/css">
+                                                .st03{fill:#FEC600;}
+                                            </style>
+                                            <g>
+                                                <polygon class="st03" points="0,9.3 5.9,15.1 4.8,24 12.4,19.9 19.9,24 18.5,14.8 24.3,9.3 16.4,7.5 12.1,0 7.5,8.1 	"/>
+                                                <polygon class="st03" points="54,9.3 59.9,15.1 58.8,24 66.4,19.9 73.9,24 72.5,14.8 78.3,9.3 70.4,7.5 66.1,0 61.5,8.1 	"/>
+                                                <polygon class="st03" points="27,9.3 32.9,15.1 31.8,24 39.4,19.9 46.9,24 45.5,14.8 51.3,9.3 43.4,7.5 39.1,0 34.5,8.1 	"/>
+                                                <polygon class="st03" points="81.6,9.3 87.5,15.1 86.4,24 94,19.9 101.5,24 100.1,14.8 105.9,9.3 98,7.5 93.7,0 89.1,8.1 	"/>
+                                                <polygon class="st03" points="109.4,9.3 115.3,15.1 114.2,24 121.8,19.9 129.3,24 127.9,14.8 133.7,9.3 125.8,7.5 121.5,0 
+                                                    116.9,8.1 	"/>
+                                            </g>
+                                        </svg>
+                                        <span class="review-name">Stephen B.</span>
+                                        <span class="review-verified">
+                                            <svg width="12" style="margin-right:5px; margin-top:5px"; version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
+                                                <g>
+                                                    <path fill="#4BAD00" d="M0,7c0-1.4,0-2.7,0-4.1C0,1.2,1.2,0,2.8,0c2.8,0,5.5,0,8.3,0C12.8,0,14,1.2,14,2.9c0,2.8,0,5.6,0,8.4
+                                                        c0,1.6-1.2,2.8-2.8,2.8c-2.8,0-5.6,0-8.4,0C1.2,14,0,12.8,0,11.1C0,9.8,0,8.4,0,7z M12.6,5.4c-0.2,0.1-0.3,0.2-0.4,0.3
+                                                        c-1.4,1.4-2.9,2.9-4.3,4.3c-0.6,0.6-1.1,0.6-1.7,0C5.4,9.3,4.7,8.7,4.1,8C3.7,7.6,3.6,7.2,3.9,6.9C4.2,6.5,4.6,6.6,5,7
+                                                        c0.5,0.5,1,1,1.5,1.5c0.2,0.3,0.4,0.3,0.7,0c1.7-1.7,3.4-3.3,5.1-5c0.1-0.1,0.2-0.2,0.2-0.3c0.3-0.9-0.4-1.9-1.3-1.9
+                                                        c-2.8,0-5.7,0-8.5,0C1.9,1.4,1.4,2,1.4,2.8c0,2.8,0,5.6,0,8.4c0,0.8,0.5,1.4,1.4,1.4c2.8,0,5.6,0,8.4,0c0.8,0,1.4-0.6,1.4-1.4
+                                                        C12.6,9.3,12.6,7.4,12.6,5.4z"/>
+                                                </g>
+                                            </svg>
+                                            
+                                            Verified Buyer
+                                        </span>
+                                        <span class="review-content">"This towel far exceeded my expectations! Big,
+                                            soft, feels great, and
+                                            best of all...no must smell ever!"
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uco-widget-container">
+                        <div class="alternative-payment-separator" data-alternative-payment-separator="">
+                            <span class="alternative-payment-separator__content">
+                                Why choose us?
+                            </span>
+                        </div>
+                        <div class="uco-widget-content">
+                            <div class="uco-widget-row">
+                                <div class="uco-widget-img">
+                                    <svg width="50" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve">
+                                        <g>
+                                            <g>
+                                                <path d="M26,52C11.7,52,0,40.4,0,26S11.7,0,26,0s26,11.7,26,26S40.4,52,26,52z M26,1.5C12.5,1.5,1.5,12.5,1.5,26
+                                                    s11,24.5,24.5,24.5s24.5-11,24.5-24.5S39.5,1.5,26,1.5z"/>
+                                            </g>
+                                            <g>
+                                                <g>
+                                                    <path d="M18.2,36.3l1.6-2.3c1.7,1.5,3.8,2.7,6.3,2.7c3,0,4.5-1.6,4.5-4.2c0-6.6-11.3-5.1-11.3-13c0-4.1,3-6.8,7.2-6.8
+                                                        c3.2,0,5.2,1.4,6.8,3.1l-1.8,2c-1.5-1.5-2.7-2.3-4.9-2.3c-2.5,0-4.1,1.6-4.1,3.9c0,5.9,11.3,4.3,11.3,13c0,4.3-3.1,7.2-7.8,7.2
+                                                        C23.1,39.4,20.1,38,18.2,36.3z M25.1,8.6h2.4v5.2h-2.4V8.6z M25.1,38.2h2.4v5.1h-2.4V38.2z"/>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path d="M-101,80.6c-3.1,0-5.7-2.6-5.7-5.7s2.6-5.7,5.7-5.7c3.2,0,5.7,2.6,5.7,5.7S-97.8,80.6-101,80.6z M-101,70.7
+                                                    c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2c2.3,0,4.2-1.9,4.2-4.2S-98.6,70.7-101,70.7z"/>
+                                            </g>
+                                            <g>
+                                                <path d="M-71.6,80.6c-3.1,0-5.7-2.6-5.7-5.7s2.6-5.7,5.7-5.7c3.2,0,5.7,2.6,5.7,5.7S-68.5,80.6-71.6,80.6z M-71.6,70.7
+                                                    c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2c2.3,0,4.2-1.9,4.2-4.2S-69.3,70.7-71.6,70.7z"/>
+                                            </g>
+                                            <g>
+                                                <polygon points="-79.5,76.5 -96.1,76.5 -96.1,75 -81,75 -81,47.5 -112.8,47.5 -112.8,75 -105.8,75 -105.8,76.5 -114.3,76.5 
+                                                    -114.3,46 -79.5,46 		"/>
+                                            </g>
+                                            <g>
+                                                <rect x="-80.3" y="74.5" width="3.7" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <polygon points="-62.2,76 -66.6,76 -66.6,74.5 -63.7,74.5 -63.7,63.6 -70.9,52.8 -80.3,52.8 -80.3,51.3 -70,51.3 -62.2,63.1 		"/>
+                                            </g>
+                                            <g>
+                                                <path d="M-66.7,61.1h-11.9v-6.3h7.1L-66.7,61.1z M-77.1,59.6h7.4l-2.5-3.3h-4.9V59.6z"/>
+                                            </g>
+                                            <g>
+                                                <rect x="-80.3" y="62.9" width="17.3" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect x="-123.7" y="51.3" width="18.2" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect x="-122.4" y="56.5" width="3.7" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect x="-115.6" y="56.5" width="18.7" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect x="-113.6" y="62.2" width="10.1" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect x="-118.7" y="62.2" width="3" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect x="-123.3" y="62.2" width="2.1" height="1.5"/>
+                                            </g>
+                                        </g>
+                                    </svg>                                        
+                                </div>
+                                <div class="uco-widget-text">
+                                    <span>30-Day Satisfaction Guarantee</span>
+                                    <p>If you're not satisfied with your product(s), we'll make it right! We promise.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="uco-widget-row">
+                                <div class="uco-widget-img">
+                                    <svg width="60" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 61.5 34.6" style="enable-background:new 0 0 61.5 34.6;" xml:space="preserve">
+                                        <g>
+                                            <g>
+                                                <path d="M22.8,34.6c-3.1,0-5.7-2.6-5.7-5.7s2.6-5.7,5.7-5.7c3.2,0,5.7,2.6,5.7,5.7S25.9,34.6,22.8,34.6z M22.8,24.7
+                                                    c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2c2.3,0,4.2-1.9,4.2-4.2S25.1,24.7,22.8,24.7z"/>
+                                            </g>
+                                            <g>
+                                                <path d="M52.1,34.6c-3.1,0-5.7-2.6-5.7-5.7s2.6-5.7,5.7-5.7c3.2,0,5.7,2.6,5.7,5.7S55.2,34.6,52.1,34.6z M52.1,24.7
+                                                    c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2c2.3,0,4.2-1.9,4.2-4.2S54.4,24.7,52.1,24.7z"/>
+                                            </g>
+                                            <g>
+                                                <polygon points="44.2,30.5 27.6,30.5 27.6,29 42.7,29 42.7,1.5 10.9,1.5 10.9,29 17.9,29 17.9,30.5 9.4,30.5 9.4,0 44.2,0 		"/>
+                                            </g>
+                                            <g>
+                                                <rect x="43.4" y="28.4" width="3.7" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <polygon points="61.5,29.9 57.1,29.9 57.1,28.4 60,28.4 60,17.6 52.9,6.8 43.4,6.8 43.4,5.3 53.7,5.3 61.5,17.1 		"/>
+                                            </g>
+                                            <g>
+                                                <path d="M57,15.1H45.1V8.7h7.1L57,15.1z M46.6,13.6H54l-2.5-3.3h-4.9V13.6z"/>
+                                            </g>
+                                            <g>
+                                                <rect x="43.4" y="16.9" width="17.3" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect y="5.3" width="18.2" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect x="1.3" y="10.5" width="3.7" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect x="8.1" y="10.5" width="18.7" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect x="10.1" y="16.2" width="10.1" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect x="5" y="16.2" width="3" height="1.5"/>
+                                            </g>
+                                            <g>
+                                                <rect x="0.4" y="16.2" width="2.1" height="1.5"/>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="uco-widget-text">
+                                    <span>Over 30,000 successfully shipped orders</span>
+                                    <p>Happy customers, end-to-end tracking and reliable customer service</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="copyright">
+                        All rights reserved ©
+                    </div>
+                    <div class="footer-links-checkout">
+                        <a href="https://www.miraclebrand.co/pages/privacy-policy" target="_blank"
+                            class="footer-link">Privacy
+                            Policy</a> |
+                        <a href="https://www.miraclebrand.co/pages/care-guide" target="_blank" class="footer-link">Care
+                            Guide</a> |
+                        <a href="https://www.miraclebrand.co/pages/terms-and-conditions" target="_blank"
+                            class="footer-link">Terms
+                            and Conditions</a> |
+                        <a href="../legal/note.html" target="_blank" class="footer-link">Notice At Collection</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right-chk">
+                <div id="toggle-mob-cart" class="isopened">
+                    <div style="width:100%; padding:30px 0;">
+                        <h4 class="chk-head">Order Summary</h4>
+                        <div class="checkout-cart-display"></div>
+                        <div class="plus-text">*Plus applicable taxes</div>
+                        <div class="hide-mobo">
+                            <div class="coupon-input-wrapper desktop_coupon">
+                                <input type="text" class="checkout-coupon-field input-flds"
+                                    placeholder="Promo code (optional)">
+                                <button class="checkout-coupon-button">REDEEM</button>
+                            </div>
+                            <div class="discount-applied es_hide">
+                                <i data-v-5c54c67c="" class="fas fa-percentage" aria-hidden="true"></i>
+                                <strong>Discount Applied!</strong> You're saving <span
+                                    class="checkout-discount-value"></span>
+                            </div>
+                            <div class="uco-widget-container">
+                                <div class="alternative-payment-separator" data-alternative-payment-separator="">
+                                    <span class="alternative-payment-separator__content">
+                                        Trusted customer reviews
+                                    </span>
+                                </div>
+                                <div class="uco-widget-content">
+                                    <div class="uco-widget-row">
+                                        <div class="uco-widget-img reviews">
+                                            <img src="./images/male.png" width="64px">
+                                        </div>
+                                        <div class="uco-widget-text reviews">
+                                            <div class="reviews">
+                                                <svg width="70" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 133.7 24" style="enable-background:new 0 0 133.7 24;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st03{fill:#FEC600;}
+                                                    </style>
+                                                    <g>
+                                                        <polygon class="st03" points="0,9.3 5.9,15.1 4.8,24 12.4,19.9 19.9,24 18.5,14.8 24.3,9.3 16.4,7.5 12.1,0 7.5,8.1 	"/>
+                                                        <polygon class="st03" points="54,9.3 59.9,15.1 58.8,24 66.4,19.9 73.9,24 72.5,14.8 78.3,9.3 70.4,7.5 66.1,0 61.5,8.1 	"/>
+                                                        <polygon class="st03" points="27,9.3 32.9,15.1 31.8,24 39.4,19.9 46.9,24 45.5,14.8 51.3,9.3 43.4,7.5 39.1,0 34.5,8.1 	"/>
+                                                        <polygon class="st03" points="81.6,9.3 87.5,15.1 86.4,24 94,19.9 101.5,24 100.1,14.8 105.9,9.3 98,7.5 93.7,0 89.1,8.1 	"/>
+                                                        <polygon class="st03" points="109.4,9.3 115.3,15.1 114.2,24 121.8,19.9 129.3,24 127.9,14.8 133.7,9.3 125.8,7.5 121.5,0 
+                                                            116.9,8.1 	"/>
+                                                    </g>
+                                                </svg>
+                                                <span class="review-name">Russel J.</span>
+                                                <span class="review-verified">
+                                                    <svg width="12" style="margin-right:5px; margin-top:5px"; version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
+                                                        <g>
+                                                            <path fill="#4BAD00" d="M0,7c0-1.4,0-2.7,0-4.1C0,1.2,1.2,0,2.8,0c2.8,0,5.5,0,8.3,0C12.8,0,14,1.2,14,2.9c0,2.8,0,5.6,0,8.4
+                                                                c0,1.6-1.2,2.8-2.8,2.8c-2.8,0-5.6,0-8.4,0C1.2,14,0,12.8,0,11.1C0,9.8,0,8.4,0,7z M12.6,5.4c-0.2,0.1-0.3,0.2-0.4,0.3
+                                                                c-1.4,1.4-2.9,2.9-4.3,4.3c-0.6,0.6-1.1,0.6-1.7,0C5.4,9.3,4.7,8.7,4.1,8C3.7,7.6,3.6,7.2,3.9,6.9C4.2,6.5,4.6,6.6,5,7
+                                                                c0.5,0.5,1,1,1.5,1.5c0.2,0.3,0.4,0.3,0.7,0c1.7-1.7,3.4-3.3,5.1-5c0.1-0.1,0.2-0.2,0.2-0.3c0.3-0.9-0.4-1.9-1.3-1.9
+                                                                c-2.8,0-5.7,0-8.5,0C1.9,1.4,1.4,2,1.4,2.8c0,2.8,0,5.6,0,8.4c0,0.8,0.5,1.4,1.4,1.4c2.8,0,5.6,0,8.4,0c0.8,0,1.4-0.6,1.4-1.4
+                                                                C12.6,9.3,12.6,7.4,12.6,5.4z"/>
+                                                        </g>
+                                                    </svg>
+                                                    
+                                                    Verified Buyer
+                                                </span>
+                                                <span class="review-content">“This towel is great. Best I have ever
+                                                    used.”
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uco-widget-row">
+                                        <div class="uco-widget-img">
+                                            <img src="./images/male.png" width="64px">
+                                        </div>
+                                        <div class="uco-widget-text">
+                                            <div class="reviews">
+                                                <svg width="70" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 133.7 24" style="enable-background:new 0 0 133.7 24;" xml:space="preserve">
+                                                    <style type="text/css">
+                                                        .st03{fill:#FEC600;}
+                                                    </style>
+                                                    <g>
+                                                        <polygon class="st03" points="0,9.3 5.9,15.1 4.8,24 12.4,19.9 19.9,24 18.5,14.8 24.3,9.3 16.4,7.5 12.1,0 7.5,8.1 	"/>
+                                                        <polygon class="st03" points="54,9.3 59.9,15.1 58.8,24 66.4,19.9 73.9,24 72.5,14.8 78.3,9.3 70.4,7.5 66.1,0 61.5,8.1 	"/>
+                                                        <polygon class="st03" points="27,9.3 32.9,15.1 31.8,24 39.4,19.9 46.9,24 45.5,14.8 51.3,9.3 43.4,7.5 39.1,0 34.5,8.1 	"/>
+                                                        <polygon class="st03" points="81.6,9.3 87.5,15.1 86.4,24 94,19.9 101.5,24 100.1,14.8 105.9,9.3 98,7.5 93.7,0 89.1,8.1 	"/>
+                                                        <polygon class="st03" points="109.4,9.3 115.3,15.1 114.2,24 121.8,19.9 129.3,24 127.9,14.8 133.7,9.3 125.8,7.5 121.5,0 
+                                                            116.9,8.1 	"/>
+                                                    </g>
+                                                </svg>
+                                                <span class="review-name">Stephen B</span>
+                                                <span class="review-verified">
+                                                    <svg width="12" style="margin-right:5px; margin-top:5px"; version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
+                                                        <g>
+                                                            <path fill="#4BAD00" d="M0,7c0-1.4,0-2.7,0-4.1C0,1.2,1.2,0,2.8,0c2.8,0,5.5,0,8.3,0C12.8,0,14,1.2,14,2.9c0,2.8,0,5.6,0,8.4
+                                                                c0,1.6-1.2,2.8-2.8,2.8c-2.8,0-5.6,0-8.4,0C1.2,14,0,12.8,0,11.1C0,9.8,0,8.4,0,7z M12.6,5.4c-0.2,0.1-0.3,0.2-0.4,0.3
+                                                                c-1.4,1.4-2.9,2.9-4.3,4.3c-0.6,0.6-1.1,0.6-1.7,0C5.4,9.3,4.7,8.7,4.1,8C3.7,7.6,3.6,7.2,3.9,6.9C4.2,6.5,4.6,6.6,5,7
+                                                                c0.5,0.5,1,1,1.5,1.5c0.2,0.3,0.4,0.3,0.7,0c1.7-1.7,3.4-3.3,5.1-5c0.1-0.1,0.2-0.2,0.2-0.3c0.3-0.9-0.4-1.9-1.3-1.9
+                                                                c-2.8,0-5.7,0-8.5,0C1.9,1.4,1.4,2,1.4,2.8c0,2.8,0,5.6,0,8.4c0,0.8,0.5,1.4,1.4,1.4c2.8,0,5.6,0,8.4,0c0.8,0,1.4-0.6,1.4-1.4
+                                                                C12.6,9.3,12.6,7.4,12.6,5.4z"/>
+                                                        </g>
+                                                    </svg>
+                                                    
+                                                    Verified Buyer
+                                                </span>
+                                                <span class="review-content">"This towel far exceeded my expectations!
+                                                    Big, soft, feels great,
+                                                    and best of all...no must smell ever!"
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uco-widget-container">
+                                <div class="alternative-payment-separator" data-alternative-payment-separator="">
+                                    <span class="alternative-payment-separator__content">
+                                        Why choose us?
+                                    </span>
+                                </div>
+                                <div class="uco-widget-content">
+                                    <div class="uco-widget-row">
+                                        <div class="uco-widget-img">
+                                            <svg width="50" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve">
+                                                <g>
+                                                    <g>
+                                                        <path d="M26,52C11.7,52,0,40.4,0,26S11.7,0,26,0s26,11.7,26,26S40.4,52,26,52z M26,1.5C12.5,1.5,1.5,12.5,1.5,26
+                                                            s11,24.5,24.5,24.5s24.5-11,24.5-24.5S39.5,1.5,26,1.5z"/>
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <path d="M18.2,36.3l1.6-2.3c1.7,1.5,3.8,2.7,6.3,2.7c3,0,4.5-1.6,4.5-4.2c0-6.6-11.3-5.1-11.3-13c0-4.1,3-6.8,7.2-6.8
+                                                                c3.2,0,5.2,1.4,6.8,3.1l-1.8,2c-1.5-1.5-2.7-2.3-4.9-2.3c-2.5,0-4.1,1.6-4.1,3.9c0,5.9,11.3,4.3,11.3,13c0,4.3-3.1,7.2-7.8,7.2
+                                                                C23.1,39.4,20.1,38,18.2,36.3z M25.1,8.6h2.4v5.2h-2.4V8.6z M25.1,38.2h2.4v5.1h-2.4V38.2z"/>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                                <g>
+                                                    <g>
+                                                        <path d="M-101,80.6c-3.1,0-5.7-2.6-5.7-5.7s2.6-5.7,5.7-5.7c3.2,0,5.7,2.6,5.7,5.7S-97.8,80.6-101,80.6z M-101,70.7
+                                                            c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2c2.3,0,4.2-1.9,4.2-4.2S-98.6,70.7-101,70.7z"/>
+                                                    </g>
+                                                    <g>
+                                                        <path d="M-71.6,80.6c-3.1,0-5.7-2.6-5.7-5.7s2.6-5.7,5.7-5.7c3.2,0,5.7,2.6,5.7,5.7S-68.5,80.6-71.6,80.6z M-71.6,70.7
+                                                            c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2c2.3,0,4.2-1.9,4.2-4.2S-69.3,70.7-71.6,70.7z"/>
+                                                    </g>
+                                                    <g>
+                                                        <polygon points="-79.5,76.5 -96.1,76.5 -96.1,75 -81,75 -81,47.5 -112.8,47.5 -112.8,75 -105.8,75 -105.8,76.5 -114.3,76.5 
+                                                            -114.3,46 -79.5,46 		"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="-80.3" y="74.5" width="3.7" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <polygon points="-62.2,76 -66.6,76 -66.6,74.5 -63.7,74.5 -63.7,63.6 -70.9,52.8 -80.3,52.8 -80.3,51.3 -70,51.3 -62.2,63.1 		"/>
+                                                    </g>
+                                                    <g>
+                                                        <path d="M-66.7,61.1h-11.9v-6.3h7.1L-66.7,61.1z M-77.1,59.6h7.4l-2.5-3.3h-4.9V59.6z"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="-80.3" y="62.9" width="17.3" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="-123.7" y="51.3" width="18.2" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="-122.4" y="56.5" width="3.7" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="-115.6" y="56.5" width="18.7" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="-113.6" y="62.2" width="10.1" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="-118.7" y="62.2" width="3" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="-123.3" y="62.2" width="2.1" height="1.5"/>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="uco-widget-text">
+                                            <span>30-Day Satisfaction Guarantee</span>
+                                            <p>If you're not satisfied with your product(s), we'll make it right! We
+                                                promise!</p>
+                                        </div>
+                                    </div>
+                                    <div class="uco-widget-row">
+                                        <div class="uco-widget-img">
+                                            <svg width="60" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 61.5 34.6" style="enable-background:new 0 0 61.5 34.6;" xml:space="preserve">
+                                                <g>
+                                                    <g>
+                                                        <path d="M22.8,34.6c-3.1,0-5.7-2.6-5.7-5.7s2.6-5.7,5.7-5.7c3.2,0,5.7,2.6,5.7,5.7S25.9,34.6,22.8,34.6z M22.8,24.7
+                                                            c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2c2.3,0,4.2-1.9,4.2-4.2S25.1,24.7,22.8,24.7z"/>
+                                                    </g>
+                                                    <g>
+                                                        <path d="M52.1,34.6c-3.1,0-5.7-2.6-5.7-5.7s2.6-5.7,5.7-5.7c3.2,0,5.7,2.6,5.7,5.7S55.2,34.6,52.1,34.6z M52.1,24.7
+                                                            c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2c2.3,0,4.2-1.9,4.2-4.2S54.4,24.7,52.1,24.7z"/>
+                                                    </g>
+                                                    <g>
+                                                        <polygon points="44.2,30.5 27.6,30.5 27.6,29 42.7,29 42.7,1.5 10.9,1.5 10.9,29 17.9,29 17.9,30.5 9.4,30.5 9.4,0 44.2,0 		"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="43.4" y="28.4" width="3.7" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <polygon points="61.5,29.9 57.1,29.9 57.1,28.4 60,28.4 60,17.6 52.9,6.8 43.4,6.8 43.4,5.3 53.7,5.3 61.5,17.1 		"/>
+                                                    </g>
+                                                    <g>
+                                                        <path d="M57,15.1H45.1V8.7h7.1L57,15.1z M46.6,13.6H54l-2.5-3.3h-4.9V13.6z"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="43.4" y="16.9" width="17.3" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect y="5.3" width="18.2" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="1.3" y="10.5" width="3.7" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="8.1" y="10.5" width="18.7" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="10.1" y="16.2" width="10.1" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="5" y="16.2" width="3" height="1.5"/>
+                                                    </g>
+                                                    <g>
+                                                        <rect x="0.4" y="16.2" width="2.1" height="1.5"/>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="uco-widget-text">
+                                            <span>Over 50,000 successfully shipped orders</span>
+                                            <p>Happy customers, end-to-end tracking and reliable customer service</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+		let checkoutHench = {
+			initTimer: function() {
+				const self = this;
+
+				let timers = document.querySelectorAll('.timer');
+				if (timers.length > 0) {
+					const leftOverTime = self.getCookie('__miracle_timer');
+					console.log('LOC: ', leftOverTime);
+					timers.forEach(function(timer) {
+						let duration = leftOverTime || timer.getAttribute('data-timer-duration');
+
+						self.startTimer(duration, timer);
+					});
+				}
+			},
+
+			startTimer: function(duration, element) {
+				const currentDate = new Date();
+					  currentDate.setTime(currentDate.getTime() + 24 * 60 * 60 * 1000);
+
+				const timer = setInterval(function() {
+					let minutes = Math.floor(duration / 60);
+					let seconds = duration - (minutes * 60);
+					if (minutes < 10) {
+						minutes = `0${minutes}`;
+					}
+					if (seconds < 10) {
+						seconds = `0${seconds}`;
+					}
+
+					element.innerHTML = `${minutes}:${seconds}`;
+
+					if (duration < 1) {
+						clearInterval(timer);
+						return;
+					} else {
+						duration--;
+
+						document.cookie = `__miracle_timer=${encodeURIComponent(duration)}; expires=${currentDate.toUTCString()}; path=/`;
+						console.log('Cookie set: ', currentDate.toUTCString(), encodeURIComponent(duration));
+					}
+				}, 1000);
+			},
+
+			getCookie: function(name) {
+				const value = `; ${document.cookie}`;
+				const parts = value.split(`; ${name}=`);
+				if (parts.length === 2) return parts.pop().split(';').shift();
+			}
+		}
+
+		document.addEventListener('DOMContentLoaded', function(e) {
+			checkoutHench.initTimer();
+		});
+	</script>
+
+    <script type="text/javascript" src="./js/checkout_t_b_n.js"></script>
+    <script type="text/javascript" async src="https://try.miraclebrand.co/pixel.js"></script>
+</body>
+</html>

@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Secure Checkout - Miracle</title>
+	<meta content="Secure Checkout - Miracle" property="og:title">
+	<meta content="Secure Checkout - Miracle" property="twitter:title">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+	<link href="./images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<link href="./images/webclip.png" rel="apple-touch-icon">
+	<meta content="../toolkit/scripts/custom_translation.json" name="checkout-translations-url">
+	<!--  CSS REFERECE
+	<link rel="stylesheet" type="text/css" href="/checkout_v2/css/checkout.css">
+	-->
+	<style>
+		h4,h6{margin-top:10px}h4,h6,p{margin-bottom:10px}.w-input,.w-select,img{vertical-align:middle}.w-checkbox::after,.w-embed:after,.w-radio:after{clear:both}.caret-down,.form-group,.w-layout-grid{-ms-grid-columns:1fr 1fr;grid-template-columns:1fr 1fr}.form-content,.form-wrapper,.w-inline-block,img{max-width:100%}.trusted-reviews,.w-layout-grid{grid-column-gap:16px;grid-row-gap:16px}.caret-down,.form-group,.trusted-reviews,.w-layout-grid{-ms-grid-rows:auto auto;grid-template-rows:auto auto;grid-auto-columns:1fr}.sign-up-text,.sign-up-text-2{white-space:nowrap;text-align:center}.caret-down,.form-group,.form-group-2,.rtc-grid,.trusted-reviews,.w-layout-grid{grid-auto-columns:1fr}.input-flds{transition:box-shadow 0.08s ease-in,color 0.08s ease-in,filter 50000s,-webkit-filter 50000s;-webkit-appearance:none;-moz-appearance:none;appearance:none}.input-flds:focus{z-index:15!important;outline:0!important;box-shadow:0 0 0 1px rgb(208 110 18 / .3),0 1px 1px 0 rgb(0 0 0 / .07),0 0 0 4px rgb(208 110 18 / .3)!important}.input-flds::-moz-placeholder,.input-flds::-webkit-input-placeholder{color:rgb(26 26 26 / .4)}.input-flds::-moz-placeholder,.input-flds::-webkit-input-placeholder,.input-flds::placeholder{color:rgb(26 26 26 / .4)}.pristine-error.checkout-validation-help-text{color:red;font-size:9px;text-align:left;width:100%}.checkout-invalid-field input,.checkout-invalid-field select{box-shadow:0 0 0 1px #ef9896,0 2px 4px 0 rgb(0 0 0 / 7%),0 1px 1.5px 0 rgb(0 0 0 / 5%);z-index:10}.checkout-invalid-field img.invalid-icon,.checkout-note.mobile{display:inline-block}.FormFieldInput-Icon.is-loaded img,.FormFieldInput-Icon.is-loaded svg{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:1}.FormFieldInput-Icon img,.FormFieldInput-Icon svg{-webkit-transform:scale(.7);-ms-transform:scale(.7);transform:scale(.7);opacity:0;transition:transform 0.4s cubic-bezier(.075,.82,.165,1),opacity 0.7s cubic-bezier(.075,.82,.165,1),-webkit-transform 0.4s cubic-bezier(.075,.82,.165,1)}.checkout-cart-display table{border-spacing:0}.w-input:focus,.w-select:focus{border-color:#e7e7e7!important;outline:0}td:first-child{padding-left:0;padding-right:0}.checkout-money{text-align:right}.checkout-cart-display button.checkout-coupon-button,.es_hide,.hide{display:none!important}tr.total-line{font-weight:800}.submitting,.submitting .loader-wrapper{display:flex}.loader_wrapper{position:absolute;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:#ffc33a;z-index:10;cursor:no-drop}.iti,.loader{position:relative}.iti,.loader:after{display:inline-block}.iti,body{background-color:#fff}.input-flds.select-field,.w-button,.w-form-label{cursor:pointer}.loader,.loader:after{border-radius:50%;width:25px;height:25px}.loader{margin:60px auto;font-size:10px;text-indent:-9999em;border-top:13px solid;border-right:13px solid;border-bottom:13px solid #000;border-left:13px solid #000;-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);-webkit-animation:1.1s linear infinite load8;animation:1.1s linear infinite load8}.loader:after{content:"";background:#ffcb55;width:20px;height:20px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}@-webkit-keyframes load8{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes load8{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.iti{z-index:2;width:100%}.bancontact-header,.cart-addons,.checkout-combo-form .bancontact-form,.checkout-combo-form .bancontact-form .cc-form,.checkout-combo-form .cc-form,.checkout-combo-form .ideal-form,.checkout-combo-form .ideal-form .cc-form,.checkout-combo-form .klarna-form,.checkout-combo-form .klarna-form .cc-form,.checkout-combo-form .paypal-form,.checkout-combo-form .paypal-form .cc-form,.checkout-note.desktop,.checkout-note.desktop.hidden,.checkout-note.hidden,.checkout-note.mobile.hidden,.footer.mobile,.ideal-header,.klarna-header,.paypal-header,.w-form-done,button.checkout-coupon-button{display:none}.iti__flag-container,ul#iti-0__country-listbox{z-index:50}.iti__selected-flag{padding:0 24px}.iti--allow-dropdown input,.iti--allow-dropdown input[type="tel"],.iti--allow-dropdown input[type="text"],.iti--separate-dial-code input,.iti--separate-dial-code input[type="tel"],.iti--separate-dial-code input[type="text"]{padding-left:84px}.white-overlay{background-color:rgb(255 255 255 / 95%);z-index:9999;top:0;left:0;height:100vh;width:100vw;position:fixed;margin:0}.spinner-wrapper{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);margin:0 auto;min-width:220px}.checkout-paypal-form,.rtc-checkout,.spinner-icon,.step.step-1{position:relative}.spinner{border:6px solid #e2e2e2;border-top:6px solid #297fbc;border-radius:50%;width:100px;height:100px;animation:2s linear infinite spin;margin:auto}.spinner-icon .spinner-icon-svg{position:absolute;top:50%;left:50%;margin-left:-19px;margin-top:-70px;width:40px;height:40px}.spinner-text{text-align:center;color:#526473;font-size:16px;padding-top:2rem}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0)}100%{-webkit-transform:rotate(360deg)}}@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.skeleton-load::after{position:absolute;content:"";height:100%;width:100%;background-image:linear-gradient(to right,#d9d9d9 0,rgb(0 0 0 / .05) 20%,#d9d9d9 40%,#d9d9d9 100%);background-repeat:no-repeat;animation:1s linear infinite shimmer;background-size:450px 400px}@keyframes shimmer{0%{background-position:-450px 0}100%{background-position:450px 0}}.w-checkbox-input.w-checkbox-input--inputType-custom.checkmark-addon:after{content:"off";float:right;color:#000;margin-right:6px;margin-top:7px;text-transform:uppercase;font-size:10px}.w-checkbox-input.w-checkbox-input--inputType-custom.checkmark-addon.w--redirected-checked:after{content:"on";color:#fff;margin-left:8px;margin-top:6px;text-transform:uppercase;font-size:10px;float:left}div#stripe-cc-number{padding:15px}.w-button,.w-inline-block,img{display:inline-block}.checkout-combo-form.checkout-combo-bancontact .bancontact-form,.checkout-combo-form.checkout-combo-credit .cc-form,.checkout-combo-form.checkout-combo-ideal .ideal-form,.checkout-combo-form.checkout-combo-klarna .klarna-form,.checkout-combo-form.checkout-combo-paypal .paypal-form{display:block}.checkout-cart-display .product-line img{width:60px;float:left;background-color:#fff;border-radius:10px;margin-right:10px}.compare-at-price{text-decoration:line-through;font-weight:400}h4,h6,label{font-weight:700}td.checkout-money{text-align:right;font-size:12px;font-weight:500}.discount-line .checkout-money{font-weight:600!important}.checkout-cart-display .compare-at-price{display:block;margin-left:5px}.checkout-cart-display tbody>tr:last-child>td{border-bottom:0;font-size:16px!important;font-weight:800}tr.product-line{display:flex;flex-direction:row;width:100%!important;justify-content:space-between;align-items:center;padding-top:10px;padding-bottom:10px;margin-bottom:0;font-size:14px;border-bottom:1px solid #f0f0f0}.checkout-cart-display table tr{border-top:none!important;width:100%;display:flex;flex-direction:row;justify-content:space-between}.product-line td:first-child{display:flex;align-items:center}.attentive-wrapper,.check-wrapper-2,tr.shipping-line,tr.subtotal-line,tr.total-line{margin-top:15px}@media screen and (min-width:767px){.cart-addons.mobile_addon{display:none!important}}#userwayAccessibilityIcon{background:0 0!important;width:24px;height:24px;min-width:24px;min-height:24px;top:0!important;left:0!important}body .uwy.userway_p3 .userway_buttons_wrapper{top:15px!important;left:13px!important;-ms-flex-pack:end;justify-content:end;position:fixed;bottom:auto!important;transform:translate(0)!important}.termly-styles-termly-banner-e1ed59{width:100%!important;margin:0!important;left:0;right:0!important;bottom:0!important}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{height:100%}body{margin:0;min-height:100%;font-size:14px;line-height:20px;color:#333}.w-button{padding:9px 15px;background-color:#3898ec;color:#fff;border:0;line-height:inherit;text-decoration:none;border-radius:0}h4{font-size:18px;line-height:24px}h6{font-size:12px;line-height:18px}p{margin-top:0}.w-embed:after,.w-embed:before,.w-radio:after,.w-radio:before{content:" ";display:table;grid-column-start:1;grid-row-start:1;grid-column-end:2;grid-row-end:2}.w-form{margin:0 0 15px}.w-form-done{padding:20px;text-align:center;background-color:#ddd}.discount-warning,.w-form-fail{display:none;margin-top:10px;padding:10px}.w-form-fail{background-color:#ffdede}.discount-warning{font-size:13px;background-color:#fede16!important;font-weight:700;text-transform:uppercase;text-align:center}label{display:block;margin-bottom:5px}.w-input,.w-select{display:block;width:100%;height:38px;padding:8px 12px;margin-bottom:10px;font-size:14px;line-height:1.428571429;color:#333;background-color:#fff;border:1px solid #ccc}.w-input:-moz-placeholder,.w-select:-moz-placeholder{color:#999}.w-input::-moz-placeholder,.w-select::-moz-placeholder{color:#999;opacity:1}.w-input:-ms-input-placeholder,.w-select:-ms-input-placeholder{color:#999}.w-input::-webkit-input-placeholder,.w-select::-webkit-input-placeholder{color:#999}.w-select{-moz-appearance:none!important;-webkit-appearance:none!important;appearance:none!important;background-color:#f3f3f3}.w-form-label{display:inline-block;font-weight:400;margin-bottom:0}.w-checkbox,.w-radio{display:block;margin-bottom:5px;padding-left:20px}.w-radio-input{margin:3px 0 0 -20px;line-height:normal;float:left}@media screen and (min-width:991px){.checkout-note.desktop{display:inline-block}.checkout-note.mobile{display:none}}.w-checkbox::after,.w-checkbox::before{content:" ";display:table;-ms-grid-column-span:1;grid-column-end:2;-ms-grid-column:1;grid-column-start:1;-ms-grid-row-span:1;grid-row-end:2;-ms-grid-row:1;grid-row-start:1}.checkout-note{padding:10px;display:inline-block;color:#3a6507;margin-top:10px;border:1px solid #9eb485;background:#e4ffc5;border-radius:5px;text-align:left}.checkout-note-img{width:36px;height:34px;float:left;margin-right:10px;margin-top:3px;background-image:url(./images/120.png);background-size:contain;background-repeat:no-repeat;background-position:center}.checkout-note p{margin-top:7px;color:#3a6507;font-weight:400}.legal-term{color:#333;margin-top:15px!important;font-size:10px!important}.legal-term a{color:#333;text-decoration:underline;font-family:inherit;font-weight:600}.legal-term span{font-family:inherit;font-weight:600}.plus-text{color:#000;font-size:12px;margin-top:0;padding-left:3px;font-family:Montserrat}.w-checkbox-input{float:left;margin:4px 0 0 -20px;line-height:normal}.w-checkbox-input--inputType-custom{border-width:1px;border-color:#ccc;border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-left:1px solid #ccc;border-style:solid;width:12px;height:12px;border-radius:2px}.w-checkbox-input--inputType-custom.w--redirected-checked{background-color:#3898ec;border-color:#3898ec;background-image:url(https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg);background-position:50% 50%;background-size:cover;background-repeat:no-repeat}.w-form-formradioinput--inputType-custom{border-width:1px;border-color:#ccc;border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-left:1px solid #ccc;border-style:solid;width:12px;height:12px;border-radius:50%}.w-form-formradioinput--inputType-custom.w--redirected-checked{border-width:4px;border-color:#3898ec}.w-layout-grid{display:-ms-grid;display:grid}.background,.rtc-checkout{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;width:100%}.background{display:flex;height:auto;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;background-color:#1f1f1f}.rtc-checkout{display:flex;height:100%;min-height:100vh;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;background-color:#fff}.rtc-left,.rtc-right{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;min-height:865px}.rtc-left{position:static;display:flex;width:55%;padding:60px 80px 60px 0;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.rtc-right{display:flex;width:45%;padding:80px 0 20px 80px;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;border-top-right-radius:18px;border-bottom-right-radius:18px;background-color:#f1f5ff;background-image:-webkit-gradient(linear,left top,right top,from(hsl(0 0% 92% / .22)),color-stop(11%,hsl(0 0% 100% / .07)),to(transparent));background-image:linear-gradient(90deg,hsl(0 0% 92% / .22),hsl(0 0% 100% / .07) 11%,transparent)}.checkout-head,.slide-content{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.checkout-head{display:flex;margin-bottom:0;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.select-form-wrapper{position:relative;display:block;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;cursor:pointer}.form-wrapper{width:100%;height:auto;max-height:100%;margin-bottom:0}.button-span{font-size:8px;font-weight:600}.checkout-steps{position:relative;z-index:5;width:100%;margin-top:15px;margin-bottom:0;padding-top:0;padding-bottom:0;border-radius:6px;background-color:#fff0}.slide-content{position:relative;display:flex;width:100%;padding:0;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.input-flds,.steps-inner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.input-flds{position:relative;z-index:2;display:flex;width:100%;height:50px;margin-bottom:0;padding:8px 12px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border:1px solid #e7e7e7;border-radius:4px;background-color:#fff}.input-flds:hover{background-color:#fdfdfd}.input-flds:focus{border:1px solid #e7e7e7;background-color:#fff0;font-size:14px}.input-flds.select-field:focus{border-width:1px;border-color:#e7e7e7}.steps-inner{display:flex;padding-top:5px;padding-bottom:5px;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.form-group{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;margin-top:0;margin-bottom:10px;margin-left:0;padding:0;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.form-group.half-fld{width:49%}.form-group.half-fld.fl{width:100%}.form-group.all-border-radius{position:relative;border:1px solid #dcdcdf;background-color:#fff}.checkout-form-headline.margin-bottom,.form-group.all-border-radius.shipping_-zone,.list-person-item.text-black.mb-30,.mbg-text{margin-bottom:0}.form-group.checkout-paypal-form{margin-right:10px;margin-bottom:0}.form-group._32-percent{width:32%}.cc-header{display:block;padding:0;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border-bottom:1px #dcdcdf}.caret-down,.step{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.caret-down{pointer-events:none;position:absolute;left:auto;right:0;bottom:0;z-index:15;display:flex;width:35px;height:50px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border-left:1px #e1e1e1;border-top-right-radius:6px;border-bottom-right-radius:6px;background-color:#fff0;cursor:none}.cc-form{width:100%;margin-top:0;padding:15px;border-top:1px solid #dcdcdf;background-color:hsla(0,0%,96.7%,.32)}.image-24{width:10px;opacity:1}.step{display:flex;width:100%;min-height:auto}.button-txt-icon,.protection-block{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.form-paypal,.rtc-header{width:100%;margin-bottom:0}.success-message{padding:0;letter-spacing:1px}.button-txt-icon{position:relative;z-index:1;display:flex;width:100%;margin-bottom:2px;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.payment-flds-box{position:relative;margin-top:20px;margin-bottom:0}.check-wrapper-2-copy,.payment-flds-box.first_child{margin-top:0}.protection-block{display:flex;margin-top:15px;margin-bottom:0;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.form,.form-content{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.form{display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.form-content,.form.checkout-combo-form{-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal}.form.checkout-combo-form{position:relative;-ms-flex-direction:column;flex-direction:column}.image-9{width:20px;margin-right:10px}.steps-arrow,.steps-text,.steps-text.text-step_2{margin-right:15px}.javy-logo{width:auto;height:30px}.steps-text{font-size:12px;text-align:center}.checkout-form-secure{margin-bottom:0;color:#8797ad;font-size:10px}.field-label-2{position:absolute;left:10px;top:8px;z-index:1;display:block;opacity:0;-webkit-transform:translate(0,3px);-ms-transform:translate(0,3px);transform:translate(0,3px);-webkit-transition:250ms ease-in-out;transition:250ms ease-in-out;color:#313131;font-size:.6em;font-weight:600}.country-logo{display:block;width:100px}.lock-icon.reverse-icon{height:20px;margin-right:10px}.rtc-combo-form{position:relative;overflow:visible;width:100%;min-height:auto;margin-top:15px}.form-content{display:flex;width:100%;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.button_rtc,.feature-image-div{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.error-message{padding-top:20px;padding-bottom:20px;text-align:center}.complete-purchase-text{font-size:18px;font-weight:700}.checkout-form-headline{margin-top:0;margin-bottom:0;color:#00207d;font-size:18px;line-height:28px;font-weight:600}.checkout-form-headline.margin-bottom.email{margin-bottom:10px}.button_rtc{position:relative;display:flex;width:100%;height:72px;margin-top:0;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border-radius:3px;background-color:#ffc33a;color:#000;font-size:14px;line-height:16px;font-weight:700;text-decoration:none}.body,.checkout-cart-display,.sign-up-text{color:rgb(26 26 26 / .9)}.small-text,.terms-text{margin-left:10px;font-weight:400;text-align:left}.frm-flds{position:relative;width:100%;-webkit-box-flex:0;-webkit-flex:0 auto;-ms-flex:0 auto;flex:0 auto}.checkout-cart-display{position:relative;width:100%;height:100%;min-height:100px;min-width:auto;margin-top:5px;margin-bottom:0;padding:0;background-color:#fff0;font-size:16px}.feature-content{width:100%;min-height:30px}.feature-image-div{display:flex;width:60px;height:60px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border-radius:100%;background-color:#fff0}.feature-header-2,.feature-heading-inner,.verified-2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.feature-content-text{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.div-block-3,.footer{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.paragraph-feature{margin-top:0;margin-bottom:0;font-size:12px;line-height:16px}.body{background-color:#f3f5e8;font-family:Montserrat,sans-serif}.footer{position:static;bottom:30px;display:flex;width:100%;margin-top:15px;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.footer.desktop{margin-top:25px}.div-block-3{display:flex;width:auto;min-height:20px}.div-block-4,.divider-wrap{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.div-block-4{display:flex;width:50%;min-height:0;padding-left:30px;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.small-text{font-size:10px}.terms-text{font-size:10px;text-decoration:underline}.mbg-days,.sign-up-text,.steps-bold{font-weight:600}.divider-wrap{display:flex;width:100%;margin-top:10px;margin-bottom:5px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.divider-wrap.features{margin-top:30px}.divider-wrap.reviews{margin-top:15px;margin-bottom:15px}.divider-wrap.payment-method{margin-top:20px;margin-bottom:5px}.grey-line{width:100%;height:1px;background-color:rgb(15 21 41 / .1)}.sign-up-text{width:auto;margin-right:12px;margin-left:12px;font-size:10px;line-height:24px}.accepts_marketing,.checkbox-field-2{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;min-width:100%;margin-right:0;margin-bottom:10px;padding-left:0;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.checkbox-terms,.checkbox-terms-2{width:18px;height:18px;min-height:18px;min-width:18px;margin-top:0;margin-right:16px;margin-left:0;border-style:solid;border-color:rgb(15 21 41 / .23);border-radius:4px;background-color:#fff;color:#000}.checkbox-terms.w--redirected-checked{margin-top:0;margin-left:0;border:0 #fff0;border-radius:4px;background-color:#00207d;background-size:14px}.checkbox-detail{display:block;width:100%;margin-bottom:0;margin-left:-5px;font-size:12px;line-height:16px}.mbg-section{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-top:15px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.image-10{width:60px;margin-right:15px}.bold-text,.mgb-extra{font-size:12px}.same-shipping{width:100%;margin-bottom:0;padding:12px 14px;cursor:pointer}.diff-shipping:hover,.same-shipping.border-bottom:hover,.same-shipping:hover{background-color:#fcfcfc}.same-shipping.border-bottom{border-bottom:1px solid #dcdcdf;background-color:#fff;cursor:pointer}.shipping-radio{width:16px;height:16px;margin-right:5px;margin-left:0}.shipping-radio:active{border:4px solid #000;color:#fff}.shipping-radio.w--redirected-checked{width:16px;height:16px;border-width:3px;border-color:#00207d;background-color:#fff;color:#fff}.diff-billing-address{overflow:visible;height:auto;margin-top:0;margin-bottom:0;padding:0;border:0 solid #ccc;border-radius:0}.accordion__content-wrap-2,.skeleton-load{overflow:hidden}.diff-billing-address-wrapper{height:auto;padding:10px;border-right:1px solid #dcdcdf;border-bottom:1px solid #dcdcdf;border-left:1px solid #dcdcdf;background-color:hsla(0,0%,96.9%,.32)}.payoptbox{position:relative;margin-top:20px}.coupon-code-opener{position:static;display:block;width:100%;height:auto;opacity:1}.rtc-left-container{position:relative;max-width:540px}.rtc-right-container{position:-webkit-sticky;position:sticky;top:40px;width:100%;max-width:420px}.hide-order-summary,.review-order-summary{color:#000;font-size:16px;font-weight:700;letter-spacing:.5px}.accordion__title-2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding:15px 20px;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;font-size:18px;font-weight:400;cursor:pointer}.checkout-form-headline-3{margin-top:20px;margin-bottom:10px;font-size:20px;line-height:26px}.order-summary-tablet-mobile{display:none;max-width:none;margin-top:20px;border:1px solid #dbdbdb}.checkout-coupon-button,.coupon-input-wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;height:100%}.coupon-input-wrapper{position:relative;display:flex;width:100%;margin-top:10px;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap}.cc-image,.checkout-coupon-button{position:absolute;left:auto;top:0;right:0;bottom:0}.checkout-coupon-button{z-index:20;display:flex;width:20%;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border-top-right-radius:8px;border-bottom-right-radius:8px;background-color:#fff0;color:rgb(0 0 0 / .9);font-size:12px;font-weight:600}.list-block-1-info,.list-person-item-info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.radio-button,.radio-button.w--redirected-checked{width:16px;height:16px;background-color:#fff}.radio-button.w--redirected-checked{border-width:3px;border-color:#00207d}.text-span{font-size:14px;font-weight:600}.text-span-3{font-size:10px}.text-span-4{width:100%;font-size:12px;font-weight:400}.footer-link{color:#333}.customer-r-text{margin-top:5px;margin-bottom:0;padding-left:0;font-size:12px;line-height:18px}.list-block-1-info{display:flex;width:100%;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.list-person-item,.list-person-item-info{width:100%;-webkit-box-orient:vertical;-webkit-box-direction:normal}.avatar-img{width:100%;height:100%;max-width:none;min-height:auto;min-width:auto;margin-right:10px;border-radius:50%;-o-object-fit:cover;object-fit:cover}.rating-stars.mr-5{height:16px;margin-right:5px}.list-person-item-info{display:flex;padding-left:10px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.flex-row,.rating-block{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.rating-block{display:flex;margin-right:5px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.flex-row{display:flex;width:100%}.list-block-1-info-sc,.list-person-item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;margin-bottom:0}.list-person-item{display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.avatar-name-2{margin-right:5px;font-size:12px;line-height:24px;font-weight:600}.list-block-1-info-sc{display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap}.list-block-1,.payment-cc{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.list-block-1{display:flex;margin-bottom:0;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.avatar-block-img{width:52px;height:52px;min-height:52px;min-width:52px;margin-right:10px}.trusted-reviews{display:-ms-grid;display:grid;margin-top:0;-ms-grid-columns:1fr;grid-template-columns:1fr}.radio-button-label{margin-bottom:0;margin-left:5px;font-weight:600}.payment-selector{border:1px solid #dcdcdf}.payment-cc{display:flex;width:100%;padding:15px;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;cursor:pointer}.rtc-form-container,.rtc-grid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;-webkit-box-orient:horizontal;-webkit-box-direction:normal}.cc-image{width:160px}.radio-select-cc{position:relative;width:100%;margin-bottom:0;-webkit-align-self:center;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;cursor:pointer}.rtc-form-container{display:flex;margin-top:0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.rtc-grid{display:flex;width:100%;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-ms-grid-columns:1fr 1fr;grid-template-columns:1fr 1fr;-ms-grid-rows:auto;grid-template-rows:auto}.rtc-grid.mobile_change{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.diff-shipping{width:100%;margin-bottom:0;padding:12px 14px;background-color:#fff;cursor:pointer}.discount-success,.summary-wrap{padding-top:10px;padding-bottom:10px}.checkout-submit-combo{position:static;z-index:15;width:100%;height:100%;margin-top:15px;background-color:#fff0;color:rgb(0 0 0 / .9);text-decoration:none}.discount-message{margin-left:0;font-weight:700;text-align:center}.sign-up-text-2,.text-block-30{font-size:10px;font-weight:600}.discount-success{margin-top:10px;margin-bottom:15px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;background-color:#00207d;color:hsl(0 0% 100% / .9)}.discount-success.bar-mobile.es_hide{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.checkout-submit-paypal{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;max-height:none;min-height:40px;padding:10px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;border-radius:4px;background-color:#ffc439;background-image:url(./images/paypal-btn.svg);background-position:50% 50%;background-size:auto;background-repeat:no-repeat}.checkout-submit-paypal:hover{background-color:#ffbd3c}.loader-wrapper{position:absolute;z-index:10;display:none;width:100%;height:100%;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;background-color:#ffcb55}.skeleton-load{position:absolute;z-index:600;width:100%;height:100%;border-radius:6px;background-color:#d9d9d9}.skeleton-load.sl_circula{position:absolute;z-index:50;display:none;width:101%;height:101%;margin-right:-5px;margin-left:-12px;border-radius:100px}.title-wrap{position:relative;display:inline-block;line-height:10px}.checkout-addon-toggle{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-bottom:0;padding-left:0;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.attentive-form{display:none;margin-top:15px}.sub-headline-title{margin-bottom:10px;color:rgb(26 26 26 / .9);font-size:10px}.summary-wrap{margin-bottom:10px;background-color:#fff0;color:hsl(0 0% 100% / .9)}.sign-up-text-2{width:auto;margin-right:12px;margin-left:12px;color:silver;line-height:24px}.discount{width:100%;margin-top:5px;margin-bottom:10px;padding-bottom:0}.feature-heading-2,.review-location-verified{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.review-shield-2{display:block;width:10px;margin-top:0}.text-block-30{display:inline-block;margin-top:0;margin-left:5px;color:#3dbf22;text-transform:uppercase}.limited-offre-icon,.limited-time-offer{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.limited-time-offer{display:flex;height:auto;margin-top:15px;padding:5px 12px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border:1px solid #00237e;border-radius:100px;background-color:#ebf0ff;color:#000}.limited-offre-icon{display:flex;height:20px;margin-right:0;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;-webkit-filter:none;filter:none}.limited-offre-head,.offer-container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;position:relative}.limited-offre-head{display:flex;margin-right:5px;margin-left:6px;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center}.offer-bold{margin-bottom:0;color:#00207d;font-size:14px;line-height:22px;font-weight:800}.offer-container{display:flex;height:35px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;-webkit-filter:none;filter:none}.express-checkout{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;margin-top:20px;margin-bottom:10px}.other-text{font-weight:400}.cc-titles{margin-bottom:3px;font-size:10px}.brand-features-2{margin-top:0;-ms-grid-columns:1fr;grid-template-columns:1fr}.feature-icon-2{width:90px;min-height:30px;font-size:14px}.feature-checkout-2{display:inline-block;margin-top:0;margin-bottom:0;margin-left:0;font-size:12px;line-height:25px;font-weight:600;text-align:left;text-transform:none}.attentive-link{color:rgb(14 14 14 / .9);font-size:10px;text-decoration:none}.form-group-2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;margin-top:0;margin-left:0;padding:0;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-grid-columns:1fr 1fr;grid-template-columns:1fr 1fr;-ms-grid-rows:auto auto;grid-template-rows:auto auto}.attentive_link{color:rgb(0 0 0 / .9);font-weight:700;text-decoration:none}.addon-selector{margin-bottom:0;padding:10px;border:1px solid #fede16;background-color:#fff4c6}@media screen and (max-width:991px){.rtc-checkout,.rtc-right{border-radius:0;min-height:auto}.rtc-checkout,.step{-webkit-box-direction:normal;-webkit-box-orient:vertical}.hide-order-summary,.review-order-summary{font-weight:400;letter-spacing:0;white-space:nowrap}.rtc-checkout,.step{-webkit-box-orient:vertical}.background,.coupon-input-wrapper{height:auto}.rtc-checkout{max-width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.rtc-left{position:relative;z-index:50;width:100%;min-height:auto;padding:0 30px 20px;box-shadow:none}.rtc-right{width:100%;height:100%;padding:20px 30px 0;background-color:#fff0;background-image:none}.checkout-head{margin-right:-30px;margin-left:-30px;padding:15px 30px 10px;background-color:#fcfcfc}.form-wrapper{height:auto;max-height:100%;max-width:100%}.checkout-steps{width:auto;margin:0 -30px;padding-right:0;padding-left:0}.slide-content{width:100%;min-height:auto;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.steps-inner{padding:10px 30px;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.step{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.javy-logo{height:30px}.steps-arrow,.steps-text{margin-right:15px}.country-logo{display:block}.checkout-cart-display.mobile-display{margin-bottom:15px}.footer.mobile{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:auto;margin-top:30px;margin-right:-30px;margin-left:-30px;padding:20px 30px}.footer.desktop,.summary-desktop{display:none}.divider-wrap.payment-method{margin-bottom:10px}.coupon-code-opener{height:45px}.rtc-left-container,.rtc-right-container{width:100%;max-width:100%}.checkout-total-value,.order-summary-tablet-mobile{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;width:auto}.checkout-total-value{display:flex;height:100%;min-height:20px;min-width:30px;padding-right:0;padding-bottom:0;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-transition:0.2s;transition:0.2s;font-size:14px}.review-order-summary{margin-left:0;font-size:16px}.hide-order-summary{display:none;font-size:14px}.accordion__title-2{margin-right:-30px;margin-left:-30px;padding:10px 30px;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;font-size:14px}.order-summary-tablet-mobile{position:static;top:0;z-index:100;display:flex;margin-top:0;margin-right:-30px;margin-left:-30px;padding-right:30px;padding-left:30px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;border-style:none;border-width:1px 0;border-color:rgb(15 21 41 / .1) #000;background-color:#fcfcfc}.checkout-paypal-form,.div-block-5{position:relative}.limited-offre-head,.limited-time-offer{-webkit-box-orient:horizontal;-webkit-box-direction:normal}.icnon-summary{width:12px;margin-left:10px}.mobile-checkoutsummary{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.accordion__content-wrap-2{width:auto;margin-right:-30px;margin-left:-30px;padding-right:30px;padding-left:30px}.customer-r-text{line-height:18px}.list-block-1-info{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.rating-stars.mr-5{height:14px}.avatar-name-2{font-size:10px}.rtc-grid.mobile_change{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.discount-message{color:hsl(0 0% 100% / .9);font-size:16px;font-weight:800;text-transform:capitalize}.discount-success.bar-mobile{width:auto;margin-top:0;margin-right:-30px;margin-left:-30px;padding:10px 3px 10px 30px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.discount-success.bar-mobile.es_hide{margin-top:25px;padding-right:30px}.cart-icon{display:none;width:16px;height:16px;margin-left:0}.div-block-5{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:auto;min-width:30px;margin-left:10px;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.skeleton-load.sl_circula{position:absolute;overflow:hidden;width:101%;height:101%;margin-right:0;margin-left:0;border-radius:100px}.discount{display:block;height:auto}.limited-time-offer{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:auto;margin-top:30px;padding:10px 0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border-radius:100px}.limited-offre-head{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;font-size:18px}.offer-bold{font-size:16px}.offer-container{margin-left:15px}.attentive-wrapper{margin-top:0}}@media screen and (max-width:767px){tr.product-line{font-size:12px}.checkout-cart-display .product-line img{width:50px;float:left}.checkout-head{padding-top:25px;padding-bottom:15px}.form-group._32-percent,.form-group.half-fld,.form-wrapper{width:100%}.slide-content{padding-top:0;padding-bottom:0}.caret-down,.input-flds{height:45px}.form-group.half-fld.mobo{width:49%}.form-content{width:100%;min-width:auto}.divider-wrap.features{margin-top:20px;margin-bottom:0}.divider-wrap.reviews{margin-top:0;margin-bottom:0}.divider-wrap.payment-method{margin-top:15px;margin-bottom:0}.mbg-section{-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}.checkout-total-value{min-height:20px;font-size:16px;font-weight:600}.hide-order-summary,.review-order-summary{font-size:16px}.accordion__title-2{padding:15px 30px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.order-summary-tablet-mobile{padding-right:30px;padding-left:30px}.list-person-item{margin-bottom:30px}.rtc-grid{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.checkout-timer{font-weight:400}.div-block-5{min-width:auto;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.skeleton-load{display:block}.limited-time-offer{height:auto;min-height:45px;margin-top:0;padding-top:10px;padding-right:0;padding-bottom:10px}.limited-offre-head{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}.offer-bold{font-size:14px;line-height:18px}}@media screen and (max-width:479px){.background,.rtc-checkout,.rtc-left,.rtc-right{overflow:hidden}.rtc-left{position:relative;height:auto;min-height:0;padding-top:0;padding-right:15px;padding-left:15px}.rtc-right{padding-top:15px;padding-right:10px;padding-left:10px;border-radius:0}.checkout-head{margin-right:-15px;margin-bottom:0;margin-left:-15px;padding-right:15px;padding-left:15px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.form-wrapper{max-height:none}.checkout-steps{display:block;width:auto;height:auto;margin:5px -10px 0;padding:0;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;background-color:#fff0}.slide-content{padding-top:0;padding-bottom:0}.steps-inner{width:100%;padding:10px 10px 10px 15px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.div-block-3,.footer{-webkit-box-align:center}.form-content,.form.checkout-combo-form,.payment-flds-box{width:100%}.protection-block{margin-top:0}.javy-logo{height:30px}.checkout-form-secure,.steps-text,.sub-headline-title,.text-block-30,.text-span-4{font-size:10px}.country-logo{width:100px}.checkout-form-headline{display:block;margin-bottom:0}.checkout-cart-display{display:block}.paragraph-feature{font-size:13px}.footer{-webkit-align-items:center;-ms-flex-align:center;align-items:center}.footer.mobile{margin-right:-10px;margin-left:-10px;padding:20px}.div-block-3{min-height:auto;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.div-block-4{width:60%;padding-left:0;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.small-text{margin-left:5px;line-height:12px}.rtc-logo{width:16px}.divider-wrap{margin-top:15px;margin-bottom:15px}.customer-r-text,.mbg-text{margin-bottom:0}.grey-line{width:20%}.sign-up-text,.sign-up-text-2{white-space:normal}.accepts_marketing,.checkbox-field-2{position:static;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap}.checkbox-detail,.rtc-left-container{position:relative}.checkbox-detail{display:block;width:100%;max-width:100%}.image-10{width:60px}.mbg-text{font-size:8px;line-height:12px}.avatar-name-2,.feature-checkout-2,.mbg-days,.mgb-extra{font-size:12px}.mbg-days{font-weight:800}.checkout-total-value{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:100%;min-height:20px;min-width:30px;padding-right:0;padding-bottom:0;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;font-weight:600;text-align:right}.hide-order-summary{color:#000;font-weight:400;letter-spacing:0}.accordion__title-2{margin-right:-15px;margin-left:-15px;padding:15px;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.checkout-form-headline-3{display:block;margin-top:10px;font-size:16px;line-height:24px}.order-summary-tablet-mobile{display:block;margin-top:0;margin-right:-15px;margin-left:-15px;padding-right:15px;padding-left:15px;border:0 #000}.limited-offre-head,.mobile-checkoutsummary{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}.icnon-summary{width:12px;margin-left:10px}.accordion__content-wrap-2,.discount-success.bar-mobile{margin-right:-15px;margin-left:-15px;padding-right:15px;padding-left:15px}.mobile-checkoutsummary{display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.accordion__content-wrap-2{padding-top:0}.checkout-coupon-button{width:35%}.footer-link{color:#0a0a0a}.list-block-1-info{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.limited-offre-head,.limited-time-offer{-webkit-box-orient:horizontal;-webkit-box-direction:normal}.rating-stars.mr-5{height:12px}.rating-block{margin-right:5px}.avatar-block-img{width:45px;height:45px;min-height:45px;min-width:45px}.trusted-reviews{width:100%;margin-top:0;padding-right:0;padding-left:0}.discount-message{font-size:14px;text-transform:capitalize}.discount-success.bar-mobile.es_hide{margin-top:20px;padding-right:10px;padding-left:10px}.checkout-submit-paypal{border-radius:4px}.cart-icon{width:15px}.div-block-5{min-width:30px}.skeleton-load{position:absolute;border-radius:0}.skeleton-load.sl_circula{margin-right:0;margin-left:-5px}.review-shield-2{width:14px;margin-top:0}.limited-time-offer{height:auto;min-height:35px;margin-top:15px;margin-right:0;margin-left:0;padding:10px 0;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.limited-offre-icon{height:35px;margin-right:0}.limited-offre-head{display:flex;width:100%;margin-right:0;margin-bottom:0;margin-left:10px;padding-right:15px;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;font-size:12px}.offer-bold{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-right:0;font-size:14px;line-height:18px}.offer-container{height:25px;margin-right:0;margin-left:10px}.other-text{margin-left:5px;font-weight:400}.brand-features-2{width:100%;margin-top:0;padding-right:10px;padding-left:10px}}
+	</style>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..900&display=swap" rel="stylesheet">
+
+	<!-- RTC CONFIG -->
+	<meta content="api.shopmiraclebrand.co" name="checkout-api-endpoint">
+	<meta content="14441424781356" name="checkout-default-variant-id">
+	<meta content="42536178319510" name="checkout-default-addons">
+	<meta content="US" name="checkout-default-shipping-zone">
+	<meta content="/up/20a-v2.html" name="checkout-next-url">
+	<meta content="mb-sheets-checkout-v2-c-v2" name="checkout-page-name">
+	<meta content="comforter" name="checkout-aux-page-name">	
+	<!-- RTC CONFIG -->
+	 
+	<!-- Google Tag Manager -->
+	<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MKJPBJLM');</script> -->
+	<!-- End Google Tag Manager -->
+	<!-- :::START:::USERWAY-->
+	<script>
+		window.addEventListener("load", () => {
+			(function (d) {
+				var s = d.createElement("script");
+				s.setAttribute("data-position", 7);
+				s.setAttribute("data-size", "small");
+				s.setAttribute("data-color", "#FFF");
+				s.setAttribute("data-account", "YtBxI18gI8");
+				s.setAttribute("src", "https://cdn.userway.org/widget.js");
+				s.async = true;
+				(d.body || d.head).appendChild(s);
+			})(document);
+			
+			const checkInterval = setInterval(() => {
+				const icon = document.getElementById("userwayAccessibilityIcon");
+				if (icon?.length) {
+					icon.style.background = "transparent";
+					clearInterval(checkInterval);
+				}
+			}, 100);
+
+			setTimeout(() => clearInterval(checkInterval), 10000);
+		});
+	</script>
+	  <!-- :::END:::USERWAY -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+
+	<script type="text/javascript">
+	! function(o, c) { var n = c.documentElement,
+			t = " w-mod-";
+		n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);
+	</script>
+
+	<!-- Start VWO Async SmartCode --> <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" /> <script type='text/javascript' id='vwoCode'> window._vwo_code || (function() { var account_id=1010263, version=2.1, settings_tolerance=2000, hide_element='body', hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important;', /* DO NOT EDIT BELOW THIS LINE */ f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_settings',cc={};try{var c=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=c&&typeof c==='object'?c:{}}catch(e){}var stT=cc.stT==='session'?w.sessionStorage:w.localStorage;code={nonce:v&&v.nonce,use_existing_jquery:function(){return typeof use_existing_jquery!=='undefined'?use_existing_jquery:undefined},library_tolerance:function(){return typeof library_tolerance!=='undefined'?library_tolerance:undefined},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){if(performance.getEntriesByName('first-contentful-paint')[0]){return''}return typeof cc.hE==='string'?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){if(!f){f=true;var t=d.getElementById('_vis_opt_path_hides');if(t)t.parentNode.removeChild(t);if(e)(new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e}},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript';if(e.src){t.src=e.src}else{t.text=e.text}v&&t.setAttribute('nonce',v.nonce);d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){var n=this.getSettings(),i=d.createElement('script'),r=this;t=t||{};if(n){i.textContent=n;d.getElementsByTagName('head')[0].appendChild(i);if(!w.VWO||VWO.caE){stT.removeItem(cK);r.load(e)}}else{var o=new XMLHttpRequest;o.open('GET',e,true);o.withCredentials=!t.dSC;o.responseType=t.responseType||'text';o.onload=function(){if(t.onloadCb){return t.onloadCb(o,e)}if(o.status===200||o.status===304){_vwo_code.addScript({text:o.responseText})}else{_vwo_code.finish('&e=loading_failure:'+e)}};o.onerror=function(){if(t.onerrorCb){return t.onerrorCb(e)}_vwo_code.finish('&e=loading_failure:'+e)};o.send()}},getSettings:function(){try{var e=stT.getItem(cK);if(!e){return}e=JSON.parse(e);if(Date.now()>e.e){stT.removeItem(cK);return}return e.s}catch(e){return}},init:function(){if(d.URL.indexOf('__vwo_disable__')>-1)return;var e=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish();stT.removeItem(cK)},e);var t;if(this.hide_element()!=='body'){t=d.createElement('style');var n=this.hide_element(),i=n?n+this.hide_element_style():'',r=d.getElementsByTagName('head')[0];t.setAttribute('id','_vis_opt_path_hides');v&&t.setAttribute('nonce',v.nonce);t.setAttribute('type','text/css');if(t.styleSheet)t.styleSheet.cssText=i;else t.appendChild(d.createTextNode(i));r.appendChild(t)}else{t=d.getElementsByTagName('head')[0];var i=d.createElement('div');i.style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;display: block !important;';i.setAttribute('id','_vis_opt_path_hides');i.classList.add('_vis_hide_layer');t.parentNode.insertBefore(i,t.nextSibling)}var o=window._vis_opt_url||d.URL,s='https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(o)+'&vn='+version;if(w.location.search.indexOf('_vwo_xhr')!==-1){this.addScript({src:s})}else{this.load(s+'&x=true')}}};w._vwo_code=code;code.init();})(); </script> <!-- End VWO Async SmartCode -->
+
+	<script>
+		var head = document.head;
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = "https://t.miraclebrand.co/v1/lst/universal-script?ph=f635c7a6a1fa8bdf05277a5a7599afc05bc3b585d3f7260daf42c511450d0801&tag=!clicked";
+		head.appendChild(script);
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEQ6ddrmYpatEuT1t1rrDhVqVu7HZiKqg&libraries=places&callback=initAutocomplete" defer></script>
+
+	<script>
+		(function(a, t, o, m, i) {
+			a[m] = a[m] || [];
+			a[m].push({
+				t: new Date().getTime(),
+				event: 'snippetRun'
+			});
+			
+			var f = t.getElementsByTagName(o)[0],
+			e = t.createElement(o);
+			e.async = !0;
+			e.dataset.namespace = "paypal_sdk";
+			e.src = 'https://www.paypal.com/sdk/js?components=shopping&client-id=' + i;
+			f.parentNode.insertBefore(e, f);
+		})(window, document, 'script', 'shoppingDDL', 'AUvZCmTImA-03Jrtr4x_ZdRAnJIL5wFVUC5_eenqw8Ynfecok5HhftLx3-ViQ-QWvmBrGyHICNnoFJrm');
+
+		var pptag = {
+			send: function(e, p) {
+				shoppingDDL.push({
+					event: e,
+					payload: p
+				});
+			},
+			set: function(s) {
+				shoppingDDL.push({
+					set: s
+				});
+			}
+		};
+	</script>
+</head>
+
+<body class="body">
+		<!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKJPBJLM"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="background">
+		<div class="rtc-checkout">
+			<div class="rtc-left">
+				<div class="rtc-left-container">
+					<div class="rtc-header">
+						<div class="checkout-head">
+							<!-- START:::LOGO -->
+							<svg class="javy-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="181.694" height="38.307" viewBox="0 0 181.694 38.307">
+								<defs>
+								  <clipPath id="clip-path">
+									<path id="Mask" d="M4.595,4.863,0,3.489,3.432,6.975,0,10.466,4.595,9.091l1.164,4.859L6.921,9.091l4.595,1.375L8.088,6.975l3.428-3.486L6.921,4.863,5.759,0Z" transform="translate(0 0)" fill="#00207d"/>
+								  </clipPath>
+								  <clipPath id="clip-path-2">
+									<path id="Clip_20" data-name="Clip 20" d="M4.6,4.863,0,3.489,3.43,6.975,0,10.466,4.6,9.091l1.163,4.859L6.922,9.091l4.594,1.375L8.087,6.975l3.429-3.486L6.922,4.863,5.759,0Z" transform="translate(170.178 0)" fill="#00207d"/>
+								  </clipPath>
+								</defs>
+								<g id="footer_logo" transform="translate(0 -0.215)">
+								  <g id="Group_4" data-name="Group 4">
+									<g id="Group_15" data-name="Group 15" transform="translate(19.193)">
+									  <path id="Fill_1" data-name="Fill 1" d="M3.664.457A.516.516,0,0,1,4.217,0h.49A.563.563,0,0,1,5.23.3l6.756,14.366h.092L18.834.3a.533.533,0,0,1,.523-.3h.49A.517.517,0,0,1,20.4.457L24.025,20.91a.531.531,0,0,1-.553.7H20.678a.666.666,0,0,1-.583-.458L18.282,9.619H18.19L12.815,21.58a.523.523,0,0,1-.522.336H11.74a.556.556,0,0,1-.522-.336L5.783,9.619H5.691L3.908,21.153a.591.591,0,0,1-.551.458H.593a.56.56,0,0,1-.583-.7Z" transform="translate(0.159 0.215)" fill="#00207d"/>
+									  <path id="Fill_3" data-name="Fill 3" d="M0,.578A.6.6,0,0,1,.583,0H3.439a.6.6,0,0,1,.585.578V20.727a.6.6,0,0,1-.585.58H.583A.6.6,0,0,1,0,20.727Z" transform="translate(31.152 0.52)" fill="#00207d"/>
+									  <path id="Fill_5" data-name="Fill 5" d="M15.2,21.307H11.978a.527.527,0,0,1-.491-.274L7.4,12.966H3.992v7.76a.605.605,0,0,1-.584.58H.583A.583.583,0,0,1,0,20.726V.579A.582.582,0,0,1,.583,0H9.367a6.628,6.628,0,0,1,6.7,6.544,6.714,6.714,0,0,1-4.545,6.147l4.207,7.731a.623.623,0,0,1,0,.612A.589.589,0,0,1,15.2,21.307ZM4.024,3.652V9.708H9.03a3.114,3.114,0,0,0,3.04-3.1A3.037,3.037,0,0,0,9.03,3.652Z" transform="translate(43.313 0.52)" fill="#00207d"/>
+									  <path id="Fill_7" data-name="Fill 7" d="M19.9,21.611H17.231A.878.878,0,0,1,16.34,21l-1.5-3.287H5.652L4.145,21a.928.928,0,0,1-.889.608H.583a.578.578,0,0,1-.5-.25.556.556,0,0,1-.018-.542L9.613.335A.549.549,0,0,1,10.135,0h.307a.522.522,0,0,1,.523.335l9.459,20.484a.559.559,0,0,1-.019.543A.577.577,0,0,1,19.9,21.611ZM10.166,7.64l-3.009,6.7h6.172l-3.07-6.7h-.094Z" transform="translate(63.887 0.215)" fill="#00207d"/>
+									  <path id="Fill_9" data-name="Fill 9" d="M11.087,0A10.446,10.446,0,0,1,18.52,2.83a.564.564,0,0,1,.031.852L16.676,5.6a.5.5,0,0,1-.766,0,7.3,7.3,0,0,0-4.73-1.8A6.929,6.929,0,0,0,4.331,10.9a6.921,6.921,0,0,0,6.879,7.032,7.413,7.413,0,0,0,4.7-1.736.569.569,0,0,1,.766,0l1.9,1.949a.575.575,0,0,1-.029.822,10.594,10.594,0,0,1-7.464,2.952A10.959,10.959,0,1,1,11.087,0" transform="translate(88.183 0.215)" fill="#00207d"/>
+									  <path id="Fill_11" data-name="Fill 11" d="M0,.578A.58.58,0,0,1,.583,0H3.409a.6.6,0,0,1,.583.578V17.653h7.832a.581.581,0,0,1,.583.58v2.494a.581.581,0,0,1-.583.58H.583A.581.581,0,0,1,0,20.727Z" transform="translate(113.487 0.52)" fill="#00207d"/>
+									  <path id="Fill_13" data-name="Fill 13" d="M0,.578A.58.58,0,0,1,.583,0h12.5a.58.58,0,0,1,.583.578v2.5a.58.58,0,0,1-.583.578H3.992V8.643h7.586a.6.6,0,0,1,.583.578v2.526a.58.58,0,0,1-.583.578H3.992v5.327h9.091a.581.581,0,0,1,.583.58v2.494a.581.581,0,0,1-.583.58H.583A.581.581,0,0,1,0,20.727Z" transform="translate(131.912 0.52)" fill="#00207d"/>
+									</g>
+									<g id="Group_18" data-name="Group 18" transform="translate(0 4.054)">
+									  <g id="Clip_20-2" data-name="Clip 20" transform="translate(0 0.017)">
+										<path id="Mask-2" data-name="Mask" d="M4.595,4.863,0,3.489,3.432,6.975,0,10.466,4.595,9.091l1.164,4.859L6.921,9.091l4.595,1.375L8.088,6.975l3.428-3.486L6.921,4.863,5.759,0Z" transform="translate(0 0)" fill="#00207d"/>
+										<path id="Clip_20-4" data-name="Clip 20" d="M4.6,4.863,0,3.489,3.43,6.975,0,10.466,4.6,9.091l1.163,4.859L6.922,9.091l4.594,1.375L8.087,6.975l3.429-3.486L6.922,4.863,5.759,0Z" transform="translate(170.178 0)" fill="#00207d"/>
+									  </g>
+									</g>
+								  </g>
+								  <path id="Fill_22" data-name="Fill 22" d="M9.887,8.491H7.84V3.967l-2.4,4.525H4.464L2.047,3.941v4.55H0V0H2.073L4.951,5.387,7.828,0H9.887Z" transform="translate(66.891 30.03)" fill="#00207d"/>
+								  <path id="Fill_25" data-name="Fill 25" d="M2.263,8.492H0L3.58,0H5.741L9.323,8.49H7.072l-.6-1.547H2.865l-.6,1.547Zm2.4-6.135L3.58,5.144H5.767Z" transform="translate(80.724 30.03)" fill="#00207d"/>
+								  <path id="Fill_28" data-name="Fill 28" d="M3.389,8.492H0V0H3.389C6.2,0,8.083,1.706,8.083,4.245S6.2,8.492,3.389,8.492ZM2.111,1.812V6.679h1.2A2.386,2.386,0,0,0,5.96,4.245,2.386,2.386,0,0,0,3.313,1.812Z" transform="translate(93.991 30.029)" fill="#00207d"/>
+								  <path id="Fill_31" data-name="Fill 31" d="M6.677,8.491H0V0H6.638V1.8H2.111V3.4H6.267v1.7H2.111v1.6H6.677Z" transform="translate(106.467 30.03)" fill="#00207d"/>
+								</g>
+							</svg>
+							<!-- END:::LOGO -->
+							
+							<svg class="country-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 115 42" style="enable-background:new 0 0 115 42;" xml:space="preserve">
+								<style type="text/css">
+									.st0{enable-background:new    ;}
+								</style>
+								<g id="_x30_16-padlock" transform="translate(12.000000, 7.000000)">
+									<path id="Shape" d="M14.9,10.8V7.1c0-1.6-0.6-3.2-1.8-4.4C12,1.6,10.6,1,9.1,1C9,1,9,1,9,1C5.8,1,3.1,3.8,3.1,7.1v3.6   C1.9,10.9,1,12,1,13.3v8.2C1,22.9,2.1,24,3.4,24h11.2c1.3,0,2.4-1.1,2.4-2.5v-8.2C17,12,16.1,10.9,14.9,10.8z M4.1,7.1L4.1,7.1   C4.1,4.3,6.3,2,9,2h0c1.3,0,2.5,0.5,3.5,1.5c1,1,1.5,2.3,1.5,3.7v3.6h-1V7.1c0-1.1-0.4-2.2-1.2-2.9C11,3.4,10,3,9,3h0   C6.8,3,5.1,4.9,5.1,7.1v3.7h-1V7.1L4.1,7.1z M12,7.1v3.6H6V7.1C6,5.4,7.4,4,9,4h0c0.8,0,1.5,0.3,2,0.9C11.6,5.5,12,6.3,12,7.1z    M16.1,21.5L16.1,21.5c0,0.9-0.7,1.5-1.5,1.5H3.4c-0.8,0-1.5-0.7-1.5-1.5v-8.2c0-0.9,0.7-1.5,1.5-1.5h11.2c0.8,0,1.5,0.7,1.5,1.5   V21.5z"/>
+									<path id="Shape_00000183239651753437188910000016317051539864339876_" d="M10.6,17.1c-0.2-0.8-0.9-1.3-1.6-1.3   c-0.9,0-1.7,0.8-1.7,1.8c0,0.8,0.5,1.5,1.2,1.7v1.4c0,0.3,0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5v-1.4C10.4,19,10.9,18,10.6,17.1z    M9,18.4c-0.4,0-0.8-0.4-0.8-0.8s0.3-0.8,0.8-0.8c0.4,0,0.8,0.4,0.8,0.8S9.4,18.4,9,18.4z"/>
+								</g>
+								<g id="Oval">
+									<path d="M21,41.4C9.8,41.4,0.6,32.2,0.6,21C0.6,9.8,9.8,0.6,21,0.6S41.4,9.8,41.4,21C41.4,32.2,32.2,41.4,21,41.4z M21,1.4   C10.2,1.4,1.4,10.2,1.4,21S10.2,40.6,21,40.6S40.6,31.8,40.6,21S31.8,1.4,21,1.4z"/>
+								</g>
+								<g class="st0">
+									<path d="M51.8,21.1c-1.8,0-3.2-0.9-3.3-2.6h2.2c0.1,0.6,0.5,1,1,1c0.6,0,1-0.3,1-0.8c0-1.6-4.2-0.7-4.2-3.7c0-1.6,1.3-2.5,3.1-2.5   c1.8,0,3.1,0.9,3.2,2.5h-2.2c0-0.5-0.4-0.9-1-0.9c-0.5,0-0.9,0.2-0.9,0.8c0,1.5,4.2,0.8,4.2,3.6C54.9,19.9,53.8,21.1,51.8,21.1z"/>
+									<path d="M61.3,14.2h-3.1v1.7h2.7v1.6h-2.7v1.8h3.1V21h-5.2v-8.4h5.2V14.2z"/>
+									<path d="M66.5,12.5c2,0,3.5,1.1,4,3h-2.3c-0.3-0.7-1-1.1-1.8-1.1c-1.3,0-2.1,0.9-2.1,2.4s0.9,2.4,2.1,2.4c0.8,0,1.4-0.4,1.8-1.1   h2.3c-0.5,1.8-2,2.9-4,2.9c-2.5,0-4.2-1.8-4.2-4.3S64,12.5,66.5,12.5z"/>
+									<path d="M71.7,12.6h2.1v5c0,1,0.5,1.6,1.5,1.6s1.5-0.6,1.5-1.6v-5h2.1v5c0,2.3-1.6,3.5-3.6,3.5c-2,0-3.5-1.2-3.5-3.5V12.6z"/>
+									<path d="M83.7,12.6c2.1,0,3.1,1.2,3.1,2.7c0,1.1-0.6,2.1-1.9,2.4l1.9,3.3h-2.3l-1.8-3.2h-0.5V21h-2.1v-8.4H83.7z M83.5,14.3h-1.3   v2.1h1.3c0.8,0,1.1-0.4,1.1-1.1C84.7,14.7,84.3,14.3,83.5,14.3z"/>
+									<path d="M93.2,14.2h-3.1v1.7h2.7v1.6h-2.7v1.8h3.1V21H88v-8.4h5.2V14.2z"/>
+								</g>
+								<g>
+								</g>
+								<g class="st0">
+									<path d="M52.6,24.5c2,0,3.5,1.1,4,3h-2.3c-0.3-0.7-1-1.1-1.8-1.1c-1.3,0-2.1,0.9-2.1,2.4s0.9,2.4,2.1,2.4c0.8,0,1.4-0.4,1.8-1.1   h2.3c-0.5,1.8-2,2.9-4,2.9c-2.5,0-4.2-1.8-4.2-4.3S50.1,24.5,52.6,24.5z"/>
+									<path d="M63.1,29.5h-3.2V33h-2.1v-8.4h2.1v3.3h3.2v-3.3h2.1V33h-2.1V29.5z"/>
+									<path d="M71.8,26.2h-3.1v1.7h2.7v1.6h-2.7v1.8h3.1V33h-5.2v-8.4h5.2V26.2z"/>
+									<path d="M77,24.5c2,0,3.5,1.1,4,3h-2.3c-0.3-0.7-1-1.1-1.8-1.1c-1.3,0-2.1,0.9-2.1,2.4s0.9,2.4,2.1,2.4c0.8,0,1.4-0.4,1.8-1.1H81   c-0.5,1.8-2,2.9-4,2.9c-2.5,0-4.2-1.8-4.2-4.3S74.6,24.5,77,24.5z"/>
+									<path d="M84.3,29.3V33h-2.1v-8.4h2.1v3.7l2.8-3.7h2.4l-3.3,4.1l3.4,4.3h-2.5L84.3,29.3z"/>
+									<path d="M94.6,33.1c-2.4,0-4.3-1.8-4.3-4.3c0-2.5,1.9-4.3,4.3-4.3c2.4,0,4.3,1.8,4.3,4.3C98.9,31.3,97,33.1,94.6,33.1z M94.6,31.2   c1.3,0,2.2-1,2.2-2.4c0-1.5-0.9-2.4-2.2-2.4c-1.4,0-2.2,0.9-2.2,2.4C92.4,30.2,93.3,31.2,94.6,31.2z"/>
+									<path d="M100.1,24.6h2.1v5c0,1,0.5,1.6,1.5,1.6c1,0,1.5-0.6,1.5-1.6v-5h2.1v5c0,2.3-1.6,3.5-3.6,3.5c-2,0-3.5-1.2-3.5-3.5V24.6z"/>
+									<path d="M108.1,24.6h6.5v1.6h-2.2V33h-2.1v-6.8h-2.2V24.6z"/>
+								</g>
+							</svg>
+						</div>
+						<div class="order-summary-tablet-mobile">
+							<div class="accordation-holder">
+								<div data-w-id="5a3ecc4a-075c-c404-8314-b7b495d47008" class="accordion__title-2">
+									<div class="mobile-checkoutsummary">
+										<div data-i18n="review_summary" class="review-order-summary">Order Summary</div>
+										<div data-i18n="hide_summary" class="hide-order-summary">Hide Order Summary</div>
+										<div class="div-block-5">
+											<div class="checkout-total-value"></div>
+										</div>
+										<svg class="icnon-summary" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 20 10.9" style="enable-background:new 0 0 20 10.9;" xml:space="preserve">
+											<g>
+												<path d="M0,0.7c0.5-0.9,1-0.9,1.8-0.2C4.4,3.1,7,5.8,9.7,8.4c0.2,0.2,0.4,0.2,0.6,0c2.6-2.7,5.3-5.3,7.9-7.9   c0.7-0.7,1.3-0.6,1.8,0.2c0,0.1,0,0.3,0,0.4c-0.2,0.3-0.4,0.5-0.6,0.7c-2.9,2.9-5.7,5.7-8.6,8.6c-0.6,0.6-1.1,0.6-1.7,0   C6.3,7.6,3.4,4.7,0.5,1.8C0.3,1.6,0.1,1.4,0,1.1C0,1,0,0.8,0,0.7z"/>
+											</g>
+										</svg>
+									</div>
+								</div>
+								<div style="height:0PX" class="accordion__content-wrap-2">
+									<div>
+										<h4 data-i18n="order_summary" class="checkout-form-headline-3">Order Summary</h4>
+										<div data-show-compare-pricing="true" data-show-product-images="true" data-currency-symbol="$" class="checkout-cart-display mobile-display">
+										</div>
+										<div class="plus-text">*Plus applicable taxes</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="limited-time-offer">
+							<div class="skeleton-load sl_circula"></div>
+							<div class="offer-container">
+								<svg class="limited-offre-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+									<path d="M12.6213 19.741C12.4481 19.7845 12.2716 19.8231 12.0963 19.8556C11.6382 19.9414 11.3354 20.3852 11.4201 20.847C11.4619 21.0742 11.5901 21.2635 11.764 21.387C11.9432 21.5141 12.1714 21.5715 12.4039 21.5279C12.6126 21.4889 12.8229 21.443 13.0293 21.3912C13.4816 21.2778 13.7572 20.8161 13.6444 20.3607C13.5318 19.9049 13.0739 19.6275 12.6213 19.741Z" fill="#001780"/>
+									<path d="M18.8641 8.34276C18.9233 8.52229 19.0362 8.66884 19.1788 8.77011C19.3902 8.92012 19.6669 8.97059 19.9309 8.88265C20.3736 8.73459 20.6134 8.25378 20.467 7.80811C20.4003 7.60494 20.3262 7.40114 20.2474 7.2027C20.0742 6.76662 19.5832 6.55432 19.15 6.72875C18.7173 6.90308 18.5065 7.39786 18.6798 7.83407C18.7461 8.00086 18.8081 8.17206 18.8641 8.34276Z" fill="#001780"/>
+									<path d="M15.3645 18.527C15.2155 18.6261 15.0618 18.7219 14.907 18.8117C14.503 19.0464 14.3647 19.5666 14.5976 19.9733C14.6608 20.084 14.7451 20.1744 14.8421 20.2435C15.1025 20.4281 15.4562 20.4558 15.7507 20.2849C15.9347 20.1779 16.1178 20.0642 16.2951 19.946C16.684 19.6872 16.791 19.1596 16.534 18.7678C16.277 18.3757 15.7534 18.2681 15.3645 18.527Z" fill="#001780"/>
+									<path d="M20.9919 10.718C20.9736 10.2487 20.5811 9.88334 20.115 9.90166C19.6495 9.92017 19.2866 10.3156 19.3049 10.7848C19.3119 10.9642 19.3137 11.1463 19.3096 11.3255C19.303 11.6198 19.4459 11.8822 19.668 12.0399C19.8003 12.1337 19.9609 12.1905 20.135 12.1945C20.601 12.2049 20.9871 11.8327 20.9974 11.3631C21.0021 11.1489 21.0003 10.932 20.9919 10.718Z" fill="#001780"/>
+									<path d="M18.7264 16.2897C18.3528 16.0073 17.8241 16.084 17.5443 16.4596C17.4371 16.6035 17.3243 16.7456 17.2087 16.8824C16.9067 17.2399 16.9494 17.7767 17.3042 18.0811C17.3244 18.0984 17.3449 18.1143 17.3661 18.1292C17.7188 18.3797 18.2091 18.3222 18.4943 17.985C18.6323 17.8218 18.7668 17.652 18.8949 17.4802C19.1747 17.1045 19.099 16.5716 18.7264 16.2897Z" fill="#001780"/>
+									<path d="M19.9674 13.2158C19.5225 13.0753 19.0487 13.3248 18.9093 13.7729C18.856 13.9441 18.7968 14.1161 18.733 14.2846C18.5928 14.6554 18.7271 15.0635 19.035 15.2822C19.0915 15.3221 19.1537 15.356 19.2212 15.3818C19.6568 15.5492 20.1446 15.3291 20.3106 14.8901C20.3864 14.6898 20.4567 14.4851 20.5203 14.2816C20.6596 13.8334 20.4121 13.3563 19.9674 13.2158Z" fill="#001780"/>
+									<path d="M8.93804 19.8633C8.18326 19.7268 7.45923 19.4943 6.77267 19.1701C6.76454 19.1658 6.75728 19.161 6.74875 19.1571C6.58696 19.0804 6.42544 18.9982 6.26889 18.9123C6.26834 18.9117 6.26735 18.9113 6.26649 18.9109C5.97926 18.7516 5.69892 18.5753 5.42658 18.3822C1.45536 15.5643 0.500516 10.0173 3.29814 6.01709C3.90647 5.14758 4.64265 4.42217 5.46337 3.84723C5.47349 3.84013 5.4836 3.83308 5.49362 3.82595C8.38573 1.81864 12.3128 1.68336 15.3837 3.74605L14.7241 4.70601C14.5408 4.9732 14.6536 5.16791 14.9746 5.13881L17.8396 4.88043C18.161 4.85133 18.3532 4.57127 18.2668 4.25861L17.4974 1.46637C17.4113 1.15334 17.1908 1.11587 17.0072 1.38302L16.3461 2.34525C14.0925 0.821354 11.3894 0.24027 8.7065 0.708902C8.43629 0.756011 8.16986 0.813669 7.90709 0.880785C7.90506 0.881149 7.90343 0.881376 7.90181 0.88174C7.89165 0.884241 7.88136 0.88756 7.87147 0.890334C5.55795 1.48879 3.53943 2.84798 2.09908 4.78726C2.08694 4.80177 2.07443 4.81596 2.06297 4.83174C2.01507 4.89671 1.96754 4.96319 1.921 5.02967C1.84489 5.13862 1.76986 5.2503 1.69809 5.36198C1.6891 5.37544 1.68224 5.38913 1.67439 5.40272C0.4858 7.25802 -0.0875022 9.40292 0.0108169 11.5866C0.0110427 11.5937 0.0106364 11.601 0.0108169 11.6083C0.0203419 11.8217 0.0371347 12.0379 0.0599313 12.2508C0.0611502 12.2645 0.0641747 12.2776 0.0664769 12.2913C0.090041 12.5054 0.119609 12.7199 0.15667 12.9345C0.533335 15.1234 1.55842 17.0931 3.09446 18.6257C3.09803 18.6293 3.10173 18.6332 3.10534 18.637C3.1066 18.6384 3.108 18.6391 3.10922 18.6404C3.52191 19.0504 3.9708 19.4297 4.45414 19.7726C5.71901 20.6704 7.12749 21.2638 8.6401 21.5372C9.09906 21.6203 9.53748 21.3126 9.61982 20.8505C9.70211 20.3881 9.39686 19.9461 8.93804 19.8633Z" fill="#001780"/>
+									<path d="M9.9819 4.2572C9.60438 4.2572 9.29858 4.5655 9.29858 4.94523V11.8L15.5223 15.0408C15.6225 15.093 15.7297 15.1176 15.8353 15.1176C16.0825 15.1176 16.3212 14.982 16.4426 14.7454C16.6157 14.4078 16.4847 13.9929 16.1495 13.8185L10.6644 10.9621V4.94523C10.6644 4.5655 10.359 4.2572 9.9819 4.2572Z" fill="#001780"/>
+								</svg>
+							</div>
+							<div class="limited-offre-head">
+								<div class="offer-bold">Hurry! <span class="other-text">Your cart is reserved for <strong data-timer-duration="900" class="checkout-timer">15:00</strong></span></div>
+							</div>
+						</div>
+						<div class="checkout-steps">
+							<div class="steps-inner">
+								<div class="steps-text">
+									<strong data-i18n="step_01" class="steps-bold">Checkout</strong><br>
+								</div>
+								<svg class="steps-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7">
+									<path id="Polygon_7" data-name="Polygon 7" d="M3.5,0,7,6H0Z" transform="translate(6) rotate(90)"/>
+								</svg>
+								<div data-i18n="step_02" class="steps-text text-step_2">Special Offers<br></div>
+								<svg class="steps-arrow" xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7">
+									<path id="Polygon_7" data-name="Polygon 7" d="M3.5,0,7,6H0Z" transform="translate(6) rotate(90)"/>
+								</svg>
+								<div data-i18n="step_03" class="steps-text text-step_3">Order Receipt<br></div>
+							</div>
+						</div>
+					</div>
+					<div class="discount">
+						<div class="discount-code-holder w-form">
+							<form id="coupon_form_desktop_fld" name="wf-form-coupon_form_desktop" data-name="coupon_form_desktop">
+								<div class="coupon-code-opener">
+									<div class="coupon-input-wrapper"><input type="text" data-i18n="[placeholder]field_coupon" class="input-flds checkout-coupon-field w-input" maxlength="256" name="coupon_desktop_field" data-name="Coupon Desktop Field" placeholder="Promo code (optional)" id="coupon_desktop_field">
+										<a data-i18n="field_apply" href="#" class="checkout-coupon-button w-button">Apply</a>
+									</div>
+								</div>
+							</form>
+							<div class="w-form-done"></div>
+							<div class="w-form-fail discount-warning es_hide">
+								<div>This discount code cannot be used</div>
+							</div>
+						</div>
+					</div>
+					<div class="discount-success bar-mobile es_hide">
+						<div class="discount-message"><span data-i18n="discount_applied" class="discount-applied">Discount Applied! You&#x27;re saving </span><span class="checkout-discount-value">0.00</span></div>
+					</div>
+					<div class="addon-selector w-form">
+						<form id="email-form" name="email-form" data-name="Email Form">
+							<div class="check-wrapper-2-copy"><label data-variant-id="42536178319510" class="w-checkbox checkout-addon-toggle">
+									<div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-terms w--redirected-checked"></div><input type="checkbox" checked="" name="checkout-addon-toggle" data-name="checkout-addon-toggle" id="checkout-addon-toggle" style="opacity:0;position:absolute;z-index:-1"><span for="checkout-addon-toggle" class="checkbox-detail w-form-label"><span data-i18n="accepts_marketing" class="text-span-4">Yes, Add 2-Year Wear &amp; Tear Warranty For Only $19.99</span></span>
+								</label></div>
+						</form>
+						<div class="w-form-done">
+							<div>Thank you! Your submission has been received!</div>
+						</div>
+						<div class="w-form-fail">
+							<div>Oops! Something went wrong while submitting the form.</div>
+						</div>
+					</div>
+					<div class="express-checkout">
+						<div class="form-group checkout-paypal-form">
+							<div id="form_paypal" class="form-paypal w-form">
+								<form id="form_paypal" name="wf-form-form_paypal" data-name="form_paypal" class="checkout-paypal-form">
+									<a href="#" class="checkout-submit-paypal w-inline-block"></a>
+								</form>
+								<div class="w-form-done">
+									<div>Thank you! Your submission has been received!</div>
+								</div>
+								<div class="w-form-fail">
+									<div>Oops! Something went wrong while submitting the form.</div>
+								</div>
+							</div>
+						</div>
+						<!-- 
+						<div id="stripe-wallet-button" class="stripe-wallet-button">
+						</div>
+						-->
+					</div>
+					<div class="divider-wrap payment-method">
+						<div class="grey-line"></div>
+						<div data-i18n="pay_cc" class="sign-up-text">OR PAY WITH CREDIT CARD</div>
+						<div class="grey-line"></div>
+					</div>
+					<div class="form-wrapper w-form">
+						<form method="post" data-name="" redirect="https://try.miraclebrand.co/receipt/" data-redirect="https://try.miraclebrand.co/receipt/" class="form checkout-combo-form">
+							<div id="step-1" class="step step-1">
+								<div class="slide-content">
+									<div class="form-content">
+										<div class="rtc-combo-form">
+											<div class="payment-flds-box first_child">
+												<h4 data-i18n="contact_information" class="checkout-form-headline margin-bottom email">Contact Information</h4>
+												<div class="form-group">
+													<div class="frm-flds"><input type="email" data-i18n="[placeholder]field_email" class="input-flds w-input" autocomplete="email" maxlength="256" name="email" data-name="email" placeholder="E-Mail*" id="email" required=""><label for="email" class="field-label-2">E-Mail Address</label></div>
+												</div>
+												<div class="check-wrapper-2"><label class="w-checkbox accepts_marketing">
+														<div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-terms w--redirected-checked"></div><input type="checkbox" id="accepts_marketing" name="accepts_marketing" data-name="accepts_marketing" checked="" style="opacity:0;position:absolute;z-index:-1"><span for="accepts_marketing" class="checkbox-detail w-form-label"><span data-i18n="accepts_marketing" class="text-span-4">Keep me up to date on news and exclusive offers</span></span>
+													</label></div>
+											</div>
+											<div class="payment-flds-box">
+												<h4 data-i18n="shipping_address" class="checkout-form-headline margin-bottom email">Shipping Address</h4>
+												<div id="overlay" class="rtc-form-container">
+													<div class="rtc-grid">
+														<div class="form-group half-fld">
+															<div class="frm-flds"><label for="shipping_first_name-2" class="field-label-2 ct">First Name</label><input type="text" data-i18n="[placeholder]field_first_name" class="input-flds w-input" autocomplete="given-name" maxlength="256" name="shipping_first_name" data-name="shipping_first_name" placeholder="First Name*" id="shipping_first_name" required=""></div>
+														</div>
+														<div class="form-group half-fld">
+															<div class="frm-flds"><label for="shipping_last_name-3" class="field-label-2">Last Name</label><input type="text" data-i18n="[placeholder]field_last_name" class="input-flds w-input" autocomplete="family-name" maxlength="256" name="shipping_last_name" data-name="shipping_last_name" placeholder="Last Name*" id="shipping_last_name" required=""></div>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="frm-flds"><label for="shipping_address-3" class="field-label-2">Address</label><input type="text" data-i18n="[placeholder]field_address_1" class="input-flds w-input" autocomplete="address-line1" maxlength="256" name="shipping_address1" data-name="shipping_address1" placeholder="Address*" id="shipping_address_1" required=""></div>
+													</div>
+													<div class="rtc-grid mobile_change">
+														<div class="form-group half-fld">
+															<div class="frm-flds"><label for="shipping_address-3" class="field-label-2 ct">Apartment, suite, etc. (optional)</label><input type="text" data-i18n="[placeholder]field_address_2" class="input-flds w-input" autocomplete="address-line2" maxlength="256" name="shipping_address2" data-name="shipping_address2" placeholder="Apartment, suite, etc. (optional)" id="shipping_address_2"></div>
+														</div>
+														<div class="form-group half-fld">
+															<div class="frm-flds">
+																<div class="select-form-wrapper"><label for="shipping_country-2" class="field-label-2 ct">Country</label><select id="shipping_country" required="" data-name="shipping_country" name="shipping_country" autocomplete="country-name" data-i18n="[placeholder]field_country" class="input-flds select-field w-select"></select>
+																	<div class="caret-down"><img src="./images/arrows.svg" loading="lazy" alt="" class="image-24"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="rtc-grid mobile_change">
+														<div class="form-group half-fld _32-percent">
+															<div class="frm-flds">
+																<div class="select-form-wrapper"><label for="shipping_state-2" class="field-label-2 ct">State</label><select id="shipping_state" required="" data-name="shipping_state" name="shipping_state" autocomplete="address-level1" data-i18n="[placeholder]field_state" class="input-flds select-field w-select"></select>
+																	<div class="caret-down"><img src="./images/arrows.svg" loading="lazy" alt="" class="image-24"></div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group _32-percent">
+															<div class="frm-flds"><label for="shipping_city-2" class="field-label-2 ct">City</label><input type="text" data-i18n="[placeholder]field_city" class="input-flds w-input" autocomplete="address-level2" maxlength="256" name="shipping_city" data-name="shipping_city" placeholder="City*" id="shipping_city" required=""></div>
+														</div>
+														<div class="form-group _32-percent">
+															<div class="frm-flds"><label for="shipping_postal_code-2" class="field-label-2 ct">ZIP</label><input type="text" data-i18n="[placeholder]field_zip" class="input-flds w-input" autocomplete="postal-code" maxlength="256" name="shipping_postal_code" data-name="shipping_postal_code" placeholder="Zip Code*" id="shipping_postal_code" required=""></div>
+														</div>
+													</div>
+													<div class="form-group">
+														<div class="frm-flds"><label for="ship_field_intl-2" class="field-label-2 ct">Phone</label><input type="tel" maxlength="256" name="ship_field_intl" data-name="ship_field_intl" id="ship_field_intl" autocomplete="tel-full" class="input-flds w-input">
+															<div class="w-embed"><input type="hidden" name="shipping_phone" id="shipping_phone" value=""></div>
+														</div>
+													</div>
+												</div>
+												<div id="overlay" class="form-group">
+													<div class="attentive-form"><label id="accepts_attentive" class="w-checkbox checkbox-field-2">
+															<div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-terms"></div><input type="checkbox" id="accepts_attentive" name="accepts_attentive" data-name="accepts_attentive" style="opacity:0;position:absolute;z-index:-1"><span for="accepts_attentive" class="checkbox-detail w-form-label"><span class="text-span-4"><strong>‍</strong></span><strong class="bold-text">Sign up to get texts from Javy and we&#x27;ll text you a 10% OFF coupon code!</strong><span class="text-span"><br></span><span class="text-span-3">By checking this box, you agree to receive recurring automated promotional and personalized marketing text messages <strong>(e.g. cart reminders)</strong> from Javy at the cell number used when signing up. Joining is not a condition of any purchase. <strong>Reply HELP for help and STOP to cancel.</strong> Msg frequency varies &amp; Msg data rates may apply. View Terms &amp; Privacy.</span></span>
+														</label></div>
+												</div>
+												<div id="overlay" class="form-group-2">
+													<div class="attentive-wrapper"><label class="w-checkbox checkbox-field-2">
+															<div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-terms-2"></div><input type="checkbox" id="accepts_attentive" name="accepts_attentive" data-name="accepts_attentive" style="opacity:0;position:absolute;z-index:-1"><span for="accepts_attentive" class="checkbox-detail w-form-label"><span class="text-span-4"><strong>Get 10% Off Your Next Order<br></strong></span><span class="attentive-link">By checking this box, you agree to receive recurring automated promotional and personalized marketing text messages <strong>(e.g. cart reminders)</strong> from Miracle Made at the cell number used when signing up. Joining is not a condition of any purchase. <strong>Reply HELP for help and STOP to cancel.</strong> Msg frequency varies &amp; Msg data rates may apply. View </span>
+																<a href="https://www.miraclebrand.co/pages/terms-and-conditions" class="attentive_link"><span class="attentive-link">Terms</span></a><span class="attentive-link"> &amp; </span>
+																<a href="https://www.miraclebrand.co/pages/privacy-policy" class="attentive_link"><span class="attentive-link">Privacy</span></a><span class="attentive-link">.</span>
+															</span>
+														</label></div>
+												</div>
+											</div>
+											<div class="payoptbox">
+												<h4 data-i18n="billing_address" class="checkout-form-headline margin-bottom">Billing Address</h4>
+												<p data-i18n="encrypted_payments" class="sub-headline-title">Select the address that matches your card or payment method.<br></p>
+												<div class="form-group all-border-radius shipping_-zone"><label id="billing_use_shipping_true" checked="" data-w-id="c487d95d-d30f-3ead-baa4-f51f8459595a" class="same-shipping border-bottom w-radio">
+														<div class="w-form-formradioinput w-form-formradioinput--inputType-custom shipping-radio w-radio-input w--redirected-checked"></div><input type="radio" data-name="billing_use_shipping" id="billing_use_shipping_true" name="billing_use_shipping" value="true" checked="" style="opacity:0;position:absolute;z-index:-1"><span for="true" data-i18n="same_shipping" class="w-form-label">Same as shipping address</span>
+													</label><label id="billing_use_shipping_false" data-w-id="c487d95d-d30f-3ead-baa4-f51f8459595e" class="diff-shipping w-radio">
+														<div class="w-form-formradioinput w-form-formradioinput--inputType-custom shipping-radio w-radio-input"></div><input type="radio" data-name="billing_use_shipping" value="false" id="billing_use_shipping_false" name="billing_use_shipping" style="opacity:0;position:absolute;z-index:-1"><span for="false" data-i18n="different_shipping" class="form-gateway-cardpayopt w-form-label">Use a different billing address</span>
+													</label></div>
+												<div style="display:none" class="diff-billing-address">
+													<div class="diff-billing-address-wrapper">
+														<div class="rtc-form-container">
+															<div class="rtc-grid">
+																<div class="form-group half-fld">
+																	<div class="frm-flds"><label for="billing_first_name" class="field-label-2 ct">First Name</label><input type="text" data-i18n="[placeholder]field_first_name" class="input-flds w-input" autocomplete="given-name" maxlength="256" name="billing_first_name" data-name="billing_first_name" placeholder="First Name*" id="billing_first_name"></div>
+																</div>
+																<div class="form-group half-fld">
+																	<div class="frm-flds"><label for="billing_last_name-2" class="field-label-2">Last Name</label><input type="text" data-i18n="[placeholder]field_last_name" class="input-flds w-input" autocomplete="family-name" maxlength="256" name="billing_last_name" data-name="billing_last_name" placeholder="Last Name*" id="billing_last_name"></div>
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="frm-flds"><label for="billing_address-2" class="field-label-2">Address</label><input type="text" data-i18n="[placeholder]field_address_1" class="input-flds w-input" autocomplete="address-line1" maxlength="256" name="billing_address1" data-name="billing_address1" placeholder="Address*" id="billing_address_1"></div>
+															</div>
+															<div class="rtc-grid mobile_change">
+																<div class="form-group half-fld">
+																	<div class="frm-flds"><label for="billing_address-3" class="field-label-2 ct">Apartment, suite, etc. (optional)</label><input type="text" data-i18n="[placeholder]field_address_2" class="input-flds w-input" autocomplete="address-line2" maxlength="256" name="billing_address2" data-name="billing_address2" placeholder="Apartment, suite, etc. (optional)" id="billing_address_2"></div>
+																</div>
+																<div class="form-group half-fld">
+																	<div class="frm-flds">
+																		<div class="select-form-wrapper"><label for="billing_country-2" class="field-label-2 ct">Country</label><select id="billing_country" name="billing_country" data-name="billing_country" autocomplete="country-name" data-i18n="[placeholder]field_country" class="input-flds select-field w-select"></select>
+																			<div class="caret-down"><img src="./images/arrows.svg" loading="lazy" alt="" class="image-24"></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="rtc-grid mobile_change">
+																<div class="form-group half-fld _32-percent">
+																	<div class="frm-flds">
+																		<div class="select-form-wrapper"><label for="billing_state-2" class="field-label-2 ct">State</label><select id="billing_state" name="billing_state" data-name="billing_state" autocomplete="address-level1" data-i18n="[placeholder]field_state" class="input-flds select-field w-select"></select>
+																			<div class="caret-down"><img src="./images/arrows.svg" loading="lazy" alt="" class="image-24"></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="form-group half-fld _32-percent">
+																	<div class="frm-flds"><label for="billing_city" class="field-label-2 ct">City</label><input type="text" data-i18n="[placeholder]field_city" class="input-flds w-input" autocomplete="address-level2" maxlength="256" name="billing_city" data-name="billing_city" placeholder="City*" id="billing_city"></div>
+																</div>
+																<div class="form-group _32-percent">
+																	<div class="frm-flds"><label for="billing_postal_code-2" class="field-label-2 ct">ZIP</label><input type="text" data-i18n="[placeholder]field_zip" class="input-flds w-input" autocomplete="postal-code" maxlength="256" name="billing_postal_code" data-name="billing_postal_code" placeholder="Zip Code*" id="billing_postal_code"></div>
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="frm-flds"><label for="billing_field_intl-2" class="field-label-2 ct">Phone</label><input type="tel" maxlength="256" name="billing_field_intl" data-name="billing_field_intl" id="billing_field_intl" autocomplete="tel-full" class="input-flds w-input">
+																	<div class="w-embed"><input type="hidden" name="billing_phone" id="billing_phone" value=""></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="payment-flds-box">
+												<h4 data-i18n="payment_details" class="checkout-form-headline">Payment details<br></h4>
+												<p data-i18n="encrypted_payments" class="sub-headline-title">All transactions are secure and encrypted.<br></p>
+												<div class="payment-selector">
+													<div class="cc-header">
+														<div class="payment-cc"><label id="combo_mode_credit" checked="" combo_mode="credit" class="radio-select-cc w-radio">
+																<div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input w--redirected-checked"></div><input type="radio" data-name="combo_mode" value="credit" id="combo_mode_credit" name="combo_mode" checked="" style="opacity:0;position:absolute;z-index:-1"><span for="credit" checked="" data-i18n="cc_payment" class="radio-button-label w-form-label">Credit Card</span><img src="./images/ccs.svg" loading="lazy" alt="" class="cc-image">
+															</label></div>
+														<div class="cc-form">
+															<div class="nmi-form">
+																<div class="rtc-grid">
+																	<div class="form-group half-fld fl">
+																		<div class="frm-flds">
+																			<div class="cc-titles">Credit Card Number</div>
+																			<div id="braintree-cc-number" class="input-flds"><br>‍</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="rtc-grid">
+																	<div class="form-group half-fld mobo">
+																		<div class="frm-flds">
+																			<div class="cc-titles">Valid Through<br></div>
+																			<div id="braintree-expiry" class="input-flds"></div>
+																		</div>
+																	</div>
+																	<div class="form-group half-fld mobo">
+																		<div class="frm-flds">
+																			<div class="cc-titles">CVV</div>
+																			<div id="braintree-cvv" class="input-flds"></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="protection-block"><img src="./images/protect.svg" loading="lazy" alt="" class="image-9">
+																<p data-i18n="protection_message" class="checkout-form-secure">We protect your payment information using encryption to provide bank-level security.<br></p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<p class="legal-term">By clicking the <span>"Complete Purchase"</span> button, you hereby agree to and accept Pattern Brands LLC's <a target="_blank" href="https://www.miraclebrand.co/pages/privacy-policy">Privacy Policy</a> and <a target="_blank" href="https://www.miraclebrand.co/pages/terms-and-conditions">Terms of Use</a></p>
+
+										<a href="#" class="checkout-submit-combo w-inline-block">
+											<div class="button_rtc">
+												<div class="loader-wrapper">
+													<div class="loader"></div>
+												</div>
+												<div class="button-txt-icon">
+													<svg class="lock-icon reverse-icon" xmlns="http://www.w3.org/2000/svg" id="locker" width="21.573" height="27" viewBox="0 0 21.573 27">
+														<path id="Path_59" data-name="Path 59" d="M9.7,0h2.442c.1.136.237.1.373.136a7.243,7.243,0,0,1,6.106,6.513,47.607,47.607,0,0,1,.1,4.918c0,.441.1.611.577.678a2.438,2.438,0,0,1,2.273,2.68v9.43A2.586,2.586,0,0,1,18.927,27H2.815A2.837,2.837,0,0,1,0,24.151V15.2c0-1.8.577-2.544,2.374-2.917a.493.493,0,0,0,.475-.577c-.034-1.425-.068-2.815,0-4.24A7.326,7.326,0,0,1,7.462.678,17.031,17.031,0,0,1,9.7,0Zm1.085,12.177h3.765c.305,0,.543,0,.509-.407a33.112,33.112,0,0,0-.136-4.85,3.948,3.948,0,0,0-2.646-3.426,4.251,4.251,0,0,0-5.732,3.6,42.5,42.5,0,0,0-.1,4.647c0,.407.2.475.543.475C8.276,12.177,9.531,12.177,10.786,12.177Zm-.1,11.024h1.594c.305,0,.441-.068.339-.441-.2-.916-.373-1.832-.577-2.747a1.078,1.078,0,0,1,.271-1.119,2.112,2.112,0,0,0-.1-2.917,1.95,1.95,0,0,0-2.68-.136,2.035,2.035,0,0,0-.373,2.883,1.536,1.536,0,0,1,.305,1.628,4.586,4.586,0,0,0-.17.984c-.136.611-.543,1.391-.305,1.73C9.328,23.506,10.176,23.133,10.685,23.2Z" transform="translate(0)"/>
+													</svg>
+													<div data-i18n="complete_purchase" class="complete-purchase-text ct">COMPLETE PURCHASE</div>
+												</div>
+												<div data-i18n="try_risk_free" class="button-span">TRY IT RISK FREE! - 30 DAY MONEY BACK GUARANTEE!</div>
+											</div>
+										</a>
+										<div class="mbg-section">
+											<img class="image-10" src="./images/money-back.webp" alt="Money Back Guarantee by Miracle Made">
+											<p data-i18n="[html]30_day_mbg" class="mbg-text"><strong class="mbg-days">30-Day Guarantee:</strong> <span class="mgb-extra">Pattern Brands offers a 30-Day Money Back Guarantee in case you don&#x27;t fall in love with our product.</span><br></p>
+										</div>
+										<div class="checkout-note mobile hidden">
+											<strong>
+												<div class="checkout-note-img"></div>
+											  	Taxes for this order will be charged when you receive the package
+											</strong>
+											<p>
+											  Shipments from the USA pay taxes/duty upon receipt instead of when paying online. Depending on your province, the rate will be between 5% to 20%. This is set by the Canadian government.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="success-message w-form-done">
+							<div>Thanks! I have received your form submission, I&#x27;ll get back to you shortly!</div>
+						</div>
+						<div class="error-message w-form-fail">
+							<div>Oops! Something went wrong while submitting the form</div>
+						</div>
+						<div class="footer desktop">
+							<div class="div-block-3">
+								<svg class="rtc-logo" xmlns="http://www.w3.org/2000/svg" width="16.202" height="14.183" viewBox="0 0 16.202 14.183">
+									<g id="Group_278" data-name="Group 278" transform="translate(0 0)">
+									  <g id="Group_277" data-name="Group 277" transform="translate(0 0)">
+										<g id="Group_275" data-name="Group 275" transform="translate(0 0.033)">
+										  <g id="Group_274" data-name="Group 274">
+											<path id="Path_437" data-name="Path 437" d="M13.991,35.525a8.734,8.734,0,0,1-1.727-.156A9.862,9.862,0,0,1,6.979,32.55q-1.786-1.8-3.586-3.586a1.982,1.982,0,0,0-.184-.145.3.3,0,0,1,.239-.053c1.269,0,2.539,0,3.808,0a2.3,2.3,0,0,0,2.211-1.6,2.25,2.25,0,0,0-2.187-2.9c-1.436-.006-2.873,0-4.309,0a2.871,2.871,0,0,1-2.94-2.5c-.064-.391-.064-.392.319-.392q3.528,0,7.055,0A5.127,5.127,0,0,1,9.8,30.994c-.175.1-.136.145-.023.257q2.038,2.029,4.071,4.064a1.61,1.61,0,0,0,.193.143Z" transform="translate(0 -21.375)" fill="#575757"/>
+										  </g>
+										</g>
+										<g id="Group_276" data-name="Group 276" transform="translate(11.987 0)">
+										  <path id="Path_438" data-name="Path 438" d="M91.943,21.131h1.393a.326.326,0,0,1,.319.393c-.165.813-.7,2.607-2.156,2.607h-.413a.326.326,0,0,1-.313-.238,5.642,5.642,0,0,0-1.239-2.215.326.326,0,0,1,.239-.547Z" transform="translate(-89.447 -21.131)" fill="#575757"/>
+										</g>
+									  </g>
+									</g>
+								</svg>
+								<div data-i18n="123" class="small-text">Powered by RTC<br></div>
+							</div>
+							<div class="div-block-4">
+								<div class="terms-text">
+									<a href="https://www.miraclebrand.co/pages/terms-and-conditions" data-i18n="terms_service" target="_blank" class="footer-link">Terms of Service</a><br>
+								</div>
+								<div class="terms-text">
+									<a target="_blank" href="https://www.miraclebrand.co/pages/privacy-policy" data-i18n="privacy_policy" class="footer-link">Privacy Policy</a><br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rtc-right">
+				<div class="rtc-right-container">
+					<div class="summary-desktop">
+						<div class="summary-wrap">
+							<div class="title-wrap">
+								<h4 data-i18n="order_summary" class="checkout-form-headline margin-bottom">Order Summary</h4>
+							</div>
+							<div data-show-compare-pricing="true" data-show-product-images="true" data-currency-symbol="$" class="checkout-cart-display">
+								<div class="skeleton-load"></div>
+							</div>
+							<div class="plus-text">*Plus applicable taxes</div>
+						</div>
+					</div>
+					<div class="checkout-note desktop hidden">
+						<strong>
+						  <div class="checkout-note-img"></div>
+						  Taxes for this order will be charged when you receive the package
+						</strong>
+						<p>
+						  Shipments from the USA pay taxes/duty upon receipt instead of when paying online. Depending on your province, the rate will be between 5% to 20%. This is set by the Canadian government.
+						</p>
+					</div>
+					<div class="w-layout-grid trusted-reviews">
+						<div class="divider-wrap reviews">
+							<div class="grey-line"></div>
+							<div data-i18n="trusted_reviews" class="sign-up-text-2">TRUSTED CUSTOMER REVIEWS</div>
+							<div class="grey-line"></div>
+						</div>
+						<div class="list-person-item text-black mb-30">
+							<div class="flex-row">
+							  <div class="avatar-block-img"><img src="./images/comforter-reviews/Sophia M.jpg" loading="lazy" alt="avatar-img" class="avatar-img"></div>
+							  <div class="list-person-item-info">
+								<div class="list-block-1">
+								  <div class="list-block-1-info">
+									<div class="list-block-1-info-sc">
+									  <div class="rating-block"><img src="./images/rating-stars.svg" loading="lazy" alt="rating-stars" class="rating-stars mr-5"></div>
+									  <div class="avatar-name-2">Andrea M.</div>
+									</div>
+									<div class="review-location-verified">
+									  <div class="verified-2"><img src="./images/medal.svg" loading="lazy" alt="" class="review-shield-2">
+										<div data-i18n="verified_buyer" class="text-block-30">Verified Buyer</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+								<p data-i18n="trusted_reviews_review_1" class="customer-r-text">"Absolutely loving the 3-temperature zone technology on this comforter!! Usually I have to kick my feet out bc I get too hot, but with this comforter I can stay under the covers all night long. Worth it for sure!"<br></p>
+							  </div>
+							</div>
+						</div>
+						<div class="list-person-item text-black mb-30">
+							<div class="flex-row">
+							  <div class="avatar-block-img"><img src="./images/comforter-reviews/Justin R.jpg" loading="lazy" alt="avatar-img" class="avatar-img"></div>
+							  <div class="list-person-item-info">
+								<div class="list-block-1">
+								  <div class="list-block-1-info">
+									<div class="list-block-1-info-sc">
+									  <div class="rating-block"><img src="./images/rating-stars.svg" loading="lazy" alt="rating-stars" class="rating-stars mr-5"></div>
+									  <div class="avatar-name-2">Justin R.</div>
+									</div>
+									<div class="review-location-verified">
+									  <div class="verified-2"><img src="./images/medal.svg" loading="lazy" alt="" class="review-shield-2">
+										<div data-i18n="verified_buyer" class="text-block-30">Verified Buyer</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+								<p data-i18n="trusted_reviews_review_2" class="customer-r-text">This miracle comforter truly is great for year round and regulates body heat so well. I’m ecstatic I have finally found, “the one”! I love that it’s designated to have different levels of heat retention through out and it just feels so thoughtfully designed. Highly recommend!<br></p>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="w-layout-grid brand-features-2">
+						<div class="divider-wrap features">
+							<div class="grey-line"></div>
+							<div class="sign-up-text-2">WHY CHOOSE US</div>
+							<div class="grey-line"></div>
+						</div>
+						<div class="feature-item">
+							<div class="feature-header-2">
+								<div class="feature-icon-2">
+									<div class="feature-image-div">
+										<svg class="feature-image-2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="65px" height="65px" viewBox="0 0 65 65" version="1.1">
+											<g id="30-day-icon">
+											  <path d="M32.5 65C50.4493 65 65 50.4493 65 32.5C65 14.5507 50.4493 0 32.5 0C14.5507 0 0 14.5507 0 32.5C0 50.4493 14.5507 65 32.5 65Z" id="Oval" fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="1"/>
+											  <g id="003-agenda" transform="translate(17 17)">
+												<path d="M26.875 27.5L3.125 27.5C1.4025 27.5 0 26.0975 0 24.375L0 3.125C0 1.4025 1.4025 0 3.125 0L26.875 0C28.5975 0 30 1.4025 30 3.125L30 24.375C30 26.0975 28.5975 27.5 26.875 27.5ZM3.125 1.25C2.09125 1.25 1.25 2.09125 1.25 3.125L1.25 24.375C1.25 25.4088 2.09125 26.25 3.125 26.25L26.875 26.25C27.9088 26.25 28.75 25.4088 28.75 24.375L28.75 3.125C28.75 2.09125 27.9088 1.25 26.875 1.25L3.125 1.25Z" transform="translate(0 2.5)" id="Shape" fill="#000000" stroke="none"/>
+												<path d="M29.375 1.25L0.625 1.25C0.28 1.25 0 0.97 0 0.625C0 0.28 0.28 0 0.625 0L29.375 0C29.72 0 30 0.28 30 0.625C30 0.97 29.72 1.25 29.375 1.25Z" transform="translate(0 10)" id="Path" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M0.625 6.25C0.28 6.25 0 5.97 0 5.625L0 0.625C0 0.28 0.28 0 0.625 0C0.97 0 1.25 0.28 1.25 0.625L1.25 5.625C1.25 5.97 0.97 6.25 0.625 6.25Z" transform="translate(6.25 0)" id="Path" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M0.625 6.25C0.28 6.25 0 5.97 0 5.625L0 0.625C0 0.28 0.28 0 0.625 0C0.97 0 1.25 0.28 1.25 0.625L1.25 5.625C1.25 5.97 0.97 6.25 0.625 6.25Z" transform="translate(22.5 0)" id="Path" fill="#000000" fill-rule="evenodd" stroke="none"/>
+											  </g>
+											</g>
+										</svg>
+									</div>
+								</div>
+								<div class="feature-content">
+									<div class="feature-heading-2">
+										<div class="feature-heading-inner">
+											<h6 class="feature-checkout-2">30-Day Satisfaction Guarantee</h6>
+										</div>
+									</div>
+									<div class="feature-content-text">
+										<div class="feature-paragraph">
+											<p class="paragraph-feature">If you&#x27;re not satisfied with your product(s), we&#x27;ll make it right! We promise.<br></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="feature-item">
+							<div class="feature-header-2">
+								<div class="feature-icon-2">
+									<div class="feature-image-div">
+										<svg class="feature-image-2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="65px" height="65px" viewBox="0 0 65 65" version="1.1">
+											<g id="shippign-icon">
+											  <path d="M32.5 65C50.4493 65 65 50.4493 65 32.5C65 14.5507 50.4493 0 32.5 0C14.5507 0 0 14.5507 0 32.5C0 50.4493 14.5507 65 32.5 65Z" id="Oval-Copy" fill="none" fill-rule="evenodd" stroke="#000000" stroke-width="1"/>
+											  <g id="006-truck" transform="translate(18 21)">
+												<path d="M3.30001 0C1.48004 0 0 1.50194 0 3.34883C0 5.19572 1.48004 6.69766 3.30001 6.69766C5.11997 6.69766 6.60001 5.19572 6.60001 3.34883C6.60001 1.50194 5.11991 0 3.30001 0ZM3.30008 5.5814C2.08675 5.5814 1.1001 4.58008 1.1001 3.34887C1.1001 2.11758 2.08681 1.11633 3.30008 1.11633C4.51335 1.11633 5.50006 2.11765 5.50006 3.34887C5.50006 4.58008 4.51335 5.5814 3.30008 5.5814Z" transform="translate(4.4001465 17.302368)" id="Shape" fill="#000000" stroke="none"/>
+												<path d="M3.30001 0C1.48004 0 0 1.50194 0 3.34883C0 5.19572 1.48004 6.69766 3.30001 6.69766C5.11997 6.69766 6.60001 5.19572 6.60001 3.34883C6.60001 1.50194 5.11997 0 3.30001 0ZM3.30008 5.5814C2.08675 5.5814 1.1001 4.58008 1.1001 3.34887C1.1001 2.11758 2.08681 1.11633 3.30008 1.11633C4.51341 1.11633 5.50006 2.11765 5.50006 3.34887C5.50006 4.58008 4.51341 5.5814 3.30008 5.5814Z" transform="translate(23.100098 17.302368)" id="Shape" fill="#000000" stroke="none"/>
+												<path d="M12.0125 8.07016L7.06253 0.256199C6.96134 0.0965405 6.78699 0 6.59995 0L0.54998 0C0.245825 0 0 0.25005 0 0.558117L0 14.5116C0 14.8202 0.245825 15.0697 0.54998 15.0697L2.74996 15.0697L2.74996 13.9534L1.09996 13.9534L1.09996 1.1163L6.29966 1.1163L11 8.53618L11 13.9535L8.24995 13.9535L8.24995 15.0697L11.55 15.0697C11.8541 15.0697 12.0999 14.8203 12.0999 14.5116L12.0999 8.37208C12.1 8.26546 12.0698 8.15996 12.0125 8.07016Z" transform="translate(20.900146 6.1395264)" id="Path" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M1.09996 5.02325L1.09996 1.1163L5.49999 1.1163L5.49999 0L0.54998 0C0.245825 0 0 0.25005 0 0.558117L0 5.58136C0 5.89002 0.245825 6.13948 0.54998 6.13948L8.8 6.13948L8.8 5.02318L1.09996 5.02318L1.09996 5.02325Z" transform="translate(23.100098 8.37207)" id="Path" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M21.45 0L0.54998 0C0.246405 0 0 0.25005 0 0.558117L0 18.4186C0 18.7272 0.246405 18.9767 0.54998 18.9767L4.95001 18.9767L4.95001 17.8604L1.10002 17.8604L1.10002 1.11623L20.9001 1.11623L20.9001 17.8604L10.45 17.8604L10.45 18.9767L21.45 18.9767C21.7542 18.9767 22 18.7272 22 18.4186L22 0.558117C22 0.25005 21.7542 0 21.45 0Z" transform="translate(0 2.232544)" id="Path" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M0 0L3.30001 0L3.30001 1.1163L0 1.1163L0 0Z" transform="translate(0.5500488 17.860474)" id="Rectangle" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M0 0L9.35004 0L9.35004 1.1163L0 1.1163L0 0Z" transform="translate(11.550049 17.860474)" id="Rectangle" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M0 0L2.19998 0L2.19998 1.1163L0 1.1163L0 0Z" transform="translate(30.25 17.860474)" id="Rectangle" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M0 0L19.2501 0L19.2501 1.1163L0 1.1163L0 0Z" transform="translate(2.1999512 4.465088)" id="Rectangle" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M0 0L1.10002 0L1.10002 1.1163L0 1.1163L0 0Z" transform="translate(7.1499023 20.093018)" id="Rectangle" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M0 0L1.10002 0L1.10002 1.1163L0 1.1163L0 0Z" transform="translate(25.850098 20.093018)" id="Rectangle" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M0 0L7.70004 0L7.70004 1.1163L0 1.1163L0 0Z" transform="translate(2.1999512 0)" id="Rectangle" fill="#000000" fill-rule="evenodd" stroke="none"/>
+												<path d="M0 0L1.10002 0L1.10002 1.1163L0 1.1163L0 0Z" id="Rectangle" fill="#000000" fill-rule="evenodd" stroke="none"/>
+											  </g>
+											</g>
+										</svg>
+									</div>
+								</div>
+								<div class="feature-content">
+									<div class="feature-heading-2">
+										<div class="feature-heading-inner">
+											<h6 class="feature-checkout-2">Over 130,000 successfully shipped orders</h6>
+										</div>
+									</div>
+									<div class="feature-content-text">
+										<div class="feature-paragraph">
+											<p class="paragraph-feature">Happy customers, end-to-end tracking and reliable customer service.<br></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer mobile">
+						<div class="div-block-3">
+							<svg class="rtc-logo" xmlns="http://www.w3.org/2000/svg" width="16.202" height="14.183" viewBox="0 0 16.202 14.183">
+								<g id="Group_278" data-name="Group 278" transform="translate(0 0)">
+								  <g id="Group_277" data-name="Group 277" transform="translate(0 0)">
+									<g id="Group_275" data-name="Group 275" transform="translate(0 0.033)">
+									  <g id="Group_274" data-name="Group 274">
+										<path id="Path_437" data-name="Path 437" d="M13.991,35.525a8.734,8.734,0,0,1-1.727-.156A9.862,9.862,0,0,1,6.979,32.55q-1.786-1.8-3.586-3.586a1.982,1.982,0,0,0-.184-.145.3.3,0,0,1,.239-.053c1.269,0,2.539,0,3.808,0a2.3,2.3,0,0,0,2.211-1.6,2.25,2.25,0,0,0-2.187-2.9c-1.436-.006-2.873,0-4.309,0a2.871,2.871,0,0,1-2.94-2.5c-.064-.391-.064-.392.319-.392q3.528,0,7.055,0A5.127,5.127,0,0,1,9.8,30.994c-.175.1-.136.145-.023.257q2.038,2.029,4.071,4.064a1.61,1.61,0,0,0,.193.143Z" transform="translate(0 -21.375)" fill="#575757"/>
+									  </g>
+									</g>
+									<g id="Group_276" data-name="Group 276" transform="translate(11.987 0)">
+									  <path id="Path_438" data-name="Path 438" d="M91.943,21.131h1.393a.326.326,0,0,1,.319.393c-.165.813-.7,2.607-2.156,2.607h-.413a.326.326,0,0,1-.313-.238,5.642,5.642,0,0,0-1.239-2.215.326.326,0,0,1,.239-.547Z" transform="translate(-89.447 -21.131)" fill="#575757"/>
+									</g>
+								  </g>
+								</g>
+							</svg>
+							<div class="small-text">Powered by RTC<br></div>
+						</div>
+						<div class="div-block-4">
+							<div class="terms-text">
+								<a target="_blank"  href="https://www.miraclebrand.co/pages/terms-and-conditions" class="footer-link">Terms of Service</a><br>
+							</div>
+							<div class="terms-text">
+								<a target="_blank" href="https://www.miraclebrand.co/pages/privacy-policy" class="footer-link">Privacy Policy</a><br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+	<script src="./js/checkout_v2-c.js"></script>
+	<style>
+	</style>
+	<script>
+		var input = document.getElementById('shipping_address_1');
+		let autocompleteShipping;
+		let shippingField1;
+		let shippingField2;
+		let shippingPostalField;
+
+		let autocompleteBilling;
+		let billingField1;
+		let billingField2;
+		let billingPostalField;
+
+		function initAutocomplete() {
+			/////////////////////////// Shipping ///////////////////////////
+			shippingField1 = document.querySelector("#shipping_address_1");
+			shippingField2 = document.querySelector("#shipping_address_2");
+			shippingPostalField = document.querySelector("#shipping_postal_code");
+
+			autocompleteShipping = new google.maps.places.Autocomplete(shippingField1, {
+			fields: ["address_components", "geometry"],
+			types: ["address"],
+			});
+
+			// When the user selects an address from the drop-down, populate the
+			// address fields in the form.
+			autocompleteShipping.addListener("place_changed", fillInAddress);
+
+			/////////////////////////// Billing ///////////////////////////
+			billingField1 = document.querySelector("#billing_address_1");
+			billingField2 = document.querySelector("#billing_address_2");
+			billingPostalField = document.querySelector("#billing_postal_code");
+
+			autocompleteBilling = new google.maps.places.Autocomplete(billingField1, {
+			fields: ["address_components", "geometry"],
+			types: ["address"],
+			});
+
+			autocompleteBilling.addListener("place_changed", fillInBillingAddress);
+		}
+
+		function fillInAddress() {
+			// Get the place details from the autocomplete object.
+			const place = autocompleteShipping.getPlace();
+			let address1 = "";
+			let postcode = "";
+			let stateShortName = "";
+			let stateLongName = "";
+			let shippingCountry = null;
+
+			// Get each component of the address from the place details,
+			// and then fill-in the corresponding field on the form.
+			// place.address_components are google.maps.GeocoderAddressComponent objects
+			// which are documented at http://goo.gle/3l5i5Mr
+			for (const component of place.address_components) {
+			const componentType = component.types[0];
+
+			switch (componentType) {
+				case "street_number": {
+				address1 = `${component.long_name} ${address1}`;
+				break;
+				}
+
+				case "route": {
+				address1 += component.short_name;
+				break;
+				}
+
+				case "postal_code": {
+				postcode = `${component.long_name}${postcode}`;
+				shippingPostalField.value = postcode;
+				setParentElementAsValid(shippingPostalField);
+				break;
+				}
+
+				case "locality": {
+				const cityInput = document.querySelector("#shipping_city");
+				cityInput.value = component.long_name;
+				setParentElementAsValid(cityInput);
+				break;
+				}
+
+				case "country": {
+				const countrySelect = document.querySelector("#shipping_country");
+				const shippingInput = document.querySelector("#ship_field_intl");
+				const countryValue = component.short_name;
+				shippingCountry = countryValue;
+				selectCountry(countrySelect, countryValue);
+				setParentElementAsValid(countrySelect);
+				setPhoneInput(shippingInput, countryValue);
+				break;
+				}
+
+				case "administrative_area_level_1": {
+				stateLongName = component.long_name;
+				stateShortName = component.short_name;
+				break;
+				}
+			}
+			}
+
+			shippingField1.value = address1;
+			shippingField2.focus();
+
+			if (shippingCountry) {
+			const stateSelect = document.querySelector("#shipping_state");
+			selectState(stateSelect, stateLongName, stateShortName);
+			setParentElementAsValid(stateSelect);
+			}
+		}
+
+		function fillInBillingAddress() {
+			const place = autocompleteBilling.getPlace();
+			let address1 = "";
+			let postcode = "";
+			let stateShortName = "";
+			let stateLongName = "";
+			let billingCountry = null;
+
+			for (const component of place.address_components) {
+			const componentType = component.types[0];
+
+			switch (componentType) {
+				case "street_number": {
+				address1 = `${component.long_name} ${address1}`;
+				break;
+				}
+
+				case "route": {
+				address1 += component.short_name;
+				break;
+				}
+
+				case "postal_code": {
+				postcode = `${component.long_name}${postcode}`;
+				billingPostalField.value = postcode;
+				setParentElementAsValid(billingPostalField);
+				break;
+				}
+
+				case "locality": {
+				const cityInput = document.querySelector("#billing_city");
+				cityInput.value = component.long_name;
+				setParentElementAsValid(cityInput);
+				break;
+				}
+
+				case "country": {
+				const countrySelect = document.querySelector("#billing_country");
+				const billingInput = document.querySelector("#billing_field_intl");
+				const countryValue = component.short_name;
+				billingCountry = countryValue;
+				selectCountry(countrySelect, countryValue);
+				setParentElementAsValid(countrySelect);
+				setPhoneInput(billingInput, countryValue);
+				break;
+				}
+
+				case "administrative_area_level_1": {
+				stateLongName = component.long_name;
+				stateShortName = component.short_name;
+				break;
+				}
+			}
+			}
+
+			billingField1.value = address1;
+			billingField2.focus();
+
+			if (billingCountry) {
+			const stateSelect = document.querySelector("#billing_state");
+			selectState(stateSelect, stateLongName, stateShortName);
+			setParentElementAsValid(stateSelect);
+			}
+		}
+
+		function setParentElementAsValid(element) {
+			element.parentNode.classList.add("checkout-valid-field");
+		}
+
+		function selectCountry(countrySelect, value) {
+			countrySelect.value = value;
+			countrySelect.classList.add("selected");
+			countrySelect.dispatchEvent(new Event("change", { bubbles: true }));
+		}
+
+		function selectState(stateSelect, longValue, shortValue) {
+			for (const option of stateSelect.options) {
+			if (
+				option.value.includes(longValue) ||
+				option.value.includes(shortValue)
+			) {
+				stateSelect.value = option.value;
+				stateSelect.classList.add("selected");
+			}
+			}
+			stateSelect.dispatchEvent(new Event("change", { bubbles: true }));
+		}
+
+		function setPhoneInput(phoneField, selectedCountry) {
+			const intlPhoneInput = window.intlTelInputGlobals.getInstance(phoneField);
+			intlPhoneInput.setCountry(selectedCountry.toLowerCase());
+			phoneField.dispatchEvent(new Event("change"));
+		}
+
+	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		document.querySelectorAll('.accordion__title-2').forEach(title => {
+			title.addEventListener('click', function() {
+				const content = this.nextElementSibling;
+				const arrow = this.querySelector('.icnon-summary');
+				const hideSummary = this.querySelector('.hide-order-summary');
+				const reviewSummary = this.querySelector('.review-order-summary');
+				
+				// Set height to auto and handle slide toggle
+				content.style.height = 'auto';
+				if (content.style.display === 'none' || !content.style.display) {
+					content.style.display = 'block';
+					// Simple slide down animation
+					const height = content.scrollHeight;
+					content.style.overflow = 'hidden';
+					content.style.height = '0px';
+					content.style.transition = 'height 300ms';
+					setTimeout(() => content.style.height = height + 'px', 0);
+				} else {
+					// Simple slide up animation
+					content.style.height = content.scrollHeight + 'px';
+					content.style.overflow = 'hidden';
+					content.style.transition = 'height 300ms';
+					setTimeout(() => content.style.height = '0px', 0);
+					setTimeout(() => content.style.display = 'none', 300);
+				}
+				
+				arrow.classList.toggle('rotate-180');
+				
+				if (content.style.display !== 'none') {
+					hideSummary.style.display = 'block';
+					reviewSummary.style.display = 'none';
+				} else {
+					hideSummary.style.display = 'none';
+					reviewSummary.style.display = 'block';
+				}
+			});
+		});
+	});
+
+	// Banned variants check
+		window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
+		window.checkoutReadyCallbacks.push(() => {
+			const banned_variants = [
+				"39754226630806", // SIG SKY QUEEN
+				"39754226663574", // SIG STONE TWIN
+				"39754227024022", // LUXE QUEEN SKY
+				"39754227056790", // LUXE TWIN STONE
+				"36614284247190", // SIG QUEEN SKY
+				"14441424945196", // SIG TWIN STONE
+				"14516028506156", // LUXE TWIN STONE
+				"36614299123862", // luxe sky queen
+				"40509700079766", // SIG QUEEN SKY
+				"40509700112534", // SIG TWIN STONE
+				"40509700505750", // LUXE QUEEN SKY
+				"40509700571286", // LUXE TWIN STONE
+			];
+
+			if (banned_variants.some(x => checkout.cart.localCart.hasVariant(x))) {
+				console.log("havevariant");
+				document.querySelector(".out_of_stock").classList.add("show_bar");
+			} else {
+				console.log("don't have");
+			}
+		});
+
+		// Page view tracking
+		document.addEventListener('DOMContentLoaded', function(e) {
+			pptag.send('page_view', { 
+				page_type: 'CHECKOUT'
+			});
+		});
+
+		// Coupon button handler
+		document.querySelector('.checkout-coupon-button').addEventListener('click', function(e) {
+			setTimeout(() => {
+				handleDiscountValidation();
+			}, 1800);
+		});
+
+		// Coupon input handler
+		document.getElementById('coupon_desktop_field').addEventListener('keypress', function(e) {
+			if (e.which === 13) { // "Enter" key code
+				setTimeout(() => {
+					handleDiscountValidation();
+				}, 1800);
+			}
+		});
+
+		// Helper function for discount validation
+		function handleDiscountValidation() {
+			if (!checkoutData.cart.localCart.state.discountTotal > 0) {
+				document.querySelector(".discount-warning").classList.remove("es_hide");
+				document.querySelector(".discount-success").classList.add("es_hide");
+			} else {
+				document.querySelector(".discount-success").classList.remove("es_hide");
+				document.querySelector(".discount-warning").classList.add("es_hide");
+			}
+		}
+
+		// Shipping zone handlers
+		window.checkoutReadyCallbacks.push(() => {
+			if (checkoutData.cart.shippingZone === "CA") {
+				document.querySelector(".checkout-note").classList.remove("hidden");
+			}
+
+			document.getElementById("shipping_country").addEventListener('change', function(e) {
+				const checkoutNote = document.querySelector(".checkout-note");
+				if (this.value !== "CA") {
+					checkoutNote.classList.add("hidden");
+				} else {
+					checkoutNote.classList.remove("hidden");
+				}
+			});
+
+			if (checkoutData.cart.shippingZone !== "US") {
+				RTC.setCurrencyFormatterCallback((value) => {
+					if (parseInt(value.replace('$', '')) == parseInt(checkout.cart.localCart.state.total)) {
+						return value.replace("$", `${("<span class='non-usa'>USD</span> $")}`);
+					} else {
+						return value;
+					}
+				});
+			}
+		});
+
+		// Development environment URL handling
+		if (window.location.href.indexOf("trymiracle-dev.outsmartly.app") > 0) {
+			Checkout.setNextUrlFn(() => {
+				return "https://trymiracle-dev.outsmartly.app/up/20a.html";
+			});
+		}
+
+		// Remove skeleton loader
+		window.checkoutReadyCallbacks.push(async () => {
+			const skeletonElement = document.querySelector(".skeleton-load");
+			skeletonElement.style.opacity = '0';
+			setTimeout(() => {
+				skeletonElement.style.display = 'none';
+			}, 300);
+		});
+		
+	</script>
+
+	<script type="text/javascript" defer src="https://cdn.shopmiraclebrand.co/js/cart_loader.js"></script>
+
+	<!-- START:::MixPanel Init -->
+	<script type="text/javascript">
+		(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+	for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+	MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+	mixpanel.init('139deeeff16104d87877b31cf8b846e8'); 
+	
+		function getQueryParam(url, param) {
+			// Expects a raw URL
+			param = param.replace(/[[]/, "\[").replace(/[]]/, "\]");
+			var regexS = "[\?&]" + param + "=([^&#]*)",
+				regex = new RegExp(regexS),
+				results = regex.exec(url);
+			if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
+				return '';
+			} else {
+				return decodeURIComponent(results[1]).replace(/\W/gi, ' ');
+			}
+		};
+	
+		function campaignParams() {
+			var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' '),
+				kw = '',
+				params = {},
+				first_params = {};
+			var index;
+			for (index = 0; index < campaign_keywords.length; ++index) {
+				kw = getQueryParam(document.URL, campaign_keywords[index]);
+				if (kw.length) {
+					params[campaign_keywords[index] + ' [last touch]'] = kw;
+				}
+			}
+			for (index = 0; index < campaign_keywords.length; ++index) {
+				kw = getQueryParam(document.URL, campaign_keywords[index]);
+				if (kw.length) {
+					first_params[campaign_keywords[index] + ' [first touch]'] = kw;
+				}
+			}
+			mixpanel.people.set(params);
+			mixpanel.people.set_once(first_params);
+			mixpanel.register(params);
+		}
+		campaignParams();
+	</script>
+	<!-- END:::MixPanel Init -->
+	<script type="text/javascript" defer src="../toolkit/scripts/pixel.js"></script>
+<!-- Begin: Northbeam Pixel -->
+<script async type="text/javascript" src="//j.northbeam.io/ota-sp/d6b41dbb-ce9e-4e1e-bdc2-36492a0d7ac1.js"></script>
+<!-- End: Northbeam Pixel -->
+<script type="text/javascript" src="https://app.termly.io/resource-blocker/5d816350-26fa-43d8-987c-fa403ed2cbc6?autoBlock=on"></script>
+</body>
+
+</html>
