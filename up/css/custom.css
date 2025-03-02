@@ -1,0 +1,125 @@
+.hide {
+	display: none !important;
+}
+
+#checkout_section {
+	display: block;
+	border: none;
+	width: 100%;
+    height: 1500px;
+}
+
+#checkout_section::-webkit-scrollbar {
+	display: none;
+}
+
+#checkout_section {
+  -ms-overflow-style: none;
+}
+
+.loader_overlay {
+	background: rgb(255, 255, 255);
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
+	display: none;
+}
+
+.loader_overlay .loader1 img {
+	width: 90px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.loader_overlay .loader2 .loadingMessageContainerWrapper {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+}
+
+.loader_overlay .loader2 .loadingMessageContainerWrapper .counter img {
+	width: 240px;
+}
+
+.loader_overlay .loader2 .loadingMessageContainerWrapper .counter p {
+	font-size: 18px;
+}
+
+.loader_overlay .loader2 .loadingMessageContainerWrapper .counter .baroutter {
+    background: #d4d9de;
+    height: 23px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    position: relative;
+}
+
+.loader_overlay .loader2 .loadingMessageContainerWrapper .counter .bar {
+    width: 0%;
+    margin: 0;
+    background: #2dce1c;
+    height: 12px;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    height: 100%;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: -webkit-linear-gradient(linear, left bottom, left top, color-stop(0, #ccea1e), color-stop(1, #ccea1e));
+    background-image: -moz-linear-gradient(center bottom, #ccea1e 37%, #ccea1e 69%);
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+}
+
+.loader_overlay .loader2 .loadingMessageContainerWrapper .counter .bar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, rgba(255,255,255,0.2)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255,255,255,0.2)), color-stop(0.75, rgba(255,255,255,0.2)), color-stop(0.75, transparent), to(transparent));
+    background-image: -moz-linear-gradient(-45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent);
+    z-index: 1;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    -webkit-animation: move 2s linear infinite;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+	#checkout_section {
+		height: 2400px;
+	}
+}

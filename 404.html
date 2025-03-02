@@ -1,0 +1,30 @@
+<script>
+	// A temporary and dirty solution for the problem of single slash at the end of url
+	//
+	// Find a valid route folder (all starts with ksp )
+	// If found, redirect to it
+	//
+	const url = window.location.href;
+	const route_valid = url
+						.split( '/' )
+						.filter( itm => itm && itm.length && itm.length > 2 )
+						.find( itm => itm.startsWith( 'ksp-au-test' ) );
+
+	let url_redirect = '';
+	if ( route_valid && route_valid.length && route_valid.length > 2 ) {
+		url_redirect = 'https://try.miraclebrand.co/' + route_valid; }
+
+	// No valid route (as ksp-...)
+	// find query param (if any)
+	// then redirect to *ksp-v18*
+	//
+	if ( url_redirect.length < 1 ) {
+		let url_param = '';
+		if ( url.includes( '?' ) ) {
+			url_param = '&' + url.split( '?' )[1]; }
+
+		url_redirect = 'https://try.miraclebrand.co/sheets/ksp/?utm_source=404' + url_param; }
+
+	window.location.replace( url_redirect );
+
+</script>

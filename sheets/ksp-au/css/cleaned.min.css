@@ -1259,7 +1259,7 @@ body .uwy.userway_p3 .userway_buttons_wrapper {
     height: 60px;
     top: 5px;
     right: 5px;
-    background-image: url(/sheets/ksp-au/images/icons/no-photo.png);
+    background-image: url(/sheets/ksp-au-internal/images/icons/no-photo.png);
     background-repeat: no-repeat;
 }
 .color-sc {
@@ -4579,7 +4579,7 @@ span#es_timer {
 
 @font-face {
     font-family: 'Brandon';
-    src: url('/sheets/ksp-au/fonts/Brandon_reg.woff2') format('woff2');
+    src: url('/sheets/ksp-au-internal/fonts/Brandon_reg.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -4587,7 +4587,7 @@ span#es_timer {
   
   @font-face {
     font-family: 'Brandon';
-    src: url('/sheets/ksp-au/fonts/Brandon_bold.woff2') format('woff2');
+    src: url('/sheets/ksp-au-internal/fonts/Brandon_bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -4595,7 +4595,7 @@ span#es_timer {
   
   @font-face {
     font-family: 'Brandon';
-    src: url('/sheets/ksp-au/fonts/Brandon_black.woff2') format('woff2');
+    src: url('/sheets/ksp-au-internal/fonts/Brandon_black.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -4603,7 +4603,7 @@ span#es_timer {
   
   @font-face {
     font-family: 'Brandon';
-    src: url('/sheets/ksp-au/fonts/Brandon_light.woff2') format('woff2');
+    src: url('/sheets/ksp-au-internal/fonts/Brandon_light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -4611,7 +4611,7 @@ span#es_timer {
   
   @font-face {
     font-family: 'Ellenluff larken';
-    src: url('/sheets/ksp-au/fonts/Ellenluff_bold.woff2') format('woff2');
+    src: url('/sheets/ksp-au-internal/fonts/Ellenluff_bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -4619,7 +4619,7 @@ span#es_timer {
   
   @font-face {
     font-family: 'Ellenluff larken';
-    src: url('/sheets/ksp-au/fonts/Ellenluff_reg.woff2') format('woff2');
+    src: url('/sheets/ksp-au-internal/fonts/Ellenluff_reg.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;

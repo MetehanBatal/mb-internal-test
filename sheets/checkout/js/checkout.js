@@ -1,165 +1,185 @@
-// Phone Intl
+///////// Phone Intl ////////////////
 window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
 window.checkoutReadyCallbacks.push(() => {
-    document.querySelector(".skeleton-load").style.display = 'none';
-    
-    const shipInput = document.getElementById("ship_field_intl");
-    const billInput = document.getElementById("billing_field_intl");
-    
-    const shipPhoneField = window.intlTelInput(shipInput, {
-        utilsScript: "./js/utils.js",
-        initialCountry: window.checkout.cart.shippingZone
-    });
-    
-    const billPhoneField = window.intlTelInput(billInput, {
-        utilsScript: "./js/utils.js",
-        initialCountry: window.checkout.cart.shippingZone
-    });
+	jQuery($(".skeleton-load").fadeOut());
+	const shipInput = document.getElementById("ship_field_intl");
+	const billInput = document.getElementById("billing_field_intl");
+	const shipPhoneField = window.intlTelInput(shipInput, {
+		utilsScript: "https://try.miraclebrand.co/checkout_v8/js/utils.js",
+		initialCountry: window.checkout.cart.shippingZone
+	});
+	const billPhoneField = window.intlTelInput(billInput, {
+		utilsScript: "https://try.miraclebrand.co/checkout_v8/js/utils.js",
+		initialCountry: window.checkout.cart.shippingZone
+	});
+	shipInput.addEventListener("change", (e) => {
+		console.log("Setting shipping phone");
+		document.getElementById("shipping_phone").value = shipPhoneField.getNumber();
+	});
+	billInput.addEventListener("change", (e) => {
+		console.log("Setting billing phone");
+		document.getElementById("billing_phone").value = billPhoneField.getNumber();
+	});
+	
+	if (checkoutData.cart.shippingZone === "CA") {
+		$(".checkout-note").removeClass('hidden');
+	}
 
-    shipInput.addEventListener("change", () => {
-        document.getElementById("shipping_phone").value = shipPhoneField.getNumber();
-    });
-
-    billInput.addEventListener("change", () => {
-        document.getElementById("billing_phone").value = billPhoneField.getNumber();
-    });
-
-    if (checkoutData.cart.shippingZone === "CA") {
-        document.querySelector(".checkout-note")?.classList.remove('hidden');
-    }
-
-    document.getElementById('shipping_country')?.addEventListener('change', function() {
-        const checkoutNote = document.querySelector(".checkout-note");
-        if (this.value !== 'CA') {
-            checkoutNote?.classList.add('hidden');
-        } else {
-            checkoutNote?.classList.remove('hidden');
-        }
-    });
+	
+	jQuery($('#shipping_country').change(function(e) {
+		if ($(this).val() != 'CA') {
+			$(".checkout-note").addClass('hidden');
+		} else {
+			$(".checkout-note").removeClass('hidden');
+		}
+	}));
+	
+	
+	// window.checkout.apiClient.toggleAddon(40272108421270).then(x => {
+	// 	window.checkout.setCart(x);
+	// 	window.checkout.drawCart();
+ // 	});
 });
 
-const checkoutHench = {
-    initCustomSelect() {
-        const selects = document.querySelectorAll('.select-box');
-        selects.forEach(select => {
-            new Choices(select, {
-                searchEnabled: false,
-                itemSelectText: ''
-            });
-        });
-    },
 
-    initTimer() {
-        const timers = document.querySelectorAll('.timer');
-        if (timers.length > 0) {
-            timers.forEach(timer => {
-                const duration = timer.getAttribute('data-timer-duration');
-                this.startTimer(duration, timer);
-            });
-        }
-    },
+ 
 
-    checkSafari() {
-        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-        if (isSafari) {
-            document.body.classList.add('is-safari');
-        }
-    },
 
-    startTimer(duration, element) {
-        const timer = setInterval(() => {
-            let minutes = Math.floor(duration / 60);
-            let seconds = duration - (minutes * 60);
-            
-            minutes = minutes < 10 ? `0${minutes}` : minutes;
-            seconds = seconds < 10 ? `0${seconds}` : seconds;
+let checkoutHench = {
+	initCustomSelect() {
+		let selects = document.querySelectorAll('.select-box');
 
-            element.innerHTML = `${minutes}:${seconds}`;
+		selects.forEach(function(select) {
+			const choices = new Choices(select, {
+				searchEnabled: false,
+				itemSelectText: ''
+			});
+		});
+	},
 
-            if (duration < 1) {
-                clearInterval(timer);
-                return;
-            }
-            duration--;
-        }, 1000);
-    },
+	initTimer: function() {
+		const self = this;
 
-    removeExtraPixels() {
-        document.querySelectorAll('img[height="1"]')
-            .forEach(image => image.style.position = 'absolute');
-    },
+		let timers = document.querySelectorAll('.timer');
+		if (timers.length > 0) {
+			timers.forEach(function(timer) {
+				let duration = timer.getAttribute('data-timer-duration');
 
-    toggleOrderSummary() {
-        const trigger = document.querySelector('#mobile-summary-heading');
-        const valueTrigger = document.querySelector('.checkout-total-value');
-        const mobileSummaryBox = document.querySelector(".mobile-order-summary-box");
+				self.startTimer(duration, timer);
+			});
+		}
+	},
 
-        [trigger, valueTrigger].forEach(element => {
-            element?.addEventListener('click', () => {
-                mobileSummaryBox?.classList.toggle('revealed');
-            });
-        });
-    },
+	checkSafari: function() {
+		const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-    listenSelection() {
-        document.querySelectorAll('.select-box').forEach(select => {
-            select.addEventListener('change', () => {
-                select.classList.add('selected');
-            });
-        });
-    },
+		// To remove the outline on radio buttons
+		// as they are not getting rounded
+		// ..like every other browser..
+		if (isSafari) {
+			document.body.classList.add('is-safari');
+		}
+	},
 
-    handleSubmit() {
-        const button = document.querySelector('.checkout-submit-combo');
-        const formBox = document.querySelector('.form-box');
-        const topScrollValue = formBox?.getBoundingClientRect().top;
+	startTimer: function(duration, element) {
+		const timer = setInterval(function() {
+			let minutes = Math.floor(duration / 60);
+			let seconds = duration - (minutes * 60);
+			if (minutes < 10) {
+				minutes = `0${minutes}`;
+			}
+			if (seconds < 10) {
+				seconds = `0${seconds}`;
+			}
 
-        button?.addEventListener('click', () => {
-            setTimeout(() => {
-                const invalidFields = document.querySelectorAll(".checkout-combo-form .checkout-invalid-field");
-                if (invalidFields.length > 0) {
-                    const new_position = invalidFields[0].getBoundingClientRect().top + window.scrollY - 80;
-                    window.scroll({
-                        top: new_position,
-                        behavior: 'smooth'
-                    });
-                }
-            }, 200);
-        });
-    }
-};
+			element.innerHTML = `${minutes}:${seconds}`;
 
-document.addEventListener('DOMContentLoaded', () => {
-    checkoutHench.initTimer();
-    checkoutHench.toggleOrderSummary();
-    checkoutHench.listenSelection();
-    checkoutHench.handleSubmit();
+			if (duration < 1) {
+				clearInterval(timer);
+				return;
+			} else {
+				duration--;
+			}
+		}, 1000);
+	},
 
-    setTimeout(() => {
-        checkoutHench.removeExtraPixels();
-    }, 2400);
+	
 
-    checkoutHench.checkSafari();
-});
+	removeExtraPixels: function() {
+		let extraImages = document.querySelectorAll('img[height="1"]');
+		extraImages.forEach(function(image) {
+			image.style.position = 'absolute';
+		});
+	},
 
-const discountObserver = new MutationObserver(() => {
-    const hasDiscount = checkoutData.cart.localCart.state.discountTotal > 0;
-    const discountSuccess = document.querySelector(".discount-success");
-    const couponForm = document.querySelector('form[name="coupon_form_desktop"]');
-    
-    if (hasDiscount) {
-        discountSuccess?.classList.remove("hidden");
-        couponForm?.classList.add('hidden');
-    } else {
-        discountSuccess?.classList.add("hidden");
-        couponForm?.classList.remove('hidden');
-    }
-});
+	toggleOrderSummary: function() {
+		const trigger = document.querySelector('#mobile-summary-heading');
+		const valueTrigger = document.querySelector('.checkout-total-value');
+		const mobileSummaryBox = document.querySelector(".mobile-order-summary-box")
+		trigger.addEventListener('click', function(e) {
+			mobileSummaryBox.classList.toggle('revealed');
+		});
+		valueTrigger.addEventListener('click', function(e) {
+			mobileSummaryBox.classList.toggle('revealed');
+		});
+	},
 
-const discountElement = document.querySelector('.checkout-discount-value');
-if (discountElement) {
-    discountObserver.observe(discountElement, { 
-        childList: true,
-        subtree: true 
-    });
+	listenSelection: function() {
+		let selects = document.querySelectorAll('.select-box');
+		selects.forEach(function(select) {
+			select.addEventListener('change', function(e) {
+				select.classList.add('selected');
+			});
+		})
+	},
+
+	handleSubmit: function() {
+		const button = document.querySelector('.checkout-submit-combo');
+		let topScrollValue = document.querySelector('.form-box').getBoundingClientRect().top;
+
+		button.addEventListener('click', function(e) {
+			console.log( $(".checkout-combo-form .checkout-invalid-field").length );
+
+			setTimeout(function() {
+				if ($(".checkout-combo-form .checkout-invalid-field").length > 0) {
+					var new_position = $(".checkout-combo-form .checkout-invalid-field").offset().top - 80;
+					window.scroll({
+						top: new_position,
+						behavior: 'smooth'
+					});
+				} else {
+					// $(".checkout-submit-combo").addClass("submitting");
+
+					// $(document).on("checkout_failed", (e)=> {
+					// 	$(".checkout-submit-combo").removeClass("submitting");
+					// 	$("#overlay").css("opacity",1);
+					// });
+				}
+			}, 200);
+		});
+	}
 }
+
+document.addEventListener('DOMContentLoaded', function(e) {
+	checkoutHench.initTimer();
+	checkoutHench.toggleOrderSummary();
+	checkoutHench.listenSelection();
+	checkoutHench.handleSubmit();
+
+	setTimeout(function() {
+		checkoutHench.removeExtraPixels();
+	}, 2400);
+
+	checkoutHench.checkSafari();
+});
+
+
+document.querySelector('.checkout-discount-value').addEventListener('DOMSubtreeModified', function(){
+	if (checkoutData.cart.localCart.state.discountTotal > 0) {
+		document.querySelector(".discount-success").classList.remove("hidden");
+		document.querySelector('form[name="coupon_form_desktop"]').classList.add('hidden');
+	} else {
+		document.querySelector(".discount-success").classList.add("hidden");
+		document.querySelector('form[name="coupon_form_desktop"]').classList.remove('hidden');
+	}
+});

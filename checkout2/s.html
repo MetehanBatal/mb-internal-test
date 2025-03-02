@@ -1,0 +1,759 @@
+<!doctype html>
+<html> 
+
+<head>
+	<meta charset="utf-8">
+	<title>Miracle Brand - Secure Checkout</title>
+	<link href="../favicon.png" rel="shortcut icon" type="image/x-icon">
+	<link href="../webclip.png" rel="apple-touch-icon">
+	<script type="text/javascript" src="https://cdn.shopmiraclebrand.co/js/cart_loader.js"></script>
+	<script type="text/javascript" async src="https://try.miraclebrand.co/pixel.js"></script>
+	<meta content="api.shopmiraclebrand.co" name="checkout-api-endpoint">
+	<meta content="14441424781356" name="checkout-default-variant-id">
+	<meta content="34937177702550" name="checkout-default-addons">
+	<meta content="US" name="checkout-default-shipping-zone">
+	<meta content="https://api.shopmiraclebrand.co/v1/cart/{sessionId}/miracle_redirect" name="checkout-next-url">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+	<meta content="../custom_translation.json" name="checkout-translations-url">
+	<meta content="C2" name="checkout-funnel-name">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/sheets.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/8603d6f597.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="column">
+					<img src="images/logo-white.svg" class="mob-logo">
+				</div>
+				<div class="column">
+					<img src="images/secure-white.svg" class="mob-secure">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="es_container es_miracle_landing">
+		<div class="es_left">
+			<div class="countdown-mob">
+				<div class="countdown-inner">
+					<i class="fas fa-clock"></i><span style="font-weight:600"> Hurry Up!</span> Your cart is reserved for <strong><span id="countdown">10:00</span></strong>
+				</div>
+			</div>
+			<script>
+				window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
+		window.checkoutReadyCallbacks.push(() => {
+	  
+		  const banned_variants = subids = [
+			"39754226630806", // SIG SKY QUEEN
+			"39754226663574", // SIG STONE TWIN
+			"39754227024022", // LUXE QUEEN SKY
+			"39754227056790",  // LUXE TWIN STONE
+			"36614284247190",  // SIG QUEEN SKY
+			"14441424945196",  // SIG TWIN STONE
+			"14516028506156",  // LUXE TWIN STONE
+			"36614299123862",  // luxe sky queen
+			"40509700079766",  // SIG QUEEN SKY
+			"40509700112534",  // SIG TWIN STONE
+			"40509700505750",   // LUXE QUEEN SKY
+			"40509700571286",  // LUXE TWIN STONE
+		  ];
+	  
+		  if (banned_variants.some(x => checkout.cart.localCart.hasVariant(x))) {
+			console.log("havevariant");
+			$(".out_of_stock").addClass("show_bar");
+		  } else {
+			console.log("don't have");
+		  }
+		});
+	  </script>
+			<div class="section-header">
+				<div class="header-img">
+					<img src="images/stone.png">
+				</div>
+				<div class="header-detail">
+					<div class="feature"><span>Prevents 99.9% of bacteria growth</span></div>
+					<div class="feature"><span>Prevents night sweating</span></div>
+					<div class="feature"><span>Luxury USA-grown Supima Cotton</span></div>
+				</div>
+			</div>
+			<div class="right-ger">
+				<div class="es_section_heading">
+					<h2>1. Select Sheets</h2>
+				</div>
+				<div class="cards-div">
+					<div class="w-embed">
+						<div class="es_container">
+							<div class="es_product">
+								<div class="es_product-content">
+									<div class="es_row es_variation_row">
+										<div class="es_swatch_row" data-type="color">
+											<label class="es_swatch-label">Color - <span class="es_swatch-value">Stone</span></label>
+											<div class="es_swatch-btn_container no-flex">
+												<div class="es_swatch es_swatch_img es_active" data-value="stone" data-title="Stone"></div>
+												<div class="es_swatch es_swatch_img" data-value="white" data-title="White"></div>
+												<div class="es_swatch es_swatch_img" data-value="sky" data-title="Sky Blue"></div>
+											</div>
+										</div>
+										<div class="es_swatch_row" data-type="size">
+											<label class="es_swatch-label">Size - <span class="es_swatch-value">Queen</span></label>
+											<div class="es_size_guide">
+												<a class="es_btn-size_guide"><img src="images/size_chart.png">&nbsp;Size Guide</a>
+											</div>
+											<div class="es_swatch-btn_container">
+												<div class="es_swatch es_active" data-value="queen" data-title="Queen">Queen</div>
+												<div class="es_swatch" data-value="twin" data-title="Twin">Twin</div>
+												<div class="es_swatch" data-value="full" data-title="Full">Full</div>
+												<div class="es_swatch" data-value="king" data-title="King">King</div>
+												<div class="es_swatch" data-value="cali_king" data-title="Cali King">Cali King</div>
+											</div>
+										</div>
+										<div class="es_swatch_row" data-type="fabric">
+											<label class="es_swatch-label">Fabric - <span class="es_swatch-value">Extra Luxe</span></label>
+											<div class="es_swatch-btn_container">
+												<div class="es_swatch es_active" data-value="signature" data-title="Signature">Signature</div>
+												<div class="es_swatch" data-value="luxe" data-title="Extra Luxe">★ Extra Luxe ★</div>
+											</div>
+											<div class="es_swatch_description" data-handle="signature">
+												Premium 480-thread-count bed sheets infused with natural silver that prevents bacterial growth.(1)(2)
+											</div>
+											<div class="es_swatch_description es_hide" data-handle="luxe">
+												Luxury 620-thread count sateen weave set is designed for an ultra-luxurious, smooth, and silky feel. Made with USA-grown Supima cotton, one of the highest quality cottons in the world.
+											</div>
+										</div>
+									</div>
+									<div class="es_row es_price_row">
+										<h2 class="es_price"> <span class="es_reg_price es_money">209</span> <span class="es_sale_price es_money">179</span> <span class="es_label_instock"><span class="es_stock_marker blinking"></span>IN STOCK & READY TO SHIP</span>
+										</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-desktop">
+				<div class="uco-widget-content">
+					<div class="uco-widget-title">
+						<span style="background:#f7fbff;padding:0 15px">Trusted customer reviews</span>
+					</div>
+					<div class="uco-widget-row">
+						<div class="uco-widget-img">
+							<img src="images/review-1.png" width="64px">
+						</div>
+						<div class="uco-widget-text">
+							<div class="reviews-s">
+								<img src="images/review-stars.svg" width="70px">
+								<span class="review-name">Andrea M.</span>
+								<span class="review-place">Wake Forest, NC</span>
+								<span class="review-verified"><img src="images/locker-green.svg" width="12px" style="margin-right:5px; margin-top:0px">Verified Buyer</span>
+								<span class="review-content">“LOVE! Best sheets ever. So luxurious. So soft. I was skeptical but they do what they say. 1 month in and still no odors.”</span>
+							</div>
+						</div>
+					</div>
+					<div class="uco-widget-row">
+						<div class="uco-widget-img">
+							<img src="images/review-3.png" width="64px">
+						</div>
+						<div class="uco-widget-text">
+							<div class="reviews-s">
+								<img src="images/review-stars.svg" width="70px">
+								<span class="review-name">Isa A.</span>
+								<span class="review-place">Denver, CO</span>
+								<span class="review-verified"><img src="images/locker-green.svg" width="12px" style="margin-right:5px; margin-top:0px">Verified Buyer</span>
+								<span class="review-content">“So far, I am very happy with the Miracle sheets! It's true, they don't smell, and it's true, I don't have bed smell. I have long believed in silver for combating bacteria, and think the sheets are a perfect idea. They are cool to sleep on and feel soft and "silky". I'm very pleased I purchased the Sateen Luxe sheets.”</span>
+							</div>
+						</div>
+					</div>
+					<div class="uco-widget-row">
+						<div class="uco-widget-img">
+							<img src="images/review-4.png" width="64px">
+						</div>
+						<div class="uco-widget-text">
+							<div class="reviews-s">
+								<img src="images/review-stars.svg" width="70px">
+								<span class="review-name">Shari B.</span>
+								<span class="review-place">Derby, NY</span>
+								<span class="review-verified"><img src="images/locker-green.svg" width="12px" style="margin-right:5px; margin-top:0px">Verified Buyer</span>
+								<span class="review-content">“Love my new miracle sheets. They do not slip off like my old sheets did. They are comfy and help keep you cool all night.”</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="es_checkout es_right">
+			<div id="checkout-forms"></div>
+			<div class="custom-upsell">
+				<label class="custom-container">
+					<div style="font-size: 13px; text-align:left; padding-top: 3px;">
+						<input type="checkbox" style="display:inner-block" checked class="checkout-addon-toggle" data-variant-id="34937177702550"> <span class="checkmark"></span>
+						Yes, <strong>Add 5-Year Wear & Tear Warranty</strong> For Only $19.99
+					</div>
+				</label>
+			</div>
+			<div id="toggle-mob-cart" class="for-desk">
+			</div>
+			<div class="coupon-input-wrapper">
+				<input type="text" class="checkout-coupon-field input-flds" placeholder="Promo code (optional)">
+				<button class="checkout-coupon-button">REDEEM</button>
+			</div>
+			<div class="discount-applied es_hide">
+				<i data-v-5c54c67c="" class="fas fa-percentage" aria-hidden="true"></i>
+				<strong>Discount Applied!</strong> You're saving $<span class="checkout-discount-value"></span>
+			</div>
+			<div class="es_section_heading">
+				<h2>2. Complete Order</h2>
+			</div>
+			<div class="paypal-express-checkout">
+				<div class="payment-method">EXPRESS CHECKOUT</div>
+				<form class="checkout-paypal-form">
+					<div class="form-group" style="display: none">
+						<label for="paypal_checkout_country">Country</label>
+						<select id="paypal_checkout_country" type="text" name="paypal_checkout_country"></select>
+						<div class="field__caret"></div>
+					</div>
+					<button class="checkout-submit-paypal paypalbtn overlay">
+						<i class="fas fa-spinner" style="display:none"></i>
+						<img src="images/paypal-logo.svg" class="pad">
+						<img src="images/paypal-txt.svg">
+					</button>
+				</form>
+			</div>
+			<div class="paypal-express-checkout">
+				<div class="payment-method">OR PAY WITH CREDIT CARD</div>
+				<div class="cc-form">
+					<button class="checkout-credit-card">
+						<i class="fas fa-spinner" style="display:none"></i>
+						<img src="images/cc.svg" width="32px" class="pad">
+						<span class="credit-card-text">CREDIT CARD</span>
+					</button>
+					<img src="images/cc-light.svg" width="290px" style="margin-top:10px">
+				</div>
+			</div>
+			<!---  CREDIT CARD FORM -->
+			<form class="checkout-combo-form" style="display: none;">
+				<div class="heading-box">
+					<h4 class="chk-head" style="float: left;">Contact Information</h4>
+					<span class="never-share" style="float: right; margin-top: 7px;">We never share your information</span>
+				</div>
+				<div class="payment-flds-box" style="border-top: none; border-bottom: none;">
+					<div class="form-group">
+						<div class="frm-flds">
+							<label for="email">Email</label>
+							<input id="email" class="input-flds" type="email" name="email" placeholder="E-Mail">
+						</div>
+					</div>
+				</div>
+				<div class="heading-box">
+					<h4 class="chk-head">Shipping Address</h4>
+				</div>
+				<div class="payment-flds-box" style="border-top: none; border-bottom: none;">
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld half-fld fl">
+							<label for="shipping_first_name">First Name</label>
+							<input type="text" class="input-flds" id="shipping_first_name" name="shipping_first_name" placeholder="First Name">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld half-fld fr">
+							<label for="shipping_last_name">Last Name</label>
+							<input id="shipping_last_name" class="input-flds" type="text" name="shipping_last_name" placeholder="Last Name">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld fl">
+							<label for="shipping_address_1">Address</label>
+							<input id="shipping_address_1" class="input-flds" type="text" name="shipping_address1" placeholder="Address">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld mobile-fr fl">
+							<label for="shipping_address_2">Apartment, suite, etc. (optional)</label>
+							<input id="shipping_address_2" class="input-flds" type="text" name="shipping_address2" placeholder="Apartment, suite, etc. (optional)">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld half-fld fl">
+							<label for="shipping_city">City</label>
+							<input id="shipping_city" class="input-flds" type="text" name="shipping_city" placeholder="City">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld half-fld fr">
+							<label for="shipping_state">State</label>
+							<select id="shipping_state" class="input-flds" name="shipping_state" data-country="US">
+							</select>
+							<div class="field__caret"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld half-fld fl">
+							<label for="shipping_postal_code">ZIP Code</label>
+							<input type="text" class="input-flds" name="shipping_postal_code" placeholder="Zip Code">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld half-fld fr">
+							<label for="shipping_country">Country</label>
+							<select id="shipping_country" class="input-flds" type="text" name="shipping_country">
+							</select>
+							<div class="field__caret"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds fl">
+							<label for="shipping_phone">Phone</label>
+							<input id="shipping_phone" class="input-flds" type="number" name="shipping_phone" inputmode="numeric" placeholder="Phone">
+						</div>
+					</div>
+				</div>
+				<div class="heading-box">
+					<h4 class="chk-head">Billing Address</h4>
+					<h6 class="chk-sub">Select the address that matches your card or payment method.</h6>
+				</div>
+				<div class="payoptbox">
+					<div class="form-group">
+						<div class="payment-cards-box fl">
+							<label for="billing_use_shipping_true" class="paymybtn">
+								<input type="radio" id="billing_use_shipping_true" class="form-gateway cardPayOpt" name="billing_use_shipping" value="true" checked>Same as shipping address
+							</label>
+						</div>
+						<div class="payment-cards-box fr bit-margin">
+							<label for="billing_use_shipping_false" class="paymybtn">
+								<input type="radio" id="billing_use_shipping_false" class="form-gateway cardPayOpt" name="billing_use_shipping" value="false">Use a different billing address
+							</label>
+						</div>
+					</div>
+				</div>
+				<!-- To automatically hide billing fields, we wrap them all in a container -->
+				<!-- See CSS above -->
+				<div class="checkout-billing-fields payment-flds-box" style="display: none;">
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld half-fld fl">
+							<label for="billing_first_name">First Name</label>
+							<input type="text" id="billing_first_name" name="billing_first_name" class="input-flds" placeholder="First Name">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld half-fld fr">
+							<label for="billing_last_name">Last Name</label>
+							<input id="billing_last_name" type="text" name="billing_last_name" class="input-flds" placeholder="Last Name">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld fl">
+							<label for="billing_address_1">Address 1</label>
+							<input id="billing_address_1" type="text" name="billing_address1" class="input-flds" placeholder="Address 1">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld mobile-fr fl">
+							<label for="billing_address_2">Address 2</label>
+							<input id="billing_address_2" type="text" name="billing_address2" class="input-flds" placeholder="Address 2">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds half-fld fl">
+							<label for="billing_city">City</label>
+							<input id="billing_city" type="text" name="billing_city" class="input-flds" placeholder="City">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld half-fld fr">
+							<label for="billing_state">State</label>
+							<select id="billing_state" name="billing_state" data-country="US" class="input-flds">
+							</select>
+							<div class="field__caret"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds mobile-half-fld half-fld fl">
+							<label for="billing_postal_code">ZIP Code</label>
+							<input type="text" name="billing_postal_code" class="input-flds" placeholder="Zip Code">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds half-fld fr">
+							<label for="billing_country">Country</label>
+							<select id="billing_country" type="text" name="billing_country" class="input-flds">
+							</select>
+							<div class="field__caret"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="frm-flds fl">
+							<label for="billing_phone">Phone</label>
+							<input id="billing_phone" type="text" name="billing_phone" class="input-flds" inputmode="numeric" placeholder="Phone">
+						</div>
+					</div>
+				</div>
+				<div class="heading-box">
+					<h4 class="chk-head">Payment Method</h4>
+					<h6 class="chk-sub">All transactions are secure and encrypted. </h6>
+				</div>
+				<div class="payoptbox payment_method">
+					<div class="form-group">
+						<div class="payment-cards-box" id="payment_radio-credit">
+							<label class="paymybtn" for="combo_mode_credit"><input type="radio" id="combo_mode_credit" name="combo_mode" value="credit" class="form-gateway cardPayOpt" checked="" class="form-gateway cardPayOpt">Credit Card
+								<img src="images/ccs.svg" class="etc_and_more" height="20" style="float: right;"></label>
+						</div>
+						<div class="payment-flds-box" style="padding: 15px;">
+							<div class="form-group">
+								<div class="frm-flds fl">
+									<div class="card_details_small">CARD NUMBER</div>
+									<div id="braintree-cc-number"></div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="frm-flds half-fld fl">
+									<div class="card_details_small">VALID THROUGH</div>
+									<div id="braintree-expiry"></div>
+								</div>
+							</div>
+							<div class="form-group"></div>
+							<div class="frm-flds half-fld fr">
+								<div class="card_details_small">CVV</div>
+								<div id="braintree-cvv"></div>
+							</div>
+						</div>
+						<!--
+				  <div class="payment-cards-box" id="payment_radio-paypal">
+					<label class="paymybtn" for="combo_mode_paypal">
+					  <input type="radio" id="combo_mode_paypal" name="combo_mode" value="paypal" class="form-gateway cardPayOpt">
+					  <img class="paypal-img" src="images/paypal.svg" style="position: absolute; margin-top: -2px;">
+					</label>
+				  </div>
+-->
+						<div class="payment-flds-box" id="payment_field-paypal" style="display: none;">
+							<img src="images/paypal-box.svg" style="display:inline-block; vertical-align:middle; margin:20px 0;">
+							<p class="paypal-txt">After clicking "Place Order", you will be redirected to QuadPay to complete your purchase securely.</p>
+						</div>
+						<!--
+				  <div class="payment-cards-box" id="payment_radio-quadpay" style="border-bottom: none;">
+					<label class="paymybtn" for="combo_mode_quadpay"><input type="radio" id="combo_mode_quadpay" name="combo_mode" value="quadpay" class="form-gateway cardPayOpt"><img class="quadpay-img" src="images/quadpay.svg" style="position: absolute; margin-top: -2px;"></label>
+				  </div>
+-->
+						<div class="payment-flds-box" id="payment_field-quadpay" style="display: none;">
+							<img src="images/paypal-box.svg" style="display:inline-block; vertical-align:middle; margin:20px 0;">
+							<p class="paypal-txt">After clicking "Place Order", you will be redirected to QuadPay to complete your purchase securely.</p>
+						</div>
+					</div>
+				</div>
+				<input type="hidden" name="combo_mode" value="credit">
+				<div style="width:100%;">
+					<div class="checkout-cart-display"></div>
+					<div class="plus-text">*Plus applicable taxes</div>
+				</div>
+				<p class="legal-term">By clicking the <span>"Complete Purchase"</span> button, you hereby agree to and accept Pattern Brands LLC's <a target="_blank" href="https://www.miraclebrand.co/pages/privacy-policy">Privacy Policy</a> and <a target="_blank" href="https://www.miraclebrand.co/pages/terms-and-conditions">Terms of Use</a></p>
+				<button class="checkout-submit-combo frm-submit">
+					<div class="complete-purchase"><i data-v-5c54c67c="" class="fas fa-lock"></i>
+						<i class="fas fa-spinner fa-spin es_hide"></i>
+						<div class="checkout_text" style="display: inline-block;">COMPLETE PURCHASE</div><br><span class="try-risk" style="font-size:10px;font-weight:400">TRY IT RISK FREE! - 30 DAY MONEY BACK GUARANTEE!
+						</span>
+					</div>
+				</button>
+				<div class="extra_row">
+					<div class="tt-promo-brand">
+					</div>
+				</div>
+			</form>
+			<!---  END CREDIT CARD FORM -->
+			<div class="section-mgb">
+				<div class="header-imgs">
+					<img class="mgb" src="images/30mbg.svg">
+				</div>
+				<div class="header-detail">
+					<p class="mgb-text">
+						<strong>30 DAY GUARANTEE:</strong> Pattern Brands offers a 30 day guarantee on all unused purchases. Simply send the item(s) back to us in the original unopened packaging for a full refund or replacement, less S&H.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="backdrop"></div>
+	<div class="footer">
+		<div class="footer-container">
+			<div class="copyright">
+				All rights reserved ©
+			</div>
+			<div class="footer-links-checkout">
+				<a href="https://www.miraclebrand.co/pages/privacy-policy" target="_blank" class="footer-link">Privacy Policy</a> |
+				<a href="https://www.miraclebrand.co/pages/care-guide" target="_blank" class="footer-link">Care Guide</a> |
+				<a href="https://www.miraclebrand.co/pages/terms-and-conditions" target="_blank" class="footer-link">Terms of Service</a> |
+				<a href="https://help.miraclebrand.co/en-US" target="_blank" class="footer-link">Policies And Helpdesk</a>
+			</div>
+		</div>
+	</div>
+	<!-- Size Guide Bedding New design -->
+	<div data-section-id="size-guide-bedding" data-section-type="size-guide-modal-section">
+		<div class="size-guide-modal bedding text-center">
+			<div class="size-guide-modal-inner">
+				<a class="btn-close" onclick="hideSizeGuideForBedding()">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.059 31.059" style="enable-background:new 0 0 31.059 31.059;" xml:space="preserve" width="25px" height="25px">
+						<g>
+							<g>
+								<path d="M30.171,31.059c-0.226,0-0.454-0.087-0.627-0.26L0.26,1.515c-0.347-0.346-0.347-0.908,0-1.255    s0.908-0.347,1.255,0l29.284,29.284c0.347,0.347,0.347,0.908,0,1.255C30.625,30.972,30.399,31.059,30.171,31.059z" />
+							</g>
+							<g>
+								<path d="M0.888,31.059c-0.228,0-0.454-0.087-0.628-0.26c-0.347-0.347-0.347-0.908,0-1.255L29.544,0.26    c0.347-0.347,0.908-0.347,1.255,0c0.347,0.347,0.347,0.909,0,1.255L1.515,30.799C1.342,30.972,1.115,31.059,0.888,31.059z" />
+							</g>
+						</g>
+					</svg>
+				</a>
+				<p class="section-title text-theme space-4">Size Guide</p>
+				<a class="size_chart-handle active" name="imperial">Imperial</a>
+				<a class="size_chart-handle" name="metric">Metric</a>
+				<div class="size_table" data-handle='imperial'>
+					<div class="size-guide-container">
+						<div class="size-guide-heading">
+							Twin
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Fitted Sheet (W x L x D)</div>
+							<div class="size-guide-column">39” x 75” x 18"</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Flat Sheet (W x L)</div>
+							<div class="size-guide-column">71” x 98”</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Pillow Cases (W x L)</div>
+							<div class="size-guide-column">20” x 27”</div>
+						</div>
+					</div>
+					<div class="size-guide-container">
+						<div class="size-guide-heading">
+							Full
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Fitted Sheet (W x L x D)</div>
+							<div class="size-guide-column">54” x 75” x 18"</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Flat Sheet (W x L)</div>
+							<div class="size-guide-column">86” x 98”</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Pillow Cases (W x L)</div>
+							<div class="size-guide-column">20” x 27”</div>
+						</div>
+					</div>
+					<div class="size-guide-container">
+						<div class="size-guide-heading">
+							Queen
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Fitted Sheet (W x L x D)</div>
+							<div class="size-guide-column">60” x 80” x 18"</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Flat Sheet (W x L)</div>
+							<div class="size-guide-column">94” x 102”</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Pillow Cases (W x L)</div>
+							<div class="size-guide-column">20” x 27”</div>
+						</div>
+					</div>
+					<div class="size-guide-container">
+						<div class="size-guide-heading">
+							King / Cali King
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Fitted Sheet (W x L x D)</div>
+							<div class="size-guide-column">76” x 80” x 18"</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Flat Sheet (W x L)</div>
+							<div class="size-guide-column">112” x 104”</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Pillow Cases (W x L)</div>
+							<div class="size-guide-column">20” x 37”</div>
+						</div>
+					</div>
+				</div>
+				<div class="size_table" data-handle='metric' style="display: none;">
+					<div class="size-guide-container">
+						<div class="size-guide-heading">
+							Twin
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Fitted Sheet (W x L x D)</div>
+							<div class="size-guide-column">99cm x 190cm x 46cm</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Flat Sheet (W x L)</div>
+							<div class="size-guide-column">180cm x 249cm</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Pillow Cases (W x L)</div>
+							<div class="size-guide-column">51cm x 69cm</div>
+						</div>
+					</div>
+					<div class="size-guide-container">
+						<div class="size-guide-heading">
+							Full
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Fitted Sheet (W x L x D)</div>
+							<div class="size-guide-column">137cm x 190cm x 46cm</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Flat Sheet (W x L)</div>
+							<div class="size-guide-column">129cm x 249cm</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Pillow Cases (W x L)</div>
+							<div class="size-guide-column">51cm x 69cm</div>
+						</div>
+					</div>
+					<div class="size-guide-container">
+						<div class="size-guide-heading">
+							Queen
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Fitted Sheet (W x L x D)</div>
+							<div class="size-guide-column">152cm x 203cm x 46cm</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Flat Sheet (W x L)</div>
+							<div class="size-guide-column">239cm x 259cm</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Pillow Cases (W x L)</div>
+							<div class="size-guide-column">51cm x 69cm</div>
+						</div>
+					</div>
+					<div class="size-guide-container">
+						<div class="size-guide-heading">
+							King / Cali King
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Fitted Sheet (W x L x D)</div>
+							<div class="size-guide-column">193cm x 203cm x 46cm</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Flat Sheet (W x L)</div>
+							<div class="size-guide-column">284cm x 264cm</div>
+						</div>
+						<div class="size-guide-row">
+							<div class="size-guide-column">Pillow Cases (W x L)</div>
+							<div class="size-guide-column">51cm x 94cm</div>
+						</div>
+					</div>
+				</div>
+				<table class="size-guide-desktop size_table" data-handle='imperial' cellpadding="0" cellspacing="0" border="0">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Fitted Sheet (W x L x D)</th>
+							<th>Flat Sheet (W x L)</th>
+							<th>Pillow Cases (W x L)</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>Twin</td>
+						<td>39” x 75” x 18"</td>
+						<td>71” x 98”</td>
+						<td>20” x 27”</td>
+					</tr>
+					<tr>
+						<td>Full</td>
+						<td>54” x 75” x 18"</td>
+						<td>86” x 98”</td>
+						<td>20” x 27”</td>
+					</tr>
+					<tr>
+						<td>Queen</td>
+						<td>60” x 80” x 18"</td>
+						<td>94” x 102”</td>
+						<td>20” x 27”</td>
+					</tr>
+					<tr>
+						<td>King / Cali King</td>
+						<td>76” x 80” x 18"</td>
+						<td>112” x 104”</td>
+						<td>20” x 37”</td>
+					</tr>
+				</table>
+				<table class="size-guide-desktop size_table" data-handle='metric' cellpadding="0" cellspacing="0" border="0" style="display: none;">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Fitted Sheet (W x L x D)</th>
+							<th>Flat Sheet (W x L)</th>
+							<th>Pillow Cases (W x L)</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>Twin</td>
+						<td>99cm x 190cm x 46cm</td>
+						<td>180cm x 249cm</td>
+						<td>51cm x 69cm</td>
+					</tr>
+					<tr>
+						<td>Full</td>
+						<td>137cm x 190cm x 46cm</td>
+						<td>129cm x 249cm</td>
+						<td>51cm x 69cm</td>
+					</tr>
+					<tr>
+						<td>Queen</td>
+						<td>152cm x 203cm x 46cm</td>
+						<td>239cm x 259cm</td>
+						<td>51cm x 69cm</td>
+					</tr>
+					<tr>
+						<td>King / Cali King</td>
+						<td>193cm x 203cm x 46cm</td>
+						<td>284cm x 264cm</td>
+						<td>51cm x 94cm</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="out_stock_miacle">
+		<style>
+		.out_of_stock {
+			background-color: #fff4c6;
+			padding: 5px;
+			margin-top: 5px;
+			text-align: center;
+			display: none;
+			font-size: 11px;
+			border-radius: 4px;
+			margin-bottom: 5px;
+			border: 1px solid #fede16;
+		}
+
+		.show_bar {
+			display: block !important;
+		}
+		</style>
+		<div class="out_of_stock">
+			<i class="fas fa-info-circle" style="margin-right:4px"></i>Due to high demand, the selected product will ship out
+			the week of <strong>November 22nd</strong>
+		</div>
+	</div>
+<script>
+	window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
+	window.checkoutReadyCallbacks.push(() => {
+		if (checkoutData.cart.shippingZone !== "US") {
+					$('.total-line .checkout-money').html("<span class='non-usa'>USD </span>" + $('.total-line .checkout-money').html());
+					$('.checkout-total-value').html("<span class='non-usa'>USD </span>" + $('.checkout-total-value').html());
+			}
+		});
+</script>
+</body>
+
+</html>

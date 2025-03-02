@@ -18,30 +18,17 @@ jQuery(document).ready(function ($) {
 		$('select').niceSelect();
 	});
 	let isDesktop = window.matchMedia(`(min-width: 768px)`);
-
-	const ctaButton = document.querySelector('.buy-now-button');
-	const stickyBar = document.querySelector('.sticky-nav');
-
-	let interactionOptions = {
-		root: null,
-		rootMargin: '0px',
-		threshold: 1
-	}
-
-	const ctaObserver = new IntersectionObserver(handleIntersect, interactionOptions);
-	ctaObserver.observe(ctaButton);
-
-	console.log(ctaButton);
-
-	function handleIntersect(entries, ctaObserver) {
-		if (window.scrollY > ctaButton.getBoundingClientRect().top) {
-			if (entries[0].isIntersecting) {
-				stickyBar.classList.remove('scrolled');
-			} else {
-				stickyBar.classList.add('scrolled');
-			}
-		}
-	}
+			const ctaButton = document.querySelector('.logo-center-el');
+			const stickyBar = document.querySelector('.sticky-nav');
+			
+			window.addEventListener('scroll', () => {				
+				const ctaButtonPosition = ctaButton.getBoundingClientRect().top + window.scrollY;								
+				if (window.scrollY > ctaButtonPosition) {
+					stickyBar.classList.add('scrolled');
+				} else {
+					stickyBar.classList.remove('scrolled');
+				}
+			});			
 
 	let faqElements = document.querySelectorAll(".faq-item");
 
@@ -55,6 +42,15 @@ jQuery(document).ready(function ($) {
 				content.style.maxHeight = content.scrollHeight + 'px';
 			}
 		});
+	});
+
+	const hiddenReviews = document.querySelectorAll('.reviews-list .review-item-2.hidden');
+	const loadMoreButton = document.querySelector('.load-more');
+
+	loadMoreButton.addEventListener('click', function(e) {
+		e.preventDefault();
+		hiddenReviews.forEach((review) => review.classList.remove('hidden'));
+		loadMoreButton.classList.add('hidden');
 	});
 
 	//Load More
@@ -246,7 +242,7 @@ jQuery(document).ready(function ($) {
 				console.log("Add to Cart");
 				console.log(data);
 
-				var nextUrl = "/checkout_v9/secure.html";
+				var nextUrl = "/steamers/checkout/";
 				var urlSearchParams = new URLSearchParams(window.location.search);
 				var params = Object.fromEntries(urlSearchParams.entries());
 

@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/cray"
+  to = "/ksp-v5"
+  status = 301
+  query = {utm_source = "Podcast_Cray"}

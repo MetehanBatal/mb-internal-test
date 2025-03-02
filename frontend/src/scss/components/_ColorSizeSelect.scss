@@ -1,0 +1,106 @@
+.ColorSizeSelect {
+    .price-text.discounted {
+        color: #7c7c7c;
+        font-weight: 500;
+        text-decoration: line-through;
+    }
+
+    .colors-container {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .colors-container>*+* {
+        margin-left: Min(10px, 1.75vw);
+    }
+
+    .color-choice {
+        --grey: #6E707F;
+        --white: #E0E1E6;
+        --blue: #BAC8D3;
+    }
+
+    .color-choice .w-radio-input {
+        width: 35px;
+        height: 35px;
+        background-image: none;
+        background-clip: content-box;
+        padding: 2px;
+        border-radius: 6px;
+    }
+
+    .color-choice .radio-color-1 {
+        background-color: var(--white);
+    }
+
+    .color-choice .radio-color-2 {
+        background-color: var(--blue);
+    }
+
+    .color-choice .radio-color-3 {
+        background-color: var(--grey);
+    }
+
+    .color-choice .w-radio-input.w--redirected-checked {
+        padding: 4px;
+    }
+
+    li.option.sold {
+        opacity: 0.5;
+    }
+
+    label.color-choice.w-radio.sold {
+        position: relative;
+        opacity: 0.3;
+    }
+
+    label.color-choice.w-radio.sold::before,
+    label.color-choice.w-radio.sold::after {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0;
+        left: -5px;
+        right: -5px;
+        height: 1px;
+        background-color: #000;
+        background-position: center;
+        background-size: cover;
+    }
+
+    label.color-choice.w-radio.sold::before {
+        /* background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 371.23 371.23' style='enable-background:new 0 0 371.23 371.23;' xml:space='preserve'%3E%3Cpolygon points='371.23,21.213 350.018,0 185.615,164.402 21.213,0 0,21.213 164.402,185.615 0,350.018 21.213,371.23 185.615,206.828 350.018,371.23 371.23,350.018 206.828,185.615 '/%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A"); */
+        transform: translateY(18px) rotate(45deg);
+    }
+
+    label.color-choice.w-radio.sold::after {
+        transform: translateY(18px) rotate(-45deg);
+    }
+
+    .color-choice.sold:after,
+    .size-choice.sold:after {
+        cursor: pointer; 
+    }
+
+    li.option.disabled.current-size {
+        pointer-events: none;
+    }
+
+    span.color-name.current-color {
+        text-transform: capitalize !important;
+    }
+
+    .color-sc {
+        margin-right: Min(10px, 1.75vw);
+    }
+
+    .price-text.discounted {
+        margin-right: 8px;
+    }
+
+    @media screen and (max-width: 479px) {
+        .form-block2 {
+            max-width: 205px;
+        }
+    }
+}

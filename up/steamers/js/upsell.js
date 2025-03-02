@@ -13,7 +13,7 @@ let upsellHench = {
 
 	thumbsSwiper: '',
 
-	initSwiper: function() {
+	initSwiper: function () {
 		const self = this;
 
 		if (hasThumbnails) {
@@ -41,12 +41,12 @@ let upsellHench = {
 		}
 	},
 
-	initVariantSelection: function() {
+	initVariantSelection: function () {
 		const self = this;
 
 		if (hasSelector) {
 			const element = document.querySelector('.variants');
-		
+
 			self.choices = new Choices(element, {
 				searchEnabled: false,
 				itemSelectText: ''
@@ -54,7 +54,7 @@ let upsellHench = {
 
 			self.choices.passedElement.element.addEventListener(
 				'choice',
-				function(event) {
+				function (event) {
 					self.quantity = event.detail.choice.value;
 
 					self.updateVariant();
@@ -65,18 +65,18 @@ let upsellHench = {
 			self.quantity = 2;
 
 			if (document.querySelector('.is-highlighted')) {
-				document.querySelector('.is-highlighted').classList.remove('is-highlighted')	
+				document.querySelector('.is-highlighted').classList.remove('is-highlighted')
 			}
 		}
 	},
 
-	listenVariantChange: function() {
+	listenVariantChange: function () {
 		const self = this;
-		
+
 		if (hasFabricSelection) {
 			let fabricSelectors = document.querySelectorAll('input[type=radio][name="fabric"]');
-			fabricSelectors.forEach(function(selector) {
-				selector.addEventListener('change', function() {
+			fabricSelectors.forEach(function (selector) {
+				selector.addEventListener('change', function () {
 					self.fabric = this.value;
 
 					self.updateVariant();
@@ -86,8 +86,8 @@ let upsellHench = {
 
 		if (hasSizeSelection) {
 			let sizeSelectors = document.querySelectorAll('input[type=radio][name="size"]');
-			sizeSelectors.forEach(function(selector) {
-				selector.addEventListener('change', function() {
+			sizeSelectors.forEach(function (selector) {
+				selector.addEventListener('change', function () {
 					self.size = this.value;
 
 					self.updateVariant('size');
@@ -101,8 +101,8 @@ let upsellHench = {
 
 		if (hasColorSelection) {
 			let colorSelectors = document.querySelectorAll('input[type=radio][name="color"]');
-			colorSelectors.forEach(function(selector) {
-				selector.addEventListener('change', function() {
+			colorSelectors.forEach(function (selector) {
+				selector.addEventListener('change', function () {
 					self.color = this.value;
 
 					self.updateVariant('color');
@@ -114,15 +114,15 @@ let upsellHench = {
 
 		if (hasScentSelector) {
 			let scentSelectors = document.querySelectorAll('input[type=radio][name="color"]');
-			scentSelectors.forEach(function(selector) {
-				selector.addEventListener('change', function() {
+			scentSelectors.forEach(function (selector) {
+				selector.addEventListener('change', function () {
 					self.color = this.value;
-					console.log( 'Color: ', self.color );
+					console.log('Color: ', self.color);
 
 					self.updateVariant('color');
 					self.updateColorName();
-					
-					console.log( selector );
+
+					console.log(selector);
 					let clickedIndex = selector.closest('.color-choice').getAttribute('data-slide');
 					self.swiper.slideTo(clickedIndex);
 
@@ -131,18 +131,18 @@ let upsellHench = {
 				});
 			});
 
-			self.swiper.on("slideChange", function(e) {
-				setTimeout(function() {
+			self.swiper.on("slideChange", function (e) {
+				setTimeout(function () {
 					let activeSlideName = document.querySelector('.swiper-slide-active').getAttribute('data-slide');
-					console.log( activeSlideName );
+					console.log(activeSlideName);
 					self.color = activeSlideName;
 					let colors = document.querySelectorAll('.color-choice');
-					
+
 					self.updateVariant('color');
-					console.log( self.color );
+					console.log(self.color);
 					self.updateColorName();
 
-					colors.forEach(function(color) {
+					colors.forEach(function (color) {
 						color.classList.remove('selected');
 
 						if (color.id === activeSlideName) {
@@ -150,20 +150,20 @@ let upsellHench = {
 						}
 					});
 				}, 150)
-				
+
 			});
 		}
 	},
 
-	updateQuantities: function() {
+	updateQuantities: function () {
 		const self = this;
 
 		let items = [];
-		Object.keys(variants).forEach(function(quantity, index) {
-			let label = 'Add ' + quantity + ' Sheet Sets for $' + ( variants[quantity][self.fabric][self.size][self.color]['sale_price'] / quantity ).toFixed(2) + ' each (' + discounts[index] + ' OFF)';
+		Object.keys(variants).forEach(function (quantity, index) {
+			let label = 'Add ' + quantity + ' Sheet Sets for $' + (variants[quantity][self.fabric][self.size][self.color]['sale_price'] / quantity).toFixed(2) + ' each (' + discounts[index] + ' OFF)';
 			let selected = false;
 			if (index === 0) {
-				label = 'Add ' + quantity + ' Sheet Set for $' + ( variants[quantity][self.fabric][self.size][self.color]['sale_price'] / quantity ).toFixed(2) + ' each (' + discounts[index] + ' OFF)'
+				label = 'Add ' + quantity + ' Sheet Set for $' + (variants[quantity][self.fabric][self.size][self.color]['sale_price'] / quantity).toFixed(2) + ' each (' + discounts[index] + ' OFF)'
 			}
 			if (index + 1 === parseInt(self.quantity)) {
 				selected = true;
@@ -179,8 +179,7 @@ let upsellHench = {
 
 		self.choices.setChoices(items, 'value', 'label', true);
 	},
-
-	updateVariant: function(from) {
+	updateVariant: function (from) {
 		const self = this;
 
 		let variantInput = document.getElementById('upsell-param-1');
@@ -189,53 +188,60 @@ let upsellHench = {
 			self.fabric = document.querySelector('input[type=radio][name="fabric"]:checked').value;
 		}
 		if (hasSizeSelection) {
-			self.size = document.querySelector('input[type=radio][name="size"]:checked').value;	
+			self.size = document.querySelector('input[type=radio][name="size"]:checked').value;
 		}
 		if (hasColorSelection && pagePath != '1a') {
-			self.color = document.querySelector('input[type=radio][name="color"]:checked').value;	
+			self.color = document.querySelector('input[type=radio][name="color"]:checked').value;
 		}
 
-		console.log( self.quantity );
+		console.log(self.quantity);
 		let matchingVariant = variants[self.quantity][self.fabric][self.size][self.color];
 
 		if (matchingVariant === undefined || matchingVariant === null) {
 			if (from === 'color') {
 				let availableVariants = variants[self.quantity][self.fabric];
+				console.log("Available Variants: ", availableVariants);
 				let key;
-				let firstAvailableVariant = Object.values(availableVariants).find(function(variant, index) {
-					key = Object.keys(availableVariants)[index];
-					return variant['sky_blue'].variantId.toString().length > 0;
-				});
-
+				let firstAvailableVariant = Object.values(availableVariants).find(
+					function (variant, index) {
+						key = Object.keys(availableVariants)[index];
+						if (variant[self.color]) {
+							return variant[self.color].variantId.toString().length > 0;
+						}
+					}
+				);
 				// let firstAvailableVariant = Object.keys(availableVariants)[0];
-				let matchingSizeSelection = document.querySelector(`input[name="size"][value=${key}]`);
+				let matchingSizeSelection = document.querySelector(
+					`input[name="size"][value=${key}]`
+				);
 				matchingSizeSelection.click();
-
 				return;
 			} else if (from === 'size') {
 				let availableVariants = variants[self.quantity][self.fabric][self.size];
 				let firstAvailableVariant = Object.keys(availableVariants)[0];
 				let matchingColorSelection = document.querySelector(`input[name="color"][value=${firstAvailableVariant}]`);
 				matchingColorSelection.click();
-
 				return;
 			}
 		} else {
 			variantInput.value = matchingVariant['variantId'];
 		}
 
+		this.filterOutOfStockProducts("color")
+		this.filterOutOfStockProducts("size")
+
 		if (pagePath === '3b') {
-			document.querySelector('.price').innerHTML = `$${matchingVariant['price']}`; 
+			document.querySelector('.price').innerHTML = `$${matchingVariant['price']}`;
 		}
-		
+
 		if (self.size === "twin" && pagePath === '3a') {
 			$(".upsell-sub-description").html("Set includes: 1 fitted sheet, 1 flat sheet, and 1 pillowcase")
-		}else {
+		} else {
 			$(".upsell-sub-description").html("Set includes: 1 fitted sheet, 1 flat sheet, and 2 pillowcases")
 		}
 	},
 
-	updateSliderImages: function() {
+	updateSliderImages: function () {
 		const self = this;
 
 		self.swiper.destroy();
@@ -246,9 +252,10 @@ let upsellHench = {
 		let images = document.querySelectorAll('.swiper-slide');
 		let index = 1;
 
-		images.forEach(function(image) {
+		images.forEach(function (image) {
 			if (index > images.length / 2) {
-				index = 1; }
+				index = 1;
+			}
 			image.querySelector('img').src = `./images/sliders/${pagePath}/${self.color}/${index}_n.jpg`;
 			image.querySelector('img').setAttribute('data-src', `./images/sliders/${pagePath}/${self.color}/${index}_n.jpg`);
 			index++;
@@ -257,20 +264,21 @@ let upsellHench = {
 		self.initSwiper();
 	},
 
-	updateColorName: function() {
+	updateColorName: function () {
 		const self = this;
-		
+
 		let colorName = self.color;
-		console.log( colorName );
+		console.log(colorName);
 		colorName = colorName.replace('_', ' ');
 		document.getElementById('color-name').innerHTML = colorName.toUpperCase();
 	},
 
-	filterOutOfStockProducts: function() {
+	filterOutOfStockProducts: function () {
 		const self = this;
 
 		let colors = document.querySelectorAll('input[name="color"]');
-		colors.forEach(function(color) {
+		console.log("Colors: ", colors);
+		colors.forEach(function (color) {
 			let isMatching = variants[self.quantity][self.fabric][self.size][color.value];
 			if (isMatching === undefined || isMatching === null) {
 				color.parentNode.classList.add('out-of-stock');
@@ -278,14 +286,24 @@ let upsellHench = {
 				color.parentNode.classList.remove('out-of-stock');
 			}
 		});
+
+		let sizes = document.querySelectorAll('input[name="size"]');
+		sizes.forEach(function (size) {
+			let isMatching = variants[self.quantity][self.fabric][size.value][self.color];
+			if (isMatching === undefined || isMatching === null) {
+				size.parentNode.classList.add('out-of-stock');
+			} else {
+				size.parentNode.classList.remove('out-of-stock');
+			}
+		});
 	},
 
-	toggleActiveClass: function() {
+	toggleActiveClass: function () {
 		if (hasToggleButtons) {
 			let labels = document.querySelectorAll('label');
 
-			labels.forEach(function(label) {
-				label.addEventListener('click', function(e) {
+			labels.forEach(function (label) {
+				label.addEventListener('click', function (e) {
 					let currentSelection = label.parentNode.querySelector('.selected');
 					currentSelection.classList.remove('selected');
 					label.classList.add('selected');
@@ -294,13 +312,13 @@ let upsellHench = {
 		}
 	},
 
-	initTimer: function() {
+	initTimer: function () {
 		const self = this;
 
 		let timers = document.querySelectorAll('.timer');
-		console.log( 'Timers: ', timers )
+		console.log('Timers: ', timers)
 		if (timers.length > 0) {
-			timers.forEach(function(timer) {
+			timers.forEach(function (timer) {
 				let duration = timer.getAttribute('data-timer-duration');
 
 				self.startTimer(duration, timer);
@@ -308,8 +326,8 @@ let upsellHench = {
 		}
 	},
 
-	startTimer: function(duration, element) {
-		const timer = setInterval(function() {
+	startTimer: function (duration, element) {
+		const timer = setInterval(function () {
 			let minutes = Math.floor(duration / 60);
 			let seconds = duration - (minutes * 60);
 			if (minutes < 10) {
@@ -330,7 +348,7 @@ let upsellHench = {
 		}, 1000);
 	},
 
-	toggleConfirmationBanner: function() {
+	toggleConfirmationBanner: function () {
 		let urlSearchParams = new URLSearchParams(window.location.search);
 		let params = Object.fromEntries(urlSearchParams.entries());
 
@@ -340,7 +358,7 @@ let upsellHench = {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', function(e) {
+document.addEventListener('DOMContentLoaded', function (e) {
 	upsellHench.initSwiper();
 	upsellHench.initVariantSelection();
 	upsellHench.toggleActiveClass();

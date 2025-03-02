@@ -1,7 +1,7 @@
 window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
 window.checkoutReadyCallbacks.push(() => {
 	if (checkoutData.cart.shippingZone !== "US") {
-		document.querySelectorAll(".non-usa").forEach(function(usaOnly) { usaOnly.innerHTML = "USD "});
+		$(".non-usa").html("USD ");
 	}
 });
 
@@ -565,8 +565,7 @@ let upsellHench = {
 
 	updateSliderImages: function () {
 		const self = this;
-		if (!hasSlider) {
-			return; }
+
 		self.swiper.destroy();
 		self.thumbsSwiper.destroy();
 
@@ -579,17 +578,17 @@ let upsellHench = {
 			}
 			let imagePath;
 			if(pagePath === "2d") {
-				imagePath = `./images/sliders/${pagePath}/new/${self.color}/0${index}.webp`;
+				imagePath = `/up/v6/images/sliders/${pagePath}/new/${self.color}/0${index}.webp`;
 
 				if (image.querySelector("img").classList.contains("thumb-img")) {
-					imagePath = `./images/sliders/${pagePath}/new/${self.color}/0${index}.webp`;
+					imagePath = `/up/v6/images/sliders/${pagePath}/new/${self.color}/0${index}.webp`;
 				}
 	
 			}else {
-				imagePath = `./images/sliders/${pagePath}/${self.color}/0${index}.webp`;
+				imagePath = `/up/v6/images/sliders/${pagePath}/${self.color}/0${index}.webp`;
 
 				if (image.querySelector("img").classList.contains("thumb-img")) {
-					imagePath = `./images/sliders/${pagePath}/${self.color}/0${index}_thumb.webp`;
+					imagePath = `/up/v6/images/sliders/${pagePath}/${self.color}/0${index}_thumb.webp`;
 				}
 	
 			}
@@ -891,7 +890,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 	upsellHench.toggleActiveClass();
 	upsellHench.listenVariantChange();
 	upsellHench.initTimer();
-	// upsellHench.toggleConfirmationBanner();
+	upsellHench.toggleConfirmationBanner();
 	window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
 	window.checkoutReadyCallbacks.push(() => {
 		upsellHench.swapVariantColors();
@@ -952,3 +951,36 @@ function removeHighlightClass() {
         .classList.remove("is-highlighted");
     }
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+	if(pagePath === "3b") {
+		const fabricRadios = document.querySelectorAll('input[name="fabric"]');
+		const sizeRadios = document.querySelectorAll('input[name="size"]');
+		const stoneColor = document.querySelector('.color.stone');
+
+		function updateStoneVisibility() {
+			const selectedFabric = document.querySelector('input[name="fabric"]:checked').value;
+			const selectedSize = document.querySelector('input[name="size"]:checked').value;
+			const selectedColor = document.querySelector('input[name="color"]:checked').value;
+
+			if (selectedFabric === 'luxe' && selectedSize === "standard" && selectedColor === "stone") {
+				stoneColor.classList.add("out-of-stock")
+				document.querySelector(".color.white").click();
+			} else if(selectedFabric === 'signature' && selectedSize === "king") {
+				document.querySelector(".selection.out-of-stock").classList.remove("out-of-stock")
+			}
+		}
+
+		// Add event listeners to fabric and size radios
+		fabricRadios.forEach(radio => {
+			radio.addEventListener('change', updateStoneVisibility);
+		});
+
+		sizeRadios.forEach(radio => {
+			radio.addEventListener('change', updateStoneVisibility);
+		});
+
+		// Initial check on page load
+		updateStoneVisibility();		
+	}	
+});

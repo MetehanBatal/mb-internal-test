@@ -1,0 +1,708 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Miracle Brand - Secure Checkout</title>
+  <meta charset="utf-8">
+  <link href="../favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../checkout/webclip.png" rel="apple-touch-icon">
+
+
+  <script type="text/javascript" src="https://cdn.shopmiraclebrand.co/js/cart_loader.js"></script>
+<script type="text/javascript" async src="https://try.miraclebrand.co/pixel.js"></script>
+  
+  <meta content="api.shopmiraclebrand.co"                   name="checkout-api-endpoint">
+  <meta content="37723333918870"                                   name="checkout-default-variant-id">
+  <meta content="34937177702550"                                   name="checkout-default-addons">
+  <meta content="US" name="checkout-default-shipping-zone">
+  <meta content="https://try.miraclebrand.co/up/2b.html"   name="checkout-next-url">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+  <meta content="try_C1" name="checkout-funnel-name">
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/mk.js"></script>
+  <script src="https://kit.fontawesome.com/8603d6f597.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="ch-preloader white-overlay" id="ch-preloader">
+    <div class="spinner-wrapper">
+      <div class="">
+        <div class="spinner"></div>
+        <div class="spinner-icon">
+          <svg fill="#e2e2e2" class="spinner-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24">
+            <path
+              d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-5 7.723v2.277h-2v-2.277c-.595-.347-1-.984-1-1.723 0-1.104.896-2 2-2s2 .896 2 2c0 .738-.404 1.376-1 1.723zm-5-7.723v-4c0-2.206 1.794-4 4-4 2.205 0 4 1.794 4 4v4h-8z" />
+          </svg>
+        </div>
+      </div>
+      <div class="">
+        <div class="spinner-text">Loading Secure Checkout...</div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="top-header for-mob">
+    <div class="container">
+
+
+      <div class="row">
+        <div class="column">
+          <img src="images/logo-white.svg" class="mob-logo">
+
+        </div>
+
+        <div class="column">
+          <img src="images/secure-white.svg" class="mob-secure">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="summry-toggle-mob for-mob">
+
+    <div class="container" id="summry-toggle-mob">
+      <p class="summry-toggle"><svg width="20" height="19" xmlns="http://www.w3.org/2000/svg"
+          class="order-summary-toggle__icon">
+          <path
+            d="M17.178 13.088H5.453c-.454 0-.91-.364-.91-.818L3.727 1.818H0V0h4.544c.455 0 .91.364.91.818l.09 1.272h13.45c.274 0 .547.09.73.364.18.182.27.454.18.727l-1.817 9.18c-.09.455-.455.728-.91.728zM6.27 11.27h10.09l1.454-7.362H5.634l.637 7.362zm.092 7.715c1.004 0 1.818-.813 1.818-1.817s-.814-1.818-1.818-1.818-1.818.814-1.818 1.818.814 1.817 1.818 1.817zm9.18 0c1.004 0 1.817-.813 1.817-1.817s-.814-1.818-1.818-1.818-1.818.814-1.818 1.818.814 1.817 1.818 1.817z">
+          </path>
+        </svg>
+        <span class="sm-txt"> Review order summary <svg width="11" height="6" xmlns="http://www.w3.org/2000/svg"
+            class="order-summary-toggle__dropdown" fill="#000">
+            <path
+              d="M.504 1.813l4.358 3.845.496.438.496-.438 4.642-4.096L9.504.438 4.862 4.534h.992L1.496.69.504 1.812z">
+            </path>
+          </svg></span>
+        <span class="sm-txt" style="display:none"> Hide order summary <svg width="11" height="7"
+            xmlns="http://www.w3.org/2000/svg" class="order-summary-toggle__dropdown" fill="#000">
+            <path
+              d="M6.138.876L5.642.438l-.496.438L.504 4.972l.992 1.124L6.138 2l-.496.436 3.862 3.408.992-1.122L6.138.876z">
+            </path>
+          </svg></span>
+      </p>
+      <p class="togle-price"><span class="checkout-total-value"></span></p>
+    </div>
+  </div>
+
+
+  <div class="chkout-bg" style="overflow:hidden">
+
+
+
+    <div class="container">
+
+      <div class="lft-chk">
+        <div class="logo-box for-desk">
+
+
+
+          <div class="row">
+            <div class="column">
+              <img src="images/logo-checkout.svg" class="mob-logo">
+
+            </div>
+
+            <div class="column">
+              <img src="images/secure.svg" class="mob-secure">
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="urgency-timer">
+          <div class="urgency-timer__icon-wrap_1D_">
+            <img class="urgency-timer__icon_2TR" src="images/hurry.svg">
+          </div>    
+          <span style="font-weight:600;margin-right:5px;"> Hurry!</span>  <span style="margin-right:5px;">Your order is reserved for </span><span id="countdown">10:00</span>
+      </div>
+
+                    
+        <div class="hide-desk">
+          <div class="coupon-input-wrapper mobile_coupon">
+
+
+            <input type="text" class="checkout-coupon-field input-flds" placeholder="Promo code (optional)">
+            <button class="checkout-coupon-button">REDEEM</button>
+          </div>
+          
+          <div class="discount-applied es_hide">
+            <i data-v-5c54c67c="" class="fas fa-percentage" aria-hidden="true"></i>
+            <strong>Discount Applied!</strong> You're saving $<span class="checkout-discount-value"></span>
+          </div>
+        </div>
+
+        
+        <div class="paypal-express-checkout">
+          <div class="payment-method">EXPRESS CHECKOUT</div>
+
+          <form class="checkout-paypal-form">
+            <div class="form-group" style="display: none">
+              <label for="paypal_checkout_country">Country</label>
+              <select id="paypal_checkout_country" type="text" name="paypal_checkout_country"></select>
+              <div class="field__caret"></div>
+            </div>
+            <button class="checkout-submit-paypal paypalbtn overlay">
+              <i class="fas fa-spinner" style="display:none"></i>
+              <img src="images/paypal-logo.svg" class="pad">
+              <img src="images/paypal-txt.svg">
+            </button>
+          </form>
+        </div>
+
+        <div class="credit-card-checkout">
+
+
+          <div class="alternative-payment-separator" data-alternative-payment-separator="">
+            <span class="alternative-payment-separator__content">
+               OR PAY WITH CREDIT CARD
+            </span>
+          </div>
+
+
+          <!---  CREDIT CARD FORM -->
+          <form class="checkout-combo-form" method="post">
+            <div class="heading-box">
+              <h4 class="chk-head">Contact Information</h4>
+            </div>
+            <div class="payment-flds-box" style="border-top: none; border-bottom: none;">
+              <div class="form-group">
+                <div class="frm-flds">
+                  <label for="email">Email</label>
+                  <input id="email" class="input-flds" type="email" name="email" placeholder="E-Mail">
+                </div>
+              </div>
+            </div>
+            <div class="heading-box">
+              <h4 class="chk-head">Shipping Address</h4>
+            </div>
+            <div class="payment-flds-box" style="border-top: none; border-bottom: none;">
+              <div class="form-group">
+                <div class="frm-flds mobile-half-fld half-fld fl">
+                  <label for="shipping_first_name">First Name</label>
+                  <input type="text" class="input-flds" id="shipping_first_name" name="shipping_first_name"
+                    placeholder="First Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds mobile-half-fld half-fld fr">
+                  <label for="shipping_last_name">Last Name</label>
+                  <input id="shipping_last_name" class="input-flds" type="text" name="shipping_last_name"
+                    placeholder="Last Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds fl">
+                  <label for="shipping_address_1">Address</label>
+                  <input id="shipping_address_1" class="input-flds" type="text" name="shipping_address1"
+                    placeholder="Address">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds mobile-fr fl">
+                  <label for="shipping_address_2">Apartment, suite, etc. (optional)</label>
+                  <input id="shipping_address_2" class="input-flds" type="text" name="shipping_address2"
+                    placeholder="Apartment, suite, etc. (optional)">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds half-fld fl">
+                  <label for="shipping_city">City</label>
+                  <input id="shipping_city" class="input-flds" type="text" name="shipping_city" placeholder="City">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds mobile-half-fld half-fld fr">
+                  <label for="shipping_state">State</label>
+                  <select id="shipping_state" class="input-flds" name="shipping_state" data-country="US">
+                  </select>
+                  <div class="field__caret"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds mobile-half-fld half-fld fl">
+                  <label for="shipping_postal_code">ZIP Code</label>
+                  <input type="text" class="input-flds" name="shipping_postal_code" placeholder="Zip Code">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds half-fld fr">
+                  <label for="shipping_country">Country</label>
+                  <select id="shipping_country" class="input-flds" type="text" name="shipping_country">
+                  </select>
+                  <div class="field__caret"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds fl">
+                  <label for="shipping_phone">Phone</label>
+                  <input id="shipping_phone" class="input-flds" type="number" name="shipping_phone" inputmode="numeric"
+                    placeholder="Phone">
+                </div>
+              </div>
+            </div>
+            <div class="heading-box">
+              <h4 class="chk-head">Billing Address</h4>
+              <h6 class="chk-sub">Select the address that matches your card or payment method.</h6>
+            </div>
+            <div class="payoptbox">
+              <div class="form-group">
+                <div class="payment-cards-box">
+                  <label for="billing_use_shipping_true" class="paymybtn">
+                    <input type="radio" id="billing_use_shipping_true" class="form-gateway cardPayOpt"
+                      name="billing_use_shipping" value="true" checked>Same as shipping address
+                  </label>
+                </div>
+                <div class="payment-cards-box">
+                  <label for="billing_use_shipping_false" class="paymybtn">
+                    <input type="radio" id="billing_use_shipping_false" class="form-gateway cardPayOpt"
+                      name="billing_use_shipping" value="false">Use a different billing address
+                  </label>
+                </div>
+              </div>
+
+            </div>
+            <!-- To automatically hide billing fields, we wrap them all in a container -->
+            <!-- See CSS above -->
+            <div class="checkout-billing-fields payment-flds-box">
+              <div class="form-group">
+                <div class="frm-flds mobile-half-fld half-fld fl">
+                  <label for="billing_first_name">First Name</label>
+                  <input type="text" id="billing_first_name" name="billing_first_name" class="input-flds"
+                    placeholder="First Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds mobile-half-fld half-fld fr">
+                  <label for="billing_last_name">Last Name</label>
+                  <input id="billing_last_name" type="text" name="billing_last_name" class="input-flds"
+                    placeholder="Last Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds fl">
+                  <label for="billing_address_1">Address 1</label>
+                  <input id="billing_address_1" type="text" name="billing_address1" class="input-flds"
+                    placeholder="Address 1">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds mobile-fr fl">
+                  <label for="billing_address_2">Address 2</label>
+                  <input id="billing_address_2" type="text" name="billing_address2" class="input-flds"
+                    placeholder="Address 2">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds half-fld fl">
+                  <label for="billing_city">City</label>
+                  <input id="billing_city" type="text" name="billing_city" class="input-flds" placeholder="City">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds mobile-half-fld half-fld fr">
+                  <label for="billing_state">State</label>
+                  <select id="billing_state" name="billing_state" data-country="US" class="input-flds">
+                  </select>
+                  <div class="field__caret"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds mobile-half-fld half-fld fl">
+                  <label for="billing_postal_code">ZIP Code</label>
+                  <input type="text" name="billing_postal_code" class="input-flds" placeholder="Zip Code">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds half-fld fr">
+                  <label for="billing_country">Country</label>
+                  <select id="billing_country" type="text" name="billing_country" class="input-flds">
+                  </select>
+                  <div class="field__caret"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="frm-flds fl">
+                  <label for="billing_phone">Phone</label>
+                  <input id="billing_phone" type="text" name="billing_phone" class="input-flds" inputmode="numeric"
+                    placeholder="Phone">
+                </div>
+              </div>
+            </div>
+
+            <div class="heading-box">
+              <h4 class="chk-head">Payment Method</h4>
+              <h6 class="chk-sub">All transactions are secure and encrypted. </h6>
+
+            </div>
+
+
+
+            <div class="payoptbox cc-payment">
+              <div class="form-group">
+                <div class="payment-cards-box" id="payment_radio-credit">
+                  <label class="paymybtn" for="combo_mode_credit"><input type="radio" id="combo_mode_credit"
+                      name="combo_mode" value="credit" class="form-gateway cardPayOpt" checked=""
+                      class="form-gateway cardPayOpt">Credit Card</label>
+                  <img src="images/ccs.svg" class="etc_and_more" height="20"
+                    style="cursor:pointer; position:relative; margin-top:-20px; margin-right: 83px;">
+                  <span class="etc_and_more"
+                    style="float: right; margin-top: -23px !important; margin-right: 15px; font-size: 12px; color: #919191;">and
+                    more...</span>
+                </div>
+
+                <div class="payment-flds-box" style="padding: 15px;">
+                  <div class="form-group">
+                    <div class="frm-flds fl">
+                      <div class="card_details_small">CARD NUMBER</div>
+                       <div id="braintree-cc-number"></div>
+                    </div>
+                 </div>
+                 <div class="form-group">
+                    <div class="frm-flds half-fld fl">
+                      <div class="card_details_small">VALID THROUGH</div>
+                
+                       <div id="braintree-expiry"></div>
+                    </div>
+                 </div>
+                 <div class="form-group"></div>
+                 <div class="frm-flds half-fld fr">
+                  <div class="card_details_small">CVV</div>
+                
+                    <div id="braintree-cvv"></div>
+                 </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="payment-flds-box attntv" style="border-top: none; border-bottom: none;">
+  
+              <div class="form-group">
+              <div id="attentiveOp
+              tIn" class="fieldset
+              -description" data-buyer-acce="" pts-marketing-a="" ttentive="" aria-label="Pho
+              ne Sign Up">
+               <div class="section__content section__content__attentive">
+               <div class="checkbox-wrapper">
+               <div class="checkbox__input" data-children-count="1">
+                <input type="checkbox" name="accepts_attentive">
+              
+               </div>
+               <div class="checkbox__label
+              checkbox__label__attentive">
+               <span id="headers" tabindex="0" focusable="true">
+               <div class="checkbox__label__attentive__header">Get 10% Off Your Next
+              Order</div>
+               <div class="checkbox__label__attentive__subheader">Sign up to get
+              texts from Miracle and we'll text you a coupon
+              code</div>
+               </span>
+               <div class="section__footer__attentive">By
+              checking this box, you agree to receive recurring automated
+              promotional and personalized marketing text messages <b>(e.g.
+              cart reminders)</b> from Miracle at the cell number used
+              when signing up. Consent is not a condition of any purchase.
+              <b>Reply HELP for help and STOP to cancel.</b> Msg frequency
+              varies. Msg &amp; data rates may apply. View <a href="http://attn.tv/miracle/terms.html" target="_blank" rel="noopener noreferrer" aria-label="Miracle Terms Link">Terms</a> &amp; <a href="https://www.miraclebrand.co/pages/privacy-policy" target="_blank" rel="noopener noreferrer" aria-label="Miracle Privacy Link">Privacy</a>.</div>
+               </div>
+               </div>
+               </div>
+              </div>
+              </div>
+              </div>
+
+
+              
+
+            <button class="checkout-submit-combo frm-submit">
+              <div class="complete-purchase"><i data-v-5c54c67c="" class="fas fa-lock"></i>
+                <i class="fas fa-spinner fa-spin"></i>
+                COMPLETE PURCHASE<br><span class="try-risk" style="font-size:10px;font-weight:400">TRY IT RISK FREE! -
+                  30 DAY MONEY BACK GUARANTEE!</span>
+              </div>
+            </button>
+          </form>
+          <!---  END CREDIT CARD FORM -->
+        </div>
+        <div class="tt-promo-brand">
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+        <div class="hide-desk">
+
+
+          <div class="uco-widget-container">
+
+            <div class="alternative-payment-separator" data-alternative-payment-separator="">
+              <span class="alternative-payment-separator__content">
+                Trusted customer reviews
+              </span>
+            </div>
+
+            <div class="uco-widget-content">
+              <div class="uco-widget-row">
+                <div class="uco-widget-img reviews">
+                  <img src="images/review-1.png" width="64px">
+                </div>
+                <div class="uco-widget-text reviews">
+
+
+                  <div class="reviews">
+                    <img src="images/review-stars.svg" width="70px">
+                    <span class="review-name">Marina P.</span>
+                    <span class="review-place">Dallas, TX</span>
+                    <span class="review-verified"><img src="images/locker-green.svg" width="12px"
+                        style="margin-right:5px; margin-top:5px">Verified Buyer</span>
+                    <span class="review-content">"I have super busy mornings, and Javy gave me like 15 minutes of my
+                      mornings back PLUS it tasted like it was just brewed up at my local coffee shop even though I made
+                      my iced coffee in my kitchen in like 10 seconds!" </span>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="uco-widget-row">
+                <div class="uco-widget-img">
+                  <img src="images/review-3.png" width="64px">
+                </div>
+                <div class="uco-widget-text">
+
+
+                  <div class="reviews">
+                    <img src="images/review-stars.svg" width="70px">
+                    <span class="review-name">Sara S.</span>
+                    <span class="review-place">Salt Lake City, UT</span>
+                    <span class="review-verified"><img src="images/locker-green.svg" width="12px"
+                        style="margin-right:5px; margin-top:5px">Verified Buyer</span>
+                    <span class="review-content">"Yep, I'm hooked! I haven't been able to go my local coffee shop
+                      because of COVID, and I don't think I'll ever go back anyway after trying Javy!" </span>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+
+
+
+            </div>
+          </div>
+
+
+
+          <div class="uco-widget-container">
+
+            <div class="alternative-payment-separator" data-alternative-payment-separator="">
+              <span class="alternative-payment-separator__content">
+                Why choose us?
+              </span>
+            </div>
+
+
+            <div class="uco-widget-content">
+              <div class="uco-widget-row">
+                <div class="uco-widget-img">
+                  <img src="images/dollar-sign.svg" width="50px">
+                </div>
+                <div class="uco-widget-text">
+                  <span>30-Day Satisfaction Guarantee</span>
+                  <p>If you're not satisfied with your product(s), we'll make it right! We promise.</p>
+                </div>
+              </div>
+              <div class="uco-widget-row">
+                <div class="uco-widget-img">
+                  <img src="images/truck.svg" width="60px">
+                </div>
+                <div class="uco-widget-text">
+                  <span>Over 30,000 successfully shipped orders</span>
+                  <p>Happy customers, end-to-end tracking and reliable customer service</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+        <div class="footer">
+          <div class="copyright">
+            All rights reserved ©
+          </div>
+          <div class="footer-links-checkout">
+            <a href="https://www.miraclebrand.co/pages/privacy-policy" target="_blank" class="footer-link">Privacy Policy</a> |
+            <a href="https://www.miraclebrand.co/pages/care-guide" target="_blank" class="footer-link">Care Guide</a> |
+            <a href="https://www.miraclebrand.co/pages/terms-and-conditions" target="_blank" class="footer-link">Terms and Conditions</a> |
+            <a href="../legal/note.html" target="_blank" class="footer-link">Notice At Collection</a>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="right-chk">
+        <div id="toggle-mob-cart" class="isopened">
+          <div style="width:100%; padding:30px 0;">
+            <h4 class="chk-head">Order Summary</h4>
+
+            <div class="checkout-cart-display"></div>
+
+
+
+
+            <div class="hide-mobo">
+
+
+              <div class="coupon-input-wrapper desktop_coupon">
+
+
+                <input type="text" class="checkout-coupon-field input-flds" placeholder="Promo code (optional)">
+                <button class="checkout-coupon-button">REDEEM</button>
+              </div>
+              <div class="discount-applied es_hide">
+                <i data-v-5c54c67c="" class="fas fa-percentage" aria-hidden="true"></i>
+                <strong>Discount Applied!</strong> You're saving $<span class="checkout-discount-value"></span>
+              </div>
+
+
+              <div class="uco-widget-container">
+
+                <div class="alternative-payment-separator" data-alternative-payment-separator="">
+                  <span class="alternative-payment-separator__content">
+                    Trusted customer reviews
+                  </span>
+                </div>
+                <div class="uco-widget-content">
+                  <div class="uco-widget-row">
+                    <div class="uco-widget-img">
+                      <img src="images/review-1.png" width="64px">
+                    </div>
+                    <div class="uco-widget-text">
+
+
+                      <div class="reviews">
+                        <img src="images/review-stars.svg" width="70px">
+                        <span class="review-name">David G.</span>
+                        <span class="review-place">New York, NY</span>
+                        <span class="review-verified"><img src="images/locker-green.svg" width="12px"
+                            style="margin-right:5px; margin-top:5px">Verified Buyer</span>
+                        <span class="review-content">"No more allergy symptoms in the morning. AMAZING! Who knew cases could be all that!" </span>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                  <div class="uco-widget-row">
+                    <div class="uco-widget-img">
+                      <img src="images/review-3.png" width="64px">
+                    </div>
+                    <div class="uco-widget-text">
+
+
+                      <div class="reviews">
+                        <img src="images/review-stars.svg" width="70px">
+                        <span class="review-name">Shari B.</span>
+                        <span class="review-place">Derby, NY</span>
+                        <span class="review-verified"><img src="images/locker-green.svg" width="12px"
+                            style="margin-right:5px; margin-top:5px">Verified Buyer</span>
+                        <span class="review-content">"Love my new miracle cases. They do not slip off like my old cases did. They are comfy and help keep you cool all night" </span>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+                </div>
+
+              </div>
+
+
+
+              <div class="uco-widget-container">
+                <div class="alternative-payment-separator" data-alternative-payment-separator="">
+                  <span class="alternative-payment-separator__content">
+                    Why choose us?
+                  </span>
+                </div>
+
+                <div class="uco-widget-content">
+                  <div class="uco-widget-row">
+                    <div class="uco-widget-img">
+                      <img src="images/dollar-sign.svg" width="50px">
+                    </div>
+                    <div class="uco-widget-text">
+                      <span>30-Day Satisfaction Guarantee</span>
+                      <p>If you're not satisfied with your product(s), we'll make it right! We promise.</p>
+                    </div>
+                  </div>
+                  <div class="uco-widget-row">
+                    <div class="uco-widget-img">
+                      <img src="images/truck.svg" width="60px">
+                    </div>
+                    <div class="uco-widget-text">
+                      <span>Over 50,000 successfully shipped orders</span>
+                      <p>Happy customers, end-to-end tracking and reliable customer service</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

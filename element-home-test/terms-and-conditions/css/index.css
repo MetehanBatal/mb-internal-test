@@ -1,0 +1,265 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  padding-top: 20px;
+  border-bottom: 1px solid #00237e;
+}
+
+h1 {
+  font-size: 60px;
+  margin-block: 10px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+h1,h2 {
+  color:#00237e;
+  font-family: "Brandon Bold";
+}
+p {
+  color: #747474;
+  font-family: "Brandon Reg";
+}
+
+.description-item .bold {
+  font-family: "Brandon Bold";
+}
+
+.description-item a {
+  color: inherit;
+  font-family: "Brandon Bold";
+  text-decoration: none;
+}
+
+footer {
+  background: #E4F3FB;
+  padding-block: 40px;
+}
+
+/* FOOTER START */
+
+.footer-container {
+  max-width: 1140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #D8D8D8;
+  gap: 35px;
+}
+.contact-section {
+  display: flex;
+  flex-direction: column;
+}
+.contact-section-text {
+  font-family: "Brandon bold";
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.mail-address p {
+  font-size: 22px;
+  font-family: "Brandon Bold";
+  margin: 0px 0px 0px 10px
+}
+.footer-logo {
+  width: 161px;
+  height: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.footer-sec {
+  margin-top: 50px;
+  padding: 40px 15px;
+  color: #747474;
+  font-family: "Brandon reg";
+}
+
+.footer-sec .font-bold {
+  color: #747474;
+  font-family: "Brandon Bold";
+}
+
+.footer-logo-wrapper {
+  max-width: 1140px;
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+ul li {
+  list-style-type: none;
+  margin-top: 10px;
+
+}
+
+.footer-area {
+  width: 100%;
+}
+
+.address-list-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address-list-title {
+  font-size: 12px;
+  font-family: "Brandon bold";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.address-list-item {
+  padding: 0px !important;
+}
+
+.shipping-list-item {
+  padding: 0px !important;
+}
+
+.info-list{
+  display: flex;
+  flex-direction: column;
+}
+.mail-address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disclaimer-section {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.copyright-section {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 38px;
+  font-size: 12px;
+  font-family: "Brandon bold";
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.disclaimer-section p {
+  font-family: "Brandon reg";
+  margin-top: 30px;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.copyright-section {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 38px;
+  font-size: 12px;
+  font-family: "Brandon bld";
+  display: flex;
+  gap: 10px;
+}
+.copyright-section-links {
+  display: flex;
+}
+.copyright-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Brandon reg";
+  color: #747474;
+  text-decoration: none;
+}
+.links-footer-line {
+  width: 1px;
+  height: 9px;
+  background-color: #747474;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+
+@media screen and (max-width: 479px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .navbar-description {
+    font-size: 13px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+  }
+
+  .footer-sec {
+    padding-inline: 0px;
+  }
+
+  .footer-area {
+    width: 40%;
+  }
+
+  .address-list-section {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+
+  .info-section {
+    margin-right: auto;
+  }
+  .copyright-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@font-face {
+  font-family: 'Brandon Med';
+  src: url('./fonts/Brandon_med.woff2') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Brandon Reg';
+  src: url('./fonts/Brandon_reg.woff2') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: 'Brandon Bold';
+  src: url('./fonts/Brandon_bld.woff2') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}

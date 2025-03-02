@@ -735,7 +735,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					window.checkout.setCart(x);
 					window.checkout.drawCart(x);					
 				
-					window.location.href = '/sheets/checkout-au/index.html';
+					window.location.href = '/sheets/checkout-au/';
 				});
 			});
 		});

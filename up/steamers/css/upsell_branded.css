@@ -122,6 +122,37 @@ p.heading {
 	color: var(--green-color);
 }
 
+.selection.out-of-stock:before,
+.selection.out-of-stock:after {
+	position: absolute;
+
+	display: block;
+
+	content: "";
+
+	top: -0.6rem;
+	left: -0.5rem;
+	right: -0.5rem;
+
+	height: 0.1rem;
+
+	background-color: #000;
+}
+
+.selection.out-of-stock:before {
+	transform: translateY(2.2rem) rotate(22deg);
+}
+
+.selection.out-of-stock:after {
+	transform: translateY(2.2rem) rotate(-22deg);
+}
+
+.out-of-stock {
+	opacity: 0.3;
+
+	overflow: hidden;
+}
+
 /* Progress Bar */
 
 .progress-bar-box {
@@ -727,6 +758,18 @@ form input[type="radio"] {
 	padding-right: 3.8rem !important;
 }
 
+.choices .choices__list.choices__list--dropdown { 
+  visibility: visible !important;
+}
+.choices .choices__list--dropdown,
+.choices .choices__list[aria-expanded]{
+  margin-top: 0px;
+}
+.choices.is-open .choices__list--dropdown, 
+.choices.is-open .choices__list[aria-expanded]{
+  margin-top: -1px;
+}
+
 /* Content Box */
 
 .upsell-content {
@@ -1288,27 +1331,6 @@ footer a:last-child {
 	 border: 1.2px solid #000;
 	 background-color: #fff;
  }
- 
-.up-1a-v5 .selected {
-	 position: relative;
-	 z-index: 15;
- }
-
-.up-1a-v5 .selected::after {
-  content: "";
-  background-image: url("../images/icons/checkmark.svg");
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  z-index: 20;
-  height: 15px;
-  width: 15px;
-}
- 
-.up-1a-v5 .selected .selector-bg {
-	 border: 1.2px solid #000;
-	 background-color: #fff;
- }
 
  .scent-text {
   font-family: "RegularFont";
@@ -1367,18 +1389,11 @@ footer a:last-child {
 	font-size: 24px !important;
 }
 
-
-.up-2a .line-through, .up-2a .highlighted-green, .up-2a .price {
-	font-size: 28px !important;
-	margin: 0;
-}
-
 .price-discounted {
 	font-family: "BoldFont";
 	display: flex;
 	align-items: center;
 	font-size: 14px;
-	gap: 5px;
 	justify-content: space-between;
 }
 

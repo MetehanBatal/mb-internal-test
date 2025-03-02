@@ -7,11 +7,13 @@ const variants = {
 					"reg_price": 129,
 					"sale_price": 92.00
 				},
+				/*
 				"rosewood": {
 					"variantId": 44247155933334,
 					"reg_price": 129,
 					"sale_price": 92.00
 				},
+				*/
 				"white": {
 					"variantId": 33709277282440,
 					"reg_price": 129,
@@ -49,11 +51,13 @@ const variants = {
 					"reg_price": 129,
 					"sale_price": 92.00
 				},
+				/*
 				"slate_blue": {
 					"variantId": 43624440922262,
 					"reg_price": 129,
 					"sale_price": 92.00
 				},
+				*/
 				"silver_grey": {
 					"variantId": 43624443347094,
 					"reg_price": 129,
@@ -108,16 +112,20 @@ const variants = {
 					"reg_price": 139,
 					"sale_price": 102.00
 				},
+				/*
 				"white": {
 					"variantId": 33709277741192,
 					"reg_price": 139,
 					"sale_price": 102.00
 				},
+				*/
+				/*
 				"sky_blue": {
 					"variantId": 33709277806728,
 					"reg_price": 139,
 					"sale_price": 102.00
 				},
+				*/
 				"navy": {
 					"variantId": 42108158378134,
 					"reg_price": 139,
@@ -143,13 +151,11 @@ const variants = {
 					"reg_price": 139,
 					"sale_price": 102.00
 				},
-				/*
 				"slate_blue": {
 					"variantId": 43624445837462,
 					"reg_price": 139,
 					"sale_price": 102.00
 				},
-				*/
 				"silver_grey": {
 					"variantId": 43624449605782,
 					"reg_price": 139,
@@ -188,11 +194,13 @@ const variants = {
 					"sale_price": 72.00
 				},
 				*/
+				/*
 				"white": {
 					"variantId": 44151266050198,
 					"reg_price": 139,
 					"sale_price": 102.00
 				}
+				*/
 			},
 		}
 	},
@@ -204,11 +212,13 @@ const variants = {
 					"reg_price": 258,
 					"sale_price": 169.00
 				},
+				/*
 				"rosewood": {
 					"variantId": 44253834215574,
 					"reg_price": 258,
 					"sale_price": 169.00
 				},
+				*/
 				"white": {
 					"variantId": 37856216350870,
 					"reg_price": 258,
@@ -246,11 +256,13 @@ const variants = {
 					"reg_price": 258,
 					"sale_price": 169.00
 				},
+				/*
 				"slate_blue": {
 					"variantId": 43624454946966,
 					"reg_price": 258,
 					"sale_price": 169.00
 				},
+				*/
 				"silver_grey": {
 					"variantId": 43624457011350,
 					"reg_price": 258,
@@ -305,16 +317,20 @@ const variants = {
 					"reg_price": 278,
 					"sale_price": 189.00
 				},
+				/*
 				"white": {
 					"variantId": 37856216580246,
 					"reg_price": 278,
 					"sale_price": 189.00
 				},
+				*/
+				/*
 				"sky_blue": {
 					"variantId": 37856216613014,
 					"reg_price": 278,
 					"sale_price": 189.00
 				},
+				*/
 				"navy": {
 					"variantId": 42108150218902,
 					"reg_price": 278,
@@ -340,13 +356,11 @@ const variants = {
 					"reg_price": 278,
 					"sale_price": 189.00
 				},
-				/*
 				"slate_blue": {
 					"variantId": 43624464122006,
 					"reg_price": 278,
 					"sale_price": 189.00
 				},
-				*/
 				"silver_grey": {
 					"variantId": 43624465858710,
 					"reg_price": 278,
@@ -385,11 +399,13 @@ const variants = {
 					"sale_price": 129.00
 				},
 				*/
+				/*
 				"white": {
 					"variantId": 44081151901846,
 					"reg_price": 139,
 					"sale_price": 129.00
 				}
+				*/
 			},
 		}
 	},
@@ -401,11 +417,13 @@ const variants = {
 					"reg_price": 387,
 					"sale_price": 231.00
 				},
+				/*
 				"rosewood": {
 					"variantId": 44253835526294,
 					"reg_price": 387,
 					"sale_price": 231.00
 				},
+				*/
 				"white": {
 					"variantId": 37856218710166,
 					"reg_price": 387,
@@ -443,11 +461,13 @@ const variants = {
 					"reg_price": 387,
 					"sale_price": 231.00
 				},
+				/*
 				"slate_blue": {
 					"variantId": 43624481652886,
 					"reg_price": 387,
 					"sale_price": 231.00
 				},
+				*/
 				"silver_grey": {
 					"variantId": 43624487288982,
 					"reg_price": 387,
@@ -502,16 +522,20 @@ const variants = {
 					"reg_price": 417,
 					"sale_price": 261.00
 				},
+				/*
 				"white": {
 					"variantId": 37856218939542,
 					"reg_price": 417,
 					"sale_price": 261.00
 				},
+				*/
+				/*
 				"sky_blue": {
 					"variantId": 37856218972310,
 					"reg_price": 417,
 					"sale_price": 261.00
 				},
+				*/
 				"navy": {
 					"variantId": 42108162146454,
 					"reg_price": 417,
@@ -537,13 +561,11 @@ const variants = {
 					"reg_price": 417,
 					"sale_price": 261.00
 				},
-				/*
 				"slate_blue": {
 					"variantId": 43624490434710,
 					"reg_price": 417,
 					"sale_price": 261.00
 				},
-				*/
 				"silver_grey": {
 					"variantId": 43624502460566,
 					"reg_price": 417,
@@ -582,11 +604,13 @@ const variants = {
 					"sale_price": 171.00
 				},
 				*/
+				/*
 				"white": {
 					"variantId": 44081167794326,
 					"reg_price": 139,
 					"sale_price": 171.00
 				}
+				*/
 			},
 		}
 	},
@@ -598,11 +622,13 @@ const variants = {
 					"reg_price": 516,
 					"sale_price": 277.00
 				},
+				/*
 				"rosewood": {
 					"variantId": 44253837688982,
 					"reg_price": 516,
 					"sale_price": 277.00
 				},
+				*/
 				"white": {
 					"variantId": 37856221593750,
 					"reg_price": 516,
@@ -640,11 +666,13 @@ const variants = {
 					"reg_price": 516,
 					"sale_price": 277.00
 				},
+				/*
 				"slate_blue": {
 					"variantId": 43624509636758,
 					"reg_price": 516,
 					"sale_price": 277.00
 				},
+				*/
 				"silver_grey": {
 					"variantId": 43624513962134,
 					"reg_price": 516,
@@ -699,16 +727,20 @@ const variants = {
 					"reg_price": 556,
 					"sale_price": 317.00
 				},
+				/*
 				"white": {
 					"variantId": 37856221823126,
 					"reg_price": 556,
 					"sale_price": 317.00
 				},
+				*/
+				/*
 				"sky_blue": {
 					"variantId": 37856221855894,
 					"reg_price": 556,
 					"sale_price": 317.00
 				},
+				*/
 				"navy": {
 					"variantId": 42108166045846,
 					"reg_price": 556,
@@ -734,13 +766,11 @@ const variants = {
 					"reg_price": 556,
 					"sale_price": 317.00
 				},
-				/*
 				"slate_blue": {
 					"variantId": 43624522580118,
 					"reg_price": 556,
 					"sale_price": 317.00
 				},
-				*/
 				"silver_grey": {
 					"variantId": 43624527954070,
 					"reg_price": 556,
@@ -779,11 +809,13 @@ const variants = {
 					"sale_price": 197.00
 				},
 				*/
+				/*
 				"white": {
 					"variantId": 44081179492502,
 					"reg_price": 139,
 					"sale_price": 197.00
 				}
+				*/
 			},
 		}
 	}

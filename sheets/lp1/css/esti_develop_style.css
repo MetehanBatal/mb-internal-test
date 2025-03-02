@@ -1,0 +1,708 @@
+.es_hide {
+	display: none !important;
+}
+
+.size-container {
+    display: inline-block;
+    width: 100%;
+    justify-content: stretch!important;
+    display: flex;
+}
+
+  .size-choice {
+    font-family: 'Brandon reg', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+    cursor: pointer;
+    float: left;
+    margin: 0;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    width: 19%;
+    display: flex;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+
+  .size-choice:nth-child(3n) {
+    margin-right: 4px;
+  }
+
+  .color-white {
+      background-color: #fff;
+      background-image: url("../images/white-sheets.png");
+      background-size: contain;
+
+  }
+
+  .color-stone {
+      background-color: transparent;
+      background-image: url("../images/stone-sheets.png");
+      background-size: contain;
+
+  }
+
+  .color-sand {
+      background-color: transparent;
+      background-image: url("../images/sand-sheets.png");
+      background-size: contain;
+  }
+
+  .color-sky {
+      background-color: transparent;
+      background-image: url("../images/sky-sheets.png");
+      background-size: contain;
+
+  }
+
+  .color-choice, .upsell-color-choice {
+    width: 100px;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+
+  .sale-price {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .reviews-cards {
+    text-align: left !important;
+  }
+
+  .color-name.current-color {
+    text-transform: capitalize;
+  }
+
+  /* Try Rist section */
+  #try-risk {
+    padding: 60px 0;
+    text-align: center;
+    background: #041a30 url(../images/blue-dotted-background.png) center 16% no-repeat;
+  }
+
+  #try-risk .container {
+    max-width: 1080px;
+    margin: auto;
+  }
+
+  #try-risk h2 {
+    font-size: 48px;
+    color: #fff;
+    line-height: 62px;
+    margin: 30px 0 10px;
+  }
+
+  #try-risk ul {
+    padding: 30px 0 0 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #try-risk ul li {
+    width: 25%;
+  }
+
+  #try-risk ul li:nth-child(even) {
+    margin: 0 9%;
+  }
+
+  #try-risk ul li img {
+    height: 40px;
+  }
+
+  #try-risk ul li h3 {
+    color: #fff;
+    margin: 30px 0 10px 0;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  #try-risk ul li p {
+    color: #fff;
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 767px) {
+    h4 {
+      font-size:14px;
+      margin-top: 5px;
+      margin-bottom:5px;
+    }
+  	#try-risk {
+  		padding: 0 15px;
+  	}
+
+  	#try-risk ul {
+  		flex-wrap: wrap;
+  	}
+
+  	#try-risk li {
+  		width: 100%;
+  	}
+  }
+
+#sticky-footer {
+	display: none;
+}
+
+#try-risk ul li * {
+    font-family: 'Brandon med', sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+	#sticky-footer {
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    background: #f6f6f6;
+	    border-top: 1px solid #d2d2d2;
+	    /* visibility: hidden; */
+	    padding: 10px;
+	    z-index: 999999;
+	    width: 100%;
+	    position: fixed;
+	    flex-wrap: wrap;
+	    height: 100px;
+	    bottom: -100%;
+	    -webkit-transition: all 0.5s ease;
+	    -moz-transition: all 0.5s ease;
+	    -ms-transition: all 0.5s ease;
+	    -o-transition: all 0.5s ease;
+	    transition: all 0.5s ease;
+	    bottom: 0;
+	}
+
+	#sticky-footer .container {
+	    margin: 0 auto;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	    padding: 0 15px;
+	    max-width: none;
+	}
+
+	#sticky-footer .color-option {
+	    margin: 0;
+	    width: 180px;
+	    height: 58px;
+	    background: #00237e;
+	    justify-content: center;
+	    display: flex;
+	    align-items: center;
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    -ms-border-radius: 5px;
+	    border-radius: 5px;
+	    font-size: 15px;
+	    color: #fff;
+	    text-decoration: none;
+	    margin-bottom: 7px;
+    	width: 150px;
+	}
+
+	#sticky-footer .shoping-info {
+	    display: flex;
+	    margin: 0;
+	    padding-left: 10px;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	#sticky-footer .shoping-info li {
+	    display: inline-block;
+	    text-align: center;
+	    font-size: 12px;
+	    position: relative;
+	    padding: 0 5px;
+	    color: #798890;
+	}
+
+	#sticky-footer .shoping-info li span {
+	    color: #00237e;
+	}
+
+	#try-risk {
+		padding: 30px;
+	}
+
+	#try-risk ul li {
+		margin: 0 0 20px 0 !important;
+		width: 100%;
+	}
+}
+
+  .text-span-28 {
+    color: #636363;
+    font-size: 13px;
+}
+span.claims {
+  text-align:center;
+}
+
+.text-span-21 {
+    position: relative;
+    top: -9px;
+    display: inline-block;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-family: 'Brandon reg', sans-serif;
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.size-choice {
+  position: relative;
+}
+
+.color-choice, .upsell-color-choice {
+  position: relative;
+}
+
+.size-choice.sold:after {
+  content: "Sold Out";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffffd1;
+  cursor: no-drop;
+}
+
+.color-choice.sold:after, .upsell-color-choice.sold:after {
+  content: "Sold Out";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffffd1;
+  cursor: no-drop;
+}
+
+/*----------------------- CSS for Upsell Popup ------------------------*/
+.upsell_popup-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #828282ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.upsell_popup {
+  max-width: 680px;
+  width: 90vw;
+  background: #FFF;
+  border-radius: 20px;
+}
+
+.upsell_popup .popup-header {
+  padding: 20px;
+  background: #00237e;
+  color: #FFF;
+  text-align: center;
+  position: relative;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px; 
+}
+
+.upsell_popup .popup-header .btn-close {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: inline-block;
+  text-align: center;
+  background: #FFF;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.upsell_popup .popup-header .btn-close span.cross {
+  font-size: 60px;
+  transform: rotate(45deg);
+  display: inline-block;
+  color: #00237e;
+  margin-top: 10px;
+}
+
+.upsell_popup .popup-header h2 {
+  text-transform: uppercase;
+}
+
+.upsell_popup .popup-header h4 {
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  margin-bottom: 0 !important;
+}
+
+.upsell_popup .popup-body {
+  padding: 10px 20px;
+  display: flex;
+}
+
+.upsell_popup .popup-body .mobile-left {
+  display: none;
+}
+
+.upsell_popup .popup-body .left {
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.upsell_popup .popup-body .right {
+  width: 50%;
+}
+
+.upsell_popup .popup-body .left .upsell_produc-img {
+  max-width: 200px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.upsell_popup .saving_percent_badge {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 900;
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 7px;
+  border-radius: 50%;
+  font-family: 'Brandon med';
+  transform: rotate(25deg);
+  left: calc(50% + 42px);
+  background: #fec600;
+  color: #00237e;
+}
+
+.upsell_popup .saving_percent_badge:after {
+  content: "OFF";
+  font-size: 14px;
+}
+
+.upsell_popup .upsell_price-wrapper {
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  background: #ffedbf;
+  border: solid 1px #ffca7f;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.upsell_popup .upsell_price-wrapper .upsell_reg_price {
+  color: #404040;
+}
+
+.upsell_popup .upsell_price-wrapper .upsell_reg_price:before, .upsell_popup .upsell_price-wrapper .upsell_sale_price:before {
+  content: "$";
+}
+
+.upsell_popup .upsell_price-wrapper .upsell_sale_price {
+  color: #00237e;
+  font-weight: 900;
+}
+
+.upsell_popup .saving_row {
+  color: #00237e;
+  font-weight: 900;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: 'Brandon med';
+}
+
+.upsell_popup label.form-group {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.size-dropdown {
+  position: relative;
+}
+
+.size-dropdown label:after{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: solid 5px #00237e;
+  border-left: solid 5px #00237e;
+  border-bottom: solid 5px transparent;
+  border-right: solid 5px transparent;
+  transform: rotate(-135deg);
+  right: 20px;
+  top: 19px;
+}
+
+.size-dropdown label select {
+  display: inline-block;
+  width: 100%;
+  border: solid 1px #ebebeb;
+  padding: 15px;
+  border-radius: 10px;
+  color: #00237e;
+  font-weight: 600;
+  font-family: 'Brandon reg', sans-serif;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+}
+
+.upsell_popup .variant-description {
+  max-width: 200px;
+  margin: 10px auto;
+  color: #00237e;
+  font-weight: 700;
+}
+
+.upsell_popup .popup-footer {
+  padding: 0 20px 30px;
+}
+
+.upsell_popup .popup-footer .remain_quantity-wrapper {
+  border-top: solid 1px #ddd;
+  padding-top: 15px;  
+}
+
+.upsell_popup .popup-footer .quantity_bar {
+  background: #e9ecef;
+  display: inline-block;
+  width: 100%;
+  height: 18px;
+  margin-top: 10px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.upsell_popup .popup-footer .quantity_bar .quantity_bar_filled {
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  background-color: #ffc107;
+  width: 66%;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient( 
+225deg
+, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent );
+  z-index: 1;
+  background-size: 25px 25px;
+  animation: move 2s linear infinite;
+  overflow: hidden;
+}
+
+.upsell_popup .checkout-buttons {
+  text-align: center;
+}
+
+.upsell_popup .checkout-buttons .btn-checkout {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: #00237e;
+  color: #FFF;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'Brandon bld';
+  padding: 24px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.upsell_popup .checkout-buttons .btn-nothanks {
+  margin-top: 20px;
+  display: inline-block;
+  font-family: 'Brandon bld';
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: solid 1px;
+}
+
+@media screen and (max-width: 767px) {
+
+  .upsell_popup-wrapper {
+    padding-bottom: 100px;
+  }
+
+  .upsell_popup .popup-header {
+    padding: 10px!important;
+  }
+
+  .upsell_popup .popup-header .btn-close span.cross {
+font-size:30px!important;
+margin-top: 5px!important;
+padding: 0px!important;
+
+  }
+
+  .upsell_popup .popup-header .btn-close {
+    width: 30px;
+    height: 30px;
+
+}
+
+
+  .upsell_popup .popup-header h2 {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
+
+  .upsell_popup .popup-header h4 {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 0;
+  }
+
+  .upsell_popup .popup-body {
+    flex-wrap: wrap;
+  }
+
+  .upsell_popup .popup-body .left {
+    width: 100%;
+  }
+
+  .mobile-half {
+    width: 50% !important;
+  }
+
+  .mobile-left {
+    float: left;
+  }
+
+  .mobile-right {
+    float: right;
+  }
+
+  .upsell_popup .saving_percent_badge {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+    left: calc(50% - 40px);
+  }
+
+  .upsell_popup .upsell_price-wrapper {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+
+  .upsell_popup .saving_row {
+    font-size: 14px;
+  }
+
+  .row {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .upsell_popup .variant-description {
+    max-width: unset;
+    margin-top: 0;
+    line-height: 1.2;
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+
+  .upsell_popup .popup-body .right {
+    width: 100%;
+  }
+
+  .upsell_popup h4 {
+    margin-bottom: 7px !important;
+  }
+
+  .size-dropdown label select {
+    padding: 0 10px;
+  }
+
+  .size-dropdown label:after {
+    top: 3px;
+    right: 13px;
+  }
+
+  .color-choice, .upsell-color-choice {
+    width: 70px;
+    height: 70px;
+  }
+
+  .upsell_popup .checkout-buttons .btn-checkout {
+    font-size: 14px;
+    padding: 20px;
+    margin-top: 7px;
+  }
+
+  .upsell_popup .checkout-buttons .btn-nothanks {
+    font-size: 14px;
+    margin-top: 7px;
+  }
+
+  .upsell_popup .popup-footer .remain_quantity-wrapper span {
+    font-size: 13px!important;
+  }
+
+  .upsell_popup .popup-body .left .upsell_produc-img {
+    margin-bottom: 0;
+  }
+
+  .upsell_popup .checkmark {
+    height: 16px;
+    width: 16px;
+  }
+
+  .upsell_popup .form-group .checkmark:after {
+    top: 4px;
+    left: 4px;
+  }
+
+  .upsell_popup label.form-group {
+    padding-left: 24px;
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .upsell_popup {
+    width: 90%;
+    height: 90%;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+
+  .upsell_popup .popup-header {
+    border-radius: 0;
+  }
+}

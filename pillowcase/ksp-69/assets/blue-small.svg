@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <defs>
+        <rect id="path-1" x="51" y="0" width="37" height="37" rx="6"></rect>
+        <filter x="-6.8%" y="-6.8%" width="113.5%" height="113.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="5" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Update" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle" transform="translate(-51.000000, 0.000000)">
+            <use fill="#BAC8D3" fill-rule="evenodd" xlink:href="#path-1"></use>
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

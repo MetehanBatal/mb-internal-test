@@ -1,0 +1,776 @@
+
+:root {
+	--bg-color: #FFFEF2;
+	--banner-bg: #DDFF8E;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-size: 1.6rem;
+    font-family: 'Brandon Reg';
+    overflow-x: hidden;
+}
+
+
+header {
+    padding-block: .6rem;
+
+    background-color: var(--banner-bg);
+
+    font-size: 2rem;
+    line-height: 2.86rem;
+    text-align: center;
+}
+
+.font-bold {
+    font-family: "Brandon Bold";
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFFFFF;
+
+    padding-block: 2.1rem;
+
+    text-align: center;
+
+    border-block: .1rem solid #000000;
+}
+
+.quiz-title {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    font-family: 'Ellenluff Light';
+    text-align: center;
+
+    margin-block: 4.1rem 1.5rem;
+}
+
+.quiz-step-subtitle {
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+    font-family: "Brandon Bold";
+    text-align: center;
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 54.6rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-inline: 1.6rem;
+
+    padding-bottom: 6.2rem;
+}
+
+
+.quiz-container.no-title-container {
+    padding-top: 0
+}
+
+.quiz-container.offer-container {
+    max-width: 93rem;
+
+    padding-top: 4.6rem;
+}
+
+.quiz-navigation-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.navigation-path {        
+    width: 95%;
+    height: .3rem;
+
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #D2D5DB;
+    z-index: -1;
+}
+
+.navigation-path-fill {
+    height: .3rem;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    background-color: #000000;
+
+    z-index: 1;
+
+    box-shadow: 0 .2rem .2rem 0 #F9F3B7;
+}
+
+.quiz-navigation {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-block: 4.5rem 3.6rem;
+}
+
+.quiz-navigation > div:not(:last-child) {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+
+    background-color: #FFFFFF;
+    color: #000000;
+
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    text-align: center;
+
+    border: .1rem solid #000000;
+
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.quiz-navigation > div:last-child {
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #FFFFFF;
+}
+
+.quiz-navigation > div:last-child img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.quiz-navigation > div.filled:not(:last-child) {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.quiz-question {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    font-family: 'Ellenluff Light';
+
+    margin-bottom: 1.4rem;
+    text-align: center;
+}
+
+.quiz-subtitle {
+    margin-inline: auto;
+
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.questions-wrapper {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+
+    margin-top: 5rem;
+}
+
+.question-item {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+
+    padding: .8rem 0 1rem 2.1rem;
+
+    background-color: #FFFFFF;
+
+    border: .1rem solid #D2D5DB;
+    border-radius: .5rem;
+
+    box-shadow: 0px 0px 8px 0px #F9F3B7;
+
+    cursor: pointer;
+
+    transition: all .3s ease-in-out;
+}
+
+
+.selectable-item {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    font-size: 1.8rem;
+    line-height: 2.57rem;
+}
+
+.question-item .checkbox {
+    position: relative;
+
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #F5F5F5;
+
+    border: .1rem solid #231F20;
+
+    transition: all .3s ease-in-out;
+}
+
+.question-item .checkbox::after {
+    transition: all .3s ease-in-out;
+}
+
+.delivered-text {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    gap: 1rem;
+}
+
+.delivered-text > div {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+
+.delivered-mobile-divider {
+    display: block;
+    height: 2rem;
+    width: .1rem;
+
+    background-color: #000000;
+
+    margin-inline: .7rem;
+}
+
+.delivered-text > p {
+    font-family: 'Brandon Bold';
+    font-size: 1.1rem;
+    line-height: 2.54rem;
+}
+
+.delivered-text > div p {
+    font-size: .8rem;
+    line-height: 1rem;
+}
+.delivered-text span {
+    font-family: 'Brandon Bold' !important;
+}
+
+.stars-wrapper {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.star-bg {
+    width: 1.2rem;
+    height: 1.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F1AD3D;
+
+    border-radius: .15rem;
+}
+
+.star-bg img {
+    width: .8rem;
+}
+
+/* Depends Functionality */
+
+.question-item.no-icon {
+    padding-block: 1.6rem;
+}
+.question-item.no-checkbox {
+    padding-block: 1.6rem;
+    padding-left: 0;    
+    justify-content: center;
+}
+
+.question-item.activated {
+    background-color: #BAE474;
+}
+
+.question-item.activated .checkbox {
+    background-color: #000000;
+}
+
+.question-item.activated .checkbox::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-25%, -25%);
+
+    background-image: url("../images/quiz/active-check.svg");
+}
+
+.quiz-cta {
+    width: 100%;
+
+    padding-block: 1.7rem;
+
+    background-color: #000000;
+    color: #FFFFFF;
+
+    font-size: 1.8rem;
+    line-height: 2.54rem;
+    text-align: center;
+
+    border-radius: .4rem;
+
+    transition: all .3s ease-in-out;
+
+    cursor: pointer;
+}
+
+.quiz-cta.yellow-bg {
+    background-color: #FCF8CD;
+    color: #D0CA8B;
+
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.cta-arrow {
+    height: 100%;
+    min-height: 100%;
+
+    min-width: 9.5rem;
+    max-width: 9.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #FFFFFF;
+    
+    cursor: pointer;
+}
+
+.cta-wrapper {
+    width: 100%;    
+    height: 5.9rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 1.3rem;
+}
+
+.video-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-wrapper p {
+    font-family: "Brandon Bold";
+    font-size: 2.6rem;
+    line-height: 3.7rem;
+}
+
+.offer-quiz-text {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+
+    font-family: "Brandon Bold";
+}
+
+.offer-title {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+    font-family: 'Ellenluff Light';
+
+    margin-block: 2.7rem 2.2rem;
+}
+
+.offer-cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offer-subtitle {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #629A04;
+    font-family: "Brandon Bold";
+
+    margin-bottom: 4rem;
+}
+
+.offer-details {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
+
+.offer-cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.offer-img {
+    width: 100%;
+    max-width: 44rem;
+}
+
+.offer-img img {
+    width: 100%;    
+}
+
+.offer-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.offer-details > p:first-child {
+    margin-bottom: 2.1rem;   
+
+    text-align: center;
+}
+
+.offer-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+
+    margin-bottom: 2.1rem;
+}
+
+.offer-detail-item > div p:first-child {
+    font-size: 1.5rem;
+    font-family: "Brandon Bold";
+}
+
+.offer-detail-item > div p:last-child {
+    font-size: 1.5rem;
+    font-family: "Brandon Reg";
+}
+
+.offer-cta-text {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+
+    text-align: center;
+}
+
+.offer-cta-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-block: 2.2rem;
+
+    margin-block: 1.5rem;
+
+    background-color: #000000;
+    color: #FFFFFF;    
+
+    font-family: 'Brandon Bold';
+    text-align: center;
+    letter-spacing: .2rem;
+
+    text-decoration: none;
+
+    border-radius: .4rem;    
+}
+
+.timer-text {
+    margin-bottom: 1.3rem;
+
+    font-size: 1.3rem;
+    font-weight: 2rem;
+    text-align: center;
+
+    font-family: "Brandon Bold";    
+}
+
+.timer {
+    color: #D1353A;
+}
+
+.shipping-disclaimer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disclaimer-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 1.2rem;
+    line-height: 1rem;
+}
+
+.disclaimer-divider {
+    height: 2.4rem;
+    width: .1rem;
+
+    margin-inline: .5rem;
+
+    background-color: #000000;    
+}
+
+.offer-reviews-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.4rem;
+
+    margin-top: 6.4rem;
+}
+
+.offer-review-item {
+    min-height: 30.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: stretch;
+    padding: 2.7rem;
+
+    background-color: #FFFFFF;
+    
+    border-radius: .4rem;
+}
+
+.offer-review-title {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-family: "Brandon Bold";
+
+    margin-block:1.2rem 1rem;
+}
+.offer-review-content {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+.verified-buyer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .3rem;
+
+    font-size: .8rem;
+    color: #629A04;
+}
+
+.offer-author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    margin-top: auto;
+}
+
+.offer-author-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    font-family: "Brandon Bold";
+}
+
+.navigation-path-fill[step="0"] {
+    width: 15%;
+}
+.navigation-path-fill[step="1"] {
+    width: 25%;
+}
+.navigation-path-fill[step="2"] {
+    width: 37%;
+}
+.navigation-path-fill[step="3"] {
+    width: 50%;
+}
+.navigation-path-fill[step="4"] {
+    width: 62.5%;
+}
+.navigation-path-fill[step="5"] {
+    width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+    .quiz-container.no-title-container {
+        padding-top: 9.6rem;
+    }
+
+    .offer-cta-section {
+        flex-direction: row;
+    }
+
+    .offer-title {
+        font-size: 3rem;
+        line-height: 3.8rem;
+    }
+
+    .offer-subtitle {
+        font-size: 2.2rem;
+        line-height: 2rem;
+    }
+
+    .offer-details > p:first-child {    
+        text-align: left;
+    }
+
+    .offer-cta-text {
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    
+        text-align: center;
+    }
+
+    .offer-reviews-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+
+    .quiz-navigation > div:last-child img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .navigation-path-fill[step="0"] {
+        width: 12.5%;
+    }
+    .navigation-path-fill[step="1"] {
+        width: 25%;
+    }
+    .navigation-path-fill[step="2"] {
+        width: 37.5%;
+    }
+    .navigation-path-fill[step="3"] {
+        width: 50%;
+    }
+    .navigation-path-fill[step="4"] {
+        width: 62.5%;
+    }
+    .navigation-path-fill[step="5"] {
+        width: 75%;
+    }
+
+    .delivered-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 5.6rem 4.4rem;
+        gap: 1rem;
+    }
+
+    .star-bg {
+        width: 1.8rem;
+        height: 2rem;
+    }
+
+    .star-bg img {
+        width: 1.2rem;
+    }
+
+    .delivered-text > div {
+        gap: 1.3rem;
+    }
+
+    .delivered-mobile-divider {
+        display: none !important;
+    }
+
+    .delivered-text > p {
+        font-family: 'Brandon Bold';
+        font-size: 1.8rem;
+        line-height: 2.54rem;
+    }
+    
+    .delivered-text > div p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    .disclaimer-divider {
+        margin-inline: 1.2rem;
+    }
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Brandon Med';
+    src: url('../fonts/Brandon_med.woff2') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: 'Brandon Reg';
+    src: url('../fonts/Brandon_reg.woff2') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: 'Brandon Bold';
+    src: url('../fonts/Brandon_bld.woff2') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: 'Ellenluff Bold';
+    src: url('../fonts/EllenLuff---Larken-Bold.woff2') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: 'Ellenluff Light';
+    src: url('../fonts/EllenLuff---Larken-Light.woff2') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+
+/* FONTS END*/

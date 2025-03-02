@@ -347,7 +347,7 @@ jQuery(document).ready(function($) {
                     console.log("Variant Set.");
                     window.checkout.setCart(x);
                     window.checkout.drawCart(x);
-                    window.location.href = "/checkout_v2/c-v4.html";
+                    window.location.href = "/comforter/checkout/";
                 });
             });
         });

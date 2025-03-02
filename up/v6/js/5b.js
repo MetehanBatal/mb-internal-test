@@ -8,12 +8,14 @@ const variants = {
 			"sale_price": 139.3,
 			"price": 139.3
 		  },
+		  /*
 		  "stone": {
 			"variantId": "42723141320854",
 			"reg_price": 199,
 			"sale_price": 139.3,
 			"price": 139.3
 			}
+		*/
 		}
 	  }
 	},

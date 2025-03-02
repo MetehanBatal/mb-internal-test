@@ -337,7 +337,7 @@ nav img {
 	content: "";
 
 	background-color: var(--green-color);
-	background-image: url("/up/v6/images/icons/tick.svg");
+	background-image: url("https://try.miraclebrand.co/up/v5/images/icons/tick.svg");
 	background-size: 0.8rem 0.5rem;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -808,7 +808,7 @@ form input[type="radio"] {
 	width: 0.9rem !important;
 	height: 0.6rem !important;
 
-	background-image: url("/up/v6/images/icons/down-arrow.svg");
+	background-image: url("https://try.miraclebrand.co/up/v5/images/icons/down-arrow.svg");
 	background-size: contain;
 	background-repeat: no-repeat;
 
@@ -1010,14 +1010,14 @@ input.cta-button {
 }
 
 .link:hover::after {
-	background-image: url("/up/v6/images/icons/right-arrow-hover.svg");
+	background-image: url("https://try.miraclebrand.co/up/v5/images/icons/right-arrow-hover.svg");
 }
 
 .link:after {
 	width: 0.85rem;
 	height: 1.2rem;
 
-	background-image: url("/up/v6/images/icons/right-arrow.svg");
+	background-image: url("https://try.miraclebrand.co/up/v5/images/icons/right-arrow.svg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;

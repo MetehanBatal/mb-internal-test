@@ -1,0 +1,976 @@
+/* LEGAL TERM */
+	
+.legal-term {
+	margin-block: -1rem !important;
+	font-size: 1.2rem !important;
+}
+
+.legal-term a {
+	color: #000;
+	text-decoration: underline;
+	font-family: "BoldFont";
+}
+
+.legal-term span {
+	font-family: "BoldFont";
+	font-size: 1.2rem;
+}
+
+/* LEGAL TERM */
+
+.plus-text {
+	font-size: 12px; 
+	margin-top: -12px; 
+	padding-left: 3px;
+	font-family: 'RegularFont';
+}
+
+
+input:focus-visible {
+	outline: 0;
+}
+
+:root {
+	--main-color: #fffef2;
+	--accent-color: #000000;
+	--green-color: #bae474;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+main {
+	padding: 2.4rem 1.8rem;
+}
+
+* {
+	box-sizing: border-box;
+
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+
+strong {
+	font-family: "BoldFont";
+}
+
+hr {
+	border: 0.05rem solid #000;
+	margin: 2.4rem 0;
+}
+
+/* Generic */
+
+.hidden {
+	display: none !important;
+}
+
+.mobile-hidden {
+	display: none;
+}
+
+/* Banner Overrides */
+
+/*#top_bar,
+span#es_timer {
+	color: var(--accent-color) !important;
+}*/
+
+#top_bar span {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded],
+.iti__country-list {
+	z-index: 12 !important;
+}
+
+.checkout-validation-help-text {
+	font-family: "RegularFont";
+	font-size: 1.4rem;
+
+	margin-top: 1.2rem;
+}
+
+/* Typography */
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+p {
+	font-family: "RegularFont";
+	font-size: 1.4rem;
+	line-height: 1.3;
+}
+
+span {
+	font-family: "RegularFont";
+	font-size: 1.4rem;
+}
+
+.sm {
+	font-size: 1.2rem;
+}
+
+/* Checkout Box */
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+
+	margin-bottom: 4.8rem;
+}
+
+.logo {
+	height: 3.2rem;
+}
+
+.navbar div {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+}
+
+.callout-box,
+.checkout-addon-toggle {
+	display: flex;
+	align-items: center;
+	gap: 1.4rem;
+
+	padding: 1.2rem 1.6rem;
+
+	background-color: #fcf8cd;
+	border-radius: 0.6rem;
+}
+
+.callout-box img {
+	width: 3rem;
+}
+
+.steps {
+	display: flex;
+	gap: 2.4rem;
+
+	margin: 1.2rem 0;
+}
+
+.discount-success {
+	padding: 1.2rem;
+	background-color: var(--green-color);
+	text-align: center;
+}
+
+.discount-success .checkout-discount-value {
+	font-family: "BoldFont";
+}
+
+.warranty-addon {
+	margin: 1.2rem 0;
+}
+
+.warranty-addon span {
+	font-family: "MediumFont";
+}
+
+.checkout-submit-paypal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+
+	padding: 1.4rem;
+
+	background-color: #ffc33a;
+	border-radius: 0.4rem;
+}
+
+.express-checkout-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.2rem;
+
+	padding: 2rem 2.4rem 2.4rem;
+	margin-bottom: 2rem;
+
+	border: 0.1rem solid var(--accent-color);
+	border-radius: 0.6rem;
+}
+
+.express-checkout_text {
+	font-family: "BoldFont";
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.checkout-paypal-form {
+	width: 100%;
+}
+
+/* TAX Notification */
+
+.checkout-note {
+	padding: 2.5rem;
+	margin-top: 1rem;
+	color: #000;
+	border: none;
+	background: #FCF8CD;
+	border-radius: .8rem;
+
+	font-size: 1.8rem;
+	text-align: left;
+}
+
+.checkout-note img {
+	height: 36px;
+	width: 28px;
+}
+
+.checkout-note strong {
+	display: flex;
+	align-items: center;
+	gap: 1rem ;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	margin-bottom: .6rem;
+}
+
+/* Order Summary */
+
+.mobile-order-summary-box {
+	display: grid;
+	align-items: center;
+	grid-template-columns: auto auto;
+
+	margin-bottom: 2.4rem;
+}
+
+.mobile-order-summary-box .heading {
+	margin-bottom: 0;
+	white-space: nowrap;
+}
+
+.mobile-order-summary-box .heading span {
+	display: none;
+
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.mobile-order-summary-box.revealed .heading span {
+	display: initial;
+}
+
+.complete-purchase-text {
+	white-space: nowrap;
+}
+
+
+.mobile-order-summary-box .checkout-total-value {
+	font-size: 1.6rem;
+	font-family: "BoldFont";
+	text-align: right;
+}
+
+.mobile-order-summary-box .checkout-total-value::after {
+	display: inline-block;
+
+	width: 1.2rem;
+	height: 0.8rem;
+
+	background-image: url("../images/down-arrow.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+	content: "";
+
+	margin-left: 0.4rem;
+
+	transition: transform 0.36s ease-in-out;
+}
+
+.mobile-order-summary-box.revealed .checkout-total-value::after {
+	transform: rotate(180deg);
+}
+
+.accordion-menu {
+	grid-area: 2/1/2/3;
+	max-height: 0;
+
+	visibility: hidden;
+	opacity: 0;
+
+	overflow: hidden;
+
+	transition: all 0.36s ease-in-out;
+}
+
+.mobile-order-summary-box.revealed .accordion-menu {
+	max-height: 60rem;
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Form */
+
+.form-box {
+	padding-top: 6rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.shipping-details {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1.2rem 3rem;
+}
+
+.different-billing-address {
+	display: none;
+
+	padding: 2.4rem;
+
+	border: 0.1rem solid #000;
+	border-top: 0;
+	border-bottom-right-radius: 0.4rem;
+	border-bottom-left-radius: 0.4rem;
+}
+
+.checkout-use-billing-address .different-billing-address {
+	display: grid;
+}
+
+.checkout-invalid-field input, .checkout-invalid-field select {
+	border-color: red;
+}
+
+.checkout-validation-help-text {
+	font-family: RegularFont;
+	font-size: 1.4rem;
+	margin-top: 0.2rem;
+	color: red;
+}
+
+.input {
+	width: 100%;
+
+	font-family: "RegularFont";
+	font-size: 1.6rem;
+
+	padding: 0.8rem 1.4rem;
+
+	border: 0.1rem solid #b4b4b4;
+	border-radius: 0.4rem;
+}
+
+.input:focus {
+	border-color: var(--accent-color);
+}
+
+input[type="radio"] {
+	position: relative;
+
+	min-width: 1.6rem;
+	min-height: 1.6rem;
+}
+
+input[type="radio"]:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	box-sizing: border-box;
+
+	width: 100%;
+	height: 100%;
+
+	content: "";
+
+	background-color: transparent;
+	outline: 0.1rem solid #b9b9b9;
+	border-radius: 100%;
+	z-index: 2;
+}
+
+.is-safari input[type="radio"]:after {
+	outline: 0;
+}
+
+input[type="radio"]:checked:after {
+	background-color: #000;
+	border: 0.3rem solid #fff;
+}
+
+input[type="checkbox"] {
+	flex-shrink: 0;
+
+	position: relative;
+
+	min-width: 2rem;
+	min-height: 2rem;
+}
+
+input[type="checkbox"]:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	content: "";
+
+	background-color: #fff;
+	border: 0.1rem solid #000;
+	border-radius: 0.4rem;
+
+	z-index: 9;
+}
+
+input[type="checkbox"]:checked:after {
+	background-image: url("../images/checkbox-mark.svg");
+	background-size: 1rem 0.7rem;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: #000;
+}
+
+.accepts_marketing {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+
+	margin-top: 1.4rem;
+}
+
+.discount-box form {
+	display: flex;
+}
+
+.discount-box .input {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.discount-warning {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fede16 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+	font-family: "BoldFont";
+  font-size: 1.4rem;
+}
+
+.checkout-coupon-button {
+	font-family: "BoldFont";
+	font-size: 1.6rem;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	padding: 0.8rem 3.6rem;
+
+	background-color: #303030;
+	color: #fff;
+
+	border-top-right-radius: 0.6rem;
+	border-bottom-right-radius: 0.6rem;
+}
+
+.checkout-coupon-button:hover {
+	background-color: var(--accent-color);
+	transition: all 0.3s ease-in-out;
+}
+
+.heading {
+	font-family: "Ellenluff larken";
+	font-size: 2.2rem;
+
+	margin-bottom: 1.2rem;
+}
+
+select:focus-visible {
+	outline: 0;
+}
+
+.select-box {
+	display: inline-block;
+
+	vertical-align: top;
+
+	width: 100%;
+
+	background-color: #f9f9f9;
+
+	padding: 7.5px 7.5px 3.75px;
+	border: 1px solid #ddd;
+	border-radius: 2.5px;
+
+	font-size: 14px;
+
+	min-height: 44px;
+
+	overflow: hidden;
+
+	padding: 0.8rem 1.4rem;
+
+	background-color: #fff;
+	border-color: #b4b4b4;
+	border-radius: 0.6rem;
+	color: rgba(0, 0, 0, 0.5);
+
+	font-family: "RegularFont";
+}
+
+.select-box:focus {
+	border-color: var(--accent-color);
+}
+
+.select-box.selected {
+	color: rgba(0, 0, 0, 1);
+}
+
+.attentive-form {
+	margin-top: 2rem;
+}
+
+.attentive-form #accepts_attentive {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.2rem;
+}
+
+.checkbox-detail strong {
+	display: block;
+
+	font-family: "Ellenluff larken";
+	font-size: 1.6rem;
+}
+
+.checkbox-detail span {
+	display: block;
+
+	font-size: 1.2rem;
+	line-height: 1.1;
+}
+
+.checkbox-detail span strong {
+	display: initial;
+
+	font-family: "BoldFont";
+	font-size: inherit;
+
+	color: initial;
+	text-decoration: none;
+}
+
+.billing-address-selection,
+.payment-method-selection {
+	margin-top: 1.6rem;
+
+	border: 0.1rem solid var(--accent-color);
+	border-radius: 0.4rem;
+}
+
+.billing-address-selection label,
+.payment-method-selection .top {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	padding: 1.4rem 1.6rem;
+}
+
+.payment-method-selection .top label {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.billing-address-selection label:first-child,
+.payment-method-selection .top {
+	border-bottom: 0.1rem solid var(--accent-color);
+}
+
+.payment-method-selection .top {
+	justify-content: space-between;
+}
+
+.payment-method-selection .bottom {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	grid-gap: 2rem 1.4rem;
+
+	padding: 1.6rem 3rem;
+}
+
+.payment-method-selection .bottom div:first-child,
+.payment-method-selection .bottom div:last-child {
+	grid-column: 1/3;
+}
+
+.payment-method-selection .bottom div:last-child {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+}
+
+.payment-method-selection .bottom div:last-child p {
+	font-size: 1.2rem;
+}
+
+.payment-method-selection .bottom .input {
+	height: 4.2rem;
+}
+
+.field-title {
+	margin-bottom: 1rem;
+}
+
+.checkout-submit-combo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.4rem;
+
+	width: 100%;
+
+	padding: 1.2rem 0.9rem;
+
+	font-family: "BoldFont";
+	font-size: 1.8rem;
+	text-decoration: none;
+
+	background-color: #303030;
+	color: #fff;
+
+	border: 0.1rem solid var(--accent-color);
+	border-radius: 0.6rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.checkout-submit-combo:hover {
+	background-color: var(--accent-color);
+}
+
+.button-text {
+	display: flex;
+	gap: 1rem;
+}
+
+.checkout-submit-combo p {
+	font-family: "BoldFont";
+	font-size: 1.2rem;
+}
+
+.guarantee-box {
+	display: flex;
+	align-items: center;
+	gap: 2.4rem;
+
+	margin-top: 2rem;
+}
+
+.guarantee-box img {
+	width: 7.2rem;
+}
+
+/* Footer */
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer div {
+	display: flex;
+	gap: 0.6rem;
+}
+
+footer a {
+	font-family: "RegularFont";
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: #000;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	transition: all 0.3s ease-in-out;
+}
+
+/* Order Summary */
+
+.summary-box {
+	display: none;
+
+	padding-top: 6.4rem;
+}
+
+.checkout-cart-display table {
+	font-family: "RegularFont";
+	font-size: 1.4rem;
+}
+
+.checkout-cart-display tbody {
+	display: flex;
+	flex-direction: column;
+}
+
+.checkout-cart-display tbody tr {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+
+	padding: 0.8rem 0;
+
+	border-bottom: 0.1rem solid var(--accent-color);
+}
+
+.checkout-cart-display tbody tr:last-child {
+	border-bottom: 0;
+}
+
+.checkout-cart-display .product-line td:not(.checkout-money) {
+	display: flex;
+	align-items: center;
+}
+
+.checkout-cart-display .product-line img {
+	width: 7.2rem;
+}
+
+.checkout-cart-display .checkout-money {
+	font-family: "BoldFont";
+}
+
+.checkout-cart-display .checkout-money .compare-at-price {
+	font-family: "RegularFont";
+	text-decoration: line-through;
+}
+
+.checkout-cart-display .total-line {
+	font-family: "BoldFont";
+	font-size: 2rem;
+}
+
+.summary-content {
+	margin-top: 4rem;
+}
+
+.inner-headline-box {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+
+	margin-bottom: 3rem;
+}
+
+.inner-headline-box div {
+	flex: 1;
+	height: 0.1rem;
+
+	background-color: var(--accent-color);
+}
+
+.inner-headline-box h5 {
+	font-family: "Ellenluff larken";
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+
+.flex {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.2rem;
+
+	margin-bottom: 3rem;
+}
+
+.flex img {
+	width: 5.4rem;
+}
+
+.flex-sm {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+}
+
+.flex-sm .checkmark-icon {
+	width: 1.2rem;
+}
+
+.review {
+	margin-top: 1.2rem;
+}
+
+.review-author {
+	margin-top: 1.2rem;
+}
+
+.icon-holder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	min-width: 6.4rem;
+	min-height: 6.4rem;
+
+	border: 0.1rem solid var(--accent-color);
+	border-radius: 100%;
+}
+
+.icon-holder img {
+	width: 3rem;
+}
+
+@media screen and (min-width: 980px) {
+	main {
+		display: grid;
+		grid-template-columns: 5.5fr 4.5fr;
+
+		padding: 0;
+	}
+
+	.logo {
+		height: 4.6rem;
+	}
+
+	.checkout-box .container {
+		max-width: 55rem;
+	}
+
+	.summary-box .container {
+		max-width: 45rem;
+	}
+
+	.checkout-box {
+		display: flex;
+		justify-content: flex-end;
+
+		padding: 2.4rem 8rem 2.4rem;
+	}
+
+	.shipping-details {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.shipping-details .iti-holder {
+		grid-column: 1 / 3;
+	}
+
+	.shipping-details .full-width,
+	.iti {
+		width: 100%;
+	}
+
+	.summary-box {
+		display: block;
+
+		background-color: var(--main-color);
+
+		padding-left: 8rem;
+		padding-right: 2.4rem;
+
+		border-left: 0.1rem solid var(--accent-color);
+	}
+
+	.mobile-order-summary-box {
+		display: none;
+	}
+
+	.checkout-note.is-mobile {
+		display: none!important;
+	}
+}
+
+/* For smaller screen sizes */
+@media screen and (max-width: 400px) {
+	.callout-box {
+		padding: 1.2rem;
+		gap: 1rem;
+	}
+
+	.callout-box p {
+		font-size: 1.2rem;
+	}
+}
+
+/* START - Fonts */
+@font-face {
+	font-family: "BoldFont";
+	src: url("https://try.miraclebrand.co/checkout_v8/fonts/Brandon/Brandon_bld.woff2");
+	font-weight: 700;
+	font-style: bold;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "MediumFont";
+	src: url("https://try.miraclebrand.co/checkout_v8/fonts/Brandon/Brandon_med.woff2");
+	font-weight: 500;
+	font-style: medium;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "RegularFont";
+	src: url("https://try.miraclebrand.co/checkout_v8/fonts/Brandon/Brandon_reg.woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Ellenluff larken";
+	src: url("https://try.miraclebrand.co/checkout_v8/fonts/Larken/EllenLuff---Larken-Light.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Ellenluff larken Regular";
+	src: url("https://try.miraclebrand.co/checkout_v8/fonts/Larken/EllenLuff---Larken-Regular.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Ellenluff larken Bold";
+	src: url("https://try.miraclebrand.co/checkout_v8/fonts/Larken/EllenLuff---Larken-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* END - Fonts*/

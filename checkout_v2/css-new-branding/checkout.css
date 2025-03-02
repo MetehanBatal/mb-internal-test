@@ -1,48 +1,11 @@
-.trusted-customer-mobile {
-	display: none;
-	margin-top: 4rem;
-}
+/* TERMLY CSS */
 
-.trusted-customer-mobile .flex>img {
-	min-width: 5.4rem;
-	height: 5.4rem;
-	object-fit: cover;
-	border-radius: 50%;
-}
-
-@media screen and (max-width: 991px) {
-	.trusted-customer-mobile {
-		display: block;
-	}
-}
-
-.submitting {
-	display: flex;
+.t-consentPrompt {
+	background-color: #000 !important;
   }
-  
-  
-  #userwayAccessibilityIcon {
-	background: transparent !important;
-	width: 24px;
-	height: 24px;
-	min-width: 24px;
-	min-height: 24px;
-	top: 0px !important;
-	left: 0px !important;
+  .termly-styles-buttons-bb7ad2 {
+	background-color: #000 !important;
   }
-  
-  body .uwy.userway_p3 .userway_buttons_wrapper {
-	top: 15px !important;
-	left: 13px !important;				
-	-ms-flex-pack: end;
-	justify-content: end;		
-	position: fixed;
-	bottom: auto !important;
-	transform: translate(0%) !important;
-  }
-  
-  
-  /* TERMLY CSS */
   .termly-styles-termly-banner-e1ed59 {
 	width: 100% !important;
 	margin: 0 !important;
@@ -51,8 +14,11 @@
 	bottom: 0 !important;
   }
   
-  /* TERMLY CSS END */
-
+  .t-acceptAllButton {
+	color: #000 !important;
+  }
+  
+  /* TERMLY CSS */
 
 /* Shipping Option CSS */
 
@@ -1159,7 +1125,7 @@ footer a:hover {
 }
 
 .icon-holder img {
-	width: 3rem !important;
+	width: 3rem;
 }
 
 @media screen and (min-width: 980px) {

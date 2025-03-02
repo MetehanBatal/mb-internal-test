@@ -1,0 +1,546 @@
+window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || []; 
+window.checkoutReadyCallbacks.push(() => {
+	if (checkoutData.cart.shippingZone !== "US") {
+		$(".non-usa").html("USD ");
+	}
+});
+
+let upsellHench = {
+	choices: '',
+
+	fabric: 'signature',
+
+	size: 'queen',
+
+	color: 'stone',
+
+	quantity: '1',
+
+	swiper: '',
+
+	thumbsSwiper: '',
+
+	initSwiper: function() {
+		const self = this;
+
+		if (hasSlider) {
+			self.thumbsSwiper = new Swiper('.swiper-thumbnails', {
+				slidesPerView: 5,
+				spaceBetween: 8,
+				watchSlidesProgress: true
+			});
+
+			self.swiper = new Swiper('.swiper-main', {
+				loop: true,
+
+				// Navigation arrows
+				navigation: {
+					nextEl: '.slider-pagination-button.next',
+					prevEl: '.slider-pagination-button.prev',
+				},
+
+				thumbs: {
+					swiper: self.thumbsSwiper,
+				}
+			});
+		}
+	},
+
+	initVariantSelection: function() {
+		const self = this;
+
+		if (hasSelector) {
+			const element = document.querySelector('.variants');
+		
+			self.choices = new Choices(element, {
+				searchEnabled: false,
+				itemSelectText: ''
+			});
+
+			self.choices.passedElement.element.addEventListener( 'choice', function(event) {
+				self.quantity = event.detail.choice.id;
+
+				self.updateVariant();
+			}, false );
+
+			self.quantity = 2;
+
+			if (document.querySelector('.is-highlighted')) {
+				document.querySelector('.is-highlighted').classList.remove('is-highlighted')	
+			}
+
+			self.usdPrefix();
+		}
+	},
+
+
+	usdPrefix: function() {
+		const self = this;
+
+		window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
+		window.checkoutReadyCallbacks.push(() => {
+			if (checkoutData.cart.shippingZone !== "US") {
+				let currentChoices = this.choices.config.choices;
+				console.log(currentChoices);
+				let newChoices = [];
+				currentChoices.forEach((choice) => {
+					let variantData = {
+						value: choice.value,
+						label: choice.label.replace("$", "USD $"),
+					}
+					newChoices.push(variantData);
+				})
+				this.choices.clearStore();
+				this.choices.setValue(newChoices);
+				console.log(newChoices)
+				if(pagePath === "2c" || pagePath === "2d" || pagePath === "4b") {
+					this.choices.setChoiceByValue("2")
+				}else {	
+					this.choices.setChoiceByValue("1")
+				}
+			}
+		});
+	},
+
+	listenVariantChange: function() {
+		const self = this;
+		
+		if (hasFabricSelection) {
+			let fabricSelectors = document.querySelectorAll('input[type=radio][name="fabric"]');
+			fabricSelectors.forEach(function(selector) {
+				selector.addEventListener('change', function() {
+				self.fabric = this.value;
+
+					self.updateVariant();
+				})
+			});
+		}
+
+		if (hasSizeSelection) {
+			let sizeSelectors = document.querySelectorAll('input[type=radio][name="size"]');
+			sizeSelectors.forEach(function(selector) {
+				selector.addEventListener('change', function() {
+					self.size = this.value;
+
+					self.updateVariant('size');
+					self.filterOutOfStockProducts('color');
+					if (hasSelector) {
+						self.updateQuantities();
+
+						let choices = document.querySelectorAll('.choices__item--choice');
+						choices.forEach(function(choice) {
+							choice.classList.remove('is-highlighted');
+							if (parseInt(choice.getAttribute('data-value')) === self.quantity ) {
+								choice.classList.add('is-selected');
+							}
+						});
+					}
+				});
+			});
+		}
+
+		if (hasColorSelection) {
+			let colorSelectors = document.querySelectorAll('input[type=radio][name="color"]');
+			colorSelectors.forEach(function(selector) {
+				selector.addEventListener('change', function() {
+					self.color = this.value;
+
+					self.updateVariant('color');
+					self.filterOutOfStockProducts('size');
+					self.updateColorName();
+					self.updateSliderImages('variant change hasColor');
+				});
+			});
+		} 
+
+		if(hasColorSelection && pagePath === "5b" ) {
+			let colorSelectors = document.querySelectorAll('input[type=radio][name="color"]');
+			colorSelectors.forEach(function(selector) {
+				selector.addEventListener('change', function() {
+					self.color = this.value;
+
+					self.updateVariant('color');
+					self.filterOutOfStockProducts('size');
+					self.updateColorName();
+					self.updateSliderImages('variant change 5b');
+					self.updateQuantities()
+				});
+			});
+		}
+	},
+
+	updateQuantities: function() {
+		const self = this;
+		let usPrefix = "";
+		window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
+		window.checkoutReadyCallbacks.push(() => {
+			if (checkoutData.cart.shippingZone !== "US") {
+				usPrefix = " USD"
+			}
+		});
+
+		let items = [];
+		Object.keys(variants).forEach(function(quantity, index) {
+			let label = "";
+				if(pagePath === "5b") {
+					label = `${self.color} - ${self.size} - ${usPrefix} $${(variants[quantity][self.fabric][self.size][self.color]['sale_price']).toFixed(2)}* `;
+				let selected = false;
+				if (index === 0) {
+					label = `${self.color} - King/Cali King - ${usPrefix} $${(variants[quantity][self.fabric][self.size][self.color]['sale_price']).toFixed(2)}* `;
+				}
+				if (index + 1 === parseInt(self.quantity)) {
+					selected = true;
+				}
+				let variantData = {
+					value: quantity,
+					label: label,
+					selected: selected
+				}
+				items.push(variantData);
+			}else {
+				label = `Add ${quantity} Sheets Sets for${usPrefix} $${(variants[quantity][self.fabric][self.size][self.color]['sale_price']  / quantity ).toFixed(2)}* each (${discounts[index]}  OFF)`;
+				let selected = false;
+				if (index === 0) {
+					label = `Add ${quantity} Sheet Sets for${usPrefix} $${(variants[quantity][self.fabric][self.size][self.color]['sale_price']  / quantity ).toFixed(2)}* each (${discounts[index]}  OFF)`;
+				}
+				if (index + 1 === parseInt(self.quantity)) {
+					selected = true;
+				}
+				let variantData = {
+					value: quantity,
+					label: label,
+					selected: selected
+				}
+				items.push(variantData);
+			}
+			
+		});
+
+		self.choices.setChoices(items, 'value', 'label', true);
+	},
+
+	updateVariant: function(from) {
+		const self = this;
+
+		let variantInput = document.getElementById('upsell-param-1');
+
+		if (hasFabricSelection) {
+			self.fabric = document.querySelector('input[type=radio][name="fabric"]:checked').value;
+		}
+		if (hasSizeSelection) {
+			self.size = document.querySelector('input[type=radio][name="size"]:checked').value;	
+		}
+		if (hasColorSelection) {
+			self.color = document.querySelector('input[type=radio][name="color"]:checked').value;
+		}
+		let matchingVariant = variants[self.quantity][self.fabric][self.size][self.color];
+		console.log(matchingVariant)
+
+		if (matchingVariant === undefined || matchingVariant === null) {
+			if (from === 'color') {
+				let availableVariants = variants[self.quantity][self.fabric];
+				let key;
+				let firstAvailableVariant = Object.values(availableVariants).find(function(variant, index) {
+					key = Object.keys(availableVariants)[index];
+					if (variant[self.color]) {
+						return variant[self.color].variantId.toString().length > 0;
+					}
+				});
+				// let firstAvailableVariant = Object.keys(availableVariants)[0];
+				let matchingSizeSelection = document.querySelector(`input[name="size"][value=${key}]`);
+				console.log(matchingSizeSelection);
+				matchingSizeSelection.click();
+
+				return;
+			} else if (from === 'size') {
+				let availableVariants = variants[self.quantity][self.fabric][self.size];
+				let firstAvailableVariant = Object.keys(availableVariants)[0];
+				let matchingColorSelection = document.querySelector(`input[name="color"][value=${firstAvailableVariant}]`);
+				matchingColorSelection.click();
+
+				return;
+			}
+		} else {
+			variantInput.value = matchingVariant['variantId'];
+		}
+
+		window.checkoutReadyCallbacks.push(() => {
+			if (checkoutData.cart.shippingZone !== "US") {
+				if (pagePath === '3b' || pagePath === '3b-v1') {
+					document.querySelector('.price').innerHTML = `<span class="non-usa">USD</span> $${matchingVariant['price']}*`; 
+				}
+				$(".non-usa").html("USD ");
+			} else{
+				if (pagePath === '3b' || pagePath === '3b-v1') {
+					document.querySelector('.price').innerHTML = `$${matchingVariant['price']}*`; 
+				}
+				$(".non-usa").html($(".non-usa").html());
+			}
+		});
+	},
+
+	updateSliderImages: function(from) {
+		const self = this;
+
+		console.log('Update slider images called from: ', from);
+
+		self.swiper.destroy();
+		self.thumbsSwiper.destroy();
+
+		let images = document.querySelectorAll('.swiper-slide');
+		let index = 1;
+
+		images.forEach(function(image) {
+			if (index > images.length / 2) {
+				index = 1; }
+			let imagePath = `./images/sliders/${pagePath}/${self.color}/0${index}.webp`;
+
+			if(image.querySelector("img").classList.contains("thumb-img")) {
+				imagePath = `./images/sliders/${pagePath}/${self.color}/0${index}_thumb.webp`;}
+
+			image.querySelector("img").src = imagePath;
+			if(pagePath !== "1b") {
+				image.querySelector("img").setAttribute("data-src",imagePath);
+			}
+			
+			index++;
+		});
+
+		self.initSwiper();
+	},
+
+	updateSize: function(event) {
+		console.log( 'Called' );
+		
+	},
+
+	updateColorName: function() {
+		const self = this;
+		
+		let colorName = self.color;
+		colorName = colorName.replace('_', ' ');
+		document.getElementById('color-name').innerHTML = colorName.toUpperCase();
+	},
+
+	filterOutOfStockProducts: function(from) {
+		const self = this;
+
+		if (from === 'color') {
+			let colors = document.querySelectorAll('input[name="color"]');
+			colors.forEach(function(color) {
+				let isMatching = variants[self.quantity][self.fabric][self.size][color.value];
+				if (isMatching === undefined || isMatching === null) {
+					color.parentNode.classList.add('out-of-stock');
+				} else {
+					color.parentNode.classList.remove('out-of-stock');
+				}
+			});
+		}
+
+		if (from === 'size') {
+			let sizes = document.querySelectorAll('input[name="size"]');
+			sizes.forEach(function(size) {
+				let isMatching = variants[self.quantity][self.fabric][size.value][self.color];
+				if (isMatching === undefined || isMatching === null) {
+					size.parentNode.classList.add('out-of-stock');
+				} else {
+					size.parentNode.classList.remove('out-of-stock');
+				}
+			});
+		}
+	},
+
+	toggleActiveClass: function() {
+		if (hasToggleButtons) {
+			let labels = document.querySelectorAll('label');
+
+			labels.forEach(function(label) {
+				label.addEventListener('click', function(e) {
+					let currentSelection = label.parentNode.querySelector('.selected');
+					currentSelection.classList.remove('selected');
+					label.classList.add('selected');
+				});
+			});
+		}
+	},
+
+	
+	// Runs only on 1a and 1b
+	swapVariantColors: function() {
+		const self = this;
+		console.log('Swap variants called');
+
+		if (hasDynamicColorChange) {	
+			console.log('Has dynamic color change');
+
+			const stoneProducts = [
+				"42636035260566",
+				"42636035621014",
+				"42636035784854",
+				"42636035948694",
+				"42636036309142",
+				"42901454061718",
+				"42901486633110",
+				"42901492465814",
+				"42901499871382",
+				"42901522088086",
+			];
+		
+			const skyBlueProducts = [
+				"42636035326102",
+				"42636035850390",
+				"42636036014230",
+				"42636036407446",
+				"42901463466134",
+				"42901496856726",
+				"42901503377558",
+				"42901523857558",		
+			];
+			
+			const whiteProducts = [
+				"42636035391638",
+				"42636035752086",
+				"42636035915926",
+				"42636036079766",
+				"42901469921430",
+				"42901489352854",
+				"42901498298518",
+				"42901507539094",		
+			];
+		
+			const navyBlueProducts = [
+				"42636035293334",
+				"42636035981462",
+				"42901459140758",
+				"42901501771926",		
+			];
+		
+			const sandProducts = [
+				"42636035358870",
+				"42636036046998",
+				"42901466185878",
+				"42901505704086",		
+			];
+		
+			const sageProducts = [
+				"42636035489942",
+				"42636036210838",
+				"42901475459222",
+				"42901516517526",
+			];
+		
+			const terracottaProducts = [
+				"42636035588246",
+				"42636036276374",
+				"42901484241046",
+				"42901517992086",		
+			];
+		
+			const charcoalProducts = [
+				"42636035522710",
+				"42636036145302",
+				"42901481193622",
+				"42901511536790",
+			];
+
+			const cart = Object.keys(RTC.getVariantQuantities());
+
+			const hasStoneColor = stoneProducts.some(variant => cart.includes(variant));
+
+			const hasSkyBlueColor = skyBlueProducts.some(variant => cart.includes(variant));
+
+			const hasWhiteColor = whiteProducts.some(variant => cart.includes(variant));
+
+			const hasNavyBlueColor = navyBlueProducts.some(variant => cart.includes(variant));
+
+			const hasSandColor = sandProducts.some(variant => cart.includes(variant));
+
+			const hasTerracottaColor = terracottaProducts.some(variant => cart.includes(variant));
+
+			const hasCharcoalColor = charcoalProducts.some(variant => cart.includes(variant));
+
+			const hasSageColor = sageProducts.some(variant => cart.includes(variant));
+
+			if (hasStoneColor) { self.color = 'stone' };
+			if (hasSkyBlueColor) { self.color = 'sky_blue' };
+			if (hasWhiteColor) { self.color = 'white' };
+			if (hasNavyBlueColor) { self.color = 'navy' };
+			if (hasSandColor) { self.color = 'sand' };
+			if (hasTerracottaColor) {self.color = "terracotta"};
+			if (hasCharcoalColor) {self.color = "charcoal"};
+			if (hasSageColor) {self.color = "sage"};
+
+			self.updateSliderImages('swapVariants');
+
+			console.log("inside function cart",cart);
+			console.log("inside function color", self.color);
+		}
+	},
+
+	findOutOfStock: function() {
+
+	},
+
+	initTimer: function() {
+		const self = this;
+
+		let timers = document.querySelectorAll('.timer');
+		if (timers.length > 0) {
+			timers.forEach(function(timer) {
+				let duration = timer.getAttribute('data-timer-duration');
+
+				self.startTimer(duration, timer);
+			});
+		}
+	},
+
+	startTimer: function(duration, element) {
+		const timer = setInterval(function() {
+			let minutes = Math.floor(duration / 60);
+			let seconds = duration - (minutes * 60);
+			if (minutes < 10) {
+				minutes = `0${minutes}`;
+			}
+			if (seconds < 10) {
+				seconds = `0${seconds}`;
+			}
+
+			element.innerHTML = `${minutes}:${seconds}`;
+
+			if (duration < 1) {
+				clearInterval(timer);
+				return;
+			} else {
+				duration--;
+			}
+		}, 1000);
+	},
+
+	toggleConfirmationBanner: function() {
+		let urlSearchParams = new URLSearchParams(window.location.search);
+		let params = Object.fromEntries(urlSearchParams.entries());
+
+		if (params['upsell'] === 'true' || params['upsell']) {
+			document.querySelector('.confirmation-box').classList.remove('hidden');
+		}
+
+		if (params['first'] === 'true' || params['first']) {
+			document.getElementById('first-upsell').classList.remove('hidden');
+		}
+	}
+}
+
+document.addEventListener('DOMContentLoaded', function(e) {
+	upsellHench.initSwiper();
+	upsellHench.initVariantSelection();
+	upsellHench.toggleActiveClass();
+	upsellHench.listenVariantChange();
+	upsellHench.initTimer();
+	upsellHench.toggleConfirmationBanner();
+});
+
+window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
+window.checkoutReadyCallbacks.push(() => {
+	console.log('RTC ready to swap colors');
+	upsellHench.swapVariantColors();
+});

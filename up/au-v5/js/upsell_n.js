@@ -1,6 +1,8 @@
 window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
 window.checkoutReadyCallbacks.push(() => {
-
+	if (checkoutData.cart.shippingZone !== "US") {
+		$(".non-usa").html("USD ");
+	}
 });
 
 /* DYNAMIC COLOR CHANGE VARIANTS*/

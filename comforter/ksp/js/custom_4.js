@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+jQuery(document).ready(function($) {
     const variants = {
-        queen: {
+        queen : {
             /*
             stone : {
                 variantId: 42789291557014, 
@@ -13,45 +13,47 @@ document.addEventListener("DOMContentLoaded", () => {
                 imgUrl: 'images/comforter.png' 
             }, 
             */
-            /*
-             white : {
-                 variantId: 42789291491478, 
-                 productTitle: 'Miracle Comforter - Funnel - Full/Queen / White', 
-                 price: 149.99, 
-                 regularPrice: 325, 
-                 productSavings: 53, 
-                 productDolarSavings: 175, 
-                 productReviews: 327, 
-                 imgUrl: 'images/comforter.png' 
-             }
-             */
+           /*
+            white : {
+                variantId: 42789291491478, 
+                productTitle: 'Miracle Comforter - Funnel - Full/Queen / White', 
+                price: 149.99, 
+                regularPrice: 325, 
+                productSavings: 53, 
+                productDolarSavings: 175, 
+                productReviews: 327, 
+                imgUrl: 'images/comforter.png' 
+            }
+            */
         },
-        king: {
-            stone: {
-                variantId: 42789291589782,
-                productTitle: 'Miracle Comforter - Funnel - King/Cali King / Stone',
-                price: 159.99,
-                regularPrice: 335,
-                productSavings: 52,
-                productDolarSavings: 175,
-                productReviews: 234,
-                imgUrl: 'images/comforter.png'
+        king : {
+            /*
+            stone : {
+                variantId: 42789291589782, 
+                productTitle: 'Miracle Comforter - Funnel - King/Cali King / Stone', 
+                price: 159.99, 
+                regularPrice: 335, 
+                productSavings: 52, 
+                productDolarSavings: 175, 
+                productReviews: 234, 
+                imgUrl: 'images/comforter.png' 
             },
-            white: {
-                variantId: 42789291524246,
-                productTitle: 'Miracle Comforter - Funnel - King/Cali King / White',
-                price: 159.99,
-                regularPrice: 335,
-                productSavings: 52,
-                productDolarSavings: 175,
-                productReviews: 234,
-                imgUrl: 'images/comforter.png'
+            */
+            white : {
+                variantId: 42789291524246, 
+                productTitle: 'Miracle Comforter - Funnel - King/Cali King / White', 
+                price: 159.99, 
+                regularPrice: 335, 
+                productSavings: 52, 
+                productDolarSavings: 175, 
+                productReviews: 234, 
+                imgUrl: 'images/comforter.png' 
             }
 
         }
     };
     const noTowelsVariant = {
-        queen: {
+        queen : {
             /*
             stone : {
                 variantId: 42790126059670, 
@@ -64,39 +66,41 @@ document.addEventListener("DOMContentLoaded", () => {
                 imgUrl: 'images/comforter.png' 
             }, 
             */
-            /*
-             white : {
-                 variantId: 42790125994134, 
-                 productTitle: 'Miracle Comforter - Funnel - Full/Queen / White', 
-                 price: 149.99, 
-                 regularPrice: 325, 
-                 productSavings: 48, 
-                 productDolarSavings: 155, 
-                 productReviews: 327, 
-                 imgUrl: 'images/comforter.png' 
-             }
-                 */
+           /*
+            white : {
+                variantId: 42790125994134, 
+                productTitle: 'Miracle Comforter - Funnel - Full/Queen / White', 
+                price: 149.99, 
+                regularPrice: 325, 
+                productSavings: 48, 
+                productDolarSavings: 155, 
+                productReviews: 327, 
+                imgUrl: 'images/comforter.png' 
+            }
+                */
         },
-        king: {
-            stone: {
-                variantId: 42790126092438,
-                productTitle: 'Miracle Comforter - Funnel - King/Cali King / Stone',
-                price: 159.99,
-                regularPrice: 335,
-                productSavings: 48,
-                productDolarSavings: 155,
-                productReviews: 234,
-                imgUrl: 'images/comforter.png'
+        king : {
+            /*
+            stone : {
+                variantId: 42790126092438, 
+                productTitle: 'Miracle Comforter - Funnel - King/Cali King / Stone', 
+                price: 159.99, 
+                regularPrice: 335, 
+                productSavings: 48, 
+                productDolarSavings: 155, 
+                productReviews: 234, 
+                imgUrl: 'images/comforter.png' 
             },
-            white: {
-                variantId: 42790126026902,
-                productTitle: 'Miracle Comforter - Funnel - King/Cali King / White',
-                price: 159.99,
-                regularPrice: 335,
-                productSavings: 48,
-                productDolarSavings: 155,
-                productReviews: 234,
-                imgUrl: 'images/comforter.png'
+            */
+            white : {
+                variantId: 42790126026902, 
+                productTitle: 'Miracle Comforter - Funnel - King/Cali King / White', 
+                price: 159.99, 
+                regularPrice: 335, 
+                productSavings: 48, 
+                productDolarSavings: 155, 
+                productReviews: 234, 
+                imgUrl: 'images/comforter.png' 
             }
 
         }
@@ -107,25 +111,27 @@ document.addEventListener("DOMContentLoaded", () => {
             this.variants = variants;
             this.currentColor = 'white';
             this.currentSize = 'king';
-
+                        
             this.initializeStockStatus();
         }
 
         initializeStockStatus() {
+            
             const colors = ['white', 'stone'];
-            const sizes = ['king'];
-
+            const sizes = ['queen', 'king'];
+                            
             colors.forEach(color => {
                 const hasAnySize = sizes.some(size => this.isVariantAvailable(size, color));
                 if (!hasAnySize) {
-                    document.querySelector(`.color-choice[data-color='${color}']`).classList.add('sold');
+                    $(`.color-choice[data-color='${color}']`).addClass('sold');
                 }
             });
 
+            
             sizes.forEach(size => {
                 const hasAnyColor = colors.some(color => this.isVariantAvailable(size, color));
                 if (!hasAnyColor) {
-                    document.querySelector(`.size-choice[data-size='${size}']`).classList.add('sold-size');
+                    $(`.size-choice[data-size='${size}']`).addClass('sold-size');
                 }
             });
         }
@@ -135,50 +141,45 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         findAvailableSize(color) {
-            return Object.keys(this.variants).find(size =>
+            return Object.keys(this.variants).find(size => 
                 this.isVariantAvailable(size, color)
             );
         }
 
         findAvailableColor(size) {
-            return Object.keys(this.variants[size] || {}).find(color =>
+            return Object.keys(this.variants[size] || {}).find(color => 
                 this.isVariantAvailable(size, color)
             );
         }
 
-        updateStockUI(selectedSize, selectedColor) {
-            document.querySelectorAll('.size-choice').forEach(sizeChoice => {
-                const size = sizeChoice.getAttribute('data-size');
-                const hasAvailableColor = Object.keys(this.variants[size] || {}).length > 0;
-                sizeChoice.classList.toggle('sold-size', !hasAvailableColor);
+        updateStockUI(selectedSize, selectedColor) {            
+            $('.size-choice').each(function() {
+                const size = $(this).attr('data-size');
+                const hasAvailableColor = Object.keys(variants[size] || {}).length > 0;
+                $(this).toggleClass('sold-size', !hasAvailableColor);
             });
-
-            document.querySelectorAll('.color-choice').forEach(colorChoice => {
-                const color = colorChoice.getAttribute('data-color');
-                const isAvailable = this.variants[selectedSize]?.[color] !== undefined;
-                colorChoice.classList.toggle('sold', !isAvailable);
+            
+            $('.color-choice').each(function() {
+                const color = $(this).attr('data-color');                
+                const isAvailable = variants[selectedSize]?.[color] !== undefined;
+                $(this).toggleClass('sold', !isAvailable);
             });
         }
 
         handleColorSelection(selectedColor) {
             if (!this.isVariantAvailable(this.currentSize, selectedColor)) {
                 const availableSize = this.findAvailableSize(selectedColor);
-                if (availableSize) {
-                    document.querySelectorAll('.size-choice.active .w-radio-input').forEach(input => {
-                        input.classList.remove('w--redirected-checked');
-                    });
-                    document.querySelectorAll('.size-choice').forEach(sizeChoice => {
-                        sizeChoice.classList.remove('active');
-                    });
-                    const newSizeChoice = document.querySelector(`[data-size='${availableSize}']`);
-                    newSizeChoice.classList.add('active');
-                    newSizeChoice.querySelector('.w-radio-input').classList.add('w--redirected-checked');
+                if (availableSize) {                    
+                    $(".size-choice.active .w-radio-input").removeClass("w--redirected-checked");
+                    $(".size-choice").removeClass("active");
+                    $(`[data-size='${availableSize}']`).addClass("active");
+                    $(`[data-size='${availableSize}'] .w-radio-input`).addClass("w--redirected-checked");
                     this.currentSize = availableSize;
                 } else {
                     return false;
                 }
             }
-
+            
             this.currentColor = selectedColor;
             this.updateStockUI(this.currentSize, selectedColor);
             return true;
@@ -188,16 +189,15 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!this.isVariantAvailable(selectedSize, this.currentColor)) {
                 const availableColor = this.findAvailableColor(selectedSize);
                 if (availableColor) {
-                    document.querySelectorAll('.color-choice').forEach(colorChoice => {
-                        colorChoice.classList.remove('active');
-                    });
-                    document.querySelector(`.color-choice[data-color='${availableColor}']`).classList.add('active');
+                    // Color UI güncellemesi
+                    $(".color-choice").removeClass("active");
+                    $(`.color-choice[data-color='${availableColor}']`).addClass("active");
                     this.currentColor = availableColor;
                 } else {
                     return false;
                 }
             }
-
+            
             this.currentSize = selectedSize;
             this.updateStockUI(selectedSize, this.currentColor);
             return true;
@@ -207,96 +207,97 @@ document.addEventListener("DOMContentLoaded", () => {
     const smartSelector = new SmartSelector(variants);
 
     function selVariant() {
-        var colorElement = document.querySelector(".color-choice.active");
-        var sizeElement = document.querySelector(".size-choice.active");
+        var color = $(".color-choice.active").attr("data-color");
+        var size = $(".size-choice.active").attr("data-size");
+        $(".selected-color").text(color);
 
-        console.log("Color Element:", colorElement)
-        console.log("sizeElement:", sizeElement)
-        var color = colorElement ? colorElement.getAttribute("data-color") : "";
-        var size = sizeElement ? sizeElement.getAttribute("data-size") : "";
-
-        var selectedColor = document.querySelector(".selected-color");
-        if (selectedColor) selectedColor.textContent = color;
-
-        if (variants[size] && variants[size][color]) {
-            document.querySelector(".es_price").textContent = variants[size][color]['price'];
-            document.querySelector(".es_saving_value").textContent = variants[size][color]['productDolarSavings'];
-            document.querySelector(".es_reg_price").textContent = variants[size][color]['regularPrice'];
+        if (variants[size]?.[color]) {
+            $(".es_price").text(variants[size][color]['price']);
+            $(".es_saving_percent").text(variants[size][color]['productSavings']);
+            $(".es_saving_value").text(variants[size][color]['productDolarSavings']);
+            $(".es_reg_price").text(variants[size][color]['regularPrice']);
+            $(".es_ratings").text(variants[size][color]['productReviews']);
+            $(".product-image img").attr("src", variants[size][color]['imgUrl']);
         }
-        
-        var slideImages = document.querySelectorAll(".slide-item-inside-wrapper img");
-        var iconImages = document.querySelectorAll(".product-icon img");
 
+        // Renk bağlı image değişimleri
         if (color === 'stone') {
-            slideImages.forEach(img => {
-                img.removeAttribute('srcset');
-                img.setAttribute('src', img.getAttribute('src').replace('white', 'stone'));
+            $('.slide-item-inside-wrapper img').each(function() {
+                $(this).removeAttr('srcset');
+                $(this).attr('src', $(this).attr('src').replace('white', 'stone'));
             });
-            iconImages.forEach(img => {
-                img.removeAttribute('srcset');
-                img.setAttribute('src', img.getAttribute('src').replace('white', 'stone'));
+            $('.product-icon img').each(function() {
+                $(this).removeAttr('srcset');
+                $(this).attr('src', $(this).attr('src').replace('white', 'stone'));
             });
         } else {
-            slideImages.forEach(img => {
-                img.setAttribute('src', img.getAttribute('src').replace('stone', 'white'));
+            $('.slide-item-inside-wrapper img').each(function() {
+                $(this).attr('src', $(this).attr('src').replace('stone', 'white'));
             });
-            iconImages.forEach(img => {
-                img.setAttribute('src', img.getAttribute('src').replace('stone', 'white'));
+            $('.product-icon img').each(function() {
+                $(this).attr('src', $(this).attr('src').replace('stone', 'white'));
             });
         }
     }
 
+    $('.to-atc').click(function() {
+        scroll({
+            behavior: 'smooth',
+            top: $('#atc-section').offset().top - 100
+        });
+    });
+
     window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
     window.checkoutReadyCallbacks.push(() => {
-        selVariant();
+        selVariant();        
 
-        document.querySelectorAll(".size-choice").forEach(sizeChoice => {
-            sizeChoice.addEventListener("click", function () {
-                const selectedSize = this.getAttribute('data-size');
-                if (smartSelector.handleSizeSelection(selectedSize)) {
-                    document.querySelectorAll(".size-choice.active .w-radio-input").forEach(el => el.classList.remove("w--redirected-checked"));
-                    document.querySelectorAll(".size-choice").forEach(el => el.classList.remove("active"));
-                    this.classList.add("active");
-                    document.querySelector(".size-choice.active .w-radio-input").classList.add("w--redirected-checked");
-                    selVariant();
-                }
-            });
+        $(".size-choice").click(function(e) {
+            const selectedSize = $(this).attr('data-size');
+            if (smartSelector.handleSizeSelection(selectedSize)) {
+                $(".size-choice.active .w-radio-input").removeClass("w--redirected-checked")
+                $(".size-choice").removeClass("active");
+                $(this).addClass("active");
+                $(".size-choice.active .w-radio-input").addClass("w--redirected-checked")
+                selVariant();
+            }
         });
 
-        document.querySelectorAll(".color-choice").forEach(colorChoice => {
-            colorChoice.addEventListener("click", function () {
-                const selectedColor = this.getAttribute('data-color');
-                if (smartSelector.handleColorSelection(selectedColor)) {
-                    document.querySelectorAll(".color-choice").forEach(el => el.classList.remove("active"));
-                    this.classList.add("active");
-                    selVariant();
-                }
-            });
+        $(".color-choice").click(function(e) {
+            const selectedColor = $(this).attr('data-color');
+            
+            if (smartSelector.handleColorSelection(selectedColor)) {
+                $(".color-choice").removeClass("active");
+                $(this).addClass("active");
+                selVariant();
+            }
         });
-
-        function handleBuyNowClick(event, quantitySelector) {
-            event.preventDefault();
+        $(".buy-now-button").click(function(e) {
+            e.preventDefault();
             const clearCart = async () => {
                 const updateRec = {};
                 checkout.cart.localCart.lineItems.forEach(x => {
-                    if (x.variantId !== '34937177702550') {
+                    if (x.variantId != '34937177702550') {
                         updateRec[x.variantId] = 0;
                     }
                 });
                 const newCart = await checkout.apiClient.setVariantQuantities(updateRec);
                 checkout.setCart(newCart);
-            };
+            }
 
-            clearCart().then(() => {
-                var size = document.querySelector(".size-choice.active")?.getAttribute("data-size");
-                var color = document.querySelector(".color-choice.active")?.getAttribute("data-color");
-                var selectedQty = parseInt(document.querySelector(quantitySelector).textContent);
-                var data = {};
+            clearCart().then(x => {
 
-                if (document.querySelector("#free-gift-check-desktop")?.checked) {
+                var size = $(".size-choice.active").attr("data-size");
+                var color = $(".color-choice.active").attr("data-color");
+                var selectedQty = parseInt($(".quantity-value").text());
+                var data = {}; 
+
+                // Check if free gift checkbox is checked
+                if ($("#free-gift-check-desktop").prop("checked")) {
+                    // Add variant with towels
                     data[variants[size][color]['variantId']] = selectedQty;
-                    data[42508804751510] = selectedQty;
+                    data[42508804751510] = selectedQty; 
                 } else {
+                    // Add variant without towels
                     data[noTowelsVariant[size][color]['variantId']] = selectedQty;
                 }
 
@@ -304,18 +305,77 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.log("Variant Set.");
                     window.checkout.setCart(x);
                     window.checkout.drawCart(x);
-                    sessionStorage.setItem("ksp","true")
+                    sessionStorage.setItem("ksp","true");
                     window.location.href = "/comforter/checkout/";
                 });
             });
-        }
-
-        document.querySelector(".buy-now-button").addEventListener("click", function (e) {
-            handleBuyNowClick(e, ".quantity-value");
         });
+        $(".mobile-buy-now-button").click(function(e) {
+            e.preventDefault();
+            const clearCart = async () => {
+                const updateRec = {};
+                checkout.cart.localCart.lineItems.forEach(x => {
+                    if (x.variantId != '34937177702550') {
+                        updateRec[x.variantId] = 0;
+                    }
+                });
+                const newCart = await checkout.apiClient.setVariantQuantities(updateRec);
+                checkout.setCart(newCart);
+            }
 
-        document.querySelector(".mobile-buy-now-button").addEventListener("click", function (e) {
-            handleBuyNowClick(e, ".mobile-quantity-value");
+            clearCart().then(x => {
+
+                var size = $(".size-choice.active").attr("data-size");
+                var color = $(".color-choice.active").attr("data-color");
+                var selectedQty = parseInt($(".mobile-quantity-value").text());
+                var data = {}; 
+
+                // Check if free gift checkbox is checked
+                if ($("#free-gift-check-desktop").prop("checked")) {
+                    // Add variant with towels
+                    data[variants[size][color]['variantId']] = selectedQty;
+                    data[42508804751510] = selectedQty; 
+                } else {
+                    // Add variant without towels
+                    data[noTowelsVariant[size][color]['variantId']] = selectedQty;
+                }
+
+                window.checkout.apiClient.setVariantQuantities(data).then(x => {
+                    console.log("Variant Set.");
+                    window.checkout.setCart(x);
+                    window.checkout.drawCart(x);
+                    sessionStorage.setItem("ksp","true");
+                    window.location.href = "/comforter/checkout/";
+                });
+            });
         });
     });
-})
+
+    $(window).scroll(function() {
+        if ($(window).width() < 768) {
+            var scroll_h = $(window).scrollTop();
+            var purchase_scrolltop = $("#purchase").position().top;
+            
+            if (scroll_h > purchase_scrolltop * 1.5) {
+                $("#sticky-footer").removeClass("es_hide");
+            } else {
+                $("#sticky-footer").addClass("es_hide");
+            }
+        }
+    });
+
+    $(".size-guide-modal .size_chart-handle").click(function() {
+        var name = $(this).attr("name");
+        $(".size-guide-modal .size_chart-handle").removeClass("active");
+        $(this).addClass("active");
+        $(".size-guide-modal .size_table").hide();
+        $(".size-guide-modal .size_table[data-handle='" + name + "']").show();
+    });
+
+    const fabricRadiosWrapper = $('.fabric-select-wrapper');
+    const fabricRadios = $('.fabric-select-wrapper input');
+    fabricRadios.bind('change', function(e) {
+        fabricRadiosWrapper.removeClass('active');
+        e.target.parentNode.classList.add('active');
+    });
+});

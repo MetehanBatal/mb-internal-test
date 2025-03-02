@@ -1,9 +1,7 @@
 window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
 window.checkoutReadyCallbacks.push(() => {
 	if (checkoutData.cart.shippingZone !== "US") {
-		document.querySelectorAll('.non-usa').forEach(element => {
-            element.innerHTML = 'USD ';
-        });
+		$(".non-usa").html("USD ");
 	}
 });
 
@@ -90,14 +88,14 @@ const rosewoodProducts = [
 ]
 
 const pathsWithNextAvailableColor = ["5b", "5b-cooling", "5b-3temp"];
-const pathsWithNextAvailableSize = ["5b-cooling"]
+const pathsWithNextAvailableSize = ["5b-cooling", "5b-3temp"]
 
 let upsellHench = {
 	choices: "",
 
 	fabric: pagePath === "2d" ? "luxe" : "signature",
 
-	size: pagePath === "6b" || pagePath === "5b" || pagePath === "5b-3temp" || pagePath === "5b-cooling" || pagePath === "4b" || pagePath === "2c" || pagePath === "2d" ? "queen" : "full",
+	size: pagePath === "6b" || pagePath === "5b" || pagePath === "5b-cooling" || pagePath === "5b-3temp" || pagePath === "4b" || pagePath === "2c" || pagePath === "2d" ? "queen" : "full",
 
 	color: pathsWithNextAvailableColor.includes(pagePath)
 		? nextAvailableColor
@@ -111,30 +109,27 @@ let upsellHench = {
 
 	initSwiper: function () {
 		const self = this;
+
 		if (hasSlider) {
-			// Destroy existing slider if present
-			if (self.innerSlider) self.innerSlider.destroy();
-		
-			// Initialize Keen Slider
-			self.innerSlider = new KeenSlider('#hero-slider', {
+			self.thumbsSwiper = new Swiper('.swiper-thumbnails', {
+				slidesPerView: 5,
+				spaceBetween: 8,
+				watchSlidesProgress: true
+			});
+
+			self.swiper = new Swiper('.swiper-main', {
 				loop: true,
-				slideChanged: (slider) => {
-					const currentIndex = slider.track.details.rel;
-					// Update active thumbnail
-					document.querySelectorAll('.thumb-img').forEach((thumb, index) => {
-						thumb.classList.toggle('active', index === currentIndex);
-					});
+
+				// Navigation arrows
+				navigation: {
+					nextEl: '.slider-pagination-button.next',
+					prevEl: '.slider-pagination-button.prev',
 				},
+
+				thumbs: {
+					swiper: self.thumbsSwiper,
+				}
 			});
-		
-			// Thumbnail click handlers
-			document.querySelectorAll('.thumb-img').forEach((thumb, index) => {
-				thumb.addEventListener('click', () => self.innerSlider.moveToIdx(index));
-			});
-		
-			// Navigation buttons
-			document.querySelector('.prev').addEventListener('click', () => self.innerSlider.prev());
-			document.querySelector('.next').addEventListener('click', () => self.innerSlider.next());
 		}
 	},
 
@@ -206,7 +201,7 @@ let upsellHench = {
 		  if (
 			pagePath === "2c" ||
 			pagePath === "2d" ||
-			pagePath === "5b" || pagePath === "5b-cooling" || pagePath === "5b-3temp" 
+			pagePath === "5b" || pagePath === "5b-cooling" || pagePath === "5b-3temp"
 		  ) {
 			self.updateQuantities();
 		  }
@@ -258,7 +253,6 @@ let upsellHench = {
 							sizeVariants = variants[self.quantity][self.fabric][self.size];
 						}
 
-						console.log('Size: ', sizeVariants, variants[self.quantity], self.fabric, self.size);
 						if (Object.keys(sizeVariants).length > 0) {
 							self.size = size;
 						}
@@ -303,7 +297,9 @@ let upsellHench = {
 		}
 
 		if (hasSizeSelection) {
-			let sizeSelectors = document.querySelectorAll('input[type=radio][name="size"]');
+			let sizeSelectors = document.querySelectorAll(
+			  'input[type=radio][name="size"]'
+			);
 			sizeSelectors.forEach(function (selector) {
 			  const sizeValue = selector.getAttribute("value");
 			  const sizeHasColors = checkIfSizeHasColors(
@@ -406,14 +402,7 @@ let upsellHench = {
 				}
 			} else if (pagePath === "4b") {
 				label = `${sizeVariants[self.color].type} - (${sizeVariants[self.color].loads} Loads) - ${usPrefix} ${sizeVariants[self.color].price} `;
-			} else if(pagePath === "5b-3temp") {
-				label = `${self.color} - ${self.size} - ${usPrefix} $${variant ? variant["price"] : "119"
-				}* `;
-				if (index === 0) {
-					label = `${self.color} - King/Cali King - ${usPrefix} $${variant ? variant["price"]?.toFixed(2) : "129"
-						}* `;
-				}
-			} else {
+			} else  {
 				label = `Add ${quantity} ${quantity == 1 ? "Sheet Set" : "Sheets Sets"
 					} for${usPrefix} $${variant ? (variant["sale_price"] / quantity).toFixed(2) : 0
 					}* each (${discounts[index]}  OFF)`;
@@ -583,13 +572,13 @@ let upsellHench = {
 
 	updateSliderImages: function () {
 		const self = this;
-	
-		// Destroy existing slider
-		if (self.innerSlider) self.innerSlider.destroy();
-	
-		let images = document.querySelectorAll('.keen-slider__slide, .thumb-img');
+
+		self.swiper.destroy();
+		self.thumbsSwiper.destroy();
+
+		let images = document.querySelectorAll('.swiper-slide');
 		let index = 1;
-	
+
 		images.forEach(function (image) {
 			if (index > images.length / 2) {
 				index = 1;
@@ -597,34 +586,29 @@ let upsellHench = {
 			let imagePath;
 			if(pagePath === "2d") {
 				imagePath = `/up/v6/images/sliders/${pagePath}/new/${self.color}/0${index}.webp`;
-	
-				if (image.classList.contains("thumb-img")) {
-					imagePath = `/up/v6/images/sliders/${pagePath}/new/${self.color}/0${index}_thumb.webp`;
+
+				if (image.querySelector("img").classList.contains("thumb-img")) {
+					imagePath = `/up/v6/images/sliders/${pagePath}/new/${self.color}/0${index}.webp`;
 				}
 	
 			}else {
 				imagePath = `/up/v6/images/sliders/${pagePath}/${self.color}/0${index}.webp`;
-				console.log(image)
-				if (image.classList.contains("thumb-img")) {
+
+				if (image.querySelector("img").classList.contains("thumb-img")) {
 					imagePath = `/up/v6/images/sliders/${pagePath}/${self.color}/0${index}_thumb.webp`;
 				}
 	
 			}
-	
-			image.src = imagePath;
+
+			image.querySelector("img").src = imagePath;
 			if (pagePath !== "1b") {
-				image.setAttribute("data-src", imagePath);
+				image.querySelector("img").setAttribute("data-src", imagePath);
 			}
-	
+
 			index++;
 		});
-	
+
 		self.initSwiper();
-	
-		if (typeof lozad !== 'undefined') {
-			const observer = lozad();
-			observer.observe();
-		}
 	},
 
 	updateSize: function (event) {
@@ -916,7 +900,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 	upsellHench.toggleActiveClass();
 	upsellHench.listenVariantChange();
 	upsellHench.initTimer();
-	// upsellHench.toggleConfirmationBanner();
+	upsellHench.toggleConfirmationBanner();
 	window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
 	window.checkoutReadyCallbacks.push(() => {
 		upsellHench.swapVariantColors();
@@ -947,3 +931,66 @@ function checkIfSizeHasColors(size, quantity, fabric) {
 
 	return hasColorsAvailable;
 }
+
+function setupNewColorAndSize() {
+	const colorSelectors = document.querySelectorAll(
+		'input[type=radio][name="color"]'
+	);
+	const sizeSelectors = document.querySelectorAll(
+		'input[type=radio][name="size"]'
+	);
+
+	const nextAvailableSelector = Array.from(colorSelectors).find(
+		(selector) => {
+			return selector.getAttribute("value") === nextAvailableColor;
+		}
+	);
+
+	const selectedSize = Array.from(sizeSelectors).find((selector) => {
+		return selector.parentNode.classList.contains("selected");
+	});
+
+	selectedSize?.dispatchEvent(new Event("change"));
+	nextAvailableSelector?.dispatchEvent(new Event("change"));
+}
+
+function removeHighlightClass() {
+    if (document.querySelector(".is-highlighted")) {
+      document
+        .querySelector(".is-highlighted")
+        .classList.remove("is-highlighted");
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+	if(pagePath === "3b") {
+		const fabricRadios = document.querySelectorAll('input[name="fabric"]');
+		const sizeRadios = document.querySelectorAll('input[name="size"]');
+		const stoneColor = document.querySelector('.color.stone');
+
+		function updateStoneVisibility() {
+			const selectedFabric = document.querySelector('input[name="fabric"]:checked').value;
+			const selectedSize = document.querySelector('input[name="size"]:checked').value;
+			const selectedColor = document.querySelector('input[name="color"]:checked').value;
+
+			if (selectedFabric === 'luxe' && selectedSize === "standard" && selectedColor === "stone") {
+				stoneColor.classList.add("out-of-stock")
+				document.querySelector(".color.white").click();
+			} else if(selectedFabric === 'signature' && selectedSize === "king") {
+				document.querySelector(".selection.out-of-stock").classList.remove("out-of-stock")
+			}
+		}
+
+		// Add event listeners to fabric and size radios
+		fabricRadios.forEach(radio => {
+			radio.addEventListener('change', updateStoneVisibility);
+		});
+
+		sizeRadios.forEach(radio => {
+			radio.addEventListener('change', updateStoneVisibility);
+		});
+
+		// Initial check on page load
+		updateStoneVisibility();		
+	}	
+});

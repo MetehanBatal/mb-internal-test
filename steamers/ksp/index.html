@@ -8,6 +8,39 @@
 		~function (W, H, A, L, E, _) { function O(T, R) { void 0 === R && (R = !1), H = new XMLHttpRequest, H.open("GET", "//triplewhale-pixel.web.app/triplepx.txt?" + ~(Date.now() / 9e7), !0), H.send(null), H.onreadystatechange = function () { 4 === H.readyState && 200 === H.status ? setTimeout(function () { return eval(H.responseText) }, 50) : (299 < H.status || H.status < 200) && T && !R && (R = !0, O(T - 1)) } } if (L = window, !L[H + "sn"]) { L[H + "sn"] = 1; try { A.setItem(H, 1 + (0 | A.getItem(H) || 0)), W.includes("⇈") && A.setItem(H + "Stg", 1 + (0 | A.getItem(H + "Stg") || 0)), (E = JSON.parse(A.getItem(H + "U") || "[]")).push(location.href), A.setItem(H + "U", JSON.stringify(E)) } catch (e) { } A.getItem('"!nC`') || (A = L, A[H] || (L = function () { return Date.now().toString(36) + "_" + Math.random().toString(36) }, E = A[H] = function (t, e) { return W = L(), (E._q = E._q || []).push([W, t, e]), E._headless = !0, W }, E.ch = W, O(5))) } }("", "TriplePixel", localStorage);
 	</script>
 	<!-- TriplePixel :: end -->
+
+
+	<!-- Begin: Paypal Script -->
+	<script>
+		(function(a, t, o, m, i) {
+			a[m] = a[m] || [];
+			a[m].push({
+				t: new Date().getTime(),
+				event: 'snippetRun'
+			});
+			var f = t.getElementsByTagName(o)[0],
+			e = t.createElement(o);
+			e.async = !0;
+			e.dataset.namespace = "paypal_sdk";
+			e.src = 'https://www.paypal.com/sdk/js?components=shopping&client-id=' + i;
+			f.parentNode.insertBefore(e, f);
+		})(window, document, 'script', 'shoppingDDL', 'AUvZCmTImA-03Jrtr4x_ZdRAnJIL5wFVUC5_eenqw8Ynfecok5HhftLx3-ViQ-QWvmBrGyHICNnoFJrm');
+
+		var pptag = {
+			send: function(e, p) {
+				shoppingDDL.push({
+					event: e,
+					payload: p
+				});
+			},
+			set: function(s) {
+				shoppingDDL.push({
+					set: s
+				});
+			}
+		};
+	</script>
+	<!-- End: Paypal Script -->
 	<script>
 		var head = document.head;
 		var script = document.createElement('script');
@@ -18,7 +51,7 @@
 	<meta charset="utf-8">
 	<title>Miracle Steamers | Miracle Made</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<link href="/steamers/ksp-v1/css/steamer.css" rel="stylesheet" type="text/css">
+	<link href="/steamers/ksp/css/steamer.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript">
 		! function (o, c) {
 			var n = c.documentElement,
@@ -38,8 +71,8 @@
 		})(window, document, 'script', 'dataLayer', 'GTM-MKJPBJLM');</script>
 	<!-- End Google Tag Manager -->
 
-	<link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
-	<link href="images/webclip.png" rel="apple-touch-icon">
+	<link href="https://try.miraclebrand.co/steamers/ksp/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<link href="https://try.miraclebrand.co/steamers/ksp/images/webclip.png" rel="apple-touch-icon">
 
 	<meta content="api.shopmiraclebrand.co" name="checkout-api-endpoint">
 	<meta content="42108628762774" name="checkout-default-variant-id">
@@ -47,8 +80,8 @@
 	<meta content="US" name="checkout-default-shipping-zone">
 	<meta content="https://api.shopmiraclebrand.co/v1/cart/{sessionId}/miracle_redirect" name="checkout-next-url">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="mb-steamers-lp-ksp-v1" name="checkout-landing-page-name">
-	<meta content="mb-steamers-lp-ksp-v1" name="checkout-funnel-name">
+	<meta content="mb-steamers-lp-ksp-v1-internal" name="checkout-landing-page-name">
+	<meta content="mb-steamers-lp-ksp-v1-internal" name="checkout-funnel-name">
 	<meta content="steamers" name="checkout-aux-page-name">
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
@@ -67,12 +100,12 @@
 		<div class="sticky-nav">
 			<div class="button-sm-2 sticky-btn-mb w-button to-atcr">buy now</div>
 			<div class="sticky-nav-wrapper">
-				<div class="sticky-nav-item"><img src="/steamers/ksp-v1/images/hourglass.svg"
+				<div class="sticky-nav-item"><img src="/steamers/ksp/images/hourglass.svg"
 						loading="lazy" alt="" class="gray-icon-2 hourglass">
 					<div><strong>14 orders </strong>at this price remaining</div>
 				</div>
 				<div class="sticky-nav-item"><img
-						src="/steamers/ksp-v1/images/Green-circle.svg" loading="lazy" alt=""
+						src="/steamers/ksp/images/Green-circle.svg" loading="lazy" alt=""
 						class="circle-green">
 					<div>Ships by <span id="date-1" class="date-1">Wed, Aug 20th</span></div>
 					<div class="button-sm-2 sticky-btn w-button to-atc">buy now</div>
@@ -81,17 +114,17 @@
 		</div>
 		<div class="navbar w-nav">
 			<a href="#" class="logo w-inline-block"><img
-					src="/steamers/ksp-v1/images/logo.svg" loading="lazy" alt="Logo-Image"
+					src="/steamers/ksp/images/logo.svg" loading="lazy" alt="Logo-Image"
 					class="logo-image"></a>
 		</div>
 		<div id="atc" class="header wf-section">
 			<div class="header-l">
 				<div class="pack-icons">
 					<img class="pack-icon"
-						src="/steamers/ksp-v1/images/3pack-icon.svg" alt="">
+						src="/steamers/ksp/images/3pack-icon.svg" alt="">
 				</div>
 
-				<div class="sold-out"><img src="/steamers/ksp-v1/images/fire.svg"
+				<div class="sold-out"><img src="/steamers/ksp/images/fire.svg"
 						loading="lazy" alt="" class="fire-icon">
 					<div>Sold Out 4x</div>
 				</div>
@@ -99,27 +132,27 @@
 					<div class="swiper swiper-main">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide" data-slide="variety">
-								<img src="/steamers/ksp-v1/images/h1.webp" alt=""
+								<img src="/steamers/ksp/images/h1.webp" alt=""
 									class=" product-img lozad mobile-hidden">
-								<img src="/steamers/ksp-v1/images/h1_mobile.webp"
+								<img src="/steamers/ksp/images/h1_mobile.webp"
 									alt="" class=" product-img lozad desktop-hidden">
 							</div>
 							<div class="swiper-slide" data-slide="clarity">
-								<img data-src="/steamers/ksp-v1/images/h3.webp"
+								<img data-src="/steamers/ksp/images/h3.webp"
 									class=" product-img lozad mobile-hidden">
-								<img data-src="/steamers/ksp-v1/images/h3_mobile.webp"
+								<img data-src="/steamers/ksp/images/h3_mobile.webp"
 									class=" product-img lozad desktop-hidden">
 							</div>
 							<div class="swiper-slide" data-slide="energize">
-								<img data-src="/steamers/ksp-v1/images/h2.webp"
+								<img data-src="/steamers/ksp/images/h2.webp"
 									class=" product-img lozad mobile-hidden">
-								<img data-src="/steamers/ksp-v1/images/h2_mobile.webp"
+								<img data-src="/steamers/ksp/images/h2_mobile.webp"
 									class=" product-img lozad desktop-hidden">
 							</div>
 							<div class="swiper-slide" data-slide="calm">
-								<img src="/steamers/ksp-v1/images/h4.webp"
+								<img src="/steamers/ksp/images/h4.webp"
 									class=" product-img lozad mobile-hidden">
-								<img src="/steamers/ksp-v1/images/h4_mobile.webp"
+								<img src="/steamers/ksp/images/h4_mobile.webp"
 									class=" product-img lozad desktop-hidden">
 							</div>
 
@@ -137,16 +170,16 @@
 					<div class="swiper swiper-thumbnails product-icons-2">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide product-icon-2"><img
-									data-src="/steamers/ksp-v1/images/h1.webp"
+									data-src="/steamers/ksp/images/h1.webp"
 									loading="lazy" alt="" class="img-fluid lozad"></div>
 							<div class="swiper-slide product-icon-2"><img
-									data-src="/steamers/ksp-v1/images/h3.webp"
+									data-src="/steamers/ksp/images/h3.webp"
 									loading="lazy" alt="" class="img-fluid lozad"></div>
 							<div class="swiper-slide product-icon-2"><img
-									data-src="/steamers/ksp-v1/images/h2.webp"
+									data-src="/steamers/ksp/images/h2.webp"
 									loading="lazy" alt="" class="img-fluid lozad"></div>
 							<div class="swiper-slide product-icon-2"><img
-									data-src="/steamers/ksp-v1/images/h4.webp"
+									data-src="/steamers/ksp/images/h4.webp"
 									loading="lazy" alt="" class="img-fluid lozad"></div>
 						</div>
 					</div>
@@ -155,7 +188,7 @@
 			<div id="atc-r" class="header-r">
 				<div class="header-r-wrapper">
 					<div class="product-info-head"><img
-							src="/steamers/ksp-v1/images/rating_stars.svg" loading="lazy"
+							src="/steamers/ksp/images/rating_stars.svg" loading="lazy"
 							alt="rating-stars" class="rating-stars mr-5">
 						<p class="sm-text fw-500">221,878+ <span class="happy-customer">happy customers</span></p>
 					</div>
@@ -187,7 +220,7 @@
 										<label id="variety" data-slide="1" data-color="variety"
 											class="color-choice w-radio current-color">
 											<div class="selector-bg" id="variety">
-												<img src="/steamers/ksp-v1/images/thumb_inactive_1.png"
+												<img src="/steamers/ksp/images/thumb_inactive_1.png"
 													alt="">
 											</div>
 											<input type="radio" data-name="color" name="color" value="variety"
@@ -197,7 +230,7 @@
 										<label id="clarity" data-slide="2" data-color="clarity"
 											class="color-choice w-radio">
 											<div class="selector-bg">
-												<img src="/steamers/ksp-v1/images/thumb_inactive_2.png"
+												<img src="/steamers/ksp/images/thumb_inactive_2.png"
 													alt="">
 											</div>
 											<input type="radio" data-name="color" name="color" value="variety"
@@ -207,7 +240,7 @@
 										<label id="energize" data-slide="3" data-color="energize"
 											class="color-choice w-radio">
 											<div class="selector-bg">
-												<img src="/steamers/ksp-v1/images/thumb_inactive_3.png"
+												<img src="/steamers/ksp/images/thumb_inactive_3.png"
 													alt="">
 											</div>
 											<input type="radio" data-name="color" id="energize" name="color"
@@ -217,7 +250,7 @@
 										</label>
 										<label id="calm" data-slide="4" data-color="calm" class="color-choice w-radio">
 											<div class="selector-bg">
-												<img src="/steamers/ksp-v1/images/thumb_inactive_5.png"
+												<img src="/steamers/ksp/images/thumb_inactive_5.png"
 													alt="">
 											</div>
 											<input type="radio" data-name="color" name="color" value="variety"
@@ -227,7 +260,7 @@
 									</div>
 								</div>
 								<div class="shipment-description">
-									<img src="/steamers/ksp-v1/images/recurring-icon-2.svg"
+									<img src="/steamers/ksp/images/recurring-icon-2.svg"
 										alt="shipping-logo">
 									<p class="shipment-text">Ships Every 60 days<span class="hidden-1140">.</span> <br
 											class="mobile-hidden-br">2 month supply</p>
@@ -237,7 +270,7 @@
 							<div class="price-block">
 								<div class="flex inner-price-block">
 									<div class="discount-img">
-										<img src="/steamers/ksp-v1/images/discount.svg"
+										<img src="/steamers/ksp/images/discount.svg"
 											alt="">
 									</div>
 
@@ -259,35 +292,35 @@
 					</div>
 					<div class="gray-sc">
 						<div class="gray-sc-item"><img
-								src="/steamers/ksp-v1/images/Green-circle.svg" loading="lazy"
+								src="/steamers/ksp/images/Green-circle.svg" loading="lazy"
 								alt="" class="gray-icon green-circle">
 							<div class="text-block-4">Ships by <strong id="date-2">Wed, Aug 20th</strong></div>
 						</div>
 						<div class="gray-sc-item"><img
-								src="/steamers/ksp-v1/images/hourglass-copy1x.svg"
+								src="/steamers/ksp/images/hourglass-copy1x.svg"
 								loading="lazy" alt="" class="gray-icon hourglass">
 							<div class="text-block-5"><strong>14 orders remaining </strong>at this price</div>
 						</div>
 					</div>
 					<div class="form-bottom-info">
 						<div class="form-bottom-info-item"><img
-								src="/steamers/ksp-v1/images/truck1x.svg" loading="lazy"
+								src="/steamers/ksp/images/truck1x.svg" loading="lazy"
 								alt="" class="shipping-icon">
 							<div class="text-block-6"><span class="ca-fast text-uppercase">Free</span> Shipping &amp;
 								Returns</div>
 						</div>
 						<div class="b-line"></div>
 						<div class="form-bottom-info-item"><img class="shipping-icon"
-								src="/steamers/ksp-v1/images/date-badge1x.svg" loading="lazy"
+								src="/steamers/ksp/images/date-badge1x.svg" loading="lazy"
 								alt="">
 							<div>30 day money-back guarantee</div>
 						</div>
 					</div>
 					<div class="cards-icon"><img
-							src="/steamers/ksp-v1/images/credit-card-icons.svg"
+							src="/steamers/ksp/images/credit-card-icons.svg"
 							loading="lazy" alt=""></div>
 					<p class="cancel-text">Cancel anytime by emailing <a
-							href="mailto:hello@miraclebrand.co">hello@miraclebrand.co</a></p>
+							href="mailto:help@support.miraclebrand.co">help@support.miraclebrand.co</a></p>
 				</div>
 			</div>
 		</div>
@@ -295,148 +328,148 @@
 			<div class="logo-container">
 				<div class="content-holder">
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/usa-today-seeklogo.com.png"
+							src="/steamers/ksp/images/usa-today-seeklogo.com.png"
 							loading="lazy" alt="" class="logo-img-8"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/yahoo-new-2019-seeklogo.com-2.png"
+							src="/steamers/ksp/images/yahoo-new-2019-seeklogo.com-2.png"
 							loading="lazy" alt="" class="logo-img-5"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/the-atlantic-magazine-seeklogo.com.png"
+							src="/steamers/ksp/images/the-atlantic-magazine-seeklogo.com.png"
 							loading="lazy" alt="" class="logo-img-6"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/us-weekly-magazine_1us-weekly-magazine.png"
+							src="/steamers/ksp/images/us-weekly-magazine_1us-weekly-magazine.png"
 							loading="lazy" alt="" class="logo-img-7"></div>
 				</div>
 				<div class="content-holder">
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/nbc002_logo_vertical_bw_1nbc002_logo_vertical_bw.png"
+							src="/steamers/ksp/images/nbc002_logo_vertical_bw_1nbc002_logo_vertical_bw.png"
 							loading="lazy" alt="" class="logo-img-9"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/bustle-ar21_1bustle-ar21.png"
+							src="/steamers/ksp/images/bustle-ar21_1bustle-ar21.png"
 							loading="lazy" alt="" class="logo-img-2"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/futurism.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/futurism.png" loading="lazy" alt=""
 							class="logo-img-3"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/NBC_1NBC.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/NBC_1NBC.png" loading="lazy" alt=""
 							class="logo-img-9"></div>
 				</div>
 				<div class="content-holder">
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/usa-today-seeklogo.com.png"
+							src="/steamers/ksp/images/usa-today-seeklogo.com.png"
 							loading="lazy" alt="" class="logo-img-8 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/yahoo-new-2019-seeklogo.com-2.png"
+							src="/steamers/ksp/images/yahoo-new-2019-seeklogo.com-2.png"
 							loading="lazy" alt="" class="logo-img-5 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/the-atlantic-magazine-seeklogo.com.png"
+							src="/steamers/ksp/images/the-atlantic-magazine-seeklogo.com.png"
 							loading="lazy" alt="" class="logo-img-6 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/us-weekly-magazine_1us-weekly-magazine.png"
+							src="/steamers/ksp/images/us-weekly-magazine_1us-weekly-magazine.png"
 							loading="lazy" alt="" class="logo-img-7 lozad"></div>
 				</div>
 				<div class="content-holder">
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/nbc002_logo_vertical_bw_1nbc002_logo_vertical_bw.png"
+							src="/steamers/ksp/images/nbc002_logo_vertical_bw_1nbc002_logo_vertical_bw.png"
 							loading="lazy" alt="" class="logo-img-9 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/bustle-ar21_1bustle-ar21.png"
+							src="/steamers/ksp/images/bustle-ar21_1bustle-ar21.png"
 							loading="lazy" alt="" class="logo-img-2 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/futurism.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/futurism.png" loading="lazy" alt=""
 							class="logo-img-3 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/NBC_1NBC.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/NBC_1NBC.png" loading="lazy" alt=""
 							class="logo-img-9 lozad"></div>
 				</div>
 				<div class="content-holder">
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/lat_logo.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/lat_logo.png" loading="lazy" alt=""
 							class="logo-img lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/hp_logo.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/hp_logo.png" loading="lazy" alt=""
 							class="logo-img-2 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/Allure_logo.png" loading="lazy"
+							src="/steamers/ksp/images/Allure_logo.png" loading="lazy"
 							alt="" class="logo-img-3 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/bi_logo.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/bi_logo.png" loading="lazy" alt=""
 							class="logo-img-4 lozad"></div>
 				</div>
 			</div>
 			<div class="logo-container">
 				<div class="content-holder">
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/usa-today-seeklogo.com.png"
+							src="/steamers/ksp/images/usa-today-seeklogo.com.png"
 							loading="lazy" alt="" class="logo-img-8 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/yahoo-new-2019-seeklogo.com-2.png"
+							src="/steamers/ksp/images/yahoo-new-2019-seeklogo.com-2.png"
 							loading="lazy" alt="" class="logo-img-5 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/the-atlantic-magazine-seeklogo.com.png"
+							src="/steamers/ksp/images/the-atlantic-magazine-seeklogo.com.png"
 							loading="lazy" alt="" class="logo-img-6 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/us-weekly-magazine_1us-weekly-magazine.png"
+							src="/steamers/ksp/images/us-weekly-magazine_1us-weekly-magazine.png"
 							loading="lazy" alt="" class="logo-img-7 lozad"></div>
 				</div>
 				<div class="content-holder">
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/nbc002_logo_vertical_bw_1nbc002_logo_vertical_bw.png"
+							src="/steamers/ksp/images/nbc002_logo_vertical_bw_1nbc002_logo_vertical_bw.png"
 							loading="lazy" alt="" class="logo-img-9 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/bustle-ar21_1bustle-ar21.png"
+							src="/steamers/ksp/images/bustle-ar21_1bustle-ar21.png"
 							loading="lazy" alt="" class="logo-img-2 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/futurism.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/futurism.png" loading="lazy" alt=""
 							class="logo-img-3 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/NBC_1NBC.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/NBC_1NBC.png" loading="lazy" alt=""
 							class="logo-img-9 lozad"></div>
 				</div>
 				<div class="content-holder">
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/usa-today-seeklogo.com.png"
+							src="/steamers/ksp/images/usa-today-seeklogo.com.png"
 							loading="lazy" alt="" class="logo-img-8 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/yahoo-new-2019-seeklogo.com-2.png"
+							src="/steamers/ksp/images/yahoo-new-2019-seeklogo.com-2.png"
 							loading="lazy" alt="" class="logo-img-5 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/the-atlantic-magazine-seeklogo.com.png"
+							src="/steamers/ksp/images/the-atlantic-magazine-seeklogo.com.png"
 							loading="lazy" alt="" class="logo-img-6 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/us-weekly-magazine_1us-weekly-magazine.png"
+							src="/steamers/ksp/images/us-weekly-magazine_1us-weekly-magazine.png"
 							loading="lazy" alt="" class="logo-img-7 lozad"></div>
 				</div>
 				<div class="content-holder">
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/nbc002_logo_vertical_bw_1nbc002_logo_vertical_bw.png"
+							src="/steamers/ksp/images/nbc002_logo_vertical_bw_1nbc002_logo_vertical_bw.png"
 							loading="lazy" alt="" class="logo-img-9 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/bustle-ar21_1bustle-ar21.png"
+							src="/steamers/ksp/images/bustle-ar21_1bustle-ar21.png"
 							loading="lazy" alt="" class="logo-img-2 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/futurism.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/futurism.png" loading="lazy" alt=""
 							class="logo-img-3 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/NBC_1NBC.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/NBC_1NBC.png" loading="lazy" alt=""
 							class="logo-img-9 lozad"></div>
 				</div>
 				<div class="content-holder">
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/lat_logo.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/lat_logo.png" loading="lazy" alt=""
 							class="logo-img lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/hp_logo.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/hp_logo.png" loading="lazy" alt=""
 							class="logo-img-2 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/Allure_logo.png" loading="lazy"
+							src="/steamers/ksp/images/Allure_logo.png" loading="lazy"
 							alt="" class="logo-img-3 lozad"></div>
 					<div class="logo-slide-wrapper"><img
-							src="/steamers/ksp-v1/images/bi_logo.png" loading="lazy" alt=""
+							src="/steamers/ksp/images/bi_logo.png" loading="lazy" alt=""
 							class="logo-img-4 lozad"></div>
 				</div>
 			</div>
-			<div class="logo-center-el"><img src="/steamers/ksp-v1/images/rating_stars.svg"
+			<div class="logo-center-el"><img src="/steamers/ksp/images/rating_stars.svg"
 					loading="lazy" alt="" class="star-icon">
 				<div class="text-block-2">124,878+<br>happy customers</div>
 			</div>
@@ -450,7 +483,7 @@
 					<div class="section-1-list">
 						<div class="section-1-item">
 							<div class="list-icon-wrapper"><img
-									src="/steamers/ksp-v1/images/clock-icon.svg"
+									src="/steamers/ksp/images/clock-icon.svg"
 									loading="lazy" alt="" class="list-icon"></div>
 							<div class="section-1-item-info">
 								<h4 class="mb-5">Quick and Simple Aromatherapy</h4>
@@ -460,7 +493,7 @@
 						</div>
 						<div class="section-1-item-2">
 							<div class="list-icon-wrapper"><img
-									src="/steamers/ksp-v1/images/smile-icon.svg"
+									src="/steamers/ksp/images/smile-icon.svg"
 									loading="lazy" alt="" class="list-icon"></div>
 							<div class="section-1-item-info">
 								<h4 class="mb-5">Energize, Relax, or Clarify</h4>
@@ -470,7 +503,7 @@
 						</div>
 						<div class="section-1-item section-1-item-2">
 							<div class="list-icon-wrapper"><img
-									src="/steamers/ksp-v1/images/breathe-icon.svg"
+									src="/steamers/ksp/images/breathe-icon.svg"
 									loading="lazy" alt="" class="list-icon"></div>
 							<div class="section-1-item-info">
 								<h4 class="mb-5">Breathe easy and decongest</h4>
@@ -480,7 +513,7 @@
 						</div>
 						<div class="section-1-item mb-0 section-1-item-3">
 							<div class="list-icon-wrapper"><img
-									src="/steamers/ksp-v1/images/relieve-icon.svg"
+									src="/steamers/ksp/images/relieve-icon.svg"
 									loading="lazy" alt="" class="list-icon"></div>
 							<div class="section-1-item-info">
 								<h4 class="mb-5">Relieve stress</h4>
@@ -498,7 +531,7 @@
 						<p class="md-text">Breathe deeply and clear your airways without pumping them with nasty
 							chemicals and toxic ingredients.</p>
 						<div class="video-block-wrapper">
-							<img src="/steamers/ksp-v1/images/side_1.jpg"alt="">
+							<img src="/steamers/ksp/images/side_1.jpg"alt="">
 						</div>
 					</div>
 					<div class="video-info-block">
@@ -507,7 +540,7 @@
 							designed lavender scent, plus, enjoy improved mindfulness and better all-round respiration
 						</p>
 						<div class="video-block-wrapper">
-							<img src="/steamers/ksp-v1/images/side_2.jpg"alt="">
+							<img src="/steamers/ksp/images/side_2.jpg"alt="">
 						</div>
 					</div>
 					<div class="video-info-block">
@@ -515,7 +548,7 @@
 						<p class="md-text">Choose our invigorating citrus scent for a powerful lasting energy boost,
 							plus enhanced focus thanks to better sleep and clearer airway</p>
 						<div class="video-block-wrapper">
-							<img src="/steamers/ksp-v1/images/side_3.jpg"alt="">
+							<img src="/steamers/ksp/images/side_3.jpg"alt="">
 						</div>
 					</div>
 					<div class="video-info-block">
@@ -524,7 +557,7 @@
 						<p class="md-text">Treat yourself or a loved one to the spa experience you’re always too busy
 							for, all from the comfort of your own home.</p>
 						<div class="video-block-wrapper">
-							<img src="/steamers/ksp-v1/images/side_4.jpg"alt="">
+							<img src="/steamers/ksp/images/side_4.jpg"alt="">
 						</div>
 					</div>
 					<div class="video-info-block">
@@ -533,7 +566,7 @@
 						<p class="md-text">You don't need a bath to relax -our Shower Steamers are quick and easy to use
 							in your apartment, hotel room, or even at the gym</p>
 						<div class="video-block-wrapper">
-							<img src="/steamers/ksp-v1/images/side_5.jpg"alt="">
+							<img src="/steamers/ksp/images/side_5.jpg"alt="">
 						</div>
 					</div>
 					<div class="video-info-block">
@@ -541,7 +574,7 @@
 						<p class="md-text">Please your steamers in the shower away from the direct jet of water and
 							allow occasional water drops and steam to release the aroma within seconds</p>
 						<div class="video-block-wrapper">
-							<img src="/steamers/ksp-v1/images/side_6.jpg"alt="">
+							<img src="/steamers/ksp/images/side_6.jpg"alt="">
 						</div>
 					</div>
 					<div class="video-info-block mb-0">
@@ -549,7 +582,7 @@
 						<p class="md-text">Experience luxurious natural scents with ingredients completely free of talc,
 							SLS, and parabens</p>
 						<div class="video-block-wrapper">
-							<img src="/steamers/ksp-v1/images/side_7.jpg"alt="">
+							<img src="/steamers/ksp/images/side_7.jpg"alt="">
 						</div>
 					</div>
 				</div>
@@ -560,7 +593,7 @@
 				<div class="section-wrapper">
 					<div class="section-2-head">
 						<div class="product-info-head mb-0"><img
-								src="/steamers/ksp-v1/images/rating_stars.svg" loading="lazy"
+								src="/steamers/ksp/images/rating_stars.svg" loading="lazy"
 								alt="rating-stars" class="rating-stars-2">
 							<p class="reviews-text">5,382 REVIEWS</p>
 						</div>
@@ -569,18 +602,18 @@
 					</div>
 					<div class="reviews-list">
 						<div class="review-item-2">
-							<div class="review-item-image-wrapper"><img data-src="/steamers/ksp-v1/images/review_1.jpg"
+							<div class="review-item-image-wrapper"><img data-src="/steamers/ksp/images/review_1.jpg"
 									loading="lazy" alt="" class="review-person lozad"></div>
 							<div class="review-info">
 								<div class="review-info-head-2">
 									<div class="review-info-head-block">
 										<div class="person-name-2">Rebecca M.</div>
 										<div class="verified-sc"><img
-												src="/steamers/ksp-v1/images/checkmark.svg"
+												src="/steamers/ksp/images/checkmark.svg"
 												loading="lazy" alt="" class="check-green">
 											<div class="verified-text">VERIFIED BUYER</div>
 										</div>
-									</div><img src="/steamers/ksp-v1/images/rating_stars.svg"
+									</div><img src="/steamers/ksp/images/rating_stars.svg"
 										loading="lazy" alt="">
 								</div>
 								<p class="review-text">Miracle shower steamers are fabulous! I feel like my shower is
@@ -589,18 +622,18 @@
 							</div>
 						</div>
 						<div class="review-item-2">
-							<div class="review-item-image-wrapper"><img data-src="/steamers/ksp-v1/images/Carla T.jpg"
+							<div class="review-item-image-wrapper"><img data-src="/steamers/ksp/images/Carla T.jpg"
 									loading="lazy" alt="" class="review-person lozad"></div>
 							<div class="review-info">
 								<div class="review-info-head-2">
 									<div class="review-info-head-block">
 										<div class="person-name-2">Carla Tess</div>
 										<div class="verified-sc"><img
-												src="/steamers/ksp-v1/images/checkmark.svg"
+												src="/steamers/ksp/images/checkmark.svg"
 												loading="lazy" alt="" class="check-green">
 											<div class="verified-text">VERIFIED BUYER</div>
 										</div>
-									</div><img src="/steamers/ksp-v1/images/rating_stars.svg"
+									</div><img src="/steamers/ksp/images/rating_stars.svg"
 										loading="lazy" alt="">
 								</div>
 								<p class="review-text">these shower steamers smell soooo good and leave such a wonderful
@@ -611,20 +644,20 @@
 						</div>
 						<div class="review-item-2">
 							<div class="review-item-image-wrapper relative-wrapper"><img
-									data-src="/steamers/ksp-v1/images/review-3.jpg" loading="lazy" alt=""
+									data-src="/steamers/ksp/images/review-3.jpg" loading="lazy" alt=""
 									class="review-person lozad">
-								<img class="non-photo" src="/steamers/ksp-v1/images/no-photo.png" alt="">
+								<img class="non-photo" src="/steamers/ksp/images/no-photo.png" alt="">
 							</div>
 							<div class="review-info">
 								<div class="review-info-head-2">
 									<div class="review-info-head-block">
 										<div class="person-name-2">Nancy N.</div>
 										<div class="verified-sc"><img
-												src="/steamers/ksp-v1/images/checkmark.svg"
+												src="/steamers/ksp/images/checkmark.svg"
 												loading="lazy" alt="" class="check-green">
 											<div class="verified-text">VERIFIED BUYER</div>
 										</div>
-									</div><img src="/steamers/ksp-v1/images/rating_stars.svg"
+									</div><img src="/steamers/ksp/images/rating_stars.svg"
 										loading="lazy" alt="">
 								</div>
 								<p class="review-text">
@@ -634,18 +667,18 @@
 							</div>
 						</div>
 						<div class="review-item-2">
-							<div class="review-item-image-wrapper"><img data-src="/steamers/ksp-v1/images/Thomas C.jpg"
+							<div class="review-item-image-wrapper"><img data-src="/steamers/ksp/images/Thomas C.jpg"
 									alt="" class="review-person lozad"></div>
 							<div class="review-info">
 								<div class="review-info-head-2">
 									<div class="review-info-head-block">
 										<div class="person-name-2">Thomas C</div>
 										<div class="verified-sc"><img
-												src="/steamers/ksp-v1/images/checkmark.svg"
+												src="/steamers/ksp/images/checkmark.svg"
 												loading="lazy" alt="" class="check-green">
 											<div class="verified-text">VERIFIED BUYER</div>
 										</div>
-									</div><img src="/steamers/ksp-v1/images/rating_stars.svg"
+									</div><img src="/steamers/ksp/images/rating_stars.svg"
 										loading="lazy" alt="">
 								</div>
 								<p class="review-text">
@@ -657,18 +690,18 @@
 						</div>
 						<div class="review-item-2">
 							<div class="review-item-image-wrapper"><img
-									src="/steamers/ksp-v1/images/review_7.jpg"
+									src="/steamers/ksp/images/review_7.jpg"
 									loading="lazy" alt="" class="review-person lozad"></div>
 							<div class="review-info">
 								<div class="review-info-head-2">
 									<div class="review-info-head-block">
 										<div class="person-name-2">Tiffany V.</div>
 										<div class="verified-sc"><img
-												src="/steamers/ksp-v1/images/checkmark.svg"
+												src="/steamers/ksp/images/checkmark.svg"
 												loading="lazy" alt="" class="check-green">
 											<div class="verified-text">VERIFIED BUYER</div>
 										</div>
-									</div><img src="/steamers/ksp-v1/images/rating_stars.svg"
+									</div><img src="/steamers/ksp/images/rating_stars.svg"
 										loading="lazy" alt="">
 								</div>
 								<p class="review-text">I’ve finally found a shower steamer that I like! They will last
@@ -678,38 +711,38 @@
 						</div>
 						<div class="review-item-2">
 							<div class="review-item-image-wrapper relative-wrapper">
-								<img data-src="/steamers/ksp-v1/images/review-2.jpg" loading="lazy" alt=""
+								<img data-src="/steamers/ksp/images/review-2.jpg" loading="lazy" alt=""
 									class="review-person lozad">
-								<img class="non-photo" src="/steamers/ksp-v1/images/no-photo.png" alt="">
+								<img class="non-photo" src="/steamers/ksp/images/no-photo.png" alt="">
 							</div>
 							<div class="review-info">
 								<div class="review-info-head-2">
 									<div class="review-info-head-block">
 										<div class="person-name-2">Nancy R.</div>
 										<div class="verified-sc"><img
-												src="/steamers/ksp-v1/images/checkmark.svg"
+												src="/steamers/ksp/images/checkmark.svg"
 												loading="lazy" alt="" class="check-green">
 											<div class="verified-text">VERIFIED BUYER</div>
 										</div>
-									</div><img src="/steamers/ksp-v1/images/rating_stars.svg"
+									</div><img src="/steamers/ksp/images/rating_stars.svg"
 										loading="lazy" alt="">
 								</div>
 								<p class="review-text">Love this product.</p>
 							</div>
 						</div>
 						<div class="review-item-2">
-							<div class="review-item-image-wrapper"><img data-src="/steamers/ksp-v1/images/Andy M.jpg"
+							<div class="review-item-image-wrapper"><img data-src="/steamers/ksp/images/Andy M.jpg"
 									loading="lazy" alt="" class="review-person lozad"></div>
 							<div class="review-info">
 								<div class="review-info-head-2">
 									<div class="review-info-head-block">
 										<div class="person-name-2">Andy M</div>
 										<div class="verified-sc"><img
-												src="/steamers/ksp-v1/images/checkmark.svg"
+												src="/steamers/ksp/images/checkmark.svg"
 												loading="lazy" alt="" class="check-green">
 											<div class="verified-text">VERIFIED BUYER</div>
 										</div>
-									</div><img src="/steamers/ksp-v1/images/rating_stars.svg"
+									</div><img src="/steamers/ksp/images/rating_stars.svg"
 										loading="lazy" alt="">
 								</div>
 								<p class="review-text">I recently purchased some shower steamers and absolutely LOVE
@@ -720,18 +753,18 @@
 						</div>
 						<div class="review-item-2">
 							<div class="review-item-image-wrapper"><img
-									src="/steamers/ksp-v1/images/review_5.jpg"
+									src="/steamers/ksp/images/review_5.jpg"
 									loading="lazy" alt="" class="review-person lozad"></div>
 							<div class="review-info">
 								<div class="review-info-head-2">
 									<div class="review-info-head-block">
 										<div class="person-name-2">Mel V.</div>
 										<div class="verified-sc"><img
-												src="/steamers/ksp-v1/images/checkmark.svg"
+												src="/steamers/ksp/images/checkmark.svg"
 												loading="lazy" alt="" class="check-green">
 											<div class="verified-text">VERIFIED BUYER</div>
 										</div>
-									</div><img src="/steamers/ksp-v1/images/rating_stars.svg"
+									</div><img src="/steamers/ksp/images/rating_stars.svg"
 										loading="lazy" alt="">
 								</div>
 								<p class="review-text">I bought these as a gift for my partner, and they’re amazing!
@@ -755,7 +788,7 @@
 					<div class="try-sc">
 						<div class="try-sc-item">
 							<div class="try-icon-wrapper"><img
-									src="/steamers/ksp-v1/images/calendar.svg" loading="lazy"
+									src="/steamers/ksp/images/calendar.svg" loading="lazy"
 									alt="try-sc-img" class="try-sc-img"></div>
 							<h4 class="try-it-title">30-day trial</h4>
 							<div class="try-sc-texts">
@@ -765,7 +798,7 @@
 						</div>
 						<div class="try-sc-item">
 							<div class="try-icon-wrapper"><img
-									src="/steamers/ksp-v1/images/shipping.svg" loading="lazy"
+									src="/steamers/ksp/images/shipping.svg" loading="lazy"
 									alt="try-sc-img" class="try-sc-img"></div>
 							<h4 class="try-it-title"><span class="ca-fast">Free</span> shipping</h4>
 							<div class="try-sc-texts-2">
@@ -775,7 +808,7 @@
 						</div>
 						<div class="try-sc-item">
 							<div class="try-icon-wrapper"><img
-									src="/steamers/ksp-v1/images/shipping.svg" loading="lazy"
+									src="/steamers/ksp/images/shipping.svg" loading="lazy"
 									alt="try-sc-img" class="try-sc-img reverse"></div>
 							<h4 class="try-it-title">Free returns</h4>
 							<div class="try-sc-texts-3">
@@ -797,7 +830,7 @@
 							<div class="faq-item faq-itemborder">
 								<div class="faq-item-head">
 									<div class="question-text">What is a shower steamer?</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -811,7 +844,7 @@
 							<div class="faq-item faq-itemborder">
 								<div class="faq-item-head">
 									<div class="question-text">Does it use chemicals? </div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -825,7 +858,7 @@
 							<div class="faq-item faq-itemborder">
 								<div class="faq-item-head">
 									<div class="question-text">What are the ingredients?</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -839,7 +872,7 @@
 							<div class="faq-item faq-itemborder">
 								<div class="faq-item-head">
 									<div class="question-text">How do you use a shower steamer?</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -857,7 +890,7 @@
 								<div class="faq-item-head">
 									<div class="question-text">Will the shower steamer make the floor slippery or create
 										stains?</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -871,7 +904,7 @@
 							<div class="faq-item faq-itemborder">
 								<div class="faq-item-head">
 									<div class="question-text">Can I use this like a bath bomb?</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -887,7 +920,7 @@
 							<div class="faq-item faq-itemborder">
 								<div class="faq-item-head">
 									<div class="question-text">Does it work with hot and cold water?</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -902,7 +935,7 @@
 							<div class="faq-item faq-itemborder">
 								<div class="faq-item-head">
 									<div class="question-text">Do the shower steamers have a shelf life?</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -918,7 +951,7 @@
 							<div class="faq-item faq-itemborder">
 								<div class="faq-item-head">
 									<div class="question-text">How long does a shower steamer last?</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -933,7 +966,7 @@
 							<div class="faq-item faq-itemborder">
 								<div class="faq-item-head">
 									<div class="question-text">Are the showers safe for kids? For pregnant women?</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -950,7 +983,7 @@
 								<div class="faq-item-head">
 									<div class="question-text">Is it safe for the shower steamer to touch the skin?
 									</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -967,7 +1000,7 @@
 							<div class="faq-item faq-itemborder">
 								<div class="faq-item-head">
 									<div class="question-text">How does our return policy work?</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
@@ -975,7 +1008,7 @@
 										<p class="faq-text">
 											You have 30 days after the product has been delivered to return it, even if
 											used! To start a return process, you can email us at <a
-												href="mailto:hello@miraclebrand.co">hello@miraclebrand.co</a> and we
+												href="mailto:help@support.miraclebrand.co">help@support.miraclebrand.co</a> and we
 											will send you the instructions where you can obtain your shipping label.
 										</p>
 									</div>
@@ -984,14 +1017,14 @@
 							<div class="faq-item faq-itemborder">
 								<div class="faq-item-head">
 									<div class="question-text">How do I get in touch?</div>
-									<img data-src="/steamers/ksp-v1/images/down-arrow.svg"
+									<img data-src="/steamers/ksp/images/down-arrow.svg"
 										alt="Dropdown Arrow" class="lozad faq-icon" />
 								</div>
 								<div class="faq-content">
 									<div class="faq-content-wrapper">
 										<p class="faq-text">
 											You can contact us at <a
-												href="mailto:hello@miraclebrand.co">hello@miraclebrand.co</a> for
+												href="mailto:help@support.miraclebrand.co">help@support.miraclebrand.co</a> for
 											general inquiries and updates regarding your order. If you have a more
 											urgent request for exchanges, cancellations or modifications, you can
 											contact us at <a
@@ -1010,7 +1043,7 @@
 		<footer class="footer wf-section">
 			<div class="container">
 				<div class="footer-wrapper"><img
-						src="/steamers/ksp-v1/images/logo_footer.svg" loading="lazy"
+						src="/steamers/ksp/images/logo_footer.svg" loading="lazy"
 						alt="Footer-Logo" class="footer-logo">
 					<div class="footer-copy-sc">
 						<div class="links-footer-1">
@@ -1023,12 +1056,12 @@
 							<a href="https://help.miraclebrand.co/en-US" target="_blank" class="link-footer">Policies
 								And Helpdesk</a>
 						</div>
-						<p class="footer-copy-1">©️ 2024 Pattern Brands LLC. All Rights Reserved.</p>
+						<p class="footer-copy-1">©️ 2025 Pattern Brands LLC. All Rights Reserved.</p>
 					</div>
 					<p class="footer-text-info">You can email us anytime at <a href="mailto:orders@miraclebrand.co."
 							class="link-f">orders@miraclebrand.co.</a>
 					</p>
-					<div class="cc-list-2"><img src="/steamers/ksp-v1/images/credit-card-icons.svg" loading="lazy" alt="cc-img" class="cc-img">
+					<div class="cc-list-2"><img src="/steamers/ksp/images/credit-card-icons.svg" loading="lazy" alt="cc-img" class="cc-img">
 				</div>
 			</div>
 		</footer>
@@ -1036,12 +1069,12 @@
 	<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=626bc78519c9a79ffb83a6b9"
 		type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
 		crossorigin="anonymous"></script>
-	<script src="/steamers/ksp-v1/js/swiper.min.js" type="text/javascript"></script>
+	<script src="/steamers/ksp/js/swiper.min.js" type="text/javascript"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
 	<script type="text/javascript" defer src="https://cdn.shopmiraclebrand.co/js/cart_loader.js"></script>
 	<script type="text/javascript" async="" src="https://try.miraclebrand.co/pixel.js"></script>
 
-	<script src="/steamers/ksp-v1/js/custom.js"></script>
+	<script src="./js/custom.js"></script>
 
 	<!-- Begin: Northbeam Pixel -->
 	<script async type="text/javascript" src="//j.northbeam.io/ota-sp/d6b41dbb-ce9e-4e1e-bdc2-36492a0d7ac1.js"></script>

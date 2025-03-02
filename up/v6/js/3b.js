@@ -2,18 +2,22 @@ const variants = {
 	"1": {
 		"signature": {
 			"standard": {
+				/*
 				"stone": {
 					"variantId": 39509018149014,
 					"price": 44
 				},
+				*/
 				"white": {
 					"variantId": 39509018214550,
 					"price": 44
 				},
+				/*
 				"sky_blue": {
 					"variantId": 39509018280086,
 					"price": 44
 				},
+				*/
 				"navy": {
 					"variantId": 42193748295830,
 					"price": 44
@@ -98,10 +102,12 @@ const variants = {
 		},
 		"luxe": {
 			"standard": {
+				/*
 				"stone": {
 					"variantId": 39509018181782,
 					"price": 49
 				},
+				*/
 				"white": {
 					"variantId": 39509018247318,
 					"price": 49
@@ -176,12 +182,10 @@ const variants = {
 					"variantId": 42310611566742,
 					"price": 49
 				},
-				/*
 				"rosewood": {
 					"variantId": 44267100012694,
 					"price": 49
 				},
-				*/
 				"slate_blue": {
 					"variantId": 43880188674198,
 					"price": 49

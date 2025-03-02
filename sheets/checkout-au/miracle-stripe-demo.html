@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.shopmiraclebrand.co/js/cart_loader.js"></script>
+
+    <script>
+      document.addEventListener("checkout_failed", () => {
+        console.log("Saw event checkout_failed");
+      });
+    </script>
+
+    <!-- These must be set -->
+    <meta content="api.shopmiraclebrand.co" name="checkout-api-endpoint" >
+    <meta content="40509700014230" name="checkout-default-variant-id" >
+
+    <meta content="US" name="checkout-default-shipping-zone">
+    <meta content="/paypalconfirm.html" name="checkout-paypal-confirm-url">
+    <meta content="funnelName123" name="checkout-funnel-name">
+    <meta content="lander123" name="checkout-landing-page-name">
+    <meta content="sales123"  name="checkout-order-tag">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="true" name="checkout-track-stock-global">
+
+    <title>Test Page - Local</title>
+
+  <body>
+    <h2>Combo Checkout (WITH STRIPE)</h2>
+    <div class="checkout-cart-display"
+    data-show-tax-pending-message="true"
+    data-show-compare-pricing="true"
+    data-show-product-images="true"
+    data-currency-symbol="$"
+    data-show-vat-included="true"
+    >
+</div>
+
+
+    <hr>
+
+
+
+        <!-- Note that a class is added here for whatever combo mode you're using, e.g. checkout-combo-credit or checkout-combo-ideal -->
+        <form class="checkout-combo-form" method="post">
+          <h4>Contact Information</h4>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email">
+          </div>
+
+          <h4>Shipping Address</h4>
+
+          <div class="form-group">
+            <label for="shipping_first_name">First Name</label>
+            <input type="text" id="shipping_first_name" name="shipping_first_name">
+          </div>
+
+          <div class="form-group">
+            <label for="shipping_last_name">Last Name</label>
+            <input id="shipping_last_name" type="text" name="shipping_last_name">
+          </div>
+
+          <div class="form-group">
+            <label for="shipping_address_1">Address 1</label>
+            <input id="shipping_address_1" type="text" name="shipping_address1">
+          </div>
+
+          <div class="form-group">
+            <label for="shipping_address_2">Address 2</label>
+            <input id="shipping_address_2" type="text" name="shipping_address2">
+          </div>
+
+          <div class="form-group">
+            <label for="shipping_city">City</label>
+            <input id="shipping_city" type="text" name="shipping_city">
+          </div>
+
+          <div class="form-group">
+            <label for="shipping_state">State</label>
+            <select id="shipping_state" name="shipping_state">
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="shipping_postal_code">ZIP Code</label>
+            <input type="text" id="shipping_postal_code" name="shipping_postal_code">
+          </div>
+
+          <div class="form-group">
+            <label for="shipping_country">Country</label>
+            <select id="shipping_country" name="shipping_country">
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="shipping_phone">Phone</label>
+            <input id="shipping_phone" type="text" name="shipping_phone">
+          </div>
+
+          <h4>Billing Address</h4>
+
+          <div class="form-group">
+            <input type="radio" id="billing_use_shipping_true" name="billing_use_shipping" value="true" checked>
+            <label for="billing_use_shipping_true">Same as Shipping Address</label>
+
+            <input type="radio" id="billing_use_shipping_false" name="billing_use_shipping" value="false">
+            <label for="billing_use_shipping_false">Use a different billing address</label>
+          </div>
+
+
+          <!-- To automatically hide billing fields, we wrap them all in a container -->
+          <!-- See CSS above -->
+          <div class="checkout-billing-fields">
+            <div class="form-group">
+              <label for="billing_first_name">First Name</label>
+              <input type="text" id="billing_first_name" name="billing_first_name">
+            </div>
+
+            <div class="form-group">
+              <label for="billing_last_name">Last Name</label>
+              <input id="billing_last_name" type="text" name="billing_last_name">
+            </div>
+
+            <div class="form-group">
+              <label for="billing_address_1">Address 1</label>
+              <input id="billing_address_1" type="text" name="billing_address1">
+            </div>
+
+            <div class="form-group">
+              <label for="billing_address_2">Address 2</label>
+              <input id="billing_address_2" type="text" name="billing_address2">
+            </div>
+
+            <div class="form-group">
+              <label for="billing_city">City</label>
+              <input id="billing_city" type="text" name="billing_city">
+            </div>
+
+
+            <div class="form-group">
+              <label for="billing_state">State</label>
+              <select id="billing_state" name="billing_state" data-country="US">
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="billing_postal_code">ZIP Code</label>
+              <input type="text" id="billing_postal_code" name="billing_postal_code">
+            </div>
+
+            <div class="form-group">
+              <label for="billing_country">Country</label>
+              <select id="billing_country" name="billing_country">
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="billing_phone">Phone</label>
+              <input id="billing_phone" type="text" name="billing_phone">
+            </div>
+          </div>
+
+          <h4>Credit Card</h4>
+          <div class="form-group">
+            <div class="frm-flds fl">
+              <div id="stripe-cc-number"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="frm-flds half-fld fl">
+              <div id="stripe-exp"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="frm-flds half-fld fr">
+              <div id="stripe-cvv"></div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <input type="radio" id="combo_mode_credit" name="combo_mode" value="credit" checked>
+            <label for="combo_mode_credit">Use Credit</label>
+          </div>
+
+
+          <div class="form-group">
+            <label>Accepts Marketing?</label>
+            <input type="checkbox" name="accepts_marketing" checked="">
+          </div>
+
+          <div class="form-group">
+            <label>Accepts Attentive?</label>
+            <input type="checkbox" name="accepts_attentive">
+          </div>
+
+          <button class="checkout-submit-combo">Buy</button>
+        </form>
+  </body>
+</html>

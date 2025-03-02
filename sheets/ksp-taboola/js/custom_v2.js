@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			},
 			twinxl: {
 				//stone: { variantId: 43965127753878, productTitle: 'Stone Sheet Set - Twin', price: 109, regularPrice: 204, productSavings: 46, productReviews: 241, imgUrl: 'images/3pc-stone.png' },
-				white: { variantId: 43965116612758, productTitle: 'White Sheet Set - Twin', price: 109, regularPrice: 204, productSavings: 46, productReviews: 241, imgUrl: 'images/3pc-white.png' },
+				//white: { variantId: 43965116612758, productTitle: 'White Sheet Set - Twin', price: 109, regularPrice: 204, productSavings: 46, productReviews: 241, imgUrl: 'images/3pc-white.png' },
 				// sand: { variantId: 14441425010732, productTitle: 'Sand Sheet Set - Twin', price: 109, regularPrice: 204, productSavings: 46, productReviews: 241, imgUrl: 'images/sand-sheets.png' },
 				//  sky_blue: { variantId: 40509700178070, productTitle: 'Sky Blue Sheet Set - Twin', price: 109, regularPrice: 204, productSavings: 46, productReviews: 241, imgUrl: 'images/3pc-sky.png' },
 			},
@@ -106,25 +106,25 @@ document.addEventListener('DOMContentLoaded', function() {
 				stone: { variantId: 42636035260566, productTitle: 'Stone Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: 'images/3pc-stone.png' },
 				white: { remaining : 9, variantId: 42636035391638, productTitle: 'White Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: 'images/3pc-white.png' },
 				sand: { variantId: 42636035358870, productTitle: 'Sand Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: 'images/sand-sheets.png' },
-				sky_blue: { remaining : 3, variantId: 42636035326102, productTitle: 'Sky Blue Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: 'images/3pc-sky.png' },
+				//sky_blue: { remaining : 3, variantId: 42636035326102, productTitle: 'Sky Blue Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: 'images/3pc-sky.png' },
 				navy_blue: { variantId: 42636035293334, productTitle: 'Navy Blue Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
 				sage: { limitedEdition: true, variantId: 42636035489942, productTitle: 'Sage Sheet Set - Queen', price: 164, regularPrice: 259, productSavings: 36, productReviews: 439, imgUrl: '' },
 				charcoal: { variantId: 42636035522710, productTitle: 'Charcoal Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
 				terracotta: { limitedEdition: true, variantId: 42636035588246, productTitle: 'Terracotta Sheet Set - Queen', price: 139, regularPrice: 234, productSavings: 40, productReviews: 439, imgUrl: '' },
-				slate_blue: { variantId: 43623967719574, productTitle: 'Slate Blue Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
+				//slate_blue: { variantId: 43623967719574, productTitle: 'Slate Blue Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
 				silver_grey: { variantId: 43623998488726, productTitle: 'Silver Grey Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
-				rosewood: { variantId: 44247335829654, productTitle: 'Rosewood Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },				
+				//rosewood: { variantId: 44247335829654, productTitle: 'Rosewood Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },				
 			},
 			king: {
 				stone: { remaining : 8, variantId: 42636035948694, productTitle: 'Stone Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-stone.png' },
-				white: { remaining : 2, variantId: 42636036079766, productTitle: 'White Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-white.png' },
+				//white: { remaining : 2, variantId: 42636036079766, productTitle: 'White Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-white.png' },
 				sand: { variantId: 42636036046998, productTitle: 'Sand Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/sand-sheets.png' },
-				sky_blue: { remaining : 13, variantId: 42636036014230, productTitle: 'Sky Blue Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-sky.png' },
+				//sky_blue: { remaining : 13, variantId: 42636036014230, productTitle: 'Sky Blue Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-sky.png' },
 				navy_blue: { variantId: 42636035981462, productTitle: 'Navy Blue Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
 				sage: { limitedEdition: true, variantId: 42636036210838, productTitle: 'Sage Sheet Set - King', price: 174, regularPrice: 270, productSavings: 35, productReviews: 234, imgUrl: '' },
 				charcoal: { variantId: 42636036145302, productTitle: 'Charcoal Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
 				terracotta: {limitedEdition: true, variantId: 42636036276374, productTitle: 'Terracotta Sheet Set - King', price: 149, regularPrice: 245, productSavings: 39, productReviews: 234, imgUrl: '' },
-				//slate_blue: { variantId: 43624013463702, productTitle: 'Charcoal Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
+				slate_blue: { variantId: 43624013463702, productTitle: 'Charcoal Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
 				silver_grey: { variantId: 43624015265942, productTitle: 'Terracotta Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
 				rosewood: { variantId: 44247335862422, productTitle: 'Rosewood Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
 			},
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			},
 			twinxl: {
 				//stone: { variantId: 43965143613590, productTitle: 'Stone Sheet Set - Twin', price: 109, regularPrice: 204, productSavings: 46, productReviews: 241, imgUrl: 'images/3pc-stone.png' },
-				white: { variantId: 43965147611286, productTitle: 'White Sheet Set - Twin', price: 109, regularPrice: 204, productSavings: 46, productReviews: 241, imgUrl: 'images/3pc-white.png' },
+				//white: { variantId: 43965147611286, productTitle: 'White Sheet Set - Twin', price: 109, regularPrice: 204, productSavings: 46, productReviews: 241, imgUrl: 'images/3pc-white.png' },
 				// sand: { variantId: 14441425010732, productTitle: 'Sand Sheet Set - Twin', price: 109, regularPrice: 204, productSavings: 46, productReviews: 241, imgUrl: 'images/sand-sheets.png' },
 				//  sky_blue: { variantId: 40509700178070, productTitle: 'Sky Blue Sheet Set - Twin', price: 109, regularPrice: 204, productSavings: 46, productReviews: 241, imgUrl: 'images/3pc-sky.png' },
 			},
@@ -163,28 +163,28 @@ document.addEventListener('DOMContentLoaded', function() {
 				stone: { variantId: 42558763073686, productTitle: 'Stone Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: 'images/3pc-stone.png' },
 				white: { remaining : 9, variantId: 42558763237526, productTitle: 'White Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: 'images/3pc-white.png' },
 				sand: { variantId: 42558763139222, productTitle: 'Sand Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: 'images/sand-sheets.png' },
-				sky_blue: { remaining : 3, variantId: 42558763270294, productTitle: 'Sky Blue Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: 'images/3pc-sky.png' },
+				//sky_blue: { remaining : 3, variantId: 42558763270294, productTitle: 'Sky Blue Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: 'images/3pc-sky.png' },
 				navy_blue: { variantId: 42558763106454, productTitle: 'Navy Blue Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
-				sage: { variantId: 42558764843158, productTitle: 'Sage Sheet Set - Queen', price: 164, regularPrice: 259, productSavings: 36, productReviews: 439, imgUrl: '' },
+				sage: { variantId: 42558765236374, productTitle: 'Sage Sheet Set - Queen', price: 164, regularPrice: 259, productSavings: 36, productReviews: 439, imgUrl: '' },
 				charcoal: {limitedEdition: true, variantId: 42558764875926, productTitle: 'Charcoal Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
-				terracotta: {limitedEdition: true, variantId: 42558764908694, productTitle: 'Terracotta Sheet Set - Queen', price: 139, regularPrice: 234, productSavings: 42, productReviews: 439, imgUrl: '' },
-				slate_blue: { variantId: 43624117403798, productTitle: 'Slate Blue Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
+				terracotta: {limitedEdition: true, variantId: 42558765170838, productTitle: 'Terracotta Sheet Set - Queen', price: 139, regularPrice: 234, productSavings: 42, productReviews: 439, imgUrl: '' },
+				//slate_blue: { variantId: 43624117403798, productTitle: 'Slate Blue Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
 				silver_grey: { variantId: 43624144437398, productTitle: 'Silver Grey Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
-				rosewood: { variantId: 44247342743702, productTitle: 'Silver Grey Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
+				//rosewood: { variantId: 44247342743702, productTitle: 'Silver Grey Sheet Set - Queen', price: 129, regularPrice: 224, productSavings: 42, productReviews: 439, imgUrl: '' },
 			},
 			king: {
 				stone: { remaining : 8, variantId: 42558763761814, productTitle: 'Stone Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-stone.png' },
-				white: { remaining : 2, variantId: 42558763925654, productTitle: 'White Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-white.png' },
+				//white: { remaining : 2, variantId: 42558763925654, productTitle: 'White Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-white.png' },
 				sand: { variantId: 42558763827350, productTitle: 'Sand Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/sand-sheets.png' },
-				sky_blue: { remaining : 13, variantId: 42558763958422, productTitle: 'Sky Blue Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-sky.png' },
+				//sky_blue: { remaining : 13, variantId: 42558763958422, productTitle: 'Sky Blue Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-sky.png' },
 				navy_blue: { variantId: 42558763794582, productTitle: 'Navy Blue Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
-				sage: { variantId: 42558764646550, productTitle: 'Sage Sheet Set - King', price: 174, regularPrice: 270, productSavings: 35, productReviews: 234, imgUrl: '' },
+				sage: { variantId: 42558765301910, productTitle: 'Sage Sheet Set - King', price: 174, regularPrice: 270, productSavings: 35, productReviews: 234, imgUrl: '' },
 				charcoal: {limitedEdition: true, variantId: 42558764679318, productTitle: 'Charcoal Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
 				terracotta: {limitedEdition: true, variantId: 42558764712086, productTitle: 'Terracotta Sheet Set - King', price: 149, regularPrice: 245, productSavings: 39, productReviews: 234, imgUrl: '' },
-				//slate_blue: { variantId: 43624154497174, productTitle: 'Charcoal Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
+				slate_blue: { variantId: 43624154497174, productTitle: 'Charcoal Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
 				silver_grey: { variantId: 43624165015702, productTitle: 'Terracotta Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
 				rosewood: { variantId: 44247342776470, productTitle: 'Rosewood Sheet Set - King', price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: '' },
-			},
+			},			
 			cali: {
 				stone: { remaining : 18, variantId: 42558764384406, productTitle: "Cali King \/ Stone \/ Signature (Percale)", price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-stone.png' },
 				sky_blue: {remaining : 8, variantId: 42558764581014, productTitle: "Cali King \/ Sky Blue \/ Signature (Percale)", price: 139, regularPrice: 235, productSavings: 40, productReviews: 234, imgUrl: 'images/3pc-stone.png' }
@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		const freeImage = document.querySelectorAll(".free-image");
 		freeImage.forEach((el) => {
 			if (freeImage) {
-				el.src = `./images/towels/towel_${color}.png`;
+				el.src = `/sheets/ksp-lp/images/towels/towel_${color}.png`;
 			}
 		})
 	}
@@ -647,7 +647,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				scrollToSelectedElements();
 				saveSelections();
 				console.log('Selections saved; exit.');
-			}
+			}			
 		});
 
 		colorEl.addEventListener('mouseenter', function() {
@@ -726,7 +726,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	function updateSlider(color) {
 		console.log('UPDATE SLIDER');
-		const BASE_PATH = './images/sliders';
+		const BASE_PATH = '/sheets/ksp-lp/images/sliders';
 		const sliderContainer = document.querySelector('.slider-box');
 		const thumbnailContainer = document.querySelector('.mobile-hidden .thumbnails');
 		const reqSliderCount = imageCount[color];
@@ -803,7 +803,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	function preloadImages(color) {
-		const BASE_PATH = './images/sliders';
+		const BASE_PATH = '/sheets/ksp-lp/images/sliders';
 		const reqSliderCount = imageCount[color];
 		const imagePromises = [];
 		const imageObjects = [];
@@ -998,28 +998,22 @@ document.addEventListener('DOMContentLoaded', function() {
 					window.checkout.setCart(x);
 					window.checkout.drawCart(x);
 					const targetVariants = [
-						"43965127753878", // TWIN XL STONE
-						"43965143613590", // TWIN XL STONE WITHOUT TOWEL
-						"44247335829654", // ROSEWOOD QUEEN
-						"44247335862422", // ROSEWOOD KING
-						"44247342743702", // ROSEWOOD QUEEN WITHOUT TOWEL
-						"44247342776470", // ROSEWOOD KING WITHOUT TOWEL
-						"43623998488726", // SILVER GREY WITH TOWEL
-						"43624144437398", // SILVER GREY WITHOUT TOWEL
-						"42636035260566", // STONE QUEEN
-						"42558763073686", // STONE QUEEN WITHOUT TOWEL
-						"43623967719574", // SLATE BLUE QUEEN 
-						"43624117403798", // SLATE BLUE QUEEN WITHOUT TOWEL
-						"43965130702998", // SPLIT KING STONE
-						"43965152723094", // SPLIT KING STONE WITHOUT TOWEL
-					];		
+						"42636035489942",
+						"42558765236374",
+						"42636035948694",
+						"42558763761814",
+						"43965130702998",
+						"43965152723094",
+						"43623998488726",
+						"43624144437398"
+					];	
 					
 					const hasAnyTargetVariant = targetVariants.some(variantId => variantId in data);				
 				
 					if (hasAnyTargetVariant) {
-						window.location.href = '/sheets/checkout/index.html?uf=red';
+						window.location.href = '/sheets/checkout/?uf=red';
 					} else {
-						window.location.href = '/sheets/checkout/index.html?uf=green';
+						window.location.href = '/sheets/checkout/?uf=green';
 					}
 				});
 			});

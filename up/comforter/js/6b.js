@@ -9,7 +9,6 @@ const variants = {
 		  "savings": 48,
 		  "savingsRaw": 47.5
 		},
-		/*
 		"white": {
 		  "variantId": "42752000786582",
 		  "reg_price": 200,
@@ -18,7 +17,6 @@ const variants = {
 		  "savings": 48,
 		  "savingsRaw": 47.5
 		},
-		*/
 	  },
 	  "king": {
 		"stone": {

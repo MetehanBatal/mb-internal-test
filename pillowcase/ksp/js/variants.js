@@ -1,232 +1,253 @@
-document.addEventListener('DOMContentLoaded', () => {
-	const customSelect = document.querySelector('.custom-select');
-	const selectSelected = customSelect.querySelector('.select-selected');
-	const selectItems = customSelect.querySelector('.select-items');
-	const options = customSelect.querySelectorAll('.select-option');
-	
-	selectSelected.addEventListener('click', function(e) {
-		e.stopPropagation();
-		selectItems.classList.toggle('select-hide');
-		customSelect.classList.toggle('active');
-	});
-	
-	options.forEach(option => {
-		option.addEventListener('click', function(e) {
-		const selectedValue = this.getAttribute('data-value');
-		selectSelected.textContent = this.textContent;
-				
-		options.forEach(opt => opt.classList.remove('selected'));
-		this.classList.add('selected');
-				
-		selectItems.classList.add('select-hide');
-				
-		handleSizeChange(selectedValue);
-		});
-	});
-	
-	document.addEventListener('click', function() {
-		selectItems.classList.add('select-hide');
-		customSelect.classList.remove('active');
-	});
+jQuery(document).ready(function ($) {
 	const variants = {
 		signature: {
 			standard: {
-				stone: {
-					oneSet: { variantId: 41430706421910, price: 49.99, regularPrice: 75 },
-					twoSet: { variantId: 41430706520214, price: 89.98, regularPrice: 150 },
-					fourSet: { variantId: 41430706618518, price: 149.96, regularPrice: 300 }
+				stone: { 
+					oneSet: { variantId: 41403111374998, productTitle: 'Miracle Set of 1', price: 69.95, regularPrice: 100, productSavings: 30 },
+					twoSet: { variantId: 41403111473302, productTitle: 'Miracle Set of 2', price: 119.92, regularPrice: 200, productSavings: 80 },
+					fourSet: { variantId: 41403111571606, productTitle: 'Miracle Set of 4', price: 179.88, regularPrice: 400, productSavings: 220 }
 				},
-				white: {
-					oneSet: { variantId: 41430706323606, price: 49.99, regularPrice: 75 },
-					twoSet: { variantId: 41430706454678, price: 89.98, regularPrice: 150 },
-					fourSet: { variantId: 41430706552982, price: 149.96, regularPrice: 300 }
+				white: { 
+					oneSet: { variantId: 41403111309462, productTitle: 'Miracle Set of 1', price: 69.95, regularPrice: 100, productSavings: 30 },
+					twoSet: { variantId: 41403111407766, productTitle: 'Miracle Set of 2', price: 119.92, regularPrice: 200, productSavings: 80 },
+					fourSet: { variantId: 41403111506070, productTitle: 'Miracle Set of 4', price: 179.88, regularPrice: 400, productSavings: 220 }
 				},
-				sky_blue: {
-					oneSet: { variantId: 41430706389142, price: 49.99, regularPrice: 75 },
-					twoSet: { variantId: 41430706487446, price: 89.98, regularPrice: 150 },
-					fourSet: { variantId: 41430706585750, price: 149.96, regularPrice: 300 }
-				}
+				sky_blue: { 
+					oneSet: { variantId: 41403111342230, productTitle: 'Miracle Set of 1', price: 69.95, regularPrice: 100, productSavings: 30 },
+					twoSet: { variantId: 41403111440534, productTitle: 'Miracle Set of 2', price: 119.92, regularPrice: 200, productSavings: 80 },
+					fourSet: { variantId: 41403111538838, productTitle: 'Miracle Set of 4', price: 179.88, regularPrice: 400, productSavings: 220 }
+				},
 			},
 			king: {
-				stone: {
-					oneSet: { variantId: 41430706716822, price: 54.99, regularPrice: 85 },
-					twoSet: { variantId: 41430706815126, price: 99.98, regularPrice: 170 },
-					fourSet: { variantId: 41403111866518, price: 159.96, regularPrice: 340 }
+				stone: { 
+					oneSet: { variantId: 41403111669910, productTitle: 'Miracle Set of 1', price: 74.99, regularPrice: 110, productSavings: 35 },
+					twoSet: { variantId: 41403111768214, productTitle: 'Miracle Set of 2', price: 129.98, regularPrice: 220, productSavings: 90 },
+					fourSet: { variantId: 41403111866518, productTitle: 'Miracle Set of 4', price: 199.88, regularPrice: 440, productSavings: 240 }
 				},
-				white: {
-					oneSet: { variantId: 41430706651286, price: 54.99, regularPrice: 85 },
-					twoSet: { variantId: 41430706749590, price: 99.98, regularPrice: 170 },
-					fourSet: { variantId: 41430706847894, price: 159.96, regularPrice: 340 }
+				white: { 
+					oneSet: { variantId: 41403111604374, productTitle: 'Miracle Set of 1', price: 74.99, regularPrice: 110, productSavings: 35 },
+					twoSet: { variantId: 41403111702678, productTitle: 'Miracle Set of 2', price: 129.98, regularPrice: 220, productSavings: 90 },
+					fourSet: { variantId: 41403111800982, productTitle: 'Miracle Set of 4', price: 199.88, regularPrice: 440, productSavings: 240 }
 				},
-				sky_blue: {
-					oneSet: { variantId: 41430706684054, price: 54.99, regularPrice: 85 },
-					twoSet: { variantId: 41430706782358, price: 99.98, regularPrice: 170 },
-					fourSet: { variantId: 41403111833750, price: 159.96, regularPrice: 340 }
-				}
-			}
+				sky_blue: { 
+					oneSet: { variantId: 41403111637142, productTitle: 'Miracle Set of 1', price: 74.99, regularPrice: 110, productSavings: 35 },
+					twoSet: { variantId: 41403111735446, productTitle: 'Miracle Set of 2', price: 129.98, regularPrice: 220, productSavings: 90 },
+					fourSet: { variantId: 41403111833750, productTitle: 'Miracle Set of 4', price: 199.88, regularPrice: 440, productSavings: 240 }
+				},
+			},
 		}
 	};
 
 
-	let currentState = {
-		fabric: 'signature',
-		size: 'standard',
-		color: 'stone',
-		option: 'twoSet',
-		quantity: 1
-	};
+	function selVariant() {
 
-	function updateVariant() {
-		const variant = variants[currentState.fabric][currentState.size][currentState.color][currentState.option];
-		return variant.variantId;
+		var fabric = 'signature';
+		console.log(fabric);
+		var size = $('.current-size[data-value]')[0].getAttribute("data-value");
+		console.log(size);
+		let color = $("input[name='color']:checked").val();
+		console.log(color);
+		let option = $("input[name='option']:checked").val();
+
+		if (variants[fabric][size][color][option] == null) {
+			var out_stock = true;
+			console.log("out_of_stock")
+
+			const bannerImgs = document.querySelectorAll('.banner-product');
+			const bannerImgsWhite = document.querySelectorAll('.banner-product-white');
+			const $select = $('.w-select').siblings('.nice-select');
+			const $colorChoice = $(".color-choice:not(.sold)");
+			const $colorChoiceDefault = $colorChoice[$colorChoice.length - 1];
+			const COLOR_DEFAULT = $($colorChoiceDefault).data('color');
+
+			if ($colorChoice.length === 1) {
+				bannerImgs.forEach(el => el.style.display = "block")
+				bannerImgsWhite.forEach(el => el.style.display = "none");
+			} else if ($colorChoice.length === 2) {
+				bannerImgs.forEach(el => el.style.display = "none")
+				bannerImgsWhite.forEach(el => el.style.display = "block");
+			} else if ($colorChoice.length === 3) {
+				bannerImgs.forEach(el => el.style.display = "block")
+				bannerImgsWhite.forEach(el => el.style.display = "none");
+			}
+
+			document.querySelector(`.nav-lg .w-slider-dot:nth-child(${$colorChoice.length})`).click();
+
+			$colorChoiceDefault.click();
+			$select.click();
+
+			color = COLOR_DEFAULT;
+		}
+
+		var price = variants[fabric][size][color][option]['price'];
+
+		$(".es_price").text(price);
+		$(".es_saving_percent").text(variants[fabric][size][color][option]['productSavings']);
+		$(".es_reg_price").text(variants[fabric][size][color][option]['regularPrice']);
+		$(".total_savings").text(variants[fabric][size][color][option]['regularPrice'] - price);
 	}
 
-	function handleColorChange(color, slideIndex) {
-		currentState.color = color;
+	function filterColorSwatches(size) {
+		var fabric = $("input[name='fabric_type']:checked").val();
 
-		// Update radio buttons
-		document.querySelectorAll('.radio-color-wrapper input[name="color"]').forEach(input => {
-			const wrapper = input.closest('.radio-color-wrapper');
-			const radioInput = wrapper.querySelector('.w-radio-input');
-			if (input.value === color) {
-				input.checked = true;
-				radioInput.classList.add('w--redirected-checked');
+		$(".color-choice").removeClass("sold");
+
+		for (var i = 0; i < $(".color-choice").length; i++) {
+			var ch = $(".color-choice").eq(i);
+			var color = ch.attr("data-color");
+			if (variants[fabric][size][color][option] == null) {
+				ch.addClass("sold");
+			}
+		}
+	}
+
+	function filterSizeSwatches(color) {
+		var fabric = $("input[name='fabric_type']:checked").val();
+		const isSoldColor = $(`[data-color="${color}"]`).hasClass('sold');
+
+		$("li.option").removeClass("sold");
+
+		const enabledOptions = [];
+
+
+		for (var i = 0; i < $("li.option").length; i++) {
+			var ch = $("li.option").eq(i);
+			var size = ch.attr("data-value");
+
+			if (variants[fabric][size][color][option] == null) {
+				ch.addClass("sold");
 			} else {
-				input.checked = false;
-				radioInput.classList.remove('w--redirected-checked');
+				enabledOptions.push(ch);
 			}
-		});
+		}
 
-		// Update color text
-		document.querySelector('.color-sc .color-value').textContent = color.charAt(0).toUpperCase() + color.slice(1).replace('_', ' ');
-
-		// Update product images
-		document.querySelectorAll('.multi-img-option').forEach(img => {
-			img.classList.remove('show');
-			if (img.getAttribute('data-color') === color) {
-				img.classList.add('show');
-			}
-		});
-
-		updateVariant();
-		updateSliderContent(color)
+		if (variants[fabric][size][color][option] == null && isSoldColor) {
+			enabledOptions[1].click();
+		}
 	}
 
-	function handleSizeChange(size) {
-		currentState.size = size;
-		document.querySelectorAll('.grid---header-option-feat').forEach(grid => {
-			if (grid.getAttribute('data-option-id') === size) {
-				grid.classList.remove('hidden');
-				grid.classList.add('active');
-			} else {
-				grid.classList.add('hidden');
-				grid.classList.remove('active');
-			}
+	window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
+	window.checkoutReadyCallbacks.push(() => {
+		selVariant();
+
+		$("li.option").click(function (e) {
+			var wrapper = $(this).parents(".list");
+			wrapper.find("li.option").removeClass("current-size");
+			$(this).addClass("current-size");
+			let selectedSize = $(this).attr("data-value");
+			$('.grid---header-option-feat').addClass('hidden');
+			$('[data-option-id='+ selectedSize +']').removeClass('hidden');
+
+			filterColorSwatches(selectedSize);
+			selVariant();
 		});
-		updateVariant();
-	}
 
-	function handleSetChange(setOption, element) {
-		currentState.option = setOption;
-		const grid = element.closest('.grid---header-option-feat');
+		$(".color-choice").click(function (e) {
+			$("option selected").addClass("current-size");
 
-		// Update radio states
-		grid.querySelectorAll('.w-radio-input').forEach(input => {
-			input.classList.remove('w--redirected-checked');
+			$(".color-name.current-color").text($(this).attr("data-color"));
+
+			$(".current-size").trigger("click");
+
+			var wrapper = $(this).parents(".colors-container");
+			wrapper.find(".color-choice").removeClass("current-color");
+			$(this).addClass("current-color");
+
+			filterSizeSwatches($(this).attr("data-color"));
+			selVariant();
 		});
-		element.querySelector('.w-radio-input').classList.add('w--redirected-checked');
 
-		// Update text display
-		const setNumber = element.querySelector('.option-text').textContent.match(/Set of (\d)/)[1];
-		document.querySelector('.label._17 .color-value').textContent = `Set of ${setNumber}`;
+		$(".buy-now-button").click(function (e) {
 
-		updateVariant();
-	}
+			////////// Clear Cart /////////////////
 
-	// Color Selection
-	document.querySelectorAll('.radio-color-wrapper').forEach(wrapper => {
-		wrapper.addEventListener('click', () => {
-			const color = wrapper.getAttribute('data-color');
-			const slideIndex = parseInt(wrapper.getAttribute('data-slide'));
-			handleColorChange(color, slideIndex);
-		});
-	});
-	// Set Selection
-	document.querySelectorAll('.size-radio-v2-2').forEach(radio => {
-		radio.addEventListener('click', () => {
-			const setOption = radio.querySelector('input[name="option"]').value;
-			handleSetChange(setOption, radio);
-		});
-	});
-
-	// Quantity Selection
-	document.querySelectorAll('.button-quantity').forEach(btn => {
-		btn.addEventListener('click', (e) => {
-			e.preventDefault();
-			const quantityDisplay = document.querySelector('.quantity-value');
-			let quantity = parseInt(quantityDisplay.textContent);
-
-			if (btn.getAttribute('quantity') === '+') {
-				quantity++;
-			} else if (quantity > 1) {
-				quantity--;
+			const clearCart = async () => {
+				const updateRec = {};
+				checkout.cart.localCart.lineItems.forEach(x => {
+					console.log(x);
+					if (x.variantId != '34937177702550') {
+						updateRec[x.variantId] = 0;
+					}
+				});
+				const newCart = await checkout.apiClient.setVariantQuantities(updateRec);
+				checkout.setCart(newCart);
 			}
 
-			currentState.quantity = quantity;
-			quantityDisplay.textContent = quantity;
-		});
-	});
-
-	// Slider Controls
-	document.querySelectorAll('.product-icon-2').forEach(thumb => {
-		thumb.addEventListener('click', () => {
-			const container = thumb.closest('.flex-center');
-			const icons = container.querySelectorAll('.product-icon-2');
-			icons.forEach(icon => icon.classList.remove('active'));
-			thumb.classList.add('active');
-
-			const slideIndex = thumb.getAttribute('data-to');
-			const slider = container.querySelector('.w-slider');
-			const targetDot = slider.querySelector(`.w-slider-nav .w-slider-dot:nth-child(${slideIndex})`);
-			if (targetDot) targetDot.click();
-		});
-	});
-
-	// Checkout Handler
-	document.querySelector('.buy-now-button').addEventListener('click', async (e) => {
-		e.preventDefault();
-		const variantId = updateVariant();
-
-		try {
-			const updateRec = {};
-			checkout.cart.localCart.lineItems.forEach(x => {
-				if (x.variantId != '34937177702550') {
-					updateRec[x.variantId] = 0;
-				}
+			clearCart().then(x => {
+				var fabric = 'signature';
+				var size = $("li.option.current-size.selected").attr("data-value");
+				let color = $("input[name='color']:checked").val();
+				let option = $("input[name='option']:checked").val();
+				var data = {};
+				data[variants[fabric][size][color][option]['variantId']] = parseInt($(".quantity-value").html());
+				console.log("Add to Cart");
+				console.log(data);
+				window.checkout.apiClient.setVariantQuantities(data).then(x => {
+					console.log("Variant Set.");
+					window.checkout.setCart(x);
+					window.checkout.drawCart(x);
+					console.log( 'Checkout object: ', window.checkout );
+					window.location.href = "/checkout_v3/secure.html";
+				});
 			});
+		});
+	});
 
-			await checkout.apiClient.setVariantQuantities(updateRec);
-			const updatedCart = await checkout.apiClient.setVariantQuantities({
-				[variantId]: currentState.quantity
-			});
-
-			checkout.setCart(updatedCart);
-			checkout.drawCart(updatedCart);
-			window.location.href = "/checkout_v3/secure.html?ksp=true";
-		} catch (error) {
-			console.error('Checkout error:', error);
+	$("input[name='fabric_type']").change(function () {
+		if ($(this).val() == "signature") {
+			$(".fabric-description").removeClass("current-fabric-type");
+			$(".fabric-description.signature").addClass("current-fabric-type");
+		}
+		else {
+			$(".fabric-description").removeClass("current-fabric-type");
+			$(".fabric-description.luxe").addClass("current-fabric-type");
 		}
 	});
 
-	document.querySelectorAll('.radio-color-wrapper').forEach(wrapper => {
-		wrapper.addEventListener('click', () => {
-			const color = wrapper.getAttribute('data-color');
-			const slideIndex = parseInt(wrapper.getAttribute('data-slide'));
-			handleColorChange(color, slideIndex);
-		});
+
+
+	$(".quantity .btn-quantity_plus").click(function (e) {
+		var qty = parseInt($(".quantity .quantity_input").val());
+		$(".quantity .quantity_input").val(qty + 1);;
 	});
 
-	// Initial setup
-	handleColorChange(currentState.color, 1);
-	handleSizeChange(currentState.size);
+	$(".quantity .btn-quantity_minus").click(function (e) {
+		var qty = parseInt($(".quantity .quantity_input").val());
+		if (qty <= 1) {
+			return;
+		}
+		$(".quantity .quantity_input").val(qty - 1);;
+	});
+
+	if ($("#purchase .size-choice.current-size").length > 0) {
+		filterColorSwatches($("#purchase .size-choice.current-size").attr("data-size"));
+	}
+
+	console.log( 'options: ', $('.option') );
+
+	$('.option.selected').addClass("current-size");
 });
+
+
+
+
+
+
+$("input[name='fabric_type']").change(function () {
+	if ($(this).val() == "signature") {
+		$(".fabric-description").removeClass("current-fabric-type");
+		$(".fabric-description.signature").addClass("current-fabric-type");
+	}
+	else {
+		$(".fabric-description").removeClass("current-fabric-type");
+		$(".fabric-description.luxe").addClass("current-fabric-type");
+	}
+
+
+
+
+});
+
+
+
+

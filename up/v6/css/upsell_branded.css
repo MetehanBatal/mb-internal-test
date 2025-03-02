@@ -364,7 +364,7 @@ nav img {
 	content: "";
 
 	background-color: var(--green-color);
-	background-image: url("../images/icons/tick.svg");
+	background-image: url("https://try.miraclebrand.co/up/v5/images/icons/tick.svg");
 	background-size: 0.8rem 0.5rem;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -440,42 +440,60 @@ nav img {
 
 /* Slider */
 
-.upsell-slider {
-	display: flex;
-	flex-direction: column;
-
+/*.upsell-slider {
 	position: relative;
+}*/
 
-	cursor: grab;
-}
-
-.slider-box {
-	display: flex;
-	overflow: hidden;
-}
-
-.slider-box:active {
-	cursor: grabbing;
-}
-
-.thumbnails {
-	display: flex;
-	gap: 1rem;
-	align-self: center;
-
+.swiper-thumbnails {
 	max-width: 29rem;
 
 	margin-top: 1.2rem;
 }
 
-.thumbnails .thumb-img {
+.swiper-thumbnails .swiper-slide {
 	border: 0.1rem solid #d0d0d0;
 	transition: border-color 0.3s ease-in-out;
 	cursor: pointer;
 }
 
-.pagination-indicator.active {
+.swiper-thumbnails .swiper-slide.swiper-slide-thumb-active {
 	border-color: var(--accent-color);
+}
+
+.up-1a .swiper-slide {
+	height: auto;
+}
+.up-1b .swiper-slide {
+	height: auto;
+}
+
+.up-3b .swiper-slide,
+.up-2c .swiper-slide,
+.up-2d .swiper-slide
+{
+		height: auto;
+}
+
+.up-3b .swiper-slide img, 
+.up-2c .swiper-slide img,
+.up-2d .swiper-slide img {
+	  height: 100%;
+		width: 100%;
+		object-fit: cover;
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.swiper-wrapper {
+	cursor: grab;
+}
+
+.swiper-wrapper:active {
+	cursor: grabbing;
 }
 
 .slider-pagination-button {
@@ -828,7 +846,7 @@ form input[type="radio"] {
 	width: 0.9rem !important;
 	height: 0.6rem !important;
 
-	background-image: url("../images/icons/down-arrow.svg");
+	background-image: url("https://try.miraclebrand.co/up/v5/images/icons/down-arrow.svg");
 	background-size: contain;
 	background-repeat: no-repeat;
 
@@ -1031,14 +1049,14 @@ input.cta-button {
 }
 
 .link:hover::after {
-	background-image: url("../images/icons/right-arrow-hover.svg");
+	background-image: url("https://try.miraclebrand.co/up/v5/images/icons/right-arrow-hover.svg");
 }
 
 .link:after {
 	width: 0.85rem;
 	height: 1.2rem;
 
-	background-image: url("../images/icons/right-arrow.svg");
+	background-image: url("https://try.miraclebrand.co/up/v5/images/icons/right-arrow.svg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -1136,6 +1154,10 @@ footer a:last-child {
 }
 
 /* Up 5B */
+
+.up-5b.cooling .swiper-slide {
+	height: auto;
+}
 
 .up-5b li p,
 .up-5b.cooling li p {
@@ -1281,7 +1303,7 @@ footer a:last-child {
 		margin-bottom: 2.4rem;
 	}
 
-	.price {
+	.price, .highlighted-price {
 		font-size: 2.8rem;
 	}
 
@@ -1565,7 +1587,7 @@ option {
 /* START - Fonts */
 @font-face {
 	font-family: "BoldFont";
-	src: url("../fonts/Brandon/Brandon_bld.woff2");
+	src: url("/up/v6/fonts/Brandon/Brandon_bld.woff2");
 	font-weight: 700;
 	font-style: bold;
 	font-display: swap;
@@ -1573,7 +1595,7 @@ option {
 
 @font-face {
 	font-family: "MediumFont";
-	src: url("../fonts/Brandon/Brandon_med.woff2");
+	src: url("/up/v6/fonts/Brandon/Brandon_med.woff2");
 	font-weight: 500;
 	font-style: medium;
 	font-display: swap;
@@ -1581,7 +1603,7 @@ option {
 
 @font-face {
 	font-family: "RegularFont";
-	src: url("../fonts/Brandon/Brandon_reg.woff2");
+	src: url("/up/v6/fonts/Brandon/Brandon_reg.woff2");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -1589,7 +1611,7 @@ option {
 
 @font-face {
 	font-family: "Ellenluff larken";
-	src: url("../fonts/Larken/EllenLuff---Larken-Light.woff2") format("woff2");
+	src: url("/up/v6/fonts/Larken/EllenLuff---Larken-Light.woff2") format("woff2");
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
@@ -1597,7 +1619,7 @@ option {
 
 @font-face {
 	font-family: "Ellenluff larken Regular";
-	src: url("../fonts/Larken/EllenLuff---Larken-Regular.woff2") format("woff2");
+	src: url("/up/v6/fonts/Larken/EllenLuff---Larken-Regular.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -1605,7 +1627,7 @@ option {
 
 @font-face {
 	font-family: "Ellenluff larken Bold";
-	src: url("../fonts/Larken/EllenLuff---Larken-Bold.woff2") format("woff2");
+	src: url("/up/v6/fonts/Larken/EllenLuff---Larken-Bold.woff2") format("woff2");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;

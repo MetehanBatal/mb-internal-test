@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<!--  Last Published: Fri Oct 08 2021 16:28:46 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="61606fc4bbf86a11cefe1418" data-wf-site="615ca038bc1f7d3a0842f6a2">
+
+<head>
+	<script> TripleHeadless = 'aloft-home.myshopify.com' </script>
+	<!-- TriplePixel :: start -->
+	<script>
+		~function(W,H,A,L,E,_){function O(T,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET","//triplewhale-pixel.web.app/triplepx.txt?"+~(Date.now()/9e7),!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?setTimeout(function(){return eval(H.responseText)},50):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(T-1))}}if(L=window,!L[H+"sn"]){L[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),W.includes("⇈")&&A.setItem(H+"Stg",1+(0|A.getItem(H+"Stg")||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=L,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),E._headless=!0,W},E.ch=W,O(5)))}}("","TriplePixel",localStorage);
+	</script>
+	<!-- TriplePixel :: end -->
+	<meta charset="utf-8" />
+	<title>Secure Checkout | Miracle Made</title>
+	<meta content="Checkout" property="og:title" />
+	<meta content="Checkout" property="twitter:title" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+	<link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<link href="images/webclip.png" rel="apple-touch-icon" />
+	<meta content="../custom_translation.json" name="checkout-translations-url"> 	<script type="text/javascript" src="https://cdn.shopmiraclebrand.co/js/cart_loader.js"></script>
+	<script type="text/javascript" async="" src="https://try.miraclebrand.co/pixel.js"></script>
+	<meta content="api.shopmiraclebrand.co" name="checkout-api-endpoint" />
+	<meta content="42558763073686" name="checkout-default-variant-id" />
+	<meta content="" name="checkout-default-addons" />
+	<meta content="US" name="checkout-default-shipping-zone" />
+	<meta content="mb-sheets-checkout-v81" name="checkout-page-name">
+
+	<meta id="checkoutNextUrlMeta" content="/up/aug30/up/v5/1a-v5?first=true" name="checkout-next-url" data-skip-content="/up/aug30/up/v5/2c-v2?first=true"  />
+	<script type="text/javascript">
+		Checkout.setNextUrlFn((cart) => {
+			const meta = document.getElementById('checkoutNextUrlMeta');
+			return meta?.getAttribute('content') ?? '/up/aug30/up/v5/1a-v5?first=true';
+		});
+	</script>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	WebFont.load({ google: { families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Inter:regular,600,800"] } });
+	</script>
+	
+	<link rel="stylesheet" type="text/css" href="https://try.miraclebrand.co/checkout_v22/css/checkout.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+	<!-- Begin: Northbeam Pixel -->
+	<script async type="text/javascript" src="//j.northbeam.io/ota-sp/d6b41dbb-ce9e-4e1e-bdc2-36492a0d7ac1.js"></script>
+	<!-- End: Northbeam Pixel -->
+
+		<!-- Start: Paypal Script -->
+
+		<script>
+			(function(a, t, o, m, i) {
+				a[m] = a[m] || [];
+				a[m].push({
+					t: new Date().getTime(),
+					event: 'snippetRun'
+				});
+				var f = t.getElementsByTagName(o)[0],
+				e = t.createElement(o);
+				e.async = !0;
+				e.dataset.namespace = "paypal_sdk";
+				e.src = 'https://www.paypal.com/sdk/js?components=shopping&client-id=' + i;
+				f.parentNode.insertBefore(e, f);
+			})(window, document, 'script', 'shoppingDDL', 'AUvZCmTImA-03Jrtr4x_ZdRAnJIL5wFVUC5_eenqw8Ynfecok5HhftLx3-ViQ-QWvmBrGyHICNnoFJrm');
+	
+			var pptag = {
+				send: function(e, p) {
+					shoppingDDL.push({
+						event: e,
+						payload: p
+					});
+				},
+				set: function(s) {
+					shoppingDDL.push({
+						set: s
+					});
+				}
+			};
+		</script>
+		<!-- End: Paypal Script -->
+	<style>
+.coupon-tag {
+	display: none;
+	margin-top: 10px;
+	padding: 8px 10px;
+	border-radius: 10px;
+	align-items: center;
+	background-color: #000;
+	width: fit-content;
+	color: #fff;
+}
+
+.coupon-tag .coupon-text {
+	font-size: 14px;
+	font-family: "BoldFont";
+	margin-inline: 6px;
+}
+	
+.coupon-tag img {
+	filter: invert(100%);
+	width: 16px;
+}
+.checkout-remove-coupon {
+	cursor: pointer;
+}
+
+.input.checkout-coupon-field {
+	display: flex !important;
+}
+
+.checkout-coupon-button {
+	display: block !important;
+}
+
+.checkout-cart-display .product-line .checkout-money {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.checkout-remove-item {
+	font-family: 'BoldFont';
+	white-space: pre;
+	color: #000;
+	text-decoration: none;
+}
+
+
+
+
+</style>
+</style>
+
+<script>
+	const internalPage = true;
+</script>
+</head>
+
+<body>
+	<main>
+		<section class="checkout-box">
+			<div class="container">
+				<div class="navbar">
+					<img src="https://try.miraclebrand.co/checkout_v8/images/logo.svg" alt="Miracle Made | Logo" class="logo" />
+					<div>
+						<img src="https://try.miraclebrand.co/checkout_v8/images/secure-icon.svg" alt="Secure Payment by Miracle Made" class="secure-icon" />
+						<p>
+							<strong class="uppercase">Secure <br />
+								Checkout</strong>
+						</p>
+					</div>
+				</div>
+				<div class="mobile-order-summary-box">
+					<h3 class="heading" id="mobile-summary-heading">
+						<span>Hide </span>Order Summary
+					</h3>
+					<p class="checkout-total-value"></p>
+					<div class="accordion-menu">
+						<div data-show-compare-pricing="true" data-show-product-images="true" data-currency-symbol="$" class="checkout-cart-display mobile-display"></div>
+						<div class="plus-text">*Plus applicable taxes</div>
+					</div>
+				</div>
+				<div class="callout-box">
+					<img src="https://try.miraclebrand.co/checkout_v8/images/discount.png" alt="Discount Icon" />
+					<p>
+						<strong class="uppercase">Sale ends soon!</strong> Your cart is
+						reserved for:
+						<strong class="timer time-remaining" data-timer-duration="900">15:00</strong>
+					</p>
+				</div>
+				<div class="steps">
+					<p class="step"><strong>Checkout</strong></p>
+					<img src="https://try.miraclebrand.co/checkout_v8/images/next-arrow.svg" alt="Next Step on Checkout" class="right-arrow" />
+					<p class="step">Special Offers</p>
+					<img src="https://try.miraclebrand.co/checkout_v8/images/next-arrow.svg" alt="Next Step on Checkout" class="right-arrow" />
+					<p class="step">Order Receipt</p>
+				</div>
+				<div class="discount-box">
+					<form name="coupon_form_desktop">
+						<input type="text" class="input checkout-coupon-field" maxlength="256" name="coupon_desktop_field" placeholder="Promo code (optional)" id="coupon_desktop_field" />
+						<a href="#" class="checkout-coupon-button">Redeem</a>
+					</form>
+					<div class="discount-success hidden">
+						<div class="discount-message">
+							<span class="discount-applied">Discount Applied! You're saving</span>
+							<span class="checkout-discount-value">0.00</span>
+						</div>
+					</div>
+					<div class="w-form-fail discount-warning">
+						<div>This discount code cannot be used</div>
+					</div>
+				</div>
+				<div class="warranty-addon">
+					<form>
+						<label data-variant-id="42536178319510" class="w-checkbox checkout-addon-toggle">
+							<input type="checkbox" name="checkout-addon-toggle" id="checkout-addon-toggle" />
+							<span for="checkout-addon-toggle" class="checkbox-detail">
+								<span>Yes, Add 2-Year Wear &amp; Tear Warranty For Only
+									$19.99</span>
+							</span>
+						</label>
+					</form>
+				</div>
+				<div class="express-checkout-box">
+					<p class="express-checkout_text">Express Checkout</p>
+					<div class="checkout-paypal-form">
+						<div class="skeleton-load"></div>
+						<div id="form_paypal" class="form-paypal w-form">
+							<form id="form_paypal" data-name="form_paypal" class="checkout-paypal-form">
+								<a href="#" class="checkout-submit-paypal">
+									<img src="https://try.miraclebrand.co/checkout_v8/images/paypal.svg" alt="Paypal Logo" />
+								</a>
+							</form>
+						</div>
+					</div>
+				</div>
+				<p class="express-checkout_text">Or Pay with Credit Card</p>
+				<div class="form-box">
+					<form method="post" redirect="https://try.javycoffee.com/up5/" data-redirect="https://try.javycoffee.com/up5/" class="form checkout-combo-form">
+						<div class="form-group">
+							<h3 class="heading">Contact Information</h3>
+							<div class="form-group">
+								<input type="email" class="input" autocomplete="email" maxlength="256" name="email" data-name="email" placeholder="E-Mail*" id="email" required />
+							</div>
+							<label class="accepts_marketing">
+								<input type="checkbox" id="accepts_marketing" name="accepts_marketing" checked />
+								<span for="accepts_marketing" class="checkbox-detail w-form-label">
+									Keep me up to date on news and exclusive offers
+								</span>
+							</label>
+						</div>
+						<div class="form-group">
+							<h3 class="heading">Shipping Address</h3>
+							<div class="shipping-details">
+								<div class="form-group"><input type="text" class="input" autocomplete="given-name" maxlength="256" name="shipping_first_name" placeholder="First Name*" id="shipping_first_name" required /></div>
+								<div class="form-group"><input type="text" class="input" autocomplete="family-name" maxlength="256" name="shipping_last_name" placeholder="Last Name*" id="shipping_last_name" required /></div>
+								<div class="form-group"><input type="text" class="input full-width" autocomplete="address-line1" maxlength="256" name="shipping_address1" placeholder="Address*" id="shipping_address_1" required /></div>
+								<div class="form-group"><input type="text" class="input full-width" autocomplete="address-line2" maxlength="256" name="shipping_address2" placeholder="Apartment, suite, etc. (optional)" id="shipping_address_2" /></div>
+								<div class="form-group"><select id="shipping_country" name="shipping_country" autocomplete="country-name" class="select-box" required></select></div>
+								<div class="form-group"><select id="shipping_state" name="shipping_state" autocomplete="address-level1" class="select-box" required></select></div>
+								<div class="form-group"><input type="text" class="input" autocomplete="address-level2" maxlength="256" name="shipping_city" placeholder="City*" id="shipping_city" required /></div>
+								<div class="form-group"><input type="text" class="input" autocomplete="postal-code" maxlength="256" name="shipping_postal_code" placeholder="Zip Code*" id="shipping_postal_code" required /></div>
+								<div class="form-group iti-holder"><input type="tel" maxlength="256" name="ship_field_intl" id="ship_field_intl" autocomplete="tel-full" class="input full-width" /></div>
+								<div class="form-group"><input type="hidden" name="shipping_phone" id="shipping_phone" value="" /></div>
+							</div>
+							<div class="attentive-form">
+								<label id="accepts_attentive">
+									<input type="checkbox" id="accepts_attentive" name="accepts_attentive" />
+									<span for="accepts_attentive" class="checkbox-detail">
+										<strong>Get 10% Off Your Next Order</strong>
+										<span>By checking this box you agree to receive recurring
+											automated promotional and personalized marketing text
+											messages <strong>(e.g. cart reminders)</strong> from
+											Miracle Made at the cell number used when signing up. Joining
+											is not a condition of any purchase.
+											<strong>Reply HELP for help and STOP to cancel.</strong>
+											Msg frequency varies & Msg data rates may apply. View
+											<a href="https://www.miraclebrand.co/pages/terms-and-conditions" target="_blank">Terms & Privacy.</a></span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<h3 class="heading">Billing Address</h3>
+							<p class="form-description">
+								Select the address that matches your card or payment method.
+							</p>
+							<div class="billing-address-selection">
+								<label class="same-shipping">
+									<input type="radio" value="true" name="billing_use_shipping" checked />
+									<span>Same as shipping address</span>
+								</label>
+								<label class="different-shipping">
+									<input type="radio" value="false" name="billing_use_shipping" />
+									<span>Use a different billing address</span>
+								</label>
+							</div>
+							<div class="shipping-details different-billing-address">
+								<div class="form-group"><input type="text" class="input" autocomplete="given-name" maxlength="256" name="billing_first_name" placeholder="First Name*" id="billing_first_name" /></div>
+								<div class="form-group"><input type="text" class="input" autocomplete="family-name" maxlength="256" name="billing_last_name" placeholder="Last Name*" id="billing_last_name" /></div>
+								<div class="form-group"><input type="text" class="input" autocomplete="address-line1" maxlength="256" name="billing_address1" placeholder="Address*" id="billing_address_1" /></div>
+								<div class="form-group"><input type="text" class="input" autocomplete="address-line2" maxlength="256" name="billing_address2" placeholder="Apartment, suite, etc. (optional)" id="billing_address_2" /></div>
+								<div class="form-group"><select id="billing_country" name="billing_country" autocomplete="country-name" class="select-box"></select></div>
+								<div class="form-group"><select id="billing_state" name="billing_state" autocomplete="address-level1" class="select-box"></select></div>
+								<div class="form-group"><input type="text" class="input" autocomplete="address-level2" maxlength="256" name="billing_city" placeholder="City*" id="billing_city" /></div>
+								<div class="form-group"><input type="text" class="input" autocomplete="postal-code" maxlength="256" name="billing_postal_code" placeholder="Zip Code*" id="billing_postal_code" /></div>
+								<div class="form-group iti-holder"><input type="tel" maxlength="256" name="billing_field_intl" id="billing_field_intl" autocomplete="tel-full" class="input" /></div>
+								<input type="hidden" name="billing_phone" id="billing_phone" value="" />
+							</div>
+						</div>
+						<div class="form-group">
+							<h3 class="heading">Payment Method</h3>
+							<p class="form-description">
+								All transactions are secure and encrypted.
+							</p>
+							<div class="payment-method-selection">
+								<div class="top">
+									<label combo_mode="credit">
+										<input type="radio" value="credit" id="combo_mode_credit" name="combo_mode" checked />
+										<span for="credit">Credit Card</span>
+									</label>
+									<img src="https://try.miraclebrand.co/checkout_v14/images/ccs.svg" loading="lazy" alt="" class="cc-image" />
+								</div>
+								<div class="bottom">
+									<div class="field">
+										<p class="field-title">Credit Card Number</p>
+										<div class="input" id="braintree-cc-number"></div>
+									</div>
+									<div class="field">
+										<p class="field-title">Valid Through</p>
+										<div class="input" id="braintree-expiry"></div>
+									</div>
+									<div class="field">
+										<p class="field-title">CVV</p>
+										<div class="input" id="braintree-cvv"></div>
+									</div>
+									<div>
+										<img src="https://try.miraclebrand.co/checkout_v8/images/protect.svg" alt="Protect Icon" />
+										<p>
+											We protect your payment information using encryption to
+											provide bank-level security.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="legal-term">By clicking the <span>"Complete Purchase"</span> button, you hereby agree to and accept Pattern Brands LLC's <a target="_blank" href="https://www.miraclebrand.co/pages/privacy-policy">Privacy Policy</a> and <a target="_blank" href="https://www.miraclebrand.co/pages/terms-and-conditions">Terms of Use</a></p>
+
+						<a href="#" class="checkout-submit-combo">
+							<div class="loader-wrapper">
+								<div class="loader"></div>
+							</div>
+							<div class="button-text">
+								<img src="https://try.miraclebrand.co/checkout_v14/images/locker.svg" alt="Complete Purchase" />
+								<div class="complete-purchase-text ct">COMPLETE PURCHASE</div>
+							</div>
+							<p>TRY IT RISK FREE! - 30 DAY MONEY BACK GUARANTEE!</p>
+						</a>
+					</form>
+					<div class="guarantee-box">
+						<img src="https://try.miraclebrand.co/checkout_v8/images/money-back.png" alt="Money Back Guarantee by Miracle Made" />
+						<p>
+							<strong>30-Day Guarantee:</strong> Pattern Brands offers a 30-Day Money
+							Back Guarantee in case you don't fall in love with our product.
+						</p>
+					</div>
+					<div class="checkout-note hidden is-mobile">
+						<strong>
+							<img src="https://try.miraclebrand.co/checkout_v14/images/tax.svg">Taxes for this order will be charged when you receive the package
+						</strong>
+						<p>
+							Shipments from the USA pay taxes/duty upon receipt instead of when paying online. Depending on your province, the rate will be between 5% to 20%. This is set by the Canadian government.
+						</p>
+					</div>
+				</div>
+				<hr />
+				<footer>
+					<div>
+						<img src="https://try.miraclebrand.co/checkout_v8/images/rtc-logo.svg" alt="RTC Logo" />
+						<p>Powered by RTC</p>
+					</div>
+					<div>
+						<a href="https://www.miraclebrand.co/pages/terms-and-conditions" target="_blank">Terms of Service</a>
+						<a href="https://www.miraclebrand.co/pages/privacy-policy" target="_blank">Privacy Policy</a>
+					</div>
+				</footer>
+			</div>
+		</section>
+		<section class="summary-box">
+			<div class="container">
+				<div class="summary">
+					<h3 class="heading">Order Summary</h3>
+					<div data-show-compare-pricing="true" data-show-product-images="true" data-currency-symbol="$" class="checkout-cart-display">
+						<div class="skeleton-load"></div>
+					</div>
+					<div class="plus-text">*Plus applicable taxes</div>
+				</div>
+				<div class="checkout-note hidden">
+					<strong>
+						<img src="https://try.miraclebrand.co/checkout_v14/images/tax.svg">Taxes for this order will be charged <br> when you receive the package
+					</strong>
+					<p>
+						Shipments from the USA pay taxes/duty upon receipt instead of when paying online. Depending on your province, the rate will be between 5% to 20%. This is set by the Canadian government.
+					</p>
+				</div>
+				<div class="summary-content">
+					<div class="inner-headline-box">
+						<div></div>
+						<h5>Trusted Customer Reviews</h5>
+						<div></div>
+					</div>
+					<div class="flex">
+						<img src="https://try.miraclebrand.co/checkout_v21/images/reviewImages/Sophia M.jpg" alt="Sophia's 5-star Review for Miracle Brand" />
+						<div>
+							<div class="flex-sm review-author">
+								<img src="https://try.miraclebrand.co/checkout_v8/images/stars.svg" alt="5-star Icon" />
+								<p><strong>Sophia M.</strong></p>
+							</div>
+							<div class="flex-sm">
+								<img src="https://try.miraclebrand.co/checkout_v8/images/checkmark.svg" alt="Verified Buyer" class="checkmark-icon" />
+								<p><strong class="uppercase sm">Verified Buyer</strong></p>
+							</div>
+							<p class="review">
+								“So stoked that my miracle sheets finally came!! They are super soft and keep me cool during the night, which is great because I’m a night sweater. Would definitely recommend”
+							</p>
+						</div>
+					</div>
+					<div class="flex">
+						<img src="https://try.miraclebrand.co/checkout_v21/images/reviewImages/Livy.jpg" alt="Livy's 5-star Review for Miracle Brand" />
+						<div>
+							<div class="flex-sm review-author">
+								<img src="https://try.miraclebrand.co/checkout_v8/images/stars.svg" alt="5-star Icon" />
+								<p><strong>Livy</strong></p>
+							</div>
+							<div class="flex-sm">
+								<img src="https://try.miraclebrand.co/checkout_v8/images/checkmark.svg" alt="Verified Buyer" class="checkmark-icon" />
+								<p><strong class="uppercase sm">Verified Buyer</strong></p>
+							</div>
+							<p class="review">
+								“The Miracle Brand sheet set is the absolute best. I am amazed by the quality and how long they stay clean for. They always keep me cool at night too. Would highly recommend it to everyone I know!”
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="summary-content">
+					<div class="inner-headline-box">
+						<div></div>
+						<h5>why choose us</h5>
+						<div></div>
+					</div>
+					<div class="flex">
+						<div class="icon-holder">
+							<img src="https://try.miraclebrand.co/checkout_v8/images/calendar.svg" alt="30-day money back guarantee" />
+						</div>
+						<div>
+							<p><strong>30-Day Satisfaction Guarantee</strong></p>
+							<p>
+								If you're not satisfied with your product(s), we'll make it
+								right! We promise.
+							</p>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="icon-holder">
+							<img src="https://try.miraclebrand.co/checkout_v8/images/fast-shipping.svg" alt="Fast shipping by Miracle Made" />
+						</div>
+						<div>
+							<p>
+								<strong>Over 221,878+ successfully shipped orders</strong>
+							</p>
+							<p>
+								Happy customers, end-to-end tracking and reliable customer
+								service.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=615ca038bc1f7d3a0842f6a2" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+	<script src="https://try.miraclebrand.co/checkout_v8/js/checkout.js" type="text/javascript"></script>
+
+	<style>
+	.submitting {
+		display: flex;
+	}
+	</style>
+<script>
+	window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
+	window.checkoutReadyCallbacks.push(() => {
+		if (checkoutData.cart.shippingZone !== "US") {
+				$('.total-line .checkout-money').html("<span class='non-usa'>USD </span>" + $('.total-line .checkout-money').html());
+				$('.checkout-total-value').html("<span class='non-usa'>USD </span>" + $('.checkout-total-value').html());
+		}
+
+		let newTitleCheckoutBox = `
+				<div class="after-checkout">
+					<img class="cart-icon" src="https://try.miraclebrand.co/checkout_v22/images/cart_icon.svg">
+					<h3 class="heading">Your cart is empty</h3>
+					<p style="margin-top: 23px;">
+						Don't miss out! <br>
+						Our <span>FREE 3pc Towel</span> deal ends soon.
+					</p>
+					<a class="cta-button" href="https://try.miraclebrand.co/sheets/ksp-v18?resetCookie=true&utm_source=empty_cart">
+						SHOP NOW
+					</a>	
+				</div>
+		`;
+
+		if(checkoutData.cart.localCart.state.lineItems.length < 1) {
+				$(".checkout-cart-display").html(newTitleCheckoutBox);
+				$(".mobile-checkout-cart-display").html(newTitleCheckoutBox);
+				$(".mobile-order-summary-box .checkout-total-value").css("display","none");
+				$("#checkout-addon-toggle").prop("checked", false);
+				$(".plus-text").css("display","none")
+		}
+
+		const allVariants = [
+			"42558763073686",
+			"42558763106454",
+			"42558763270294",
+			"42558763139222",
+			"42558763237526",
+			"42558764843158",
+			"42558765203606",
+			"42558765236374",
+			"42558764875926",
+			"42558764908694",
+			"42558765170838",
+			"42558763303062",
+			"42558763335830",
+			"42558763499670",
+			"42558763368598",
+			"42558763466902",
+			"42558763532438",
+			"42558763565206",
+			"42558763729046",
+			"42558763597974",
+			"42558763696278",
+			"42558763761814",
+			"42558763794582",
+			"42558763958422",
+			"42558763827350",
+			"42558763925654",
+			"42558764646550",
+			"42558764679318",
+			"42558765039766",
+			"42558765301910",
+			"42558765367446",
+			"42558764712086",
+			"42558764384406",
+			"42558764417174",
+			"42558764449942",
+			"42558764581014",
+			"42901602762902",
+			"42901605187734",
+			"42901608661142",
+			"42901613740182",
+			"42901617967254",
+			"42901630845078",
+			"42901638742166",
+			"42901640151190",
+			"42901644148886",
+			"42901651128470",
+			"42901653618838",
+			"42901664071830",
+			"42901671608470",
+			"42901673672854",
+			"42901675049110",
+			"42901745303702",
+			"42901746876566",
+			"42901759033494",
+			"42901765619862",
+			"42901768601750",
+			"42901781184662",
+			"42901785477270",
+			"42901789507734",
+			"42901791113366",
+			"42901793144982",
+			"42901794881686",
+			"42901803532438",
+			"42901805891734",
+			"42636035260566",
+			"42636035293334",
+			"42636035326102",
+			"42636035358870",
+			"42636035391638",
+			"42636035489942",
+			"42636035522710",
+			"42636035588246",
+			"42636035621014",
+			"42636035752086",
+			"42636035784854",
+			"42636035850390",
+			"42636035915926",
+			"42636035948694",
+			"42636035981462",
+			"42636036014230",
+			"42636036046998",
+			"42636036079766",
+			"42636036145302",
+			"42636036210838",
+			"42636036276374",
+			"42636036309142",
+			"42636036407446",
+			"42901454061718",
+			"42901459140758",
+			"42901463466134",
+			"42901466185878",
+			"42901469921430",
+			"42901475459222",
+			"42901481193622",
+			"42901484241046",
+			"42901486633110",
+			"42901489352854",
+			"42901492465814",
+			"42901496856726",
+			"42901498298518",
+			"42901499871382",
+			"42901501771926",
+			"42901503377558",
+			"42901505704086",
+			"42901507539094",
+			"42901511536790",
+			"42901516517526",
+			"42901517992086",
+			"42901522088086",
+			"42901523857558",
+		];
+
+		const towels = [
+			"42508804784278",
+			"42508804751510",
+			"42508804817046"
+		];
+
+		const matchingVariant = checkoutData.cart.localCart.state.lineItems.find(variant => {
+			return allVariants.includes(variant.variantId.toString());
+		});
+		
+		console.log(matchingVariant);
+
+		const cart = Object.keys(RTC.getVariantQuantities());
+
+		const hasTowel = towels.some(variant => cart.includes(variant));
+		const foundedTowel = towels.find(variant => cart.includes(variant));
+
+		let findWarranty = checkoutData.cart.localCart.state.lineItems.find(variant => variant.variantId === 42536178319510);
+		let customerQuantity = matchingVariant.quantity;
+		let newVariant = matchingVariant.variantId;
+		let activeProductName = matchingVariant.title;
+		let productQuantity = 1;
+
+		function insertQuantityInput(currentQuantity, type) {
+			let findWarranty = checkoutData.cart.localCart.state.lineItems.find(variant => variant.variantId === 42536178319510);
+			if (type === 'remove') {
+				currentQuantity = checkoutData.cart.localCart.state.lineItems.find(variant => variant.variantId !== 42536178319510).quantity; 
+			}
+
+			let input = `
+				<div class="increment-button">
+					<div class="flex-quantity decrement quantity-changer">-</div>
+					<input class="quantity-input" type="number" min="0" value="${currentQuantity}">
+					<div class="flex-quantity increment quantity-changer">+</div>
+				</div>
+			`;
+
+			let removeWarranty = `
+				<a href="#" class="checkout-remove-item checkout-remove-warranty">
+					<span class="remove-text">Remove</span>
+					<img src="https://try.miraclebrand.co/checkout_v22/images/remove-icon.svg" alt="remove icon" class="remove-icon" />
+				</a>
+			`;
+			let removeProduct = `
+				<a href="#" class="checkout-remove-item checkout-remove-product">
+					<span class="remove-text">Remove</span>
+					<img src="https://try.miraclebrand.co/checkout_v22/images/remove-icon.svg" alt="remove icon" class="remove-icon" />
+				</a>
+			`;
+			var incrementButtons = document.querySelectorAll('.increment-button');
+			console.log(incrementButtons)
+			if (!incrementButtons || incrementButtons.length === 0) {
+				console.log(incrementButtons)
+				$(`img[alt="${activeProductName}"]`).closest("td").append(input);
+			}
+			$(`img[alt="${activeProductName}"]`).parent().parent().append(removeProduct);
+			$(`img[alt="${activeProductName}"]`).parent().parent().css("display","grid")
+
+			if(findWarranty) {
+				$(`td:contains("${findWarranty.title}")`).parent().append(removeWarranty);
+				$(`td:contains("${findWarranty.title}")`).parent().css("display","grid");
+			}
+
+		}
+
+		insertQuantityInput(customerQuantity);
+
+		$(document).on('click', '.quantity-changer', function() {
+			productQuantity = $(".quantity-input").val();
+			if ( $(this).hasClass("decrement") ) {
+				productQuantity = parseInt($(".quantity-input").val()) - 1;
+			} else {
+				productQuantity = parseInt($(".quantity-input").val()) + 1;
+			}
+			if (productQuantity < 1) {
+				setTimeout(() => {
+					$(".checkout-cart-display").html(newTitleCheckoutBox);
+					$(".mobile-checkout-cart-display").html(newTitleCheckoutBox);
+					$(".mobile-order-summary-box .checkout-total-value").css("display","none");
+					$("#checkout-addon-toggle").prop("checked", false);
+					$(".plus-text").css("display","none")
+				},2400)
+			}
+
+			$('.quantity-input').val(productQuantity);
+			if(hasTowel) {
+				updateCart(newVariant, productQuantity);
+				setTimeout(() => {
+					updateCart(foundedTowel, productQuantity);
+				},800)
+			}else {
+				updateCart(newVariant, productQuantity);
+			}
+			
+		});
+
+		function updateCart(newVariant, quantity, type) {
+			var data = {};
+			data[newVariant] = quantity;
+			RTC.setVariantQuantities(data).then(x => {
+				insertQuantityInput(quantity, type);
+			});
+			setTimeout(() => {
+				if($('.total-line .checkout-money').html().includes("USD") && $('.checkout-total-value').html().includes("USD")) {
+					$('.total-line .checkout-money').html($('.total-line .checkout-money').html())
+					$('.checkout-total-value').html($('.checkout-total-value').html());
+				}else {
+					$('.total-line .checkout-money').html("<span class='non-usa'>USD </span>" + $('.total-line .checkout-money').html());
+					$('.checkout-total-value').html("<span class='non-usa'>USD </span>" + $('.checkout-total-value').html());
+				}
+			},1600)
+		}
+
+		$(document).on('change', '.quantity-input', function() {
+			updateCart(newVariant, $(this).val());
+		});
+
+		$(document).on('click', '.checkout-remove-warranty', function() {
+			let findWarranty = checkoutData.cart.localCart.state.lineItems.find(variant => variant.variantId === 42536178319510);
+			$('#checkout-addon-toggle').prop('checked', false);
+			updateCart(findWarranty.variantId, 0, 'remove');			
+		});
+
+		let removeButtonData = {
+			"landingPageName": checkout.cart.landingPageName,
+			"checkoutPageName": 'mb-sheets-checkout-v22',
+			"url": window.location.origin + window.location.pathname,
+			"variantId": newVariant.toString(),
+		};
+		
+		$(document).on('click', '.checkout-remove-product', function() {
+			
+			mixpanel.track("RemoveButton Clicked", removeButtonData);
+			$('#checkout-addon-toggle').prop('checked', false);
+			updateCart(newVariant, 0, 'remove');
+
+			if(findWarranty) {
+				setTimeout(() => {
+					updateCart(findWarranty, 0, 'remove');
+				},100)
+			}
+			
+
+			setTimeout(() => {
+				$(".checkout-cart-display").html(newTitleCheckoutBox);
+				$(".mobile-checkout-cart-display").html(newTitleCheckoutBox);
+				$(".mobile-order-summary-box .checkout-total-value").css("display","none");
+				$("#checkout-addon-toggle").prop("checked", false);
+				$(".plus-text").css("display","none")
+			},2400)
+		});
+
+		$('#checkout-addon-toggle').change(function() {
+			setTimeout(function() {
+				insertQuantityInput(1, 'remove');
+				$('.total-line .checkout-money').html("<span class='non-usa'>USD </span>" + $('.total-line .checkout-money').html());
+				$('.checkout-total-value').html("<span class='non-usa'>USD </span>" + $('.checkout-total-value').html());
+			}, 2000);
+		}); 
+
+		window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
+		window.checkoutReadyCallbacks.push(() => {
+			if (checkoutData.cart.shippingZone === "CA") {
+				$(".checkout-note").removeClass("hidden");
+			}
+
+			$("#shipping_country").change(function(e) {
+				if ($(this).val() != "CA") {
+					$(".checkout-note").addClass("hidden");
+				} else {
+					$(".checkout-note").removeClass("hidden");
+				}
+			});
+		});
+		$('.checkout-coupon-button').click(function(e) {
+				let sendingQuantity = $(".quantity-input").val();
+				let couponName = $('#coupon_desktop_field').val().toLowerCase();
+				if(couponName === 'merry20') {
+					$('.discount-success').css({'display': 'block'});
+					$('.discount-warning').css({'display': 'none'});
+				}
+				if ( couponName === 'datedateline25' || couponName === 'cal25' || couponName === '25merry') {
+					$('.discount-success').css({'display': 'none'});
+					$('.discount-warning').css({'display': 'block'});
+					$('#coupon_desktop_field').val('');
+					setTimeout(function() {
+						RTC.removeCoupon();
+
+						$('.discount-success').addClass('hidden');
+						$('.checkout-coupon-field').removeAttr('style');
+						$('.checkout-coupon-button').removeAttr('style');
+						$('.discount-success').removeAttr('style');
+					}, 1000);
+				};
+				setTimeout(() => {
+						insertQuantityInput(sendingQuantity)
+				},1800)
+			});
+	});
+  
+</script>
+</body>
+
+</html>

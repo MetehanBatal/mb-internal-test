@@ -37,21 +37,25 @@ const variants = {
 					"reg_price": 179,
 					"sale_price": 109
 				},
+				/*
 				"sage": {
 					"variantId": 42310575620246,
 					"reg_price": 179,
 					"sale_price": 109
 				},
+				*/
 				"slate_blue": {
 					"variantId": 43624547877014,
 					"reg_price": 179,
 					"sale_price": 109
 				},
+				/*
 				"silver_grey": {
 					"variantId": 43624551481494,
 					"reg_price": 179,
 					"sale_price": 109
 				},
+				*/
 				"rosewood": {
 					"variantId": 44275590234262,
 					"reg_price": 179,
@@ -95,11 +99,13 @@ const variants = {
 				}
 			},
 			"king": {
+				/*
 				"stone": {
 					"variantId": 33709275971720,
 					"reg_price": 189,
 					"sale_price": 119
 				},
+				*/
 				"white": {
 					"variantId": 33709276004488,
 					"reg_price": 189,
@@ -164,11 +170,13 @@ const variants = {
 				},
 			},
 			"split_king": {
+				/*
 				"stone": {
 					"variantId": 44151383916694,
 					"reg_price": 139,
 					"sale_price": 119.00
 				},
+				*/
 				"white": {
 					"variantId": 44151385456790,
 					"reg_price": 139,
@@ -227,21 +235,25 @@ const variants = {
 					"reg_price": 358,
 					"sale_price": 197
 				},
+				/*
 				"sage": {
 					"variantId": 42310583713942,
 					"reg_price": 358,
 					"sale_price": 197
 				},
+				*/
 				"slate_blue": {
 					"variantId": 43624563343510,
 					"reg_price": 358,
 					"sale_price": 197
 				},
+				/*
 				"silver_grey": {
 					"variantId": 43624566816918,
 					"reg_price": 358,
 					"sale_price": 197
 				},
+				*/
 				"rosewood": {
 					"variantId": 44253839130774,
 					"reg_price": 358,
@@ -285,11 +297,13 @@ const variants = {
 				}
 			},
 			"king": {
+				/*
 				"stone": {
 					"variantId": 37856215662742,
 					"reg_price": 378,
 					"sale_price": 217
 				},
+				*/
 				"white": {
 					"variantId": 37856215728278,
 					"reg_price": 378,
@@ -354,12 +368,13 @@ const variants = {
 				}
 			},
 			"split_king": {
-
+				/*
 				"stone": {
 					"variantId": 44082676170902,
 					"reg_price": 139,
 					"sale_price": 217.00
 				},
+				*/
 				"white": {
 					"variantId": 44082676203670,
 					"reg_price": 139,
@@ -419,21 +434,25 @@ const variants = {
 					"reg_price": 537,
 					"sale_price": 269
 				},
+				/*
 				"sage": {
 					"variantId": 42310592364694,
 					"reg_price": 537,
 					"sale_price": 269
 				},
+				*/
 				"slate_blue": {
 					"variantId": 43624572977302,
 					"reg_price": 537,
 					"sale_price": 269
 				},
+				/*
 				"silver_grey": {
 					"variantId": 43624574484630,
 					"reg_price": 537,
 					"sale_price": 269
 				},
+				*/
 				"rosewood": {
 					"variantId": 44253841424534,
 					"reg_price": 537,
@@ -477,11 +496,13 @@ const variants = {
 				},
 			},
 			"king": {
+				/*
 				"stone": {
 					"variantId": 37856218316950,
 					"reg_price": 567,
 					"sale_price": 299
 				},
+				*/
 				"white": {
 					"variantId": 37856218382486,
 					"reg_price": 567,
@@ -546,11 +567,13 @@ const variants = {
 				}
 			},
 			"split_king": {
+				/*
 				"stone": {
 					"variantId": 44082735317142,
 					"reg_price": 139,
 					"sale_price": 299.00
 				},
+				*/
 				"white": {
 					"variantId": 44082735349910,
 					"reg_price": 139,
@@ -609,21 +632,25 @@ const variants = {
 					"reg_price": 716,
 					"sale_price": 320
 				},
+				/*
 				"sage": {
 					"variantId": 42310595477654,
 					"reg_price": 716,
 					"sale_price": 320
 				},
+				*/
 				"slate_blue": {
 					"variantId": 43624583495830,
 					"reg_price": 716,
 					"sale_price": 320
 				},
+				/*
 				"silver_grey": {
 					"variantId": 43624590409878,
 					"reg_price": 716,
 					"sale_price": 320
 				},
+				*/
 				"rosewood": {
 					"variantId": 44253842374806,
 					"reg_price": 716,
@@ -667,11 +694,13 @@ const variants = {
 				},
 			},
 			"king": {
+				/*
 				"stone": {
 					"variantId": 37856221134998,
 					"reg_price": 756,
 					"sale_price": 360
 				},
+				*/
 				"white": {
 					"variantId": 37856221200534,
 					"reg_price": 756,
@@ -741,11 +770,13 @@ const variants = {
 				}
 			},
 			"split_king": {
+				/*
 				"stone": {
 					"variantId": 44082752159894,
 					"reg_price": 139,
 					"sale_price": 360.00
 				},
+				*/
 				"white": {
 					"variantId": 44082752192662,
 					"reg_price": 139,

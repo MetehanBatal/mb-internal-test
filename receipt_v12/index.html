@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script> TripleHeadless = 'aloft-home.myshopify.com' </script>
+	<!-- TriplePixel :: start -->
+	<script>
+		~function(W,H,A,L,E,_){function O(T,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET","//triplewhale-pixel.web.app/triplepx.txt?"+~(Date.now()/9e7),!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?setTimeout(function(){return eval(H.responseText)},50):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(T-1))}}if(L=window,!L[H+"sn"]){L[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),W.includes("⇈")&&A.setItem(H+"Stg",1+(0|A.getItem(H+"Stg")||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=L,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),E._headless=!0,W},E.ch=W,O(5)))}}("","TriplePixel",localStorage);
+	</script>
+	<!-- TriplePixel :: end -->
+	<meta charset="utf-8">
+	<title>Thank You | Miracle Brand</title>
+	<meta content="Thank You | Miracle Brand" property="og:title">
+	<meta content="true" name="checkout-receipt-page">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://try.miraclebrand.co/receipt_v12/js/receipt1.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+	<!-- SYSTEM CODE -->
+	<script type="text/javascript" src="https://cdn.shopmiraclebrand.co/js/cart_loader.js"></script>
+	<meta content="api.shopmiraclebrand.co" name="checkout-api-endpoint">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta content="mb-receipt-v12" name="checkout-funnel-name">
+	<script src="https://app.fairing.co/js/enquire-labs.js"></script>
+	<link href="../favicon.png" rel="shortcut icon" type="image/x-icon">
+	<link href="../webclip.png" rel="apple-touch-icon">
+	<link rel="stylesheet" type="text/css" href="https://try.miraclebrand.co/receipt_v12/css/checkout.css">
+	<link rel="stylesheet" type="text/css" href="https://try.miraclebrand.co/receipt_v12/css/receipt1.css">
+	<style>
+	.popup-trigger {
+		cursor: pointer;
+	}
+
+	@media screen and (max-width: 767px) {
+		.redeem-popup-opener {
+			margin-left: 4px;
+		}
+
+		.redeem-popup-opener img {
+			width: 16px;
+		}
+
+		.close-popup-icon {
+			top: 12px !important;
+			right: 12px !important;
+		}
+
+		.popup-content .popup-footer a {
+			font-size: 13px;
+		}
+	}
+
+	.close-popup-icon {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		transform: translate3d(-50%, 50%, 0);
+		cursor: pointer;
+	}
+
+	.redeem-popup-opener {
+		display: inline-block;
+
+		margin-left: 2px;
+
+		cursor: pointer;
+	}
+
+	.redeem-popup-opener span {
+		display: block;
+
+		font-family: 'Montserrat';
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 1;
+		text-decoration: underline;
+
+		margin-right: 4px;
+	}
+
+	.redeem-popup-opener img {
+		width: 16px;
+
+		position: static;
+		transform: translateY(3px);
+	}
+
+	.popup-cashback {
+		position: fixed;
+		left: 0%;
+		top: 0%;
+		right: 0%;
+		bottom: 0%;
+		z-index: 999;
+		display: none;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(113, 131, 153, 0.55);
+	}
+
+	.popup-cashback .popup-size-wrapper {
+		opacity: 1 !important;
+		transform: none !important;
+
+		display: flex;
+		width: 100%;
+		height: 100%;
+		padding: 135px 30px 66px;
+
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	.popup-cashback .popup-size-block {
+		position: relative;
+
+		max-width: 520px;
+		width: 100%;
+		max-height: 100%;
+
+		overflow: auto;
+
+		padding: 40px 28px;
+
+		justify-content: flex-start;
+		align-items: flex-start;
+		border-radius: 12px;
+
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		background-color: #fff;
+	}
+
+	.popup-cashback .popup-header {
+		display: flex;
+		align-items: center;
+
+		margin-bottom: 44px;
+	}
+
+	.popup-header p {
+		color: #303c48;
+		font-size: 32px;
+		margin: 0 12px;
+	}
+
+	.cashback-icon {
+		height: 40px;
+	}
+
+	.point-w-icon {
+		display: flex;
+		align-items: center;
+		grid-gap: 8px;
+		margin-bottom: 12px;
+	}
+
+	.popup-content p {
+		margin-bottom: 16px;
+		color: #333b47;
+		font-size: 18px;
+	}
+
+	.point-w-icon p {
+		margin-bottom: 0;
+		font-size: 16px;
+	}
+
+	.popup-content ul {
+		padding-left: 14px;
+	}
+
+	.popup-content li {
+		color: #333b47;
+		font-size: 16px;
+		margin-bottom: 12px;
+	}
+
+	.popup-content hr {
+		border-style: solid;
+		border-color: #cecece;
+		border-width: 0.5px;
+		margin: 36px 0;
+	}
+
+	.popup-content p.sm {
+		font-size: 14px;
+		line-height: 16px;
+		margin-top: 35px;
+	}
+
+	.popup-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 36px;
+	}
+
+	.popup-footer .flexbox {
+		display: flex;
+		align-items: center;
+	}
+
+	.popup-content .sm a,
+	.popup-footer a {
+		color: #00237e;
+	}
+
+	.popup-content .popup-footer p {
+		font-size: 14px;
+		line-height: 16px;
+		margin: 0;
+	}
+
+	.popup-footer img {
+		height: 30px;
+	}
+
+	@media screen and (max-width: 370px) {
+		.popup-cashback .popup-size-wrapper {
+			padding: 135px 20px 50px;
+		}
+
+		.popup-cashback .popup-size-block {
+			padding: 40px 18px;
+		}
+	}
+	.mail-link {
+		text-decoration: underline;
+	}
+	</style>
+	<!-- 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+</head>
+
+<body>
+	<!-- <div data-post-purchase-survey style="width:100%;margin-top:30px;"></div> -->
+	<div class="review-outer-box hidden">
+		<div class="review-box">
+			<div class="close-icon-popup">
+				<img class="close-icon-popup-img" src="./assets/close-icon.svg" alt="">
+			</div>
+			<div id="enquire_labs_target"></div>
+		</div>
+	</div>
+	<div class="popup-cashback">
+		<div class="popup-size-wrapper">
+			<div class="popup-size-block">
+				<img src="images/close.svg" loading="lazy" alt="" class="close-popup-icon">
+				<div class="popup-header">
+					<img src="images/logo.svg" alt="">
+					<p>+</p>
+					<img src="images/cashback-icon.png" alt="" class="cashback-icon">
+				</div>
+				<div class="popup-content">
+					<p>No points. No coupons. Just cash.</p>
+					<p><strong>How it works: easily.</strong></p>
+					<ul>
+						<li>After purchase, you’ll get an email with a link to redeem your cash back</li>
+						<li>Choose how to get your cash back: Visa Debit Card or Bonus Gift Card. It will be useable once the 30 day return period has passed</li>
+						<li>Done! Enjoy the cash</li>
+					</ul>
+					<hr>
+					<p><strong>Why people love Cash Back</strong></p>
+					<div class="point-w-icon">
+						<img src="images/noun-cash.svg" alt="">
+						<p>Cash in your pocket, no clipping coupons</p>
+					</div>
+					<div class="point-w-icon">
+						<img src="images/noun-lock.svg" alt="">
+						<p class="ml-sm">Safe & secure</p>
+					</div>
+					<p class="sm">Any rebate submission that does not strictly comply with all rebate terms and conditions may be rejected.<br /><br />After a qualifying purchase, you have 6 months to submit a Cash Back request. If you already made a qualifying purchase, you can redeem your Cash Back <a target="_blank" href="https://www.getfondue.com/cash-back-terms-of-service/">here.</a></p>
+					<div class="popup-footer">
+						<div class="flexbox">
+							<p>Powered by</p>
+							<img src="images/fondue.jpg" alt="">
+						</div>
+						<a href="https://www.getfondue.com/cash-back-terms-of-service/" target="_blank" class="terms">
+							Cash Back Redemption Terms
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="left rtc-left">
+			<div class="rtc-left-container">
+				<div class="header">
+					<div class="row">
+						<div class="column">
+							<div class="site-logo"><img src="assets/logo-checkout.svg"></div>
+						</div>
+						<!-- <div class="column">
+							<div class="site-usa"><img src="../made-in-usa.svg"></div>
+						</div> -->
+					</div>
+				</div>
+				<div class="mobile-cart-toggle mobile">
+					<div class="summry-toggle-mob">
+						<div class="container" id="summry-toggle-mob">
+							<p class="summry-toggle"><svg width="20" height="19" xmlns="http://www.w3.org/2000/svg" class="order-summary-toggle__icon">
+									<path d="M17.178 13.088H5.453c-.454 0-.91-.364-.91-.818L3.727 1.818H0V0h4.544c.455 0 .91.364.91.818l.09 1.272h13.45c.274 0 .547.09.73.364.18.182.27.454.18.727l-1.817 9.18c-.09.455-.455.728-.91.728zM6.27 11.27h10.09l1.454-7.362H5.634l.637 7.362zm.092 7.715c1.004 0 1.818-.813 1.818-1.817s-.814-1.818-1.818-1.818-1.818.814-1.818 1.818.814 1.817 1.818 1.817zm9.18 0c1.004 0 1.817-.813 1.817-1.817s-.814-1.818-1.818-1.818-1.818.814-1.818 1.818.814 1.817 1.818 1.817z"></path>
+								</svg>
+								<span class="sm-txt"> Review order summary <svg width="11" height="6" xmlns="http://www.w3.org/2000/svg" class="order-summary-toggle__dropdown" fill="#000">
+										<path d="M.504 1.813l4.358 3.845.496.438.496-.438 4.642-4.096L9.504.438 4.862 4.534h.992L1.496.69.504 1.812z"></path>
+									</svg></span>
+								<span class="sm-txt" style="display:none"> Hide order summary <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg" class="order-summary-toggle__dropdown" fill="#000">
+										<path d="M6.138.876L5.642.438l-.496.438L.504 4.972l.992 1.124L6.138 2l-.496.436 3.862 3.408.992-1.122L6.138.876z"></path>
+									</svg></span>
+							</p>
+							<p class="togle-price"><span class="checkout-subtotal-value">0.00</span></p>
+						</div>
+					</div>
+					<div id="toggle-mob-cart" class="closed">
+						<div style="width:100%; padding-block:30px 0;">
+							<h4 class="chk-head">Order Summary</h4>
+							<div class="checkout-cart-display" data-show-compare-pricing="true" data-show-product-images="false" data-currency-symbol="$"></div>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="order-header">
+						<img src="assets/checkmark.svg" class="checkmark">
+						<h3 class="order-name">
+							Thank you!
+						</h3>
+					</div>
+					<p class="bigger-text">
+						Your miracle products are right around the corner!
+					</p>
+					<div class="congratulations">
+						<span class="emoji"><img src="./images/confetti.png" alt=""></span> Congratulations on taking some of our best online only offers!
+					</div>
+					<p class="mail-link-wrapper">
+						For any additional help regarding your order please email us at: <a class="mail-link" href="mailto:help@support.miraclebrand.co">help@support.miraclebrand.co</a>
+					</p>
+					<div class="instagram-feed">
+						<div class="feed-top">
+							<div>
+								<img src="assets/instagram.svg" alt="">
+								<p>@miracle.brand</p>
+							</div>
+							<a href="https://www.instagram.com/miracle.brand/" target="_blank">
+								<div class="btn sm">Follow</div>
+							</a>
+						</div>
+						<p>Tag us for a chance to win a<strong> $1,000 MIRACLE HOME bundle</strong></p>
+						<a href="https://www.instagram.com/miracle.brand/" target="_blank">
+							<div class="feed">
+								<img src="assets/instagram_01.jpg" alt="">
+								<img src="assets/instagram_02.jpg" alt="">
+								<img src="assets/instagram_03.jpg" alt="">
+								<img src="assets/instagram_04.jpg" alt="">
+								<img src="assets/instagram_05.jpg" alt="">
+							</div>
+						</a>
+					</div>
+					<div class="order-section left-order-section border">
+						<img src="assets/clock.svg">
+						<div class="order-section_row">
+							<h3>Finalizing Authorization</h3>
+							<p>Your payment details are being verified.<br />You will receive a confirmation email within 15 minutes <br class="mobile-hidden"> once confirmed.</p>
+						</div>
+					</div>
+					<div class="order-section left-order-section border">
+						<img src="assets/packing.svg">
+						<div class="order-section_row">
+							<h3>Order Updates</h3>
+							<p>You’ll get shipping and delivery updates by email.</p>
+						</div>
+					</div>
+					<div class="order-section left-order-section border">
+						<img src="assets/user.svg">
+						<div class="order-section_row">
+							<h3>Customer Information</h3>
+							<div class="row">
+								<div class="column-address">
+									<h4>Billing Address</h5>
+										<div class="checkout-billing-address"></div>
+								</div>
+								<div class="column-address">
+									<h4>Shipping Address</h5>
+										<div class="checkout-shipping-address"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="order-section order-section-footer_info">
+						<p class="order-section_contactus">
+							Need help? <a href="mailto:help@support.miraclebrand.co">Contact us</a>
+						</p>
+						<p class="order-section_continueshopping">
+							<a href="https://miraclebrand.co" class="btn btn-continueshopping">Continue shopping</a>
+						</p>
+					</div>
+				</div>
+				<div class="footer">
+					<ul class="policy-list">
+						<li class="policy-list__item ">
+							<a href="https://www.miraclebrand.co/pages/terms-and-conditions">Terms of Service</a>
+						</li>
+						<li class="policy-list__item ">
+							<a href="https://www.miraclebrand.co/pages/privacy-policy">Privacy Policy</a>
+						</li>
+						<!-- <li class="policy-list__item ">
+							<a href="https://www.miraclebrand.co/pages/care-guide">Care Guide</a>
+						</li> -->
+						<li class="policy-list__item ">
+							Copyright 2022. Pattern Brands LLC. All rights reserved.
+						</li>
+					</ul>
+					<div class="rtc-section">
+						<img src="./assets/rtc-logo.png" alt="">
+						<p>Powered by RTC</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="rtc-right desktop">
+			<div class="rtc-right-container">
+				<div class="summary-wrap">
+					<div class="title-wrap">
+						<h4 data-i18n="order_summary" class="checkout-form-headline margin-bottom">Order Summary</h4>
+					</div>
+					<div data-show-compare-pricing="true" data-show-product-images="false" data-currency-symbol="$" class="checkout-cart-display">
+						<div class="skeleton-load"></div>
+					</div>
+					<div class="order-section border center coupon">
+						<div class="order-section_row">
+							<h3>Congratulations!</h3>
+							<h4>You unlocked a new coupon code!</h4>
+							<p class="right-order-section-description">
+								You’ve exclusively qualified for this discount because <br> of your recent purchase.
+							</p>
+							<div class="coupon-field">
+								LOVELYCUSTOMER
+							</div>
+							<p class="right-order-section-description">
+								Use this coupon code on your next order for 10% OFF!
+							</p>
+							<a href="https://miraclebrand.co" class="btn coupon">SHOP NOW</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// Wait for the DOM to be ready
+		window.addEventListener("DOMContentLoaded", function() {
+			
+			window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
+			window.checkoutReadyCallbacks.push(async function() {
+				setTimeout(() => {
+					const API_KEY = "6qNLE3RmDlsMh8UFOTZEpF4j2tGmwzMMr8rfOQ3WMd8cyKVkzs7HYvomsxZpfcCi"; // API key (Publishable API key located on your Account page)
+					const TARGET_ELEMENT = document.getElementById("enquire_labs_target");
+	
+					let currentDate = new Date();
+					currentDate.toUTCString();
+	
+					// Setup the customer object. We use the customer object to decide which questions to
+					// ask and to associate responses with a customer.
+					const customer = {
+						email: "example@example.com", // Included in export data so responses can
+						// be associated with a customer
+	
+						id: Date.now(), // Your internal customer ID. Included in export 
+						// data so responses can be associated with a customer
+	
+						order_count: 1 // Used to determine if a customer is new or not. If this
+						// value is 1, the customer is considered new, if it is
+						// greater than one, the customer is considered returning.
+					};
+	
+					// Setup the transaction object. The transaction object allows us to associate order volume
+					// with responses in reporting, and is included in data exports for more granular analysis.
+					const transaction = {
+						country_code: checkout.cart.shippingZone,
+						coupon_amount: checkout.cart.localCart.state.discountTotal,
+						coupon_code: checkout.cart.couponCode,
+						coupon_type: "fixed",
+						created_at: currentDate,
+						currency_code: checkout.cart.cartCurrency,
+						id: checkout.cart.id,
+						landing_page_path: checkout.cart.landingPageName,
+						locality: checkout.cart.shippingAddress.city,
+	
+						number: checkout.cart.id,
+	
+						platform: "internal-website",
+	
+						postcode: checkout.cart.shippingAddress.zip,
+						region: checkout.cart.shippingAddress.province,
+	
+						source: "try",
+	
+						total: checkout.cart.localCart.state.total,
+						total_usd: checkout.cart.localCart.state.total,
+					};
+					const EL = EnquireLabs(API_KEY, TARGET_ELEMENT, {
+						transaction: transaction,
+						customer: customer,
+						config: {
+							integrations: {
+								ga: false, // Set to true to fire Google Anaylitcs events
+								gtm: false, // Set to true to fire Google Tag Manger events
+								rockerbox: false // Set to true to fire Rockerbox events
+							}
+						}
+					});
+	
+					
+	
+					EL.nextQuestion();
+	
+					// To toggle degbug mode. Debug mode will remain enabled until "toggleDebug()" is called
+					// again, even after page reloads.
+					EnquireLabs.toggleDebug()
+
+					setTimeout(() => {
+						if (TARGET_ELEMENT.children.length > 0) {
+							$(".review-outer-box").removeClass("hidden");
+						}
+					}, 1000);
+				}, 9000);
+			});
+			document.querySelector('.close-icon-popup').addEventListener('click', function(e) {
+				document.querySelector('.review-outer-box').classList.add('hidden');
+			});
+		});
+		</script>
+	<script src="https://try.miraclebrand.co/receipt_v12/js/receipt1.js"></script>
+	<script>
+	// trigger cashback popup
+	const cashbackPopup = document.querySelector('.popup-cashback');
+
+	cashbackPopup.addEventListener('click', e => {
+		const el = e.target.closest('.popup-size-block');
+		if (el === null) {
+			$('body').removeClass('overflow-hidden');
+			cashbackPopup.style.display = "none"
+		}
+	});
+
+	$('.close-popup-icon').click(function() {
+		cashbackPopup.style.display = "none";
+		$('body').removeClass('overflow-hidden');
+	});
+
+	$('.popup-trigger').click(function(e) {
+		console.log('click');
+		$('body').addClass('overflow-hidden');
+
+		cashbackPopup.style.display = "block";
+
+		let deviceHeight = $(window).outerHeight();
+		if ((deviceHeight - 140) < $('.popup-content').outerHeight()) {
+			$('body').addClass('popup-sm');
+		}
+	});
+	</script>
+
+	<script>
+		window.checkoutReadyCallbacks = window.checkoutReadyCallbacks || [];
+		window.checkoutReadyCallbacks.push(() => {
+			if (checkoutData.cart.shippingZone !== "US") {
+				if (!$('.total-line .checkout-money').html().includes('US')) {
+					$('.total-line .checkout-money').html('USD ' + $('.total-line .checkout-money').html());
+					$('.checkout-total-value').html('USD ' + $('.checkout-total-value').html());
+				}else{ 
+					$('.total-line .checkout-money').replace("US", "US ");
+					$('.checkout-total-value').replace("US", "US ");
+			}
+			}
+		});
+	</script>
+</body>
+
+</html>
